@@ -2,6 +2,30 @@
 
 Last updated: 2026-07-06
 
+## 2026-07-06 (Iteration 4, Experiment F): Operator-Portfolio PRISM — COMPLETE
+
+- Objective/hypotheses: H4 — a uniform operator portfolio (random
+  operator per mutation event) succeeds on all landscape types without
+  configuration at ≤4x matched-operator cost; H5 — adaptive credit
+  assignment closes part of the gap.
+- Code: `experiments/iteration-04/portfolio_study.py` (budgeted,
+  resumable) + `analyze_portfolio.py`. Modes {portfolio, adaptive} x
+  {hamming, kendall, adjacency} x n ∈ {6..16}, 15 seeds, cap 10000 —
+  protocol identical to Iteration-3 Experiment C for direct merging.
+- Results: **H4 confirmed** — portfolio: zero censoring everywhere,
+  overhead 1.1-4.1x vs matched fixed operator (vs unbounded failure for
+  mismatched fixed operators). **H5 partially confirmed** — adaptive
+  weights rank the literature-matched operator top on 3/3 landscapes
+  (automated landscape typing), but hitting times do not consistently
+  beat the uniform portfolio and each mutation event costs one extra
+  evaluation.
+- Decision D8: uniform portfolio is the recommended default for unknown
+  landscapes; fixed matched operator when the type is known; adaptive
+  as a landscape-diagnosis tool.
+- Outputs: `experiments/iteration-04/results/` (CSV, summary,
+  comparison table, weights, figure). Full write-up:
+  `iterations/2026-07-06-iteration-04-operator-portfolio.md`.
+
 ## 2026-07-06 (Iteration 2, Experiment A): Toy Validation Reproduction — COMPLETE
 
 This closes the "Historical Experiment: Toy Convergence Validation"

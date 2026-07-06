@@ -1,0 +1,27 @@
+
+=== hamming (matched fixed operator: swap) ===
+n      matched  portfolio  adaptive  worst-fixed  pf/matched  ad/matched
+6           23        51        58          4691         2.2         2.5
+8           66       144       163          9357         2.2         2.5
+10         114       304       274         10000         2.7         2.4
+12         188       400       372         10000         2.1         2.0
+14         234       734       696         10000         3.1         3.0
+16         405      1140       883         10000         2.8         2.2
+
+=== kendall (matched fixed operator: insert) ===
+n      matched  portfolio  adaptive  worst-fixed  pf/matched  ad/matched
+6           21        40        30            32         1.9         1.4
+8           70        80        93            88         1.1         1.3
+10         121       127       138           156         1.1         1.1
+12         224       202       255           283         0.9         1.1
+14         322       346       332           442         1.1         1.0
+16         396       501       458           588         1.3         1.2
+
+=== adjacency (matched fixed operator: inversion) ===
+n      matched  portfolio  adaptive  worst-fixed  pf/matched  ad/matched
+6           28        78        67          6008         2.8         2.4
+8          134       242       191          6697         1.8         1.4
+10         390       936       875          9363         2.4         2.2
+12         345       784      2002         10000         2.3         5.8
+14         529      2150      1168         10000         4.1         2.2
+16        1199      1915      2592*        10000         1.6         2.2

@@ -2,6 +2,32 @@
 
 Last updated: 2026-07-06
 
+## 2026-07-06 (Iteration 4): Uniform Operator Portfolio as Recommended Default
+
+Decision: When the landscape type of an ordering problem is unknown,
+PRISM should run with `mutation="portfolio"` (uniform random operator
+per mutation event). A fixed matched operator remains best when the
+landscape type is known. `mutation="adaptive"` is relegated to
+landscape diagnosis (its final weight vector identifies the landscape
+type) rather than production search.
+
+Context: Iteration 3 showed mismatched fixed operators hard-fail on
+plateau-rich landscapes; requiring users to type their landscape a
+priori is error-prone.
+
+Evidence: Experiment F — portfolio solves all three typed landscapes to
+n=16 with zero censoring at 1.1-4.1x matched-operator generations;
+adaptive learns the correct operator (3/3) but does not consistently
+beat uniform and costs one extra evaluation per mutation event.
+
+Expected impact: removes the highest-severity configuration risk (R12)
+at a bounded constant-factor cost; strengthens the paper's method
+section.
+
+Reversal condition: a credit-assignment scheme that consistently beats
+the uniform portfolio (e.g., UCB or windowed rewards) in a future
+iteration.
+
 ## 2026-07-06: Apply PRISM to RL Through Ordering Surfaces
 
 Decision: Treat PRISM-RL as a wrapper pattern where the genome is an ordering of

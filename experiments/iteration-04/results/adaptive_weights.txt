@@ -1,0 +1,3 @@
+hamming    mean final weights: swap=0.290, insert=0.233, inversion=0.235, scramble=0.242 -> top: swap (= matched)
+kendall    mean final weights: swap=0.247, insert=0.266, inversion=0.245, scramble=0.241 -> top: insert (= matched)
+adjacency  mean final weights: swap=0.226, insert=0.237, inversion=0.299, scramble=0.238 -> top: inversion (= matched)

@@ -61,6 +61,17 @@ separates existing historical material from the new continuity structure.
 | `prism-research/core/prism.py` (updated) | Now supports `mutation=` swap/insert/inversion/scramble; swap default is bit-for-bit v2-compatible. | Compare versions via `git diff iteration-02..iteration-03`. |
 | `prism-research/benchmarks/synthetic.py` (updated) | Added adjacency (R-type) and deceptive objectives. | Landscape typing documented in module docstring. |
 
+## Iteration 4 (2026-07-06): Operator-Portfolio PRISM
+
+| Path | Purpose | Status / Notes |
+| --- | --- | --- |
+| `iterations/2026-07-06-iteration-04-operator-portfolio.md` | Iteration-4 lab log: portfolio/adaptive design, results, D8. | Complete. |
+| `experiments/iteration-04/portfolio_study.py` | Budgeted resumable runner for Experiment F. | Protocol identical to Experiment C for baseline merging. |
+| `experiments/iteration-04/analyze_portfolio.py` | Merges Experiment F with Iteration-3 baselines; overhead ratios, adaptive weights, figure. | Complete. |
+| `experiments/iteration-04/results/portfolio_results.csv` | Per-run results incl. evaluations and final operator weights. | 540 rows. |
+| `experiments/iteration-04/results/portfolio_summary.csv`, `portfolio_vs_fixed.txt`, `adaptive_weights.txt`, `portfolio_study.png` | Aggregates, comparison table, learned weights, figure. | Complete. |
+| `prism-research/core/prism.py` (updated) | Adds `mutation="portfolio"` and `mutation="adaptive"`; fixed-operator paths bit-for-bit unchanged. | Compare via `git diff iteration-03..iteration-04`. |
+
 ## Current Paper and Presentation Deliverables
 
 | Path | Purpose | Status / Notes |
