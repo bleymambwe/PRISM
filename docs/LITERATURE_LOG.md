@@ -1,6 +1,37 @@
 # PRISM Literature and Source Review Log
 
-Last updated: 2026-07-05
+Last updated: 2026-07-06
+
+## Iteration-3 Entries
+
+### Permutation Operator-Landscape Classification (via other.md synthesis)
+
+- Citation: Cicirello (2022) permutation-type classification
+  (A-permutations/absolute positions, R-permutations/adjacencies,
+  P-permutations/precedences), as summarized in `other.md`
+  "Permutation operators must match problem structure". Related primary
+  sources named there: Rudolph (1994) elitist-GA convergence; Eiben et
+  al. (1991) Markov-chain EA analysis.
+- Link or local path: `other.md` (secondary summary; primary papers not
+  yet independently retrieved).
+- Reviewed by: Claude (Iteration 3).
+- Date reviewed: 2026-07-06.
+- Research question: should PRISM's mutation operator depend on the
+  fitness landscape's permutation type?
+- Key claims: swap/cycle mutation suits A-type, inversion (2-opt-like)
+  suits R-type, insert suits P-type; crossover analogues PMX/CX, ERX,
+  OX respectively.
+- Methods relevant to PRISM: directly testable — PRISM v2 hard-coded
+  swap mutation; Iteration-3 Experiment C tests the matched-operator
+  prediction on typed synthetic landscapes.
+- Evidence quality: secondary summary; classification is standard in
+  the permutation-EA literature. Primary-source verification is a
+  follow-up.
+- Limitations: our synthetic landscapes are idealized instances of each
+  type; real ordering problems mix types.
+- How it changes project direction: PRISM gains a `mutation=` parameter
+  (v2-compatible default) and, if H1 holds, an operator-selection
+  guideline becomes part of the method and paper.
 
 This file records literature, references, and source documents that have been
 reviewed or cited by project materials. Entries should distinguish direct paper

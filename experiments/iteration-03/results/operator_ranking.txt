@@ -1,0 +1,32 @@
+
+=== adjacency (matched operator per literature: inversion) ===
+n=6   inversion(28) < insert(262) < scramble(399) < swap(6008*)
+n=8   inversion(134) < insert(1606) < scramble(3997*) < swap(6697*)
+n=10  inversion(390) < insert(4655*) < swap(8883*) < scramble(9363*)
+n=12  inversion(345) < insert(8213*) < scramble(10000*) < swap(10000*)
+n=14  inversion(529) < insert(9935*) < scramble(10000*) < swap(10000*)
+n=16  inversion(1199) < insert(10000*) < scramble(10000*) < swap(10000*)
+H1 at n=16: literature-matched 'inversion' vs empirical best 'inversion' -> MATCHES
+
+=== deceptive (matched operator per literature: n/a) ===
+n=6   inversion(3759*) < swap(9333*)
+n=8   inversion(9925*) < swap(10000*)
+n=10  inversion(10000*) < swap(10000*)
+
+=== hamming (matched operator per literature: swap) ===
+n=6   swap(23) < scramble(734) < inversion(2066*) < insert(4691*)
+n=8   swap(66) < scramble(3154*) < inversion(5426*) < insert(9357*)
+n=10  swap(114) < scramble(8017*) < inversion(8274*) < insert(10000*)
+n=12  swap(188) < scramble(8587*) < inversion(9388*) < insert(10000*)
+n=14  swap(234) < insert(10000*) < inversion(10000*) < scramble(10000*)
+n=16  swap(405) < insert(10000*) < inversion(10000*) < scramble(10000*)
+H1 at n=16: literature-matched 'swap' vs empirical best 'swap' -> MATCHES
+
+=== kendall (matched operator per literature: insert) ===
+n=6   insert(21) < swap(28) < inversion(32) < scramble(32)
+n=8   insert(70) < scramble(80) < swap(85) < inversion(88)
+n=10  insert(121) < scramble(151) < inversion(154) < swap(156)
+n=12  swap(199) < insert(224) < scramble(238) < inversion(283)
+n=14  insert(322) < swap(339) < scramble(353) < inversion(442)
+n=16  insert(396) < swap(440) < scramble(540) < inversion(588)
+H1 at n=16: literature-matched 'insert' vs empirical best 'insert' -> MATCHES

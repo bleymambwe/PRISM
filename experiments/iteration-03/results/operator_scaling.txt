@@ -1,0 +1,6 @@
+adjacency  inversion  exponent  3.44 over n=[6, 8, 10, 12, 14, 16]
+hamming    swap       exponent  2.79 over n=[6, 8, 10, 12, 14, 16]
+kendall    insert     exponent  2.98 over n=[6, 8, 10, 12, 14, 16]
+kendall    inversion  exponent  2.97 over n=[6, 8, 10, 12, 14, 16]
+kendall    scramble   exponent  2.82 over n=[6, 8, 10, 12, 14, 16]
+kendall    swap       exponent  2.72 over n=[6, 8, 10, 12, 14, 16]

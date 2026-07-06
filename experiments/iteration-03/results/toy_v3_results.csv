@@ -1,0 +1,3 @@
+problem,stage1_std,stage1_std_v2,best_fitness,best_perm,generations,runtime_sec
+XOR-v3,0.0,0.1,1.0,"[1, 0, 3, 4, 2]",60,300.7
+Parity-v3,0.0,0.179,1.0,"[3, 2, 0, 4, 1]",60,741.2

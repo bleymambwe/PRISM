@@ -2,6 +2,104 @@
 
 Last updated: 2026-07-06
 
+## 2026-07-06 (Iteration 2, Experiment A): Toy Validation Reproduction — COMPLETE
+
+This closes the "Historical Experiment: Toy Convergence Validation"
+follow-up below: the reproduction has now been run from a clean
+environment.
+
+- Code: `prism-research/experiments/validate_toy_problems.py` (port of
+  notebook cell 17), seed 42, 150 generations, pop 20, k=3, p_m 0.05,
+  elitism 1.
+- Environment: Windows 10, Python 3.12.6, numpy 1.26.4, torch 2.12.1+cpu
+  (no GPU). Total wall time ≈ 34 min.
+- Results: XOR/OR/AND/parity accuracy 1.0000; polynomial MSE 0.0070
+  (reference 0.0068). All headline numbers reproduce.
+- Corrections to the historical record: order matters for 4/5 problems
+  (AND has zero variance across orderings); "convergence generation" is
+  unstable because fitness is stochastic (all classification problems
+  hit best fitness at generation 0 via lucky noisy evaluations); only
+  positions 0-2 of the permutation are functional in these benchmarks.
+- Outputs: `prism-research/outputs/validation_*` (committed, tag
+  `iteration-02`). Full write-up:
+  `prism-research/docs/iteration-02.md`.
+
+## 2026-07-06 (Iteration 3, Experiment E): All-Positions Toy Benchmark — NEGATIVE RESULT
+
+- Objective/hypothesis: H3 — deepening XOR/parity networks to 5
+  permuted layers (all positions functional) increases fitness variance
+  across orderings.
+- Code: `experiments/iteration-03/validate_toy_v3.py`, seed 42,
+  60 generations.
+- Result: H3 falsified. Stage-1 variance dropped to exactly 0 (all
+  orderings at chance 0.500 on both problems) — the deeper stacks are
+  untrainable within the 50-100-step budget. The search still reported
+  best fitness 1.0, which stage-1 shows must be evaluation-noise luck;
+  independently confirms the best-ever-fitness inflation problem.
+- Outputs: `experiments/iteration-03/results/toy_v3_results.csv`.
+- Follow-up: benchmark redesign must vary something other than depth;
+  add noise control (k-run averaging or fixed per-eval init seeds).
+
+## 2026-07-06 (Iteration 3, Experiments C & D): Operator x Landscape Study
+
+- Objective/hypothesis: H1 — literature-matched mutation operators
+  (swap on absolute-position, insert on precedence, inversion on
+  adjacency landscapes; per `other.md`/Cicirello) minimize hitting
+  time. H2 — deceptive landscape blows up hitting times without
+  violating the worst-case bound.
+- Code: `experiments/iteration-03/operator_study.py` +
+  `analyze_operator_study.py`. Operators {swap, insert, inversion,
+  scramble} x landscapes {hamming, kendall, adjacency} x
+  n ∈ {6,8,10,12,14,16}, 15 seeds, cap 20000 generations; deceptive:
+  {swap, inversion} x n ∈ {6,8,10}.
+- Baseline: Iteration-2 swap results (verified to reproduce exactly).
+- Protocol v2: cap 10000 generations (lowered from 20000 after the
+  first run was killed mid-way; rankings unaffected), kill-safe
+  incremental CSV with resume, early-abort after >=14/15 censoring at
+  a size (larger sizes recorded as status=skipped).
+- Status: COMPLETE (2026-07-06).
+- Results: **H1 confirmed on all three landscape types** — matched
+  operators best everywhere (swap on hamming 405 gens at n=16 vs total
+  censoring for all others; insert on kendall best at 5/6 sizes;
+  inversion on adjacency 1199 at n=16 vs total censoring for all
+  others). Key insight: smooth landscapes (kendall) are
+  operator-forgiving (~10-40% spread, zero censoring); plateau-rich
+  landscapes (hamming, adjacency) turn operator mismatch into hard
+  failure. Matched-operator scaling exponents 2.79 (hamming/swap),
+  2.98 (kendall/insert), 3.44 (adjacency/inversion) — consistent with
+  O(n³ log n) out to n=16. **H2 confirmed**: deceptive landscape
+  censors almost everything by n=8-10 for both operators tested;
+  polynomial-time behavior is landscape-conditional.
+- Outputs: `experiments/iteration-03/results/operator_study_results.csv`
+  plus `operator_summary.csv`, `operator_ranking.txt`,
+  `operator_scaling.txt`, `operator_study.png`. Full write-up:
+  `iterations/2026-07-06-iteration-03-operator-study.md`.
+
+## 2026-07-06: PRISM-RL Lightweight Benchmarks
+
+- Objective: test whether PRISM can be applied as a framework to lightweight
+  reinforcement-learning ordering problems.
+- Code: `prism-research/benchmarks/rl_ordering.py` and
+  `prism-research/experiments/rl_ordering_experiment.py`.
+- Benchmarks:
+  - `option_route_grid`: deterministic semi-MDP where each permutation item is
+    a navigation option and fitness is episodic return after executing the
+    option order.
+  - `chain_curriculum`: tabular Q-learning chain where each permutation item is
+    a curriculum task and fitness is final target performance plus a small
+    training-efficiency term.
+- Protocol: exact enumeration for the small search spaces; PRISM over eight
+  seeds; random-search baseline with the same number of fitness evaluations.
+- Results: `option_route_grid` exact best 80.0 at permutation
+  `2 5 3 0 7 6 1 4`; swap hit rate 0.25, inversion hit rate 0.625.
+  `chain_curriculum` exact best 1.00425 at permutation `5 3 0 1 2 4`;
+  swap hit rate 0.75, insert hit rate 1.00.
+- Interpretation: PRISM transfers to RL when the RL problem exposes a finite
+  ordering surface such as options or curriculum tasks. The core algorithm did
+  not require RL-specific changes; customization is primarily the fitness
+  evaluator and, for route-like objectives, mutation choice.
+- Outputs: `prism-research/outputs/rl_ordering_*`.
+
 ## Historical Experiment: Synthetic Runtime Scaling
 
 Source artifacts:
