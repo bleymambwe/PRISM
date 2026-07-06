@@ -1,0 +1,3 @@
+n=6 XOR-v4: optimum 1.0000 (33/720), min 0.4167, mean 0.7885, std 0.1103
+n=6 PRISM (portfolio, 80 gens, 10 seeds): hit rate 0.90, mean regret 0.0083
+n=7 XOR (k=1, budget 800 evals): PRISM mean best 1.0000 vs random 1.0000 (gap +0.0000, 4 seeds)

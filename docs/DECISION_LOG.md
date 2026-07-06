@@ -1,6 +1,37 @@
 # PRISM Decision Log
 
-Last updated: 2026-07-06
+Last updated: 2026-07-07
+
+## 2026-07-07 (Iteration 6): Runtime Secrets from Google Cloud Secret Manager
+
+Decision: API keys (OpenAI TTS, etc.) are fetched at run time via
+`gcloud secrets versions access latest --secret=<NAME>` and never
+written to the repository, environment files, or logs.
+
+Context: Audio-lesson generation needed the OpenAI API key; the EVE app
+already manages keys in Google Cloud Secret Manager.
+
+Evidence: `scripts/generate_audio_lessons.py` retrieves the key inside
+the process; nothing key-shaped appears in any committed artifact.
+
+Reversal condition: none anticipated.
+
+## 2026-07-07 (Iteration 6): Notion Tracker Is the Progress View, Repo Is Truth
+
+Decision: The "PRISM Research Tracker" database (on the Comprehensive
+Documentation Notion page) is the living progress dashboard — its
+formula `Progress` property is the single progress metric, with board /
+table / timeline / chart views. The git repository remains the source
+of truth for research content; Notion summarizes, never originates.
+
+Context: User requested an up-to-date Notion documentation page and a
+formula-driven project tracker with multiple views.
+
+Evidence: Tracker created 2026-07-07 with 21 workstreams spanning
+iterations 02-06 and next priorities.
+
+Reversal condition: if Notion and repo state diverge, repo wins and the
+tracker is corrected.
 
 ## 2026-07-06 (Iteration 5): v4 Is the Canonical Toy Benchmark Design
 

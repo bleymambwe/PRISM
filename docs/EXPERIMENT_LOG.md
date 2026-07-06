@@ -1,6 +1,27 @@
 # PRISM Experiment Log
 
-Last updated: 2026-07-06
+Last updated: 2026-07-07
+
+## 2026-07-07 (Iteration 6, Experiment H): v4 Scale-Up — STAGE A SUCCESS, STAGE B SATURATED
+
+- Objective: scale the exact-ground-truth methodology beyond n=5.
+- Code: `experiments/iteration-06/v4_scaleup.py` (budgeted, resumable);
+  block pool extended to 8 types (`toy_problems_v4.py`, indices 0-4
+  unchanged).
+- Stage A (n=6 XOR, k=3): all 720 orderings enumerated — optimum
+  1.0000 held by 33/720, landscape std 0.1103. PRISM (portfolio, 80
+  gens, 10 seeds): hit rate 0.90, mean regret 0.0083. Methodology
+  scales.
+- Stage B (n=7 XOR, k=1, 800-eval budget, 4 seeds): PRISM and random
+  both saturate at 1.0000 — the k=1 objective's optimum set is too
+  dense to discriminate. PRISM converged after touching only 127-164
+  distinct permutations vs random's 800, but time-to-first-hit was not
+  recorded for random, so no speed claim. Protocol lesson: use parity
+  (sparse optima) + evaluations-to-first-optimum at n=7.
+- Incident: brief chunk overlap wrote 103 duplicate enumeration rows;
+  all values identical (unplanned determinism check passed); deduped.
+- Outputs: `experiments/iteration-06/results/`. Write-up:
+  `iterations/2026-07-06-iteration-06-scaleup-and-communication.md`.
 
 ## 2026-07-06 (Iteration 5, Experiment G): Benchmark v4 with Exact Ground Truth — COMPLETE
 

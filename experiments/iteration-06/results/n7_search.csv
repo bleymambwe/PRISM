@@ -1,0 +1,9 @@
+method,seed,best_fitness,distinct_evals
+prism,0,1.0,127
+random,0,1.0,800
+prism,1,1.0,144
+random,1,1.0,800
+prism,2,1.0,132
+random,2,1.0,800
+prism,3,1.0,164
+random,3,1.0,800

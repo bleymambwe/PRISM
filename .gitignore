@@ -36,3 +36,10 @@ Thumbs.db
 desktop.ini
 *.tmp
 *.swp
+
+# Generated audio lessons are local artifacts (33MB, slow uplink);
+# regenerate with scripts/generate_audio_lessons.py (key from GCP Secret Manager)
+deliverables/audio/*.mp3
+
+# Downloaded paper PDFs (131MB, re-downloadable from arXiv; metadata is tracked)
+research-opportunity-mapping-2026-07-06/papers/pdfs/

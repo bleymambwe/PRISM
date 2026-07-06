@@ -83,6 +83,20 @@ separates existing historical material from the new continuity structure.
 | `deliverables/PRISM_Framework_Research_Paper.md` / `.pdf` | Paper updated with Iterations 3-5 (operator matching, portfolio, v4 benchmarks); PDF rebuilt. | Current through Iteration 5. |
 | `deliverables/PRISM_Iteration_Journey.html` | Self-contained animated visual research log (iterations 2-5): charts, hypothesis ledger, light/dark, reduced-motion. | Browser-verified both themes; also published as a claude.ai artifact. |
 
+## Iteration 6 (2026-07-06/07): Scale-Up, Decks, Audio, Notion
+
+| Path | Purpose | Status / Notes |
+| --- | --- | --- |
+| `iterations/2026-07-06-iteration-06-scaleup-and-communication.md` | Iteration-6 lab log. | Complete. |
+| `experiments/iteration-06/v4_scaleup.py` | Experiment H runner: n=6 enumeration + search, n=7 PRISM-vs-random regret. | Budgeted/resumable. |
+| `experiments/iteration-06/results/` | n6_landscape.csv (720 orderings), n6_search.csv, n7_search.csv, scaleup_summary.txt. | See iteration note for results. |
+| `prism-research/benchmarks/toy_problems_v4.py` (updated) | Block pool extended to 8 types (indices 0-4 unchanged); `make_xor_fitness(k_trials)` factory. | n=5 results unaffected. |
+| `scripts/build_versions_deck.py` → `deliverables/PRISM_Versions_Deck.pptx` | Versions deck: one chapter per git tag iteration-02..06, timeline, hypothesis ledger. | New. |
+| `deliverables/PRISM_Framework_Presentation.pptx` (rebuilt) | Main deck refreshed with iterations 3-5 results. | Slides updated in build script. |
+| `deliverables/audio/scripts/lesson-{1..6}-*.txt` | Lesson scripts: simple, student, practitioner, research, critics, full paper narration. | Committed. |
+| `deliverables/audio/lesson-{1..6}-*.mp3` | Generated audio (~33 MB, OpenAI TTS tts-1, voices nova/onyx). | Local artifacts; regenerate via `scripts/generate_audio_lessons.py` (key from GCP Secret Manager). |
+| Notion: documentation page + PRISM Research Tracker | 2026-07 research-status section; tracker DB with formula Progress, 21 rows, 5 views. | https://app.notion.com/p/2ccc1245c0b3812396d7dadfb28e48fd |
+
 ## Current Paper and Presentation Deliverables
 
 | Path | Purpose | Status / Notes |
