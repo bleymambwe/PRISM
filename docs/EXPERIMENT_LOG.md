@@ -2,6 +2,26 @@
 
 Last updated: 2026-07-06
 
+## 2026-07-06 (Iteration 5, Experiment G): Benchmark v4 with Exact Ground Truth — COMPLETE
+
+- Objective/hypotheses: H6 — residual blocks fix the v3 trainability
+  collapse; H7 — permutation-seeded init makes fitness deterministic;
+  H8 — ordering still matters with residual blocks.
+- Code: `prism-research/benchmarks/toy_problems_v4.py` +
+  `experiments/iteration-05/benchmark_v4_study.py` (budgeted,
+  resumable). All 120 orderings enumerated per task (k=3 seeded trials
+  each), then PRISM (portfolio mutation, 60 generations, 10 seeds)
+  against the enumerated cache.
+- Results: all three hypotheses confirmed. XOR-v4: optimum 1.0000
+  (8/120 orderings), landscape std 0.120, PRISM hit rate 100%.
+  Parity-v4: optimum 0.9583 (2/120), std 0.098, hit rate 40%, mean
+  regret 0.0333. Determinism verified by repeat evaluation.
+- Decision D9: v4 is the canonical toy benchmark design; substantially
+  closes R10.
+- Outputs: `experiments/iteration-05/results/` (landscape CSV, search
+  CSV, summary). Write-up:
+  `iterations/2026-07-06-iteration-05-paper-and-benchmark-v4.md`.
+
 ## 2026-07-06 (Iteration 4, Experiment F): Operator-Portfolio PRISM — COMPLETE
 
 - Objective/hypotheses: H4 — a uniform operator portfolio (random

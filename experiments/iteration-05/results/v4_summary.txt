@@ -1,0 +1,4 @@
+XOR-v4: optimum 1.0000 (8/120 permutations), min 0.5000, mean 0.8035, std 0.1202 (order matters: YES)
+XOR-v4: PRISM (portfolio, 60 gens, 10 seeds) hit rate 1.00, mean regret 0.0000
+Parity-v4: optimum 0.9583 (2/120 permutations), min 0.4583, mean 0.7205, std 0.0976 (order matters: YES)
+Parity-v4: PRISM (portfolio, 60 gens, 10 seeds) hit rate 0.40, mean regret 0.0333

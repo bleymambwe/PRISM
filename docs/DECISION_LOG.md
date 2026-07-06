@@ -2,6 +2,28 @@
 
 Last updated: 2026-07-06
 
+## 2026-07-06 (Iteration 5): v4 Is the Canonical Toy Benchmark Design
+
+Decision: The v4 benchmark design — five permuted residual bottleneck
+blocks, weight init seeded from the permutation, fitness = mean of k=3
+trials — replaces the v2 neural toy benchmarks for all forward work;
+v2 results remain in the record for historical comparison only.
+
+Context: R10 documented that v2 fitness was stochastic and used only 3
+of 5 permutation positions; the Iteration-3 depth-based redesign (v3)
+was falsified.
+
+Evidence: Experiment G — determinism verified by repeat evaluation; all
+orderings trainable (no chance-collapse); landscape std 0.098-0.120;
+exact enumeration gives ground-truth optima and honest hit rates
+(XOR-v4 100%, Parity-v4 40% at 60 generations — headroom to
+discriminate search variants).
+
+Expected impact: publication-grade toy results; template for scaling
+beyond n=5 (regret vs best-known when enumeration is infeasible).
+
+Reversal condition: none anticipated; extend rather than revert.
+
 ## 2026-07-06 (Iteration 4): Uniform Operator Portfolio as Recommended Default
 
 Decision: When the landscape type of an ordering problem is unknown,

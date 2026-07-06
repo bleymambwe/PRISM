@@ -72,6 +72,17 @@ separates existing historical material from the new continuity structure.
 | `experiments/iteration-04/results/portfolio_summary.csv`, `portfolio_vs_fixed.txt`, `adaptive_weights.txt`, `portfolio_study.png` | Aggregates, comparison table, learned weights, figure. | Complete. |
 | `prism-research/core/prism.py` (updated) | Adds `mutation="portfolio"` and `mutation="adaptive"`; fixed-operator paths bit-for-bit unchanged. | Compare via `git diff iteration-03..iteration-04`. |
 
+## Iteration 5 (2026-07-06): Paper Update, Benchmark v4, Visual Research Log
+
+| Path | Purpose | Status / Notes |
+| --- | --- | --- |
+| `iterations/2026-07-06-iteration-05-paper-and-benchmark-v4.md` | Iteration-5 lab log. | Complete. |
+| `prism-research/benchmarks/toy_problems_v4.py` | Canonical toy benchmarks (D9): residual blocks, permutation-seeded init, deterministic k=3-trial fitness. | Supersedes v2 benchmarks for forward work. |
+| `experiments/iteration-05/benchmark_v4_study.py` | Experiment G runner: determinism check, 120-permutation enumeration, cached PRISM search. | Budgeted/resumable. |
+| `experiments/iteration-05/results/v4_landscape.csv`, `v4_search.csv`, `v4_summary.txt` | Full enumerated landscapes, per-seed search results, summary. | Complete. |
+| `deliverables/PRISM_Framework_Research_Paper.md` / `.pdf` | Paper updated with Iterations 3-5 (operator matching, portfolio, v4 benchmarks); PDF rebuilt. | Current through Iteration 5. |
+| `deliverables/PRISM_Iteration_Journey.html` | Self-contained animated visual research log (iterations 2-5): charts, hypothesis ledger, light/dark, reduced-motion. | Browser-verified both themes; also published as a claude.ai artifact. |
+
 ## Current Paper and Presentation Deliverables
 
 | Path | Purpose | Status / Notes |
