@@ -11,7 +11,7 @@ Last updated: 2026-07-06
 | R5 | The workspace previously lacked Git metadata. | Change history and rollback were weak. | Closed 2026-07-06 | Git was initialized at the project root on branch `main`. |
 | R6 | Several PDFs have unclear source relationships. | Generated artifacts may be hard to reproduce or update. | Open | Map each PDF to its source `.tex`, notebook, or external origin. |
 | R7 | Scale-up targets such as CIFAR-10, LLM applications, and compiler optimization are listed but not yet implemented in visible files. | Claims of readiness may exceed demonstrated evidence. | Open | Define one concrete next benchmark with success criteria, compute budget, and baseline comparisons. |
-| R8 | No remote repository was configured at the time of local Git initialization. | Local commits may not be backed up or shareable until a remote push succeeds. | Open | Configure a remote or create one through the user's preferred hosting provider, then push `main`. |
+| R8 | No remote repository was configured at the time of local Git initialization. | Local commits may not be backed up or shareable until a remote push succeeds. | Closed 2026-07-06 | Created private GitHub remote `https://github.com/bleymambwe/PRISM` and pushed `main`. |
 
 ## Maintenance Rule
 

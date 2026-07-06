@@ -15,7 +15,9 @@ As of 2026-07-05, the project appears to be in a documented validation stage:
   NEAT-style topology evolution, and usage examples.
 - `PRISM_Research_Blog.tex` and `PRISM_Presentation.tex` are publication and
   presentation sources.
-- The workspace is not currently initialized as a Git repository.
+- The workspace was not initially a Git repository; as of 2026-07-06 it is
+  initialized on branch `main` and pushed to the private GitHub remote
+  `https://github.com/bleymambwe/PRISM`.
 
 The claims above are inherited from existing project documents and should be
 reproduced before being treated as independently verified results.
