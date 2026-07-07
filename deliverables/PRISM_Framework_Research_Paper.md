@@ -227,7 +227,44 @@ Parity-v4 with mean regret 0.033 — misses land on near-optimal orderings.
 These are honest, reproducible search statistics rather than best-observed
 noise.
 
-### 5.6 Lightweight Reinforcement Learning
+### 5.6 Scale-Up, a Falsification, and the Locality Diagnostic
+
+Scaling the ground-truth methodology to n = 6 succeeded (all 720
+orderings enumerated; optimum held by 33; PRISM hit rate 0.90, mean
+regret 0.0083). At n = 7 the program then produced its most important
+negative result. On the fully enumerated parity landscape (5040
+orderings, optimum held by 14 = 0.28 percent), PRISM with default
+hyperparameters prematurely converges (4/15 seeds reach an optimum,
+exploring only ~103 distinct orderings — statistically identical to
+random sampling at that budget), and even tuned for full exploration
+(population 40, mutation rate 0.6: 15/15 hits) it needs 384 mean
+distinct evaluations against random-without-replacement's 318. Random
+sampling also matches or beats PRISM's best-found quality at every
+distinct-evaluation budget of 50 or more. **On this landscape, PRISM
+has no advantage over uniform random sampling.**
+
+The explanation is measurable before any search runs. Two classical
+statistics — one-step move autocorrelation per operator (rho1) and
+fitness-distance correlation to the nearest optimum (FDC) — computed on
+all eight enumerated landscapes, reproduce every observed outcome:
+
+| Landscape class | rho1 (matched op) | FDC | Search outcome |
+| --- | ---: | ---: | --- |
+| Synthetic typed (hamming/kendall/adjacency) | 0.66 / 0.78 / 0.68 | -0.83 / -0.32 / -0.25 | matched PRISM >> random |
+| Neural v4, n=5-6 | 0.01-0.06 | -0.20 to -0.25 | high hit rates at small scale |
+| Neural v4, n=7 parity | 0.02 | -0.06 | PRISM ~ random |
+| Deceptive | 0.65 (smooth!) | +0.78 | everything fails |
+
+rho1 recovers the matched operator on 3/3 typed landscapes without
+running any search; FDC's sign and magnitude separate "search pays"
+(strongly negative) from "needle in a haystack" (near zero) from
+"deceptive" (positive — smooth but pointing away). The resulting
+pre-flight diagnostic — sample a few hundred evaluations, read off the
+matched operator and whether evolutionary search should beat random —
+is now a mandatory step for every new PRISM application, and, we
+suggest, for permutation-search applications generally.
+
+### 5.7 Lightweight Reinforcement Learning
 
 PRISM was also tested as an RL ordering framework through two small benchmarks.
 
@@ -271,6 +308,17 @@ options, curricula, or modules.
 
 The current evidence is promising but preliminary:
 
+- **PRISM's advantage over random sampling is landscape-conditional in two
+  independent ways.** The mutation operator must match the landscape type
+  (Section 5.3; mitigated by the portfolio), and the landscape's top end
+  must have exploitable locality at all (Section 5.6: on the n=7 neural
+  landscape, FDC ~ -0.06, PRISM is statistically indistinguishable from
+  uniform random sampling under a distinct-evaluation cost model). Any
+  application claim must ship with the locality diagnostic and a
+  random-without-replacement baseline.
+- Default hyperparameters (population 20, mutation rate 0.05) are n<=6
+  settings; at n>=7 they cause premature convergence. Scale-aware settings
+  (population >= 40, mutation rate >= 0.5) restore full exploration.
 - The polynomial-runtime behavior is landscape-conditional: deceptive
   landscapes defeat all tested operators, and mismatched fixed operators fail
   on plateau-rich landscapes (mitigated but not eliminated by the portfolio).

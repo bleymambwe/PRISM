@@ -1,6 +1,28 @@
 # PRISM Experiment Log
 
-Last updated: 2026-07-07 (Iteration 7)
+Last updated: 2026-07-07 (Iteration 8)
+
+## 2026-07-07 (Iteration 8, Experiment J): Landscape Locality Diagnostic — H11 CONFIRMED
+
+- Objective: predict PRISM-vs-random outcomes and operator matching
+  from pre-search statistics.
+- Code: `experiments/iteration-08/locality_study.py` (~2 min; zero new
+  training — cached/closed-form landscapes).
+- Metrics: one-step move autocorrelation rho1 per operator (4000
+  sampled moves) + fitness-distance correlation (FDC, Cayley distance
+  to nearest optimum) on 8 enumerated landscapes.
+- Results: rho1 recovers the matched operator 3/3 (hamming→swap 0.655,
+  kendall→insert 0.777, adjacency→inversion 0.675) with no search run;
+  FDC separates outcomes 8/8: −0.83 (fast convergence) … −0.20/−0.25
+  (usable at small n) … −0.06 (n=7 parity: PRISM ≈ random) … +0.78
+  (deceptive: anti-guidance despite high smoothness). Neural
+  landscapes have rho1 ≈ 0.00–0.06 under precise operators — locally
+  near-random, explaining Experiment I.
+- Caveat: scramble's rho1 inflated by identity moves; compare it only
+  across landscapes.
+- Decision D14: rho1+FDC pre-flight is mandatory for new applications.
+- Outputs: `experiments/iteration-08/results/locality.{csv,txt}`.
+  Write-up: `iterations/2026-07-07-iteration-08-landscape-locality.md`.
 
 ## 2026-07-07 (Iteration 7, Experiment I): n=7 Parity Discriminating Protocol — H10 FALSIFIED
 

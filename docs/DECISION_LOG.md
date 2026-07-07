@@ -1,6 +1,27 @@
 # PRISM Decision Log
 
-Last updated: 2026-07-07 (Iteration 7)
+Last updated: 2026-07-07 (Iteration 8)
+
+## 2026-07-07 (Iteration 8): The Locality Pre-Flight Is Mandatory
+
+Decision (D14): every new PRISM application begins with the locality
+diagnostic — sample a few hundred evaluations, compute rho1 per
+operator and FDC. Matched operator = argmax rho1 (excluding scramble,
+whose rho1 is inflated by identity moves). Proceed with evolutionary
+search only if FDC is materially negative; near-zero FDC → report
+random sampling as the method of record; positive FDC → do not use
+PRISM.
+
+Evidence: Experiment J — the diagnostic reproduces the operator-
+matching result 3/3 and all 8 observed search outcomes from pre-search
+statistics alone.
+
+Expected impact: replaces expensive trial-and-error search experiments
+with a ~cheap measurement; the paper's methodological centerpiece
+alongside ground-truth benchmarking.
+
+Reversal condition: an application where the diagnostic's prediction
+materially misleads (would itself be a publishable finding).
 
 ## 2026-07-07 (Iteration 7): Scale-Aware Hyperparameters + Mandatory Random Baseline
 
