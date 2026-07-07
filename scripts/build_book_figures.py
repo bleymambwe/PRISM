@@ -242,4 +242,227 @@ ax2.set_xlabel("accuracy"); ax2.set_ylabel("orderings")
 ax2.grid(alpha=.3, axis="y")
 save(fig, "fig_llm.png")
 
+# ================= v2 figures (reference-quality upgrade) =================
+import itertools
+
+# ---------- Fig 2.2: the four mutation operators, visually ----------
+fig, axes = plt.subplots(2, 2, figsize=(9, 3.6))
+demos = [
+    ("swap — exchange two positions", "swap",
+     [0, 1, 2, 3, 4, 5], [0, 4, 2, 3, 1, 5], [(1, 4)]),
+    ("insert — remove and re-insert", "insert",
+     [0, 1, 2, 3, 4, 5], [0, 2, 3, 4, 1, 5], [(1, 4)]),
+    ("inversion — reverse a segment", "inversion",
+     [0, 1, 2, 3, 4, 5], [0, 4, 3, 2, 1, 5], [(1, 4)]),
+    ("scramble — shuffle a segment", "scramble",
+     [0, 1, 2, 3, 4, 5], [0, 3, 1, 4, 2, 5], [(1, 4)]),
+]
+for ax, (title, op, before, after, arcs) in zip(axes.flat, demos):
+    for row, perm in [(1.5, before), (0, after)]:
+        for i, b in enumerate(perm):
+            changed = before[i] != after[i]
+            ax.add_patch(Rectangle((i, row), .9, .9, color=C[op],
+                                   alpha=1 if (row == 0 and changed)
+                                   else .35))
+            ax.text(i + .45, row + .45, f"B{b+1}", ha="center",
+                    va="center", fontsize=8,
+                    color="white" if (row == 0 and changed) else C["ink"],
+                    fontweight="bold")
+    ax.annotate("", xy=(3, 1.05), xytext=(3, 1.45),
+                arrowprops=dict(arrowstyle="->", color=C["ink"]))
+    ax.set_title(title, fontsize=9)
+    ax.set_xlim(-.3, 6.2); ax.set_ylim(-.4, 2.7); ax.axis("off")
+save(fig, "fig_moves.png")
+
+# ---------- Fig 3.2: Markov chain absorption diagram ----------
+fig, ax = plt.subplots(figsize=(8.5, 3))
+import matplotlib.patches as mpatches
+transient = [(0.8, 1.5), (2.2, 2.2), (2.2, 0.8), (3.6, 1.5)]
+for i, (x, y) in enumerate(transient):
+    ax.add_patch(plt.Circle((x, y), .42, color=C["swap"], alpha=.85))
+    ax.text(x, y, f"T{i+1}", ha="center", va="center", color="white",
+            fontweight="bold")
+ax.add_patch(mpatches.FancyBboxPatch((5.3, 0.7), 2.6, 1.6,
+             boxstyle="round,pad=0.12", fc=C["insert"], alpha=.2,
+             ec=C["insert"]))
+for j, (x, y) in enumerate([(6, 1.5), (7.2, 1.5)]):
+    ax.add_patch(plt.Circle((x, y), .42, color=C["insert"]))
+    ax.text(x, y, f"A{j+1}", ha="center", va="center", color="white",
+            fontweight="bold")
+ax.text(6.6, 2.55, "absorbing set (population contains an optimum)",
+        ha="center", fontsize=8.5, color=C["insert"])
+ax.text(2.2, 2.95, "transient states (suboptimal populations)",
+        ha="center", fontsize=8.5, color=C["swap"])
+edges = [((0.8, 1.5), (2.2, 2.2)), ((0.8, 1.5), (2.2, 0.8)),
+         ((2.2, 2.2), (3.6, 1.5)), ((2.2, 0.8), (3.6, 1.5)),
+         ((2.2, 2.2), (2.2, 0.8)), ((3.6, 1.5), (6, 1.5))]
+for (x1, y1), (x2, y2) in edges:
+    ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="->",
+                                 color=C["muted"], shrinkA=14,
+                                 shrinkB=14, lw=1.2))
+loop = mpatches.FancyArrowPatch((6.35, 1.75), (6.9, 1.75),
+                                connectionstyle="arc3,rad=0.9",
+                                arrowstyle="->", color=C["insert"], lw=1.4)
+ax.add_patch(loop)
+ax.text(6.6, 0.35, "elitism: no arrow ever leaves the absorbing set",
+        ha="center", fontsize=8.5, color=C["ink"])
+ax.set_xlim(0, 8.3); ax.set_ylim(0, 3.3); ax.axis("off")
+save(fig, "fig_markov.png")
+
+# ---------- Fig 3.3: Cayley graph of S3 under swap ----------
+fig, ax = plt.subplots(figsize=(5, 4.2))
+perms3 = list(itertools.permutations([1, 2, 3]))
+angles = np.linspace(np.pi / 2, np.pi / 2 + 2 * np.pi, 7)[:-1]
+coords = {p: (np.cos(a), np.sin(a)) for p, a in zip(perms3, angles)}
+for p, q in itertools.combinations(perms3, 2):
+    if sum(a != b for a, b in zip(p, q)) == 2:  # one swap apart
+        ax.plot([coords[p][0], coords[q][0]],
+                [coords[p][1], coords[q][1]], color=C["grid"], lw=1.4,
+                zorder=1)
+for p, (x, y) in coords.items():
+    ident = p == (1, 2, 3)
+    ax.add_patch(plt.Circle((x, y), .21,
+                            color=C["insert"] if ident else C["swap"],
+                            zorder=2))
+    ax.text(x, y, "".join(map(str, p)), ha="center", va="center",
+            color="white", fontsize=9, fontweight="bold", zorder=3)
+ax.text(0, -1.45, "every permutation reachable from every other:\n"
+        "irreducibility by construction", ha="center", fontsize=8.5,
+        color=C["muted"])
+ax.set_xlim(-1.5, 1.5); ax.set_ylim(-1.7, 1.4)
+ax.set_aspect("equal"); ax.axis("off")
+save(fig, "fig_cayley.png")
+
+# ---------- Fig 3.4: absorption probability decay (theory) ----------
+fig, ax = plt.subplots(figsize=(5.4, 3.2))
+t = np.arange(0, 300)
+for lam, lab, col in [(0.96, r"$\rho(Q)=0.96$ (typical)", C["swap"]),
+                      (0.99, r"$\rho(Q)=0.99$ (hard landscape)",
+                       C["inversion"]),
+                      (0.90, r"$\rho(Q)=0.90$ (easy landscape)",
+                       C["insert"])]:
+    ax.plot(t, lam ** t, color=col, label=lab)
+ax.set_xlabel("generation t")
+ax.set_ylabel("Pr(still suboptimal)")
+ax.legend(fontsize=8); ax.grid(alpha=.3)
+save(fig, "fig_absorption.png")
+
+# ---------- Fig 4.2: real convergence trajectories (iteration 2) ----------
+h = np.load(os.path.join(ROOT,
+                         "prism-research/outputs/validation_histories.npz"))
+fig, ax = plt.subplots(figsize=(6.8, 3.4))
+for name, col in [("XOR", C["swap"]), ("3-bit Parity", C["inversion"]),
+                  ("Polynomial", C["portfolio"])]:
+    y = h[name]
+    if name == "Polynomial":
+        y = 1 + y / 20  # scale MSE for shared axis, annotated
+        ax.plot(y, color=col, label="Polynomial (scaled −MSE)")
+    else:
+        ax.plot(y, color=col, label=name)
+ax.annotate("discrete jumps: population discovers a\nbetter ordering "
+            "and elitism locks it in", xy=(41, .996), xytext=(70, .72),
+            fontsize=8, color=C["ink"],
+            arrowprops=dict(arrowstyle="->", color=C["muted"]))
+ax.set_xlabel("generation"); ax.set_ylabel("best fitness")
+ax.legend(fontsize=8, loc="lower right"); ax.grid(alpha=.3)
+save(fig, "fig_trajectories.png")
+
+# ---------- Fig 5.3: adaptive operator weights (iteration 4) ----------
+pf4 = list(csv.DictReader(open(os.path.join(
+    ROOT, "experiments/iteration-04/results/portfolio_results.csv"))))
+fig, axes = plt.subplots(1, 3, figsize=(9.6, 2.8), sharey=True)
+MATCH2 = {"hamming": "swap", "kendall": "insert",
+          "adjacency": "inversion"}
+ops4 = ["swap", "insert", "inversion", "scramble"]
+for ax, obj in zip(axes, MATCH2):
+    ws = {o: [] for o in ops4}
+    for r in pf4:
+        if r["objective"] == obj and r["mode"] == "adaptive" \
+                and r["censored"] == "False":
+            w = json.loads(r["operator_weights"])
+            for o in ops4:
+                ws[o].append(w[o])
+    means = [np.mean(ws[o]) for o in ops4]
+    bars = ax.bar(range(4), means, color=[C[o] for o in ops4])
+    for rect, o in zip(bars, ops4):
+        rect.set_alpha(1 if o == MATCH2[obj] else .45)
+    ax.axhline(.25, color=C["muted"], ls=":", lw=1)
+    ax.set_xticks(range(4))
+    ax.set_xticklabels([o[:4] for o in ops4], fontsize=8)
+    ax.set_title(f"{obj}\n(matched: {MATCH2[obj]})", fontsize=9)
+    ax.grid(alpha=.3, axis="y")
+axes[0].set_ylabel("mean learned weight")
+axes[0].text(3.4, .258, "uniform", fontsize=7, color=C["muted"])
+save(fig, "fig_adaptive.png")
+
+# ---------- Fig 6.2: n=7 — exploration collapse + tuned configs ----------
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.6, 3.2))
+cfgs = ["pop 20\np=.05", "pop 20\np=.30", "pop 40\np=.30",
+        "pop 40\np=.60", "pop 60\np=.50"]
+hits = [4, 9, 10, 15, 15]
+explored = [103, 236, 319, 389, 404]
+ax1.bar(range(5), hits, color=[C["adaptive"]] + [C["inversion"]] * 2 +
+        [C["insert"]] * 2)
+ax1.set_xticks(range(5)); ax1.set_xticklabels(cfgs, fontsize=7.5)
+ax1.set_ylabel("seeds finding an optimum (of 15)")
+ax1.set_title("premature convergence is fixable…", fontsize=9)
+ax1.axhline(15, color=C["muted"], ls=":", lw=1); ax1.grid(alpha=.3,
+                                                          axis="y")
+budgets = [25, 50, 100, 200]
+prism_q = [0.9083, 0.9389, 0.9556, 0.9583]
+rand_q = [0.9028, 0.9528, 0.9639, 0.9778]
+ax2.plot(budgets, prism_q, "o-", color=C["portfolio"],
+         label="PRISM (default)")
+ax2.plot(budgets, rand_q, "s--", color=C["muted"], label="random")
+ax2.set_xlabel("distinct-evaluation budget")
+ax2.set_ylabel("mean best accuracy found")
+ax2.set_title("…but random matches or wins anyway", fontsize=9)
+ax2.legend(fontsize=8); ax2.grid(alpha=.3)
+save(fig, "fig_n7_honest.png")
+
+# ---------- Fig 7.2: LLM search comparison ----------
+fig, ax = plt.subplots(figsize=(5.6, 3))
+methods = ["PRISM\n(default)", "PRISM\n(D12-scaled)", "random\n(no repl.)"]
+vals = [6, 7, 18]
+cols = [C["portfolio"], C["portfolio"], C["muted"]]
+b = ax.bar(methods, vals, color=cols)
+for rect, a in zip(b, [1, .7, .8]):
+    rect.set_alpha(a)
+for rect, v in zip(b, vals):
+    ax.text(rect.get_x() + rect.get_width() / 2, v + .4, str(v),
+            ha="center", fontsize=9, fontweight="bold")
+ax.set_ylabel("mean distinct evaluations\nto first exact optimum")
+ax.set_title("LLM chain ordering: 15/15 hits for all methods",
+             fontsize=9)
+ax.grid(alpha=.3, axis="y")
+save(fig, "fig_llm_search.png")
+
+# ---------- Fig 9.1: the research arc / hypothesis timeline ----------
+fig, ax = plt.subplots(figsize=(9.8, 3.4))
+events = [
+    (2, "reproduce v1\n+ 3 corrections", C["insert"], 1),
+    (3, "operator matching\nconfirmed 3/3", C["insert"], 1),
+    (3.35, "H3 depth redesign\nFALSIFIED", C["adaptive"], -1),
+    (4, "portfolio ≤4.1×\nzero failures", C["insert"], 1),
+    (4.35, "H5 adaptive speedup\nnot confirmed", C["inversion"], -1),
+    (5, "ground truth:\n120 enumerated", C["insert"], 1),
+    (6, "scale to 720;\nn=7 XOR saturates", C["inversion"], 1),
+    (7, "H10 FALSIFIED:\nPRISM ≈ random", C["adaptive"], -1),
+    (8, "locality diagnostic\npredicts 8/8", C["insert"], 1),
+    (9, "LLM: 6%→97%\nby order alone", C["portfolio"], 1),
+]
+ax.axhline(0, color=C["muted"], lw=1.5)
+for x, label, col, side in events:
+    ax.plot([x], [0], "o", color=col, ms=9, zorder=3)
+    ax.annotate(label, xy=(x, 0), xytext=(x, .55 * side),
+                ha="center", fontsize=7.3, color=C["ink"],
+                arrowprops=dict(arrowstyle="-", color=C["grid"]))
+for it in range(2, 10):
+    ax.text(it, -1.05, f"it-{it:02d}", ha="center", fontsize=8,
+            color=C["muted"])
+ax.set_xlim(1.5, 9.6); ax.set_ylim(-1.25, 1.25); ax.axis("off")
+ax.set_title("nine versions, eleven experiments, two falsifications "
+             "— all kept in the record", fontsize=10)
+save(fig, "fig_arc.png")
+
 print("all figures written to", FIG)

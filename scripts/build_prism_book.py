@@ -18,7 +18,8 @@ from reportlab.platypus import (BaseDocTemplate, Frame, Image,
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 FIG = os.path.join(ROOT, "deliverables", "book_figures")
-OUT = os.path.join(ROOT, "deliverables", "PRISM_Book.pdf")
+OUT = os.environ.get("PRISM_BOOK_OUT",
+                     os.path.join(ROOT, "deliverables", "PRISM_Book.pdf"))
 
 INK = colors.HexColor("#222222")
 MUT = colors.HexColor("#666460")
@@ -192,13 +193,20 @@ story += fig("fig_loop.png",
 story += [Paragraph("2.1 The mutation operators", S["h2"]), P(
     "How a copy is 'shuffled a little' turns out to be the single most "
     "consequential design choice in the whole framework (Chapter 5). "
-    "Four operators are implemented: <b>swap</b> exchanges two "
-    "positions; <b>insert</b> removes one element and re-inserts it "
-    "elsewhere; <b>inversion</b> reverses a contiguous segment; "
-    "<b>scramble</b> shuffles a segment. Two meta-modes remove the "
-    "choice: <b>portfolio</b> draws one of the four uniformly at random "
-    "per mutation event, and <b>adaptive</b> learns operator weights "
-    "from which mutations improve their parent."),
+    "Four operators are implemented, each defining a different notion "
+    "of 'neighboring ordering':")]
+story += fig("fig_moves.png",
+             "Figure 2.2 — The four mutation operators applied to the "
+             "same parent (top row) producing a child (bottom row; "
+             "changed positions highlighted). Each operator induces a "
+             "different neighborhood graph over the n! orderings — and "
+             "Chapter 5 shows the choice can decide success outright.")
+story += [P(
+    "Two meta-modes remove the choice: <b>portfolio</b> draws one of "
+    "the four uniformly at random per mutation event, and "
+    "<b>adaptive</b> learns operator weights from which mutations "
+    "improve their parent (with a weight floor that preserves the "
+    "theory of Chapter 3)."),
     Paragraph("2.2 Versioning discipline", S["h2"]), P(
     "Every algorithm version is a git tag (iteration-02 through "
     "iteration-09), and each version reproduces the previous one "
@@ -218,6 +226,23 @@ story += plain(
     "never lose it. Together these guarantee the search ends up at an "
     "optimal ordering — eventually. The fine print of 'eventually' is "
     "where the real science lives.")
+story += [Paragraph("3.1 The state space and its two structural "
+                    "properties", S["h2"]), P(
+    "Model each possible population as one state of a finite Markov "
+    "chain: the next population depends only on the current one, "
+    "through fixed selection/mutation probabilities. Two structural "
+    "properties then do all the work.")]
+story += fig("fig_cayley.png",
+             "Figure 3.1 — The Cayley graph of S₃ under swap moves: six "
+             "orderings, each reachable from each. With p_m > 0 the "
+             "population chain inherits this reachability "
+             "(irreducibility) — no ordering is ever permanently out of "
+             "reach. Green: the identity ordering.", width=8.5)
+story += fig("fig_markov.png",
+             "Figure 3.2 — The absorption argument. Transient states "
+             "(blue) are populations without an optimum; arrows "
+             "eventually lead into the absorbing set (green), and "
+             "elitism guarantees no transition ever leaves it.")
 story += theorem(
     "CONVERGENCE (Markov-chain absorption)",
     "Model each population as a state of a finite Markov chain. With "
@@ -225,6 +250,12 @@ story += theorem(
     "irreducible; with elitism &ge; 1, populations containing a global "
     "optimum form an absorbing set. Hence Pr(the population eventually "
     "contains an optimum) = 1.")
+story += fig("fig_absorption.png",
+             "Figure 3.3 — What the spectral radius ρ(Q) of the "
+             "transient submatrix means in practice: the probability of "
+             "still being suboptimal decays geometrically as ρ(Q)ᵗ. "
+             "Harder landscapes push ρ(Q) toward 1 and stretch the "
+             "decay.", width=10)
 story += theorem(
     "RUNTIME (project claim, empirically supported in-range)",
     "Under the project's stated assumptions, the expected number of "
@@ -234,9 +265,9 @@ story += theorem(
     "operators; the ratio E[T]/(n³ ln n) is flat across a threefold "
     "range of n).")
 story += fig("fig_scaling.png",
-             "Figure 3.1 — Measured mean hitting times (15 seeds) versus "
+             "Figure 3.4 — Measured mean hitting times (15 seeds) versus "
              "the theoretical n³ log n shape, from the Iteration-2 "
-             "scaling study.")
+             "scaling study.", width=10)
 story += note(
     "Convergence-with-probability-1 is cheap: essentially any elitist "
     "algorithm with nonzero mutation has it (Rudolph 1994), including "
@@ -270,11 +301,42 @@ story += [P(
     "scores identically. Determinism makes full enumeration meaningful: "
     "120 orderings at n = 5, 720 at n = 6, 5040 at n = 7 — each "
     "landscape evaluated exhaustively.")]
+story += fig("fig_trajectories.png",
+             "Figure 4.1 — Real convergence trajectories from the "
+             "Iteration-2 reproduction. The staircase shape is the "
+             "algorithm's signature: plateaus while the population "
+             "explores, discrete jumps when a better ordering is found, "
+             "and monotonicity guaranteed by elitism.", width=12)
+story += [Paragraph("4.1 The v4 benchmark results, exactly", S["h2"])]
+rows_bench = [["Landscape", "Orderings", "Optimum", "Held by",
+               "PRISM hit rate", "Mean regret"],
+              ["XOR-v4, n=5", "120", "1.000", "8 (6.7%)", "100%",
+               "0.000"],
+              ["Parity-v4, n=5", "120", "0.958", "2 (1.7%)", "40%",
+               "0.033"],
+              ["XOR-v4, n=6", "720", "1.000", "33 (4.6%)", "90%",
+               "0.008"],
+              ["Parity-v4, n=7", "5040", "1.000", "14 (0.28%)",
+               "27% (see Ch. 6)", "—"]]
+tb = Table([[Paragraph(c, S["tcell"]) for c in r] for r in rows_bench],
+           colWidths=[3.4 * cm, 2 * cm, 1.9 * cm, 2.6 * cm, 3.4 * cm,
+                      2.4 * cm])
+tb.setStyle(TableStyle([
+    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e8eef8")),
+    ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#d8d5cc")),
+    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+    ("LEFTPADDING", (0, 0), (-1, -1), 5),
+    ("TOPPADDING", (0, 0), (-1, -1), 3),
+    ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
+story += [tb, Spacer(1, 6),
+          Paragraph("Table 4.1 — Every enumerated neural landscape and "
+                    "PRISM's exactly graded performance (portfolio "
+                    "mutation, 15 or 10 seeds).", S["cap"])]
 story += fig("fig_landscapes.png",
-             "Figure 4.1 — Three fully enumerated fitness landscapes. "
+             "Figure 4.2 — Three fully enumerated fitness landscapes. "
              "Dashed line: the global optimum. Search quality can now be "
-             "reported as an exact hit rate and regret: 100% at n=5 XOR, "
-             "90% at n=6, and the instructive n=7 story of Chapter 6.")
+             "reported as an exact hit rate and regret rather than "
+             "best-observed noise.")
 story += note(
     "An accidental robustness check: a process overlap re-evaluated 103 "
     "permutations in separate runs — every value matched exactly. "
@@ -323,7 +385,14 @@ story += [P(
 story += fig("fig_portfolio.png",
              "Figure 5.2 — Matched operator vs portfolio at n = 16. The "
              "dashed line marks where every mismatched fixed operator "
-             "sits: total failure.")
+             "sits: total failure.", width=11.5)
+story += fig("fig_adaptive.png",
+             "Figure 5.3 — What the adaptive mode learns: mean final "
+             "operator weights per landscape (uncensored runs; dotted "
+             "line = uniform 0.25). The matched operator (solid) rises "
+             "to the top on all three landscapes — a landscape-typing "
+             "diagnostic — even though the speedup never materializes.",
+             width=12.5)
 story.append(PageBreak())
 
 # ================= CH 6 =================
@@ -349,8 +418,15 @@ story += [P(
     "&rho;<sub>1</sub>, the correlation between an ordering's fitness "
     "and its one-move neighbor's fitness; and FDC, the correlation "
     "between fitness and distance to the nearest optimum.")]
+story += fig("fig_n7_honest.png",
+             "Figure 6.1 — The honest n = 7 story in two panels. Left: "
+             "premature convergence is a hyperparameter problem — "
+             "scaling population and mutation rate restores 15/15 exact "
+             "hits. Right: it does not matter — uniform random sampling "
+             "matches or beats PRISM's best-found quality at every "
+             "budget beyond 25 evaluations on this landscape.")
 story += fig("fig_locality.png",
-             "Figure 6.1 — The locality diagnostic across all eight "
+             "Figure 6.2 — The locality diagnostic across all eight "
              "enumerated landscapes. Left: ρ1 per operator recovers the "
              "matched operator (row-wise maximum) on 3/3 typed synthetic "
              "landscapes; the neural landscapes are near-zero — locally "
@@ -403,6 +479,24 @@ story += [P(
     "optima are moderately dense here (60/720), so random remains "
     "respectable; sparser, harder instances are the natural stress "
     "test.")]
+story += fig("fig_llm_search.png",
+             "Figure 7.2 — Search efficiency on the LLM landscape: mean "
+             "distinct evaluations to the first exactly optimal "
+             "ordering (15 seeds each). At roughly $0.02 of API cost "
+             "per distinct evaluation, PRISM's 3× saving is real money "
+             "at scale.", width=9.5)
+story += [Paragraph("7.1 Beyond one experiment", S["h2"]), P(
+    "The same wrapper pattern applies to any prompt-structure or "
+    "pipeline-ordering question: agent subroutine order (plan / act / "
+    "observe / reflect), retrieval-augmentation step order, tool-call "
+    "sequencing, curriculum order for fine-tuning data. Each exposes a "
+    "finite ordering surface, and the Chapter-6 pre-flight tells you — "
+    "for a few hundred cached evaluations — whether the landscape "
+    "rewards search at all before you commit a budget. A lightweight "
+    "reinforcement-learning proof of concept in the repository "
+    "(option-route and curriculum ordering) shows the same transfer: "
+    "the route-like task favored inversion mutation, exactly as its "
+    "adjacency-type structure predicts.")]
 story.append(PageBreak())
 
 # ================= CH 8 =================
@@ -435,6 +529,12 @@ story.append(PageBreak())
 # ================= CH 9 =================
 story += [Paragraph("9 · Critique, Limitations, and Open Problems",
                     S["h1"])]
+story += fig("fig_arc.png",
+             "Figure 9.1 — The whole program at a glance: nine tagged "
+             "versions, eleven experiments, and — kept deliberately in "
+             "the record — two falsified hypotheses and one partial "
+             "result. Below the line: the results that did not go the "
+             "algorithm's way.")
 story += plain(
     "A good research program keeps a list of the ways it might be "
     "wrong. Ours: the problems are still small; the guarantee "

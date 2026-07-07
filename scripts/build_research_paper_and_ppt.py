@@ -114,8 +114,76 @@ def build_paper_pdf():
         spaceAfter=8,
     )
 
+    # Figures injected after matching headings (generated from the
+    # committed experiment CSVs by scripts/build_book_figures.py)
+    figdir = DELIVERABLES / "book_figures"
+    cap_style = ParagraphStyle(name="FigCap", parent=body, fontSize=8,
+                               leading=10.5,
+                               textColor=colors.HexColor("#666460"),
+                               spaceBefore=2, spaceAfter=10)
+    FIGURE_MAP = {
+        "1. Introduction": [
+            ("fig_concept.png", "Figure 1: the same fixed components in "
+             "two orders — ordering alone separates success from "
+             "failure on the benchmarks of Section 5.", 6.2)],
+        "3. Algorithm": [
+            ("fig_loop.png", "Figure 2: one PRISM generation.", 6.2),
+            ("fig_moves.png", "Figure 3: the four mutation operators; "
+             "each induces a different neighborhood over orderings.",
+             6.2)],
+        "4. Theoretical Framing": [
+            ("fig_markov.png", "Figure 4: transient states drain into "
+             "the absorbing set; elitism seals it.", 6.0)],
+        "5.2 Synthetic Runtime Scaling": [
+            ("fig_scaling.png", "Figure 5: measured hitting times vs "
+             "the n³ log n shape (Iteration 2).", 4.6)],
+        "5.3 Operator-Landscape Matching (Completed Study)": [
+            ("fig_operators.png", "Figure 6: matched operators (bold) "
+             "vs mismatch climbing into the censoring cap.", 6.4)],
+        "5.4 Operator Portfolio: Automating the Choice": [
+            ("fig_portfolio.png", "Figure 7: matched vs portfolio at "
+             "n=16; dashed line = mismatched-operator failure.", 5.2),
+            ("fig_adaptive.png", "Figure 8: adaptive mode's learned "
+             "weights identify the matched operator 3/3.", 6.0)],
+        "5.5 Noise-Controlled Neural Benchmarks with Exact Ground Truth": [
+            ("fig_landscapes.png", "Figure 9: three exactly enumerated "
+             "landscapes; dashed line = global optimum.", 6.4),
+            ("fig_trajectories.png", "Figure 10: convergence "
+             "trajectories — plateaus, jumps, elitism-enforced "
+             "monotonicity.", 5.4)],
+        "5.6 Scale-Up, a Falsification, and the Locality Diagnostic": [
+            ("fig_n7_honest.png", "Figure 11: n=7 — tuning fixes "
+             "exploration (left) but random matches PRISM's quality "
+             "anyway (right).", 6.2),
+            ("fig_locality.png", "Figure 12: ρ1 per operator and "
+             "FDC reproduce all observed outcomes pre-search.", 6.4)],
+        "5.7 Application: LLM Reasoning-Chain Ordering": [
+            ("fig_llm.png", "Figure 13: position effects and the full "
+             "enumerated LLM landscape (6.3%–96.9% by order "
+             "alone).", 6.4),
+            ("fig_llm_search.png", "Figure 14: distinct evaluations to "
+             "the first exact optimum.", 4.2)],
+        "9. Conclusion": [
+            ("fig_arc.png", "Figure 15: the research arc — including "
+             "the falsifications.", 6.4)],
+    }
+
+    def inject_figures(heading):
+        for fname, cap, w in FIGURE_MAP.get(heading, []):
+            fp = figdir / fname
+            if not fp.exists():
+                continue
+            img = Image(str(fp))
+            ratio = img.imageHeight / img.imageWidth
+            img.drawWidth = w * inch
+            img.drawHeight = w * ratio * inch
+            story.append(Spacer(1, 4))
+            story.append(img)
+            story.append(Paragraph(cap, cap_style))
+
     lines = PAPER_MD.read_text(encoding="utf-8").splitlines()
     story = []
+    current_section = [""]
     i = 0
     in_code = False
     code_lines = []
@@ -160,8 +228,12 @@ def build_paper_pdf():
         if stripped.startswith("# "):
             story.append(Paragraph(clean_inline(stripped[2:]), styles["PaperTitle"]))
         elif stripped.startswith("## "):
+            inject_figures(current_section[0])
+            current_section[0] = stripped[3:].strip()
             story.append(Paragraph(clean_inline(stripped[3:]), styles["PaperH1"]))
         elif stripped.startswith("### "):
+            inject_figures(current_section[0])
+            current_section[0] = stripped[4:].strip()
             story.append(Paragraph(clean_inline(stripped[4:]), styles["PaperH2"]))
         elif stripped.startswith("- "):
             items = []
@@ -175,6 +247,7 @@ def build_paper_pdf():
             story.append(Paragraph(clean_inline(stripped), body))
         i += 1
 
+    inject_figures(current_section[0])
     if RL_GAPS.exists():
         story.append(PageBreak())
         story.append(Paragraph("Appendix Figure: PRISM-RL Gaps", styles["PaperH1"]))
