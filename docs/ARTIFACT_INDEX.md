@@ -96,6 +96,7 @@ separates existing historical material from the new continuity structure.
 | `deliverables/audio/scripts/lesson-{1..6}-*.txt` | Lesson scripts: simple, student, practitioner, research, critics, full paper narration. | Committed. |
 | `deliverables/audio/lesson-{1..6}-*.mp3` | Generated audio (~33 MB, OpenAI TTS tts-1, voices nova/onyx). | Local artifacts; regenerate via `scripts/generate_audio_lessons.py` (key from GCP Secret Manager). |
 | Notion: documentation page + PRISM Research Tracker | 2026-07 research-status section; tracker DB with formula Progress, 21 rows, 5 views. | https://app.notion.com/p/2ccc1245c0b3812396d7dadfb28e48fd |
+| `research-opportunity-mapping-2026-07-06/data/cloud_cost_analysis.csv` + `.md` | Cloud cost analysis: measured cost of iterations 2-6 on GCP (~$1 on-demand; $0.45 actually spent on TTS) + planned-benchmark costs/durations/services with cheapest-alternative column. | Prices verified 2026-07-07 (us-central1 list). |
 
 ## Current Paper and Presentation Deliverables
 
