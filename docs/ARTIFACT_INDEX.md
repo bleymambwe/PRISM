@@ -98,6 +98,14 @@ separates existing historical material from the new continuity structure.
 | Notion: documentation page + PRISM Research Tracker | 2026-07 research-status section; tracker DB with formula Progress, 21 rows, 5 views. | https://app.notion.com/p/2ccc1245c0b3812396d7dadfb28e48fd |
 | `research-opportunity-mapping-2026-07-06/data/cloud_cost_analysis.csv` + `.md` | Cloud cost analysis: measured cost of iterations 2-6 on GCP (~$1 on-demand; $0.45 actually spent on TTS) + planned-benchmark costs/durations/services with cheapest-alternative column. | Prices verified 2026-07-07 (us-central1 list). |
 
+## The PRISM Book (2026-07-07)
+
+| Path | Purpose | Status / Notes |
+| --- | --- | --- |
+| `deliverables/PRISM_Book.pdf` | Illustrated multi-level book (14 pp): undergrad "in plain terms" boxes + rigorous bodies + "for researchers" notes; 8 figures generated from committed experiment CSVs; covers iterations 2-9. | Rebuild: `python scripts/build_book_figures.py && python scripts/build_prism_book.py`. |
+| `scripts/build_book_figures.py` | All book figures from real data (concept, loop, scaling, operators, portfolio, landscapes, locality heatmap, LLM position effects). | `deliverables/book_figures/*.png`. |
+| `scripts/build_prism_book.py` | Book layout/content (reportlab; cover, TOC, 9 chapters, theorem boxes, experiment ledger appendix). | Complete. |
+
 ## Current Paper and Presentation Deliverables
 
 | Path | Purpose | Status / Notes |
