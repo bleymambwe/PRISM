@@ -1,6 +1,34 @@
 # PRISM Literature and Source Review Log
 
-Last updated: 2026-07-06
+Last updated: 2026-07-07 (Iteration 10 — first direct paper reviews)
+
+## Direct Reviews (Iteration 10)
+
+### Real et al. 2019 — Regularized Evolution for Image Classifier Architecture Search
+- Local path: `research-opportunity-mapping-2026-07-06/papers/pdfs/05_*.pdf`
+- Reviewed: 2026-07-07 (direct). Key mechanism: aging evolution —
+  sample-tournament, mutate winner, append child, remove OLDEST.
+- Impact on PRISM: tested in Experiment L; fixes premature convergence
+  (48%→78% hit rate on parity n=7) but converges to random's level on
+  weak-locality landscapes; elitist scheme stays faster on structured
+  ones. Adopted into guideline D15. Theory caveat: breaks strict
+  elitism, so the absorption theorem needs restating for aging mode.
+
+### White et al. — BANANAS: Bayesian Optimization with Neural Architectures
+- Local path: `papers/pdfs/14_*.pdf`. Reviewed: 2026-07-07 (direct).
+- Key mechanism: predictor over encodings + acquisition over
+  mutation-proposed candidates; encoding choice dominates.
+- Impact: positional-one-hot ridge surrogate tested in Experiment L —
+  mild win on the LLM landscape (matches its position-effect
+  structure), inert on parity. Follow-up: precedence-pair encoding.
+
+### Abdelfattah et al. 2021 — Zero-Cost Proxies for Lightweight NAS
+- Local path: `papers/pdfs/15_*.pdf`. Reviewed: 2026-07-07 (direct).
+- Key result: single-minibatch proxies preserve rank (τ≈0.82 on
+  NAS-Bench-201), speeding all search families ~4×.
+- Impact: mapped to PRISM as k=1 screen → k=3 confirm multi-fidelity
+  gating for expensive neural fitness; relevant when GPU-scale
+  benchmarks start; no-op on cached landscapes.
 
 ## Iteration-3 Entries
 

@@ -1,6 +1,27 @@
 # PRISM Decision Log
 
-Last updated: 2026-07-07 (Iteration 8)
+Last updated: 2026-07-07 (Iteration 10)
+
+## 2026-07-07 (Iteration 10): Replacement Policy Joins the Pre-Flight Guideline
+
+Decision (D15): the D14 pre-flight now also selects the replacement
+policy. FDC materially negative → elitist PRISM (matched operator or
+portfolio): fastest, keeps the Theorem-2.2 guarantee. FDC ≈ 0 →
+random sampling or aging-PRISM (statistically equivalent there; aging
+gives anytime population behavior). Aging evolution is the safe
+default when the pre-flight is skipped, because it never underperforms
+random — unlike elitist PRISM, which can (Experiment I).
+
+Evidence: Experiment L, 40-seed verification on parity n=7 — aging
+78% hit rate vs elitist 48% vs random 75%; elitist fastest on
+structured XOR n=6 (18.5 vs 28.7 mean evals).
+
+Trade-off recorded: aging sacrifices strict elitism, so almost-sure
+absorption no longer holds as stated (best-ever record retains the
+optimum, but the population can lose it).
+
+Reversal condition: a hybrid (elitist + stagnation-triggered aging
+restarts) that dominates both — natural Iteration-11 candidate.
 
 ## 2026-07-07 (Iteration 8): The Locality Pre-Flight Is Mandatory
 

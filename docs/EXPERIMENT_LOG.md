@@ -1,6 +1,26 @@
 # PRISM Experiment Log
 
-Last updated: 2026-07-07 (Iteration 9)
+Last updated: 2026-07-07 (Iteration 10)
+
+## 2026-07-07 (Iteration 10, Experiment L): Literature-Driven Improvements — GUIDELINE, NOT SILVER BULLET
+
+- Candidates from the downloaded papers: aging evolution (Real et al.
+  2019), BANANAS-style surrogate (White et al.; positional one-hot +
+  ridge), zero-cost proxies (Abdelfattah et al.; noted for GPU scale).
+- Protocol: 4 methods × 3 cached landscapes × 15 seeds (free), 40-seed
+  verification on parity n=7, cap 500 distinct evals.
+- Results: aging lifts parity-n=7 hit rate 48% → 78% at equal budget
+  (fixes premature convergence without hyperparameter surgery) but
+  lands exactly at random's 75% — as the locality theory predicts for
+  FDC ≈ 0. Elitist PRISM remains fastest on structured landscapes
+  (18.5 vs 28.7 evals, XOR n=6). Surrogate wins mildly only where its
+  encoding matches structure (LLM 5.8 evals); inert on parity.
+- Decision D15: replacement policy added to the pre-flight guideline
+  (FDC negative → elitist+matched/portfolio; FDC ≈ 0 → random or
+  aging; aging = safe default). Theory note: aging sacrifices strict
+  elitism, so Theorem 2.2's absorption argument needs restating.
+- Code/outputs: `experiments/iteration-10/`. Write-up:
+  `iterations/2026-07-07-iteration-10-literature-improvements.md`.
 
 ## 2026-07-07 (Iteration 9, Experiment K): LLM Reasoning-Chain Ordering — FLAGSHIP RESULT
 
