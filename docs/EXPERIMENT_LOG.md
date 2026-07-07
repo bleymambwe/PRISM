@@ -1,6 +1,28 @@
 # PRISM Experiment Log
 
-Last updated: 2026-07-07 (Iteration 8)
+Last updated: 2026-07-07 (Iteration 9)
+
+## 2026-07-07 (Iteration 9, Experiment K): LLM Reasoning-Chain Ordering — FLAGSHIP RESULT
+
+- Setup: 6 reasoning-module instructions permuted in the prompt;
+  fitness = Gemini 2.5 Flash-Lite (temp 0) accuracy on a fixed
+  32-question GSM8K subset; key from GCP Secret Manager. All 720
+  orderings enumerated (~23k cached API calls, ≈$3-5).
+- Ordering effect: accuracy 0.063-0.969 by ordering alone (std 0.230).
+  Position effects: ANSWER-format first 0.435 vs last 0.870; COMPUTE
+  first 0.908 vs fifth 0.585.
+- D14 pre-flight validated end-to-end on a real application: rho1 →
+  insert (0.547; the precedence-type theoretical prediction),
+  FDC −0.346 → search beats random. Both correct.
+- Search (15 seeds, exact): PRISM mean 6 distinct evals to first
+  optimum vs random 18 (3×); optima moderately dense (60/720 = 8.3%),
+  so the honest framing is a modest absolute edge on a friendly
+  landscape with the methodology fully transferred.
+- Code: `experiments/iteration-09/llm_chain_experiment.py` (staged:
+  variance gate → enumeration; per-call resumable cache) +
+  `analyze_llm_landscape.py`.
+- Outputs: `experiments/iteration-09/results/`. Write-up:
+  `iterations/2026-07-07-iteration-09-llm-reasoning-chain.md`.
 
 ## 2026-07-07 (Iteration 8, Experiment J): Landscape Locality Diagnostic — H11 CONFIRMED
 

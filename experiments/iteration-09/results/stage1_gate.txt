@@ -1,0 +1,1 @@
+STAGE 1 (variance gate): 30 orderings, mean acc 0.664, min 0.188, max 0.969, std 0.2586 -> PROCEED

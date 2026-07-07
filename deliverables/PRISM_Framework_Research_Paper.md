@@ -264,7 +264,37 @@ matched operator and whether evolutionary search should beat random —
 is now a mandatory step for every new PRISM application, and, we
 suggest, for permutation-search applications generally.
 
-### 5.7 Lightweight Reinforcement Learning
+### 5.7 Application: LLM Reasoning-Chain Ordering
+
+The flagship application evaluates the entire methodology on a real
+problem: six fixed reasoning-module instructions (restate, identify,
+plan, compute, check, answer-format) whose order in the prompt is the
+permutation; fitness is the accuracy of Gemini 2.5 Flash-Lite
+(temperature 0) on a fixed 32-question GSM8K subset. All 720 orderings
+were enumerated exactly (~23,000 cached API calls, roughly three to
+five dollars).
+
+**Ordering swings accuracy from 6.3 percent to 96.9 percent** (mean
+0.72, std 0.23) — the largest order effect measured in this project.
+The position-effect table is directly interpretable: placing the
+answer-format instruction first drops mean accuracy to 0.435 (the model
+answers before reasoning) versus 0.870 when placed last; placing the
+compute instruction first yields 0.908 versus 0.585 in fifth position
+(early calculation with later verification beats deferred calculation).
+
+The pre-flight diagnostic of Section 5.6 predicted the experiment's
+outcome before any search ran: rho1 identified insert as the matched
+operator (0.547, versus swap 0.411 and inversion 0.297) — exactly the
+operator theory's prediction for precedence-type problems — and
+FDC = -0.346 predicted that search would beat random. Both predictions
+held: PRISM reached an exactly optimal ordering in a mean of 6 distinct
+evaluations across 15 seeds, versus 18 for random-without-replacement,
+with better best-found quality at small budgets. With optima at 8.3
+percent density the landscape is friendly and random search remains
+respectable; harder instances (more modules, harder questions) are the
+natural stress test.
+
+### 5.8 Lightweight Reinforcement Learning
 
 PRISM was also tested as an RL ordering framework through two small benchmarks.
 
