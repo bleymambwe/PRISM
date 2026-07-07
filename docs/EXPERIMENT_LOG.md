@@ -1,6 +1,32 @@
 # PRISM Experiment Log
 
-Last updated: 2026-07-07
+Last updated: 2026-07-07 (Iteration 7)
+
+## 2026-07-07 (Iteration 7, Experiment I): n=7 Parity Discriminating Protocol — H10 FALSIFIED
+
+- Objective: PRISM vs random under evaluations-to-first-optimum on a
+  sparse-optimum ground-truth landscape (fixes It-6 Stage B).
+- Code: `experiments/iteration-07/n7_parity_protocol.py`
+  (multiprocessing enumeration, 3 workers, budgeted/resumable) +
+  `extended_analysis.py` (free, cached).
+- Landscape: all 5040 orderings enumerated — optimum 1.0000 held by
+  14/5040 (0.28%); std 0.113. H9 (sparsity) confirmed.
+- Headline: default PRISM (pop 20, p_m 0.05) hit 4/15 seeds (premature
+  convergence: only ~103 distinct orderings explored); random hits
+  100% at mean 318 evals. At PRISM's actual budget random would hit
+  ~31% ≈ PRISM's 27%. Tuned (pop 40, p_m 0.6): 15/15 hits but at mean
+  384 evals — still not better than random's 318/336. Best-found
+  quality at equal budgets: random matches or beats PRISM at every
+  budget ≥50.
+- Conclusion: **on this neural landscape PRISM has no advantage over
+  uniform random sampling under a distinct-evaluation cost model** —
+  landscape locality, not the algorithm, governs when evolutionary
+  search pays (contrast: synthetic landscapes where matched-operator
+  PRISM beats random by orders of magnitude).
+- Decisions D12 (n≥7 hyperparameters + mandatory random baseline) and
+  D13 (locality measurement before attributing wins) adopted.
+- Outputs: `experiments/iteration-07/results/`. Write-up:
+  `iterations/2026-07-07-iteration-07-n7-parity-protocol.md`.
 
 ## 2026-07-07 (Iteration 6, Experiment H): v4 Scale-Up — STAGE A SUCCESS, STAGE B SATURATED
 

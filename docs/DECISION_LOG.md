@@ -1,6 +1,31 @@
 # PRISM Decision Log
 
-Last updated: 2026-07-07
+Last updated: 2026-07-07 (Iteration 7)
+
+## 2026-07-07 (Iteration 7): Scale-Aware Hyperparameters + Mandatory Random Baseline
+
+Decision (D12): pop 20 / p_m 0.05 are n≤6 settings. For n≥7 use
+pop ≥ 40 and p_m ≥ 0.5 (15/15 exact hits at n=7 vs 4/15 with defaults).
+Every search-quality claim must include a random-without-replacement
+baseline under the distinct-evaluation metric.
+
+Evidence: Experiment I sensitivity sweep (free, against the cached
+5040-permutation landscape).
+
+Reversal condition: a principled adaptive schedule (e.g., p_m scaled to
+maintain expected novel-offspring rate) that dominates fixed settings.
+
+## 2026-07-07 (Iteration 7): Locality Before Attribution
+
+Decision (D13): before attributing any application win to PRISM
+(starting with the LLM reasoning-chain experiment), measure landscape
+locality (fitness correlation of move-adjacent orderings) and compare
+to the random baseline. Rationale: Experiment I showed PRISM ≈ random
+on a weak-locality neural landscape while beating random by orders of
+magnitude on structured synthetic landscapes — the advantage is a
+landscape property, and claims must be conditioned on it.
+
+Reversal condition: none; this is a methodology standard.
 
 ## 2026-07-07 (Iteration 6): Runtime Secrets from Google Cloud Secret Manager
 

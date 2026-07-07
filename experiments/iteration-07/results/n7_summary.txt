@@ -1,0 +1,4 @@
+n=7 parity landscape: optimum 1.0000 (14/5040 = 0.28%), min 0.3750, mean 0.6838, std 0.1130
+PRISM (portfolio): mean 54, median 48 distinct evals to first optimum (4 hits, 11 misses within cap)
+random: mean 318, median 244 evals to first optimum (15 seeds)
+speedup (random mean / PRISM mean): 5.9x

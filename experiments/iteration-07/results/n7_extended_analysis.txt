@@ -1,0 +1,18 @@
+random hit prob within 50 distinct evals: 0.13
+random hit prob within 130 distinct evals: 0.31
+random hit prob within 318 distinct evals: 0.60
+random hit prob within 384 distinct evals: 0.67
+expected random evals to first optimum: 336
+
+config                 hits  mean evals(hit)  mean explored
+pop=20 p_m=0.05     4/15               54            103
+pop=20 p_m=0.3      9/15              146            236
+pop=40 p_m=0.3     10/15              214            319
+pop=40 p_m=0.6     15/15              384            389
+pop=60 p_m=0.5     15/15              398            404
+
+ budget  PRISM best (mean)  random best (mean)  optimum=1.0000
+     25             0.9083              0.9028
+     50             0.9389              0.9528
+    100             0.9556              0.9639
+    200             0.9583              0.9778
