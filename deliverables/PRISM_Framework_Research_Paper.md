@@ -144,8 +144,14 @@ operators (log-log exponents 2.79-3.44; E[T]/(n^3 ln n) flat across a 3x
 range of n). Two boundaries are established empirically and must
 accompany any statement of the theory: polynomial-time behavior requires
 operator-landscape match and top-end locality; and the aging replacement
-policy sacrifices strict elitism, so the absorption argument applies to
-the best-ever record rather than the population.
+policy sacrifices strict elitism. Appendix B restates the guarantees
+precisely for each replacement variant: the hybrid retains almost-sure
+population convergence verbatim; aging retains almost-sure *discovery*
+(convergence of the best-ever record) with an explicit
+landscape-independent geometric bound, while population-level absorption
+provably fails; and elitist portfolio search additionally carries a
+crude unconditional worst-case bound that complements the
+landscape-conditional polynomial claim.
 
 ## 6. Experiments
 
@@ -417,6 +423,93 @@ Mixed-type landscapes; a second LLM and harder question set;
 uncertainty-aware surrogate acquisition; n>=9 sampled-statistics
 protocol; formal restatement of absorption under aging; primary-source
 verification of the runtime bound's assumptions.
+
+## Appendix B. Convergence Statements for Replacement Variants
+
+This appendix closes the theory gap opened by Section 6.8: aging
+replacement breaks strict elitism, so the original absorption argument
+does not apply as stated. We restate what survives, for the exact
+implementations in the repository. Throughout, S_n is the symmetric
+group, F : S_n -> R the fitness, Omega_opt = argmax F (|Omega_opt| =
+m >= 1), and "portfolio mutation" draws one of {swap, insert,
+inversion, scramble} uniformly and applies it once.
+
+**Proposition B.1 (one-step universal reachability).** Under portfolio
+mutation as implemented, for every parent pi and every target sigma in
+S_n,
+
+  Pr(mutate(pi) = sigma) >= delta_0 := 1 / (4 C(n,2) n!) = 1 / (2 n (n-1) n!).
+
+*Proof.* With probability 1/4 the scramble operator is drawn; its
+segment endpoints i < j are uniform over the C(n,2) unordered pairs,
+so with probability 1/C(n,2) the segment is the entire permutation;
+the segment is then shuffled uniformly (Fisher-Yates), so every
+arrangement of S_n — in particular sigma — results with probability
+1/n!. Multiplying the three factors gives the bound; other operators
+and partial segments can only add probability. (Numerically verified:
+2,000,000 Monte-Carlo draws at n=5 give 2.21e-4 against the bound
+2.08e-4, and the full-segment shuffle is uniform to within Monte-Carlo
+noise across all 24 targets at n=4;
+`experiments/iteration-15/theory_check.py`.) ∎
+
+**Proposition B.2 (aging mode: almost-sure discovery, geometric
+bound; no population absorption).** Consider aging-PRISM (population
+mu; each step: tournament over a random sample, one portfolio
+mutation of the winner, append child, remove oldest). Let T be the
+first step at which an optimal ordering is evaluated, and let b_t be
+the best-ever-evaluated fitness (the record).
+
+(i) Each step's child lies in Omega_opt with probability >= m delta_0,
+regardless of the population's contents (Proposition B.1 applies to
+whatever parent the tournament selects). Hence T is stochastically
+dominated by a Geometric(m delta_0) variable:
+
+  Pr(T > t) <= (1 - m delta_0)^t,  E[T] <= 2 n (n-1) n! / m.
+
+The record process b_t is non-decreasing by construction and equals
+max F for all t >= T; therefore the record converges to the optimum
+almost surely, with the explicit landscape-independent bound above.
+(For parity n=7 with m = 14 the bound is 30,240 steps; the observed
+40-seed mean is 222.5 [170, 277] — the bound is a crude worst case,
+as intended.)
+
+(ii) Population-level absorption fails: an optimal individual entering
+the population at step t is deterministically removed at step t + mu
+(first-in-first-out), and the event that it is not re-created in the
+intervening mu steps has positive probability (e.g., every one of the
+mu mutation draws produces a non-optimal child, each of which has
+probability bounded away from zero). Hence states whose populations
+contain an optimum are not absorbing, and no almost-sure statement
+about the *population* holds without the record. This is the precise
+sense in which "aging trades the letter of the guarantee for
+robustness" (Section 6.8). ∎
+
+**Proposition B.3 (hybrid mode: Theorem 2.2 verbatim).** The
+elitist-with-restart hybrid preserves the best-ever individual by
+construction: in normal generations the elite slot copies the current
+population maximum, and every restart re-injects the best-ever
+ordering explicitly before re-randomizing the remainder. By induction
+the population always contains an individual of best-ever fitness, so
+populations containing an optimum form an absorbing set; irreducibility
+is unchanged (mutation is untouched). The almost-sure convergence
+argument for elitist PRISM therefore applies to the hybrid without
+modification. ∎
+
+**Remark B.4 (unconditional worst-case bound for elitist portfolio
+search).** In elitist PRISM with portfolio mutation, each generation
+produces mu - 1 children, each mutated with probability p_m, so an
+optimum is discovered per generation with probability >=
+1 - (1 - p_m m delta_0)^(mu-1). With elitism, discovery implies
+permanent retention, giving
+
+  E[generations to optimum] <= 1 / (1 - (1 - p_m m delta_0)^(mu-1))
+                             ~ 2 n (n-1) n! / ((mu-1) p_m m).
+
+This factorial-order bound is vacuous in practice but exact and
+assumption-free; it brackets the claim of Section 5 from above, while
+the O(n^3 log n) statement — which requires landscape structure — is
+the claim of practical interest. The pair makes the division of labor
+explicit: guarantees are cheap; *rates* are landscape-conditional.
 
 ## References
 

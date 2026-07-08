@@ -1,5 +1,20 @@
 # PRISM Experiment Log
 
+## 2026-07-08 (Iteration 15): Aging-Mode Theory Restatement — GAP 2 CLOSED
+
+- Key fact: implemented scramble reaches ANY ordering from ANY parent in
+  one move with prob >= 1/(2n(n-1)n!) (full-segment + uniform shuffle);
+  portfolio inherits it. Numerically verified (2M draws: 2.21e-4 vs
+  bound 2.08e-4; full-segment shuffle uniform over all 24 targets, n=4).
+- Paper Appendix B (new): B.1 one-step reachability; B.2 aging = a.s.
+  RECORD convergence with explicit geometric bound (E[T] <= 2n(n-1)n!/m;
+  parity n=7 bound 30,240 vs observed 222.5) + proof that population
+  absorption FAILS; B.3 hybrid preserves best-ever by construction =>
+  original theorem verbatim (the theory-preserving robustness option);
+  B.4 unconditional worst-case bound for elitist portfolio.
+- Outputs: experiments/iteration-15/results/theory_check.txt. Write-up:
+  iterations/2026-07-08-iteration-15-theory-restatement.md.
+
 ## 2026-07-08 (Iteration 14): Statistics Pass + Claims Audit — ONE HEADLINE CORRECTED
 
 - 40-seed Wilson/bootstrap CIs for all headline comparisons (4

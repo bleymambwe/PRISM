@@ -1,0 +1,11 @@
+check 1 (one-step reachability, n=5, 2,000,000 draws):
+  theoretical lower bound delta0 = 2.083e-04
+  observed Pr(child == distant target) = 2.210e-04 (442 hits)  -> bound HOLDS
+
+check 2 (full-segment scramble uniformity, n=4):
+  80091 full-segment draws over 24/24 targets; expected 3337 each; max relative deviation 0.034 -> UNIFORM (within MC noise)
+
+check 3 (aging discovery bound, parity n=7, m=14):
+  Proposition B.2 bound: E[T_discover] <= 30,240 steps
+  observed (Iteration 14, 40 seeds): mean 222.5, bootstrap CI [170, 277] distinct evaluations
+  observed << bound, as expected of a worst-case, landscape-independent guarantee
