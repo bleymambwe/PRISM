@@ -233,9 +233,14 @@ instruction first drops mean accuracy to 0.435 (the model answers before
 reasoning) versus 0.870 last; the compute instruction first yields 0.908
 versus 0.585 in fifth position. The pre-flight predicted the experiment:
 rho1 selected insert (0.547) — the precedence-type prediction — and
-FDC = -0.346 predicted search beats random. Both held: PRISM reached an
-exact optimum in 6 mean distinct evaluations versus 18 for random
-(15/15 seeds). Caveat: optima are moderately dense (60/720).
+FDC = -0.346 predicted searchable structure. At 40 seeds with bootstrap
+CIs, all methods reach an exact optimum quickly and comparably (PRISM
+9.9 [7,13] mean distinct evaluations versus random 10.8 [8,14]; an
+earlier 15-seed reading suggesting a 3x gap did not survive the larger
+seed count and is corrected here). With optima at 60/720 density, the
+scientific payload of this experiment is the 90-point ordering effect,
+the interpretable position-effect table, and the pre-flight's validated
+forecasts — not search superiority on a landscape this friendly.
 
 A harder instance (n = 8 modules; 40,320 orderings; first application
 beyond enumerability; hard-capped spend $5.56) widened the ordering
@@ -261,13 +266,16 @@ The strongest result of the program's improvement studies: a
 precedence-encoded surrogate (binary "i before j" features, ridge
 regression, mutation-proposed candidates, evaluate-top-predicted). On
 the pure-precedence Kendall landscape with a single optimum among 5,040
-orderings it reaches the optimum in 13.5 mean evaluations — 4x faster
-than matched-operator elitist search (55.7) — while random sampling finds
-it in 0/15 runs within the 500-evaluation cap. It is also best or
-tied-best on the XOR n=6 and parity n=7 landscapes. A positional
-encoding, by contrast, is inert on parity and only mildly helpful on the
-LLM landscape: surrogate power is an encoding-landscape match, exactly
-parallel to operator matching — and detectable by the same pre-flight.
+orderings it reaches the optimum in 14.8 mean evaluations, 95% CI
+[14, 15], versus matched-operator elitist search at 54.2 [50, 59] —
+non-overlapping intervals at 40 seeds — while random sampling finds the
+optimum in only 2/40 runs within the 500-evaluation cap. It is
+tied-best on XOR n=6 and parity n=7 (where, per Section 6.6, no method
+separates from random: all 40-seed hit-rate CIs overlap random's
+[0.60, 0.86]). A positional encoding, by contrast, is inert on parity
+and indistinguishable elsewhere: surrogate power is an
+encoding-landscape match, exactly parallel to operator matching — and
+detectable by the same pre-flight.
 
 ## 7. The PRISM Protocol
 
@@ -332,6 +340,83 @@ contribution is not that evolution beats everything; it is a small,
 analyzable optimizer whose failure modes are mapped as carefully as its
 successes, and a protocol that tells you, before you spend, which tool
 to use and whether to search at all.
+
+## Appendix A. Experimental Details and Threats to Validity
+
+Structured for reproduction; one block per experiment family. All runs:
+seeded numpy RNGs, distinct-evaluation cost model with caching,
+budgeted-resumable scripts in `experiments/iteration-XX/`.
+
+### A.1 Synthetic operator studies (C, D, F)
+
+Motivation: isolate operator-neighborhood effects on landscapes of
+known type. Setup: hamming (absolute position), kendall (precedence),
+adjacency (routing), deceptive objectives, closed-form, deterministic;
+n in {6,8,10,12,14,16}; 15 seeds per cell; cap 10,000 generations
+(censored runs recorded, never discarded). Variables: operator
+(swap/insert/inversion/scramble/portfolio/adaptive) x landscape x n.
+Hyperparameters: population 20, tournament 3, p_m 0.05, elitism 1.
+Metrics: generations to optimum; censoring rate. Threats: single
+hyperparameter set (mitigated by the D12 sweep at n=7); landscape
+types are pure — real problems mix types (open problem, Section 9).
+
+### A.2 Ground-truth neural benchmarks (G, H, I)
+
+Motivation: eliminate best-observed bias; grade search exactly. Setup:
+v4 = n permuted residual bottleneck blocks (widths/activations listed
+in `toy_problems_v4.py`), weight init seeded from (permutation, trial),
+fitness = mean accuracy of k=3 trials, 50-100 Adam steps, lr 0.1.
+Enumerations: 120 (n=5), 720 (n=6), 5,040 (n=7) orderings; determinism
+verified by 103 accidental re-evaluations matching exactly. Baselines:
+six methods (elitist, aging, hybrid, two surrogates, random) at 40
+seeds, Wilson 95% CIs (Iteration-14 statistics pass; full table in
+`experiments/iteration-14/results/headline_cis.csv`). Key CI-backed
+results: parity n=7 elitist 19/40 [0.33,0.63] < random 30/40
+[0.60,0.86]; no method's hit-rate CI separates from random's on that
+landscape; kendall n=7 surr-prec 14.8 [14,15] < elitist 54.2 [50,59],
+random 2/40. Threats: the landscape family depends on the seeding
+convention; k=3 is one noise-control choice; toy scale.
+
+### A.3 Locality diagnostic (J) and its sampling error
+
+Motivation: predict search outcomes pre-search. Metrics: rho1 =
+Pearson correlation of f(pi) vs f(op(pi)) over sampled moves; FDC =
+correlation of fitness with Cayley distance to nearest optimum.
+Iteration-14 reliability study (200 resamples at realistic pre-flight
+sizes — 100 move-pairs per operator, 200 FDC points): correct-operator
+pick rate 0.99 (hamming), 0.94 (kendall), 0.96 (adjacency);
+deceptive-regime call stability 1.00; FDC regime call stability 0.83
+(xor n=6), 0.78 (parity n=7), 1.00 (LLM). When rho1 carries no signal
+(neural landscapes, rho1 0.00-0.06) the operator pick is arbitrary
+(agreement 0.39-0.41) — precisely the regime in which the operator
+choice is immaterial. Threats: live pre-flights approximate FDC with
+distance-to-best-known (validated once, Experiment M); scramble's rho1
+is inflated by identity moves and is excluded from argmax.
+
+### A.4 LLM instruction-ordering (K, M)
+
+Motivation: a real, API-priced ordering surface with enumerable ground
+truth at n=6. Setup: modules as numbered prompt steps; Gemini 2.5
+Flash-Lite, temperature 0, max 600-650 output tokens; fixed GSM8K test
+subsets (seed 42; 32 questions at n=6, first 20 at n=8); answer = last
+'Answer: <number>' match, fallback last number; per-(ordering,question)
+cache so each API call is paid once; staged variance gate before any
+budget. Cost: ~$3-5 (n=6, 23k calls), $5.56 (n=8, 23.8k calls,
+hard-capped in code). Metrics: accuracy per ordering; position
+effects; distinct evaluations to first exact optimum vs
+random-without-replacement. Threats: single model snapshot;
+deterministic decoding is not bit-guaranteed across API versions (the
+cache freezes one snapshot); extraction regex; GSM8K pretraining
+contamination affects absolute accuracy but not ordering comparisons
+(shared across orderings); fitness granularity (1/20) made n=8 optima
+dense — the D16 resolution rule now precedes any search spend.
+
+### A.5 What additional experiments would strengthen the work
+
+Mixed-type landscapes; a second LLM and harder question set;
+uncertainty-aware surrogate acquisition; n>=9 sampled-statistics
+protocol; formal restatement of absorption under aging; primary-source
+verification of the runtime bound's assumptions.
 
 ## References
 

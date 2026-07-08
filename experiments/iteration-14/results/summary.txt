@@ -1,0 +1,41 @@
+
+== xor_n6 (optimum 1.0000, 33/720) ==
+  elitist    hits 40/40 CI[0.91,1.00]  evals   19.6 [14,26]      best@200 1.0000 [1.0000,1.0000]
+  aging      hits 40/40 CI[0.91,1.00]  evals   27.1 [18,36]      best@200 1.0000 [1.0000,1.0000]
+  hybrid     hits 40/40 CI[0.91,1.00]  evals   18.6 [14,24]      best@200 1.0000 [1.0000,1.0000]
+  surr-pos   hits 40/40 CI[0.91,1.00]  evals   18.5 [13,25]      best@200 1.0000 [1.0000,1.0000]
+  surr-prec  hits 40/40 CI[0.91,1.00]  evals   16.8 [12,22]      best@200 1.0000 [1.0000,1.0000]
+  random     hits 40/40 CI[0.91,1.00]  evals   20.3 [14,28]      best@200 1.0000 [1.0000,1.0000]
+
+== parity_n7 (optimum 1.0000, 14/5040) ==
+  elitist    hits 19/40 CI[0.33,0.63]  evals  116.5 [79,158]     best@200 0.9740 [0.9677,0.9802]
+  aging      hits 31/40 CI[0.62,0.88]  evals  222.5 [170,277]    best@200 0.9740 [0.9677,0.9802]
+  hybrid     hits 29/40 CI[0.57,0.84]  evals  224.1 [178,273]    best@200 0.9708 [0.9635,0.9781]
+  surr-pos   hits 33/40 CI[0.68,0.91]  evals  191.4 [151,235]    best@200 0.9792 [0.9729,0.9854]
+  surr-prec  hits 33/40 CI[0.68,0.91]  evals  197.0 [149,248]    best@200 0.9781 [0.9719,0.9844]
+  random     hits 30/40 CI[0.60,0.86]  evals  210.1 [172,251]    best@200 0.9750 [0.9688,0.9812]
+
+== llm_chain_n6 (optimum 0.9688, 60/720) ==
+  elitist    hits 40/40 CI[0.91,1.00]  evals    9.9 [7,13]       best@200 0.9688 [0.9688,0.9688]
+  aging      hits 40/40 CI[0.91,1.00]  evals   10.2 [7,13]       best@200 0.9688 [0.9688,0.9688]
+  hybrid     hits 40/40 CI[0.91,1.00]  evals   10.9 [8,15]       best@200 0.9688 [0.9688,0.9688]
+  surr-pos   hits 40/40 CI[0.91,1.00]  evals    9.7 [7,13]       best@200 0.9688 [0.9688,0.9688]
+  surr-prec  hits 40/40 CI[0.91,1.00]  evals    9.7 [7,13]       best@200 0.9688 [0.9688,0.9688]
+  random     hits 40/40 CI[0.91,1.00]  evals   10.8 [8,14]       best@200 0.9688 [0.9688,0.9688]
+
+== kendall_n7 (optimum 1.0000, 1/5040) ==
+  elitist    hits 40/40 CI[0.91,1.00]  evals   54.2 [50,59]      best@200 1.0000 [1.0000,1.0000]
+  aging      hits 40/40 CI[0.91,1.00]  evals   72.5 [64,81]      best@200 1.0000 [1.0000,1.0000]
+  hybrid     hits 40/40 CI[0.91,1.00]  evals   91.5 [84,100]     best@200 1.0000 [1.0000,1.0000]
+  surr-pos   hits 40/40 CI[0.91,1.00]  evals  185.8 [137,238]    best@200 0.9762 [0.9655,0.9857]
+  surr-prec  hits 40/40 CI[0.91,1.00]  evals   14.8 [14,15]      best@200 1.0000 [1.0000,1.0000]
+  random     hits  2/40 CI[0.01,0.17]  evals  197.5 [139,256]    best@200 0.8929 [0.8786,0.9072]
+
+== pre-flight sampling error (200 resamples each) ==
+  xor_n6         pick=insert(0.41) n/a            FDC -0.20 CI[-0.35,-0.05] regime=neg stable=0.83
+  parity_n7      pick=insert(0.39) n/a            FDC -0.05 CI[-0.20,+0.10] regime=zero stable=0.78
+  llm_chain_n6   pick=insert(0.85) n/a            FDC -0.36 CI[-0.45,-0.28] regime=neg stable=1.00
+  hamming_n7     pick=swap(0.99) 0.99 correct   FDC -0.82 CI[-0.86,-0.77] regime=neg stable=1.00
+  kendall_n7     pick=insert(0.94) 0.94 correct   FDC -0.31 CI[-0.44,-0.20] regime=neg stable=0.99
+  adjacency_n7   pick=inversion(0.96) 0.96 correct   FDC -0.23 CI[-0.37,-0.10] regime=neg stable=0.87
+  deceptive_n7   pick=swap(0.95) n/a            FDC +0.81 CI[+0.52,+0.86] regime=pos stable=1.00

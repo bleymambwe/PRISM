@@ -1,0 +1,8 @@
+landscape,modal_operator_pick,pick_agreement@100pairs,matched_pick_rate,fdc_full,fdc_sample_ci,regime,regime_call_stability@200pts
+xor_n6,insert,0.41,n/a,-0.202,"[-0.35,-0.05]",neg,0.83
+parity_n7,insert,0.39,n/a,-0.052,"[-0.20,0.10]",zero,0.78
+llm_chain_n6,insert,0.85,n/a,-0.358,"[-0.45,-0.28]",neg,1.0
+hamming_n7,swap,0.99,0.99 correct,-0.824,"[-0.86,-0.77]",neg,1.0
+kendall_n7,insert,0.94,0.94 correct,-0.313,"[-0.44,-0.20]",neg,0.99
+adjacency_n7,inversion,0.96,0.96 correct,-0.227,"[-0.37,-0.10]",neg,0.87
+deceptive_n7,swap,0.95,n/a,0.81,"[0.52,0.86]",pos,1.0

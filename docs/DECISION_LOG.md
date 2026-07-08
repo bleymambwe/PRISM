@@ -1,5 +1,13 @@
 # PRISM Decision Log
 
+## 2026-07-08 (Iteration 14): Headline Claims Require >=40-Seed CIs
+
+Decision (D18): any result promoted to abstract/headline status must be
+backed by >=40 seeds with confidence intervals (or exact enumeration);
+15-seed readings are exploratory. Evidence: the It-9 "3x faster"
+claim reversed at 40 seeds. Reversal condition: none — methodology
+standard.
+
 Last updated: 2026-07-07 (Iteration 10)
 
 ## 2026-07-08 (Iteration 12): Encoding-Matched Surrogates Join the Guideline

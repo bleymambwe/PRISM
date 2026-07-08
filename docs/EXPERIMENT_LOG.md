@@ -1,5 +1,18 @@
 # PRISM Experiment Log
 
+## 2026-07-08 (Iteration 14): Statistics Pass + Claims Audit — ONE HEADLINE CORRECTED
+
+- 40-seed Wilson/bootstrap CIs for all headline comparisons (4
+  landscapes x 6 methods) + pre-flight sampling-error study (200
+  resampled pre-flights): operator pick 0.94-0.99 correct on typed
+  landscapes, deceptive call 1.00 stable, parity regime call 0.78.
+- CORRECTION: the It-9 "PRISM 3x faster than random" LLM claim did not
+  survive 40 seeds (9.9 [7,13] vs 10.8 [8,14]); downgraded everywhere.
+  Kendall surrogate result strengthened (disjoint CIs). Full audit:
+  docs/ICML_READINESS_AUDIT.md.
+- Outputs: experiments/iteration-14/results/. Write-up:
+  iterations/2026-07-08-iteration-14-rigor-and-communication.md.
+
 Last updated: 2026-07-07 (Iteration 10)
 
 ## 2026-07-08 (Iteration 12, Experiment N): Hybrid + Precedence Surrogate — FIRST METHOD TO BEAT ELITIST PRISM
