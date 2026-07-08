@@ -98,6 +98,12 @@ separates existing historical material from the new continuity structure.
 | Notion: documentation page + PRISM Research Tracker | 2026-07 research-status section; tracker DB with formula Progress, 21 rows, 5 views. | https://app.notion.com/p/2ccc1245c0b3812396d7dadfb28e48fd |
 | `research-opportunity-mapping-2026-07-06/data/cloud_cost_analysis.csv` + `.md` | Cloud cost analysis: measured cost of iterations 2-6 on GCP (~$1 on-demand; $0.45 actually spent on TTS) + planned-benchmark costs/durations/services with cheapest-alternative column. | Prices verified 2026-07-07 (us-central1 list). |
 
+## Team Briefing (2026-07-08)
+
+| Path | Purpose | Status / Notes |
+| --- | --- | --- |
+| `deliverables/PRISM_TEAM_BRIEFING.txt` | Single consolidated plain-text reference: documentation map, algorithm at submission (loop, operators, variants, protocol, theory incl. Appendix B), every experiment A-N with what/how/result/meaning/comparison/threats, decisions D8-D18, related-work positioning, costs, reproduction, open items. | Keep in sync at iteration close-out; numbers only from committed CSVs. |
+
 ## The PRISM Book (2026-07-07)
 
 | Path | Purpose | Status / Notes |
