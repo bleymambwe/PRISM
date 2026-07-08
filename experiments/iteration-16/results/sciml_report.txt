@@ -1,0 +1,11 @@
+Experiment P — SciML pipeline-ordering landscape (720 orderings, deterministic):
+  fitness (1 - relative coefficient error): min 0.768, mean 0.953, max 0.999, std 0.077
+  optimum held by 12/720 orderings
+  best ordering:  CLIP -> SUBSAMPLE -> SMOOTH -> TRIM -> MEDIAN -> DIFF
+  worst ordering: MEDIAN -> TRIM -> SMOOTH -> CLIP -> SUBSAMPLE -> DIFF (fitness 0.768)
+  mean fitness by DIFF position: p1:0.951 p2:0.977 p3:0.988 p4:0.975 p5:0.939 p6:0.886
+
+D14 pre-flight: rho1 swap=0.35, insert=0.54, inversion=0.32, scramble=0.56 | FDC +0.109
+  decision: operator=insert; DECEPTIVE - no search
+  prism   hits 38/40 CI[0.83,0.99] mean evals-to-optimum 29.1
+  random  hits 40/40 CI[0.91,1.00] mean evals-to-optimum 45.9

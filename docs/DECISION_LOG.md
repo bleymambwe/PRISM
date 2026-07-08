@@ -1,5 +1,14 @@
 # PRISM Decision Log
 
+## 2026-07-08 (Iteration 16): FDC Borderline Band
+
+Decision (D19): FDC in (+0.05, +0.3) is a borderline band handled like
+the near-zero regime (random sampling as method of record); the hard
+"do not use evolutionary search" call is reserved for strongly positive
+FDC (the measured 100%-stable deceptive call was at +0.78). Evidence:
+Experiment P (FDC +0.109; random 40/40 vs PRISM 38/40 — near-zero
+behavior, not deception).
+
 ## 2026-07-08 (Iteration 14): Headline Claims Require >=40-Seed CIs
 
 Decision (D18): any result promoted to abstract/headline status must be

@@ -1,5 +1,25 @@
 # PRISM Experiment Log
 
+## 2026-07-08 (Iteration 16, Experiments O+P): Transfer + SciML — CROSS-SIZE TRANSFER DISCOVERED
+
+- O1 cross-task (XOR-v4 vs Parity-v4, 120 shared orderings): ZERO
+  transfer (r = -0.004; top-10% overlap = chance). Good orderings are
+  task-specific on the neural benchmarks.
+- O2/O3 cross-size (LLM n=6 -> n=8, 222 unbiased random orderings):
+  STRONG transfer — n=6 position effects predict n=8 fitness at
+  Spearman 0.665 [0.582, 0.725]; selecting top-10% by the n=6-derived
+  score gives mean accuracy 0.900 [0.873, 0.925] vs random 0.725 —
+  a free +17.5-point warm start with zero n=8 evaluations.
+- P (SciML, first of its kind): SINDy preprocessing-pipeline ordering,
+  720 orderings enumerated (numpy-only, deterministic) — recovery
+  error swings 0.1% <-> 23.2%; DIFF-position effect non-monotone and
+  high-variance last; best = CLIP->SUBSAMPLE->SMOOTH->TRIM->MEDIAN->DIFF.
+  Pre-flight FDC +0.109 -> borderline; 40 seeds: random 40/40 more
+  reliable than PRISM 38/40 (directionally correct call). D19: FDC
+  borderline band (+0.05..+0.3) handled as near-zero.
+- Outputs: experiments/iteration-16/. Write-up:
+  iterations/2026-07-08-iteration-16-transfer-and-sciml.md.
+
 ## 2026-07-08 (Iteration 15): Aging-Mode Theory Restatement — GAP 2 CLOSED
 
 - Key fact: implemented scramble reaches ANY ordering from ANY parent in

@@ -1,0 +1,14 @@
+O1 cross-task transfer (XOR-v4 vs Parity-v4, 120 shared orderings, n=5):
+  Pearson r = -0.004 | Spearman rho = -0.001 | top-10% overlap = 0.08 (chance ~0.10)
+
+O2 cross-size transfer (LLM n=6 position effects -> n=8 fitness, 222 unbiased random orderings):
+  Spearman rho = 0.665 | Pearson r = 0.685
+
+O3 warm-start value (top-10% by n=6-derived score, k=22):
+  mean n=8 accuracy of score-selected orderings: 0.900
+  mean n=8 accuracy of all random orderings:      0.725
+  best possible in sample:                        1.000
+
+D18 CIs (4000 bootstrap resamples):
+  O2 Spearman rho 95% CI: [0.582, 0.725]
+  O3 warm-start top-10% mean 95% CI: [0.873, 0.925] vs random mean 0.725
