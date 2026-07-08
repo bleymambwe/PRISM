@@ -2,6 +2,18 @@
 
 Last updated: 2026-07-07 (Iteration 10)
 
+## 2026-07-08 (Iteration 12): Encoding-Matched Surrogates Join the Guideline
+
+Decision (D17): when the D14 pre-flight indicates precedence structure
+(argmax rho1 = insert), the precedence-pair surrogate is the method of
+record — Experiment N shows it dominating all population methods (4x
+matched-operator elitist on the single-optimum kendall n=7; random 0/15
+there). D15 otherwise unchanged; the elitist+restart hybrid or aging is
+the default when no pre-flight is run.
+
+Reversal condition: a calibrated acquisition function or a different
+encoding that dominates it on the same protocol.
+
 ## 2026-07-08 (Iteration 11): Fitness Resolution Before Search Budget
 
 Decision (D16): for API-priced ordering applications, the variance gate

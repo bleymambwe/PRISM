@@ -2,6 +2,24 @@
 
 Last updated: 2026-07-07 (Iteration 10)
 
+## 2026-07-08 (Iteration 12, Experiment N): Hybrid + Precedence Surrogate — FIRST METHOD TO BEAT ELITIST PRISM
+
+- Free (cached/closed-form). Six methods x four landscapes incl.
+  kendall n=7 (a SINGLE optimum in 5040).
+- H18 STRONGLY CONFIRMED: the precedence-pair surrogate (binary
+  "i before j" ridge) finds kendall's single needle in 13.5 mean evals
+  vs elitist 55.7 and random 0/15 — 4x the matched operator; also
+  best/tied-best on XOR n=6 (13.5) and parity n=7 (33/40). Surrogate
+  power = encoding-landscape match, parallel to operator matching.
+- H17 partially confirmed: elitist+restart hybrid matches elitist on
+  structured (17.4 vs 18.5) and reaches aging-level robustness on
+  parity (29/40), but restarts waste budget on kendall (89.5) —
+  a no-pre-flight default, not a replacement for guided choice.
+- D17: precedence surrogate is the method of record when the
+  pre-flight shows precedence structure.
+- Outputs: experiments/iteration-12/. Write-up:
+  iterations/2026-07-08-iteration-12-hybrid-surrogate.md.
+
 ## 2026-07-08 (Iteration 11, Experiment M): Harder LLM Instance — PRE-FLIGHT VALIDATED AT SCALE
 
 - n=8 modules (40,320 orderings, first beyond-enumeration application),
