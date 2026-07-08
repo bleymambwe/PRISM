@@ -126,45 +126,50 @@ def build_paper_pdf():
             ("fig_concept.png", "Figure 1: the same fixed components in "
              "two orders — ordering alone separates success from "
              "failure on the benchmarks of Section 5.", 6.2)],
-        "3. Algorithm": [
+        "4. Algorithm": [
             ("fig_loop.png", "Figure 2: one PRISM generation.", 6.2),
             ("fig_moves.png", "Figure 3: the four mutation operators; "
              "each induces a different neighborhood over orderings.",
              6.2)],
-        "4. Theoretical Framing": [
+        "5. Theoretical Framing": [
             ("fig_markov.png", "Figure 4: transient states drain into "
              "the absorbing set; elitism seals it.", 6.0)],
-        "5.2 Synthetic Runtime Scaling": [
+        "6.2 Synthetic runtime scaling": [
             ("fig_scaling.png", "Figure 5: measured hitting times vs "
              "the n³ log n shape (Iteration 2).", 4.6)],
-        "5.3 Operator-Landscape Matching (Completed Study)": [
+        "6.3 Operator-landscape matching (requirement, not preference)": [
             ("fig_operators.png", "Figure 6: matched operators (bold) "
              "vs mismatch climbing into the censoring cap.", 6.4)],
-        "5.4 Operator Portfolio: Automating the Choice": [
+        "6.4 The operator portfolio": [
             ("fig_portfolio.png", "Figure 7: matched vs portfolio at "
              "n=16; dashed line = mismatched-operator failure.", 5.2),
             ("fig_adaptive.png", "Figure 8: adaptive mode's learned "
              "weights identify the matched operator 3/3.", 6.0)],
-        "5.5 Noise-Controlled Neural Benchmarks with Exact Ground Truth": [
+        "6.5 Ground truth by construction": [
             ("fig_landscapes.png", "Figure 9: three exactly enumerated "
              "landscapes; dashed line = global optimum.", 6.4),
             ("fig_trajectories.png", "Figure 10: convergence "
              "trajectories — plateaus, jumps, elitism-enforced "
              "monotonicity.", 5.4)],
-        "5.6 Scale-Up, a Falsification, and the Locality Diagnostic": [
+        "6.6 The honest boundary and the pre-flight diagnostic": [
             ("fig_n7_honest.png", "Figure 11: n=7 — tuning fixes "
              "exploration (left) but random matches PRISM's quality "
              "anyway (right).", 6.2),
             ("fig_locality.png", "Figure 12: ρ1 per operator and "
              "FDC reproduce all observed outcomes pre-search.", 6.4)],
-        "5.7 Application: LLM Reasoning-Chain Ordering": [
+        "6.7 Application: LLM reasoning-chain ordering": [
             ("fig_llm.png", "Figure 13: position effects and the full "
              "enumerated LLM landscape (6.3%–96.9% by order "
              "alone).", 6.4),
             ("fig_llm_search.png", "Figure 14: distinct evaluations to "
              "the first exact optimum.", 4.2)],
-        "9. Conclusion": [
-            ("fig_arc.png", "Figure 15: the research arc — including "
+        "6.8 Method selection beyond operators: replacement and surrogates": [
+            ("fig_surrogate.png", "Figure 15: the precedence surrogate "
+             "reaches kendall's single optimum 4x faster than elitist "
+             "search (left) and is tied-best for robustness on parity "
+             "(right).", 6.2)],
+        "11. Conclusion": [
+            ("fig_arc.png", "Figure 16: the research arc — including "
              "the falsifications.", 6.4)],
     }
 
