@@ -2,6 +2,15 @@
 
 Last updated: 2026-07-07 (Iteration 10)
 
+## 2026-07-08 (Iteration 11): Fitness Resolution Before Search Budget
+
+Decision (D16): for API-priced ordering applications, the variance gate
+and pre-flight sample must also establish that the fitness statistic can
+DISCRIMINATE (optimum ties not dense at the chosen resolution) before
+any search budget is spent. Evidence: Experiment M — 20-question
+granularity made perfect orderings dense; all methods saturated at 1.0,
+exactly as the sampled pre-flight forecast.
+
 ## 2026-07-07 (Iteration 10): Replacement Policy Joins the Pre-Flight Guideline
 
 Decision (D15): the D14 pre-flight now also selects the replacement

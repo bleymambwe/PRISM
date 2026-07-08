@@ -1,0 +1,4 @@
+best@30: PRISM 1.0000 vs random 1.0000 (+0.0000)
+best@60: PRISM 1.0000 vs random 1.0000 (+0.0000)
+best@120: PRISM 1.0000 vs random 1.0000 (+0.0000)
+spend: 23805 calls, ~$5.56

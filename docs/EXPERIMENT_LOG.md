@@ -2,6 +2,22 @@
 
 Last updated: 2026-07-07 (Iteration 10)
 
+## 2026-07-08 (Iteration 11, Experiment M): Harder LLM Instance — PRE-FLIGHT VALIDATED AT SCALE
+
+- n=8 modules (40,320 orderings, first beyond-enumeration application),
+  20 GSM8K questions, Gemini Flash-Lite; hard budget cap in code;
+  actual spend $5.56 (23,805 calls, token-metered).
+- Gate: ordering swings accuracy 0.10-1.00 (std 0.240) — larger than n=6.
+- Sampled pre-flight (222 orderings): rho1 -> insert 0.75 (precedence
+  prediction holds at n=8); approx-FDC -0.095 -> "random likely
+  competitive". Search stage (4 seeds each): PRISM = random = 1.0000 at
+  every budget — the pre-flight forecast exactly right.
+- Lesson (D16): optimum density is partly measurement resolution
+  (20-question granularity makes perfect ties dense); choose fitness
+  resolution before spending search budget.
+- Outputs: experiments/iteration-11/. Write-up:
+  iterations/2026-07-08-iteration-11-harder-llm.md.
+
 ## 2026-07-07 (Iteration 10, Experiment L): Literature-Driven Improvements — GUIDELINE, NOT SILVER BULLET
 
 - Candidates from the downloaded papers: aging evolution (Real et al.

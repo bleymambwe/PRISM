@@ -1,0 +1,2 @@
+STAGE 2 pre-flight (222 sampled orderings): rho1 swap=0.41, insert=0.75, inversion=0.63, scramble=0.67 | approx-FDC(best-known) -0.095
+  D14 decision: operator=insert; random likely competitive | best sampled fitness 1.000
