@@ -1,5 +1,22 @@
 # PRISM Experiment Log
 
+## 2026-07-08 (Iteration 18, Experiment R): Transfer-Guided Evaluation - MODEST SUPPORT
+
+- Question: can n=6 LLM instruction-order position effects guide a
+  low-budget n=8 evaluation policy, not just correlate with n=8 fitness?
+- Free/cached: used Iteration 9 full n=6 LLM landscape and Iteration 11 n=8
+  answer cache; no new API calls.
+- Result: source-score vs n=8 fitness Spearman rho = 0.656, Pearson r =
+  0.685 over 222 complete unbiased n=8 orderings. Guided evaluation reaches a
+  perfect n=8 ordering by budget 5; random-without-replacement has 0.248
+  probability of a perfect hit at budget 5. Top 10 percent by transferred score
+  has mean target accuracy 0.900 vs random-pool mean 0.725.
+- Interpretation: strengthens Iteration 16 from "transfer correlation" to a
+  usable warm-start/evaluation policy, but not a standalone top-tier result
+  because perfect n=8 orderings are not sparse.
+- Outputs: experiments/iteration-18/results/transfer_guided_selection.txt.
+  Write-up: iterations/2026-07-08-iteration-18-research-loop-selection.md.
+
 ## 2026-07-08 (Iteration 16, Experiments O+P): Transfer + SciML — CROSS-SIZE TRANSFER DISCOVERED
 
 - O1 cross-task (XOR-v4 vs Parity-v4, 120 shared orderings): ZERO
@@ -48,7 +65,7 @@
 - Outputs: experiments/iteration-14/results/. Write-up:
   iterations/2026-07-08-iteration-14-rigor-and-communication.md.
 
-Last updated: 2026-07-07 (Iteration 10)
+Last updated: 2026-07-08 (Iteration 18)
 
 ## 2026-07-08 (Iteration 12, Experiment N): Hybrid + Precedence Surrogate — FIRST METHOD TO BEAT ELITIST PRISM
 

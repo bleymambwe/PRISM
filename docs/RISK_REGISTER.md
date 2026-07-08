@@ -1,6 +1,6 @@
 # PRISM Risk Register
 
-Last updated: 2026-07-06
+Last updated: 2026-07-08
 
 | ID | Risk / Assumption | Impact | Status | Mitigation / Next Action |
 | --- | --- | --- | --- | --- |
@@ -17,6 +17,8 @@ Last updated: 2026-07-06
 | R11 | Background processes on this machine are killed after a few minutes, and long unbudgeted runs lose work. | Experiments silently truncated; wasted compute. | Mitigated 2026-07-06 | Use the budgeted resumable runner pattern (`operator_study.py <budget-seconds>`, incremental CSV, resume-on-rerun) for all long experiments. |
 | R12 | PRISM's polynomial-time behavior is landscape-conditional: mismatched operators hard-fail on plateau-rich landscapes and deceptive landscapes defeat all tested operators. | Overclaiming "O(n³ log n) runtime" without conditions would be scientifically wrong. | Partially mitigated 2026-07-06 (Iteration 4) | Operator-choice risk resolved: uniform portfolio (`mutation="portfolio"`) succeeds on all typed landscapes at ≤4x matched cost (Experiment F, D8). Deceptive-landscape limitation remains and must be stated in papers. Portfolio-on-deceptive untested. |
 | R13 | C: drive on this machine runs chronically near-full (hit 100% during Iteration 6, corrupting one write and crashing an interpreter). | Failed writes, lost experiment output, blocked git operations. | Mitigated 2026-07-07 | Freed ~7 GB (pip/npm/uv caches, stale temp). Before generating large artifacts (audio, enumerations), check free space; keep the budgeted-resumable pattern so partial work survives. |
+| R14 | The strongest LLM transfer evidence may depend on low fitness resolution and dense perfect-ordering sets. | Search-policy gains may disappear on harder or higher-resolution reasoning tasks. | Open 2026-07-08 | Use larger/harder eval sets before promoting claims: at least 100 questions or MATH/AIME subset, report optimum density, random baseline, and 40-seed/bootstrap CIs. |
+| R15 | This machine has no CUDA GPU, 4 logical CPUs, and about 8 GB RAM. | Open-source model internals, circuit discovery, activation patching, and training-scale baselines cannot be run locally at publication quality. | Open 2026-07-08 | Keep local work cached/CPU-only; before cloud execution, present budget. Iteration 18 estimate: L4 pilot about $10-20; A100/H100 DWS pilot about $20-50 with checkpointing. |
 
 ## Maintenance Rule
 

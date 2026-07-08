@@ -1,0 +1,18 @@
+Experiment R: n=6 -> n=8 transfer-guided evaluation
+candidate pool: 222 complete unbiased n=8 orderings
+source-score vs n=8 fitness: Spearman rho=0.656, Pearson r=0.685
+fitness range in pool: [0.050, 1.000], mean=0.725, perfect_count=12
+
+budget,guided_best,random_best_mean,random_best_ci95,random_p_hit_1.0
+1,0.850,0.727,[0.250,1.000],0.054
+3,0.900,0.895,[0.600,1.000],0.153
+5,1.000,0.933,[0.800,1.000],0.248
+10,1.000,0.963,[0.900,1.000],0.428
+20,1.000,0.983,[0.950,1.000],0.683
+30,1.000,0.992,[0.950,1.000],0.838
+50,1.000,0.998,[0.950,1.000],0.955
+100,1.000,1.000,[1.000,1.000],1.000
+200,1.000,1.000,[1.000,1.000],1.000
+
+top-10% by transferred score: mean=0.900, min=0.800, max=1.000
+interpretation: promoted only if guided evaluation reaches high-quality orderings at materially lower budget than random in this cached pool.

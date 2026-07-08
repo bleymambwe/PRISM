@@ -1,6 +1,6 @@
 # PRISM Artifact Index
 
-Last updated: 2026-07-06
+Last updated: 2026-07-08
 
 This index records the purpose and status of visible project artifacts. It
 separates existing historical material from the new continuity structure.
@@ -103,6 +103,14 @@ separates existing historical material from the new continuity structure.
 | Path | Purpose | Status / Notes |
 | --- | --- | --- |
 | `deliverables/PRISM_TEAM_BRIEFING.txt` | Single consolidated plain-text reference: documentation map, algorithm at submission (loop, operators, variants, protocol, theory incl. Appendix B), every experiment A-N with what/how/result/meaning/comparison/threats, decisions D8-D18, related-work positioning, costs, reproduction, open items. | Keep in sync at iteration close-out; numbers only from committed CSVs. |
+
+## Iteration 18 (2026-07-08): Research Loop Selection
+
+| Path | Purpose | Status / Notes |
+| --- | --- | --- |
+| `iterations/2026-07-08-iteration-18-research-loop-selection.md` | Literature refresh, 0-10 hypothesis scoring, hardware/budget gate, D20 research direction selection, and Experiment R write-up. | Complete. |
+| `experiments/iteration-18/transfer_guided_selection.py` | Cached experiment testing whether n=6 LLM position effects guide low-budget n=8 evaluation. | Complete; no API calls. |
+| `experiments/iteration-18/results/transfer_guided_selection.txt` | Experiment R output: source-score correlation and guided-vs-random budget table. | Complete. |
 
 ## The PRISM Book (2026-07-07)
 

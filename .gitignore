@@ -43,3 +43,9 @@ deliverables/audio/*.mp3
 
 # Downloaded paper PDFs (131MB, re-downloadable from arXiv; metadata is tracked)
 research-opportunity-mapping-2026-07-06/papers/pdfs/
+
+# Expanded literature download 2026-07-07 (663MB of arXiv PDFs; manifest/CSV/notes are tracked)
+research-opportunity-mapping-2026-07-06/papers/expanded_2026_07_07/pdfs/
+
+# Windows shortcuts
+*.lnk

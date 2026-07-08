@@ -1,5 +1,19 @@
 # PRISM Decision Log
 
+## 2026-07-08 (Iteration 18): Primary Candidate Is Transferable Instruction Ordering
+
+Decision (D20): the primary publication-oriented research candidate is now
+"transferable instruction-order landscapes," supported by the LLM ordering
+landscape, D14 pre-flight diagnostics, Iteration 16 cross-size transfer, and
+Iteration 18 transfer-guided evaluation. The transformer-replacement,
+KV-cache, activation-routing, feature-visualization, and continual-learning
+framings are deferred because current literature is crowded and local evidence
+is weak. Evidence: Iteration 18 literature refresh and Experiment R.
+
+Reversal condition: cross-model/SLM transfer fails decisively in Iteration 17
+or a higher-resolution harder LLM benchmark shows no budgeted advantage over
+random after confidence intervals.
+
 ## 2026-07-08 (Iteration 16): FDC Borderline Band
 
 Decision (D19): FDC in (+0.05, +0.3) is a borderline band handled like
@@ -17,7 +31,7 @@ backed by >=40 seeds with confidence intervals (or exact enumeration);
 claim reversed at 40 seeds. Reversal condition: none — methodology
 standard.
 
-Last updated: 2026-07-07 (Iteration 10)
+Last updated: 2026-07-08 (Iteration 18)
 
 ## 2026-07-08 (Iteration 12): Encoding-Matched Surrogates Join the Guideline
 

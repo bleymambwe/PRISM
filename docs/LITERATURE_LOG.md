@@ -1,6 +1,80 @@
 # PRISM Literature and Source Review Log
 
-Last updated: 2026-07-07 (Iteration 10 — first direct paper reviews)
+## Direct Reviews / Current Literature Refresh (Iteration 18)
+
+### Ok and Lee 2026 - Lost in the Prompt Order
+- Link: https://arxiv.org/html/2601.14152
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Research question: does prompt-order sensitivity already have a mechanistic
+  explanation?
+- Key claim: in MCQA, context-question-option ordering beats
+  question-option-context because causal masking prevents earlier option tokens
+  from attending to later context; interventions partly close the gap.
+- Impact on PRISM: strengthens the LLM order-sensitivity framing but means a
+  paper must distinguish PRISM's exhaustive instruction-order landscapes and
+  transfer diagnostics from existing prompt-order mechanism work.
+
+### Zhou et al. 2026 - The Curse of Verbalization
+- Link: https://aclanthology.org/2026.findings-eacl.218.pdf
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Key claim: reasoning performance improves when information presentation
+  order aligns with utilization order; verbalization flexibility correlates
+  with reasoning ability across models.
+- Impact on PRISM: aligns directly with the instruction-order transfer
+  hypothesis; raises the bar for novelty by making order-alignment a known
+  reasoning factor.
+
+### Kimi Team 2025 - Kimi Linear
+- Link: https://arxiv.org/pdf/2510.26692
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Key claim: a hybrid linear-attention architecture can outperform full
+  attention while reducing KV cache usage and improving long-context
+  throughput.
+- Impact on PRISM: transformer-replacement framing is deprioritized; it would
+  require large-scale training and hardware results beyond this workspace.
+
+### Lahoti et al. 2026 - Mamba-3
+- Link: https://www.arxiv.org/pdf/2603.15569
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Key claim: SSM-style sequence models continue to improve retrieval,
+  state-tracking, and language modeling efficiency.
+- Impact on PRISM: reinforces that architecture-replacement claims are crowded
+  and not locally evidenced.
+
+### Haverbeck et al. 2026 - The risk of KV cache compression
+- Link: https://arxiv.org/html/2607.01520
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Key claim: KV compression can be characterized by minimax risk and intrinsic
+  cache compressibility.
+- Impact on PRISM: KV/memory optimization is plausible but already has strong
+  theory competition.
+
+### Pan 2026 - PolyKV; Yang et al. 2026 - CompilerKV
+- Links: https://arxiv.org/html/2606.15157v1 and
+  https://arxiv.org/html/2602.08686
+- Reviewed: 2026-07-08 (direct abstracts/excerpts).
+- Key claim: layer/head/risk-adaptive KV compression methods are improving
+  LongBench performance under tight budgets.
+- Impact on PRISM: PRISM as KV policy search is deferred unless GPU budget and
+  strong baselines are available.
+
+### Cicirello 2022 - Fitness Landscape Analysis of Permutation Problems
+- Link: https://arxiv.org/abs/2208.11188
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Key claim: distance metrics classify permutation problem features and inform
+  mutation-operator choice.
+- Impact on PRISM: supports the operator/landscape diagnostic as a method
+  component, but also limits novelty of the underlying operator-matching idea.
+
+### Qiu and Miikkulainen 2023 - Shortest Edit Path Crossover
+- Link: https://proceedings.mlr.press/v202/qiu23b.html
+- Reviewed: 2026-07-08 (direct abstract/excerpt).
+- Key claim: theory-driven crossover can address the permutation problem in
+  black-box NAS and outperform mutation/RL baselines.
+- Impact on PRISM: PRISM as generic NAS/operator search must be positioned
+  carefully; instruction-order landscapes remain more distinctive locally.
+
+Last updated: 2026-07-08 (Iteration 18 literature refresh)
 
 ## Direct Reviews (Iteration 10)
 
