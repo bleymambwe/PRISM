@@ -1,5 +1,50 @@
 # PRISM Experiment Log
 
+## 2026-07-12 (Iteration 17, Experiment Q): Cross-Model SLM Transfer — EXTREMES TRANSFER, STRUCTURE DOES NOT
+
+- Question: do instruction-ordering effects measured on Gemini 2.5
+  Flash-Lite transfer to a much smaller model (Gemma 26B MoE, 4B active —
+  SLM class)? Doubles as the audit's second-model replication and the
+  live D20 confirmation/reversal test.
+- Design: same 6 modules, same 32 GSM8K questions as Experiment K;
+  120 orderings (100 random seed-17 + source top-15 + bottom-5) x 32
+  questions = 3,840 cells, cached and resumable; temperature 0.
+- Spend: 4,101 calls; worst-case-if-billed $1.37 (Gemma tier
+  free-of-charge; token-metered). Run in 16 foreground chunks 2026-07-11/12.
+- Results (bootstrap CIs, 10k resamples):
+  - Q1 fitness correlation (100 random orderings): Spearman 0.158
+    [-0.018, 0.338] — WEAK; CI spans zero. Fine-grained landscape rank
+    does not transfer across models.
+  - Q2 position-effect table correlation: r = 0.064 — near zero. The
+    flash-lite ANSWER-late gradient (0.44 -> 0.87) is absent on Gemma
+    (flat/noisy row). Contrasts sharply with same-model cross-size
+    transfer (Exp. O: 0.665).
+  - Q3 extremes: source TOP-15 -> Gemma 0.565 [0.460, 0.665] vs
+    random-100 0.442 [0.395, 0.490] vs source BOTTOM-5 0.150
+    [0.088, 0.200]. Top-minus-random diff CI [+0.008, +0.234] (excludes
+    zero, marginal); random-minus-bottom [+0.221, +0.372] (decisive).
+    Top-15 individually heterogeneous on Gemma: 0.19-0.88.
+  - Q4 order sensitivity: Gemma std 0.247, range [0.06, 0.91] vs
+    flash-lite std 0.226 — the SLM is at least as order-sensitive.
+  - Q5 warm-start (top-10% of the random pool by source score): 0.459
+    [0.334, 0.603] vs random 0.442 — NO usable lift.
+- Interpretation: cross-model transfer is asymmetric — ordering
+  PATHOLOGY transfers robustly (avoid source-bottom orderings: ~29-pt
+  penalty), ordering OPTIMALITY transfers weakly (+12 pts, marginal),
+  and positional STRUCTURE does not transfer at all at this scale.
+  Not a decisive D20 failure (reversal clause NOT triggered), but the
+  transfer claim must be narrowed from "landscapes transfer" to
+  "extreme orderings transfer; structure is model-specific." The
+  causal-masking mechanism story is weakened for cross-model claims
+  and needs the cross-family legs (Qwen/Llama) to arbitrate.
+- Caveat: Gemma mean accuracy 0.442 on this set — near the middle of
+  the scale, so noise per (ordering, question) cell is maximal; and the
+  low mean may compress position effects. A harder-question re-test on
+  a stronger SLM (benchmark #2 design) is the follow-up.
+- Outputs: experiments/iteration-17/results/{gemma_answer_cache.csv,
+  token_usage.csv, slm_transfer_report.txt}. Code:
+  experiments/iteration-17/slm_transfer.py.
+
 ## 2026-07-08 (Iteration 18, Experiment R): Transfer-Guided Evaluation - MODEST SUPPORT
 
 - Question: can n=6 LLM instruction-order position effects guide a
@@ -449,3 +494,25 @@ Experiment run: None.
 
 Result: Added project-level documentation and logs. See
 `iterations/2026-07-05-continuity-setup.md`.
+# Iteration 19: ANASOD--PRISM boundary diagnostic (complete)
+
+- Objective: determine when NAS-Bench-201 operation distributions are a
+  sufficient abstraction and when edge placement retains exploitable residual
+  structure.
+- Method: exhaustive partition of 15,625 architectures into 210 distributions;
+  eta-squared across distributions; within-slice SD/range, exact swap rho1, and
+  exact FDC to nearest tied optimum on each dataset.
+- Implementation: `experiments/iteration-19/anasod_boundary.py`; accepts a
+  compact CSV or the official `.pth` API archive.
+- Verification: the 15-placement synthetic fixture completes and recovers its
+  deliberately injected locality. This verifies code paths only.
+- Data: `simple-hpo-bench==0.2.0` compact NATS-Bench tables, three repeated
+  last-epoch validation accuracies per architecture; means analyzed.
+- Results: eta-squared = 0.461/0.556/0.612 on CIFAR-10/CIFAR-100/ImageNet16;
+  residual within-distribution fractions = 0.539/0.444/0.388. Figure-1 slice
+  placement ranges = 0.848/2.530/4.956 points; rho1 = 0.137/-0.143/0.223;
+  FDC = -0.412/-0.273/-0.721.
+- Interpretation: ANASOD is supported as a strong coarse abstraction but not a
+  sufficient statistic; placement structure is conditional on slice/dataset.
+- Limitation: compact last-epoch backend rather than official 4.7 GB archive;
+  budget-matched search confirmation remains. Do not cite fixture metrics.

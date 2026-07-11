@@ -1,0 +1,20 @@
+Q1 cross-model fitness correlation (100 random orderings):
+  Spearman rho = 0.158 [-0.018, 0.338] | Pearson r = 0.124
+
+Q2 position-effect table correlation (36 cells): Pearson r = 0.064
+  source (flash-lite) ANSWER row: 0.44 0.58 0.74 0.81 0.87 0.87
+  target (gemma-4B)   ANSWER row: 0.39 0.53 0.50 0.43 0.33 0.49
+
+Q3 extreme-ordering transfer on the SLM:
+  source TOP-15 orderings  -> target mean 0.565 (min 0.188)
+  random-100               -> target mean 0.442
+  source BOTTOM-5 orderings-> target mean 0.150 (max 0.219)
+
+Q4 order sensitivity vs model size (same 32 questions):
+  flash-lite (source): mean 0.734, std 0.226, range [0.16, 0.97]
+  gemma-4B active (SLM): mean 0.442, std 0.247, range [0.06, 0.91]
+
+Q5 warm-start on the SLM (top-10% by SOURCE fitness):
+  mean target accuracy 0.459 [0.334, 0.603] vs random mean 0.442
+
+spend: 4101 calls; worst-case if billed ~$1.37 (Gemma API tier is free-of-charge)
