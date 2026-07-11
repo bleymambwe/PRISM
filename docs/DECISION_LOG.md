@@ -1,5 +1,24 @@
 # PRISM Decision Log
 
+## 2026-07-11 (Review): Paper Framing Approved by Bley
+
+Decision (D21): Bley approved decisions 1, 2, 3, and 5 of
+`review/RESEARCH_DISCUSSION_BRIEF_RESPONSES_2026-07-11.md`:
+(1) PRISM's identity statement — a predictive protocol for permutation
+optimization (measure → forecast → select strategy → execute → verify);
+the evolutionary searcher is the default executor, not the identity.
+(2) The protocol-vs-searcher terminology is adopted throughout paper and
+docs; theory claims (elitist absorption, aging record convergence) attach
+only to the searcher, never to enumeration studies.
+(3) Prompt-optimizer baselines (OPRO/APE, DSPy-MIPROv2, GEPA, GREATER;
+PromptBridge for the transfer claim) are a REQUIRED condition of the LLM
+paper (~$5-10), including the complementarity experiment (freeze an
+optimizer's output, permute its module order).
+(5) The rho1-vs-alternatives mini-ablation (free, CPU) is approved.
+
+Still open: review decision 4 (long-term-vision framing option 1 vs 2)
+and 6 (SLM candidate pool — resolved by D16 pilots).
+
 ## 2026-07-08 (Iteration 18): Primary Candidate Is Transferable Instruction Ordering
 
 Decision (D20): the primary publication-oriented research candidate is now
