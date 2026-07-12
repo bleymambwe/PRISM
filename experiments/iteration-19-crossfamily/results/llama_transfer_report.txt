@@ -1,0 +1,22 @@
+MODEL: meta-llama/llama-3.2-3b-instruct (leg 'llama')
+
+Q1 cross-model fitness correlation (100 random orderings):
+  Spearman rho = 0.375 [0.181, 0.554] | Pearson r = 0.438
+
+Q2 position-effect table correlation (36 cells): Pearson r = 0.582
+  source (flash-lite) ANSWER row: 0.44 0.58 0.74 0.81 0.87 0.87
+  target (llama)       ANSWER row: 0.13 0.18 0.27 0.31 0.32 0.33
+
+Q3 extreme-ordering transfer:
+  source TOP-15  -> target mean 0.312 (min 0.188); top-minus-random diff CI [+0.003, +0.118]
+  random-100     -> target mean 0.254
+  source BOTTOM-5-> target mean 0.100 (max 0.125); random-minus-bottom diff CI [+0.113, +0.200]
+
+Q4 order sensitivity (same 32 questions):
+  flash-lite (source): mean 0.734, std 0.226, range [0.16, 0.97]
+  llama (target): mean 0.254, std 0.153, range [0.00, 0.62]
+
+Q5 warm-start (top-10% of random pool by SOURCE fitness):
+  mean target accuracy 0.303 [0.178, 0.431] vs random mean 0.254
+
+spend: 3900 calls; API-reported $0.21 (guard file: {"qwen": 0.4541987454500002, "llama": 0.20997689660000016})

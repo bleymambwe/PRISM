@@ -1,5 +1,48 @@
 # PRISM Experiment Log
 
+## 2026-07-12 (Iteration 19, Experiment Q2): Cross-FAMILY Transfer — REPLICATED; GEMMA WAS THE OUTLIER
+
+- Question: is the Gemma asymmetry (Exp. Q: pathology transfers, structure
+  doesn't) the cross-model rule, or Gemma-specific? Two more families via
+  OpenRouter, identical 120-ordering x 32-question design: Qwen3-30B-A3B
+  -instruct-2507 (3B ACTIVE MoE; qwen3-4b not served on OpenRouter) and
+  Llama-3.2-3B-instruct (dense).
+- Spend: $0.66 API-reported total, both legs, of the $9.00 authorized cap
+  (qwen $0.45 / 3,954 calls; llama $0.21 / 3,900 calls). Two-meter guard
+  (per-call usage.cost + key-usage endpoint) held throughout.
+- Results per target (source = Flash-Lite landscape, Exp. K):
+  - LLAMA (weak model, mean 0.254 — real headroom): Q1 Spearman 0.375
+    [0.181, 0.554]; Q2 position-effect r = 0.582 with a MONOTONE
+    ANSWER-late gradient (0.13 -> 0.33) mirroring the source (0.44 -> 0.87);
+    Q3 top-minus-random CI [+0.003, +0.118], random-minus-bottom
+    [+0.113, +0.200] (decisive); Q4 std 0.153, range [0.00, 0.62].
+  - QWEN (at CEILING, mean 0.918, range [0.66, 0.97]): landscape
+    compressed; Q1 Spearman 0.250 [0.098, 0.490]; Q2 r = 0.401;
+    Q3 top-minus-random [+0.013, +0.051] (small but excludes zero);
+    bottom-avoidance vanishes ([-0.034, +0.096]) — a strong-enough model
+    solves even bad orderings (D16 resolution lesson at model level).
+  - GEMMA (Exp. Q recap): Q1 0.158 (spans 0), Q2 0.064, decisive
+    bottom-avoidance only.
+- Synthesis (the finding): TOP-ordering advantage transfers on ALL THREE
+  families (three independent positive CIs excluding zero);
+  bottom-avoidance transfers decisively on both targets with headroom;
+  rank correlation transfers on 2/3 (Llama, Qwen — Gemma is the weakest,
+  not the rule); position-effect STRUCTURE transfers where headroom
+  exists (Llama 0.582, Qwen 0.401 vs Gemma 0.064). The Iteration-17
+  "structure does not transfer" conclusion is CORRECTED: it was a
+  Gemma-specific (and partly mid-accuracy-noise) result. D20 is
+  STRENGTHENED: instruction-order landscapes transfer across model
+  families, modulated by target capability — sensitivity collapses at
+  ceiling (Qwen std 0.075) and structure emerges with headroom.
+- Caveat: 32 easy questions saturate strong SLMs; the ordering-
+  sensitivity-vs-capability curve needs the harder benchmark #2 set
+  before it is a headline. All numbers are enumeration/bootstrap over
+  the fixed ordering sets, not search results.
+- Outputs: experiments/iteration-19-crossfamily/results/ (per-leg caches,
+  token meters, spend_guard.json, {qwen,llama}_transfer_report.txt).
+  Live dashboard: deliverables/PRISM_Live_Dashboard.html (auto-refreshes;
+  regenerated on every runner save by scripts/build_live_dashboard.py).
+
 ## 2026-07-12 (Iteration 17, Experiment Q): Cross-Model SLM Transfer — EXTREMES TRANSFER, STRUCTURE DOES NOT
 
 - Question: do instruction-ordering effects measured on Gemini 2.5

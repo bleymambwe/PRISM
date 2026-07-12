@@ -1,0 +1,10 @@
+{
+ "cap_usd": 9.0,
+ "reported_usd": {
+  "qwen": 0.4541987454500002,
+  "llama": 0.20997689660000016
+ },
+ "key_usage_baseline": 0.0,
+ "key_usage_latest": 0.660076368,
+ "updated": "2026-07-12 14:17:46"
+}

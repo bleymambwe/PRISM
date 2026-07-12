@@ -1,0 +1,22 @@
+MODEL: qwen/qwen3-30b-a3b-instruct-2507 (leg 'qwen')
+
+Q1 cross-model fitness correlation (100 random orderings):
+  Spearman rho = 0.250 [0.098, 0.490] | Pearson r = 0.295
+
+Q2 position-effect table correlation (36 cells): Pearson r = 0.401
+  source (flash-lite) ANSWER row: 0.44 0.58 0.74 0.81 0.87 0.87
+  target (qwen)       ANSWER row: 0.91 0.90 0.90 0.92 0.92 0.96
+
+Q3 extreme-ordering transfer:
+  source TOP-15  -> target mean 0.950 (min 0.906); top-minus-random diff CI [+0.013, +0.051]
+  random-100     -> target mean 0.918
+  source BOTTOM-5-> target mean 0.887 (max 0.969); random-minus-bottom diff CI [-0.034, +0.096]
+
+Q4 order sensitivity (same 32 questions):
+  flash-lite (source): mean 0.734, std 0.226, range [0.16, 0.97]
+  qwen (target): mean 0.918, std 0.075, range [0.66, 0.97]
+
+Q5 warm-start (top-10% of random pool by SOURCE fitness):
+  mean target accuracy 0.934 [0.884, 0.969] vs random mean 0.918
+
+spend: 3954 calls; API-reported $0.45 (guard file: {"qwen": 0.4541987454500002, "llama": 0.0})
