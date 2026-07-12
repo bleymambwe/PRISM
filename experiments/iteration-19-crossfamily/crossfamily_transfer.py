@@ -15,6 +15,14 @@ Provider: OpenRouter (OpenAI-compatible chat completions). Key read from GCP
 Secret Manager secret OPENROUTER_API_KEY. Reasoning/thinking disabled so the
 target models answer directly (parity with Gemma/Flash-Lite runs).
 
+COST GUARD (hard cap $9.00 across BOTH legs, authorized 2026-07-12):
+  1. Every response carries OpenRouter's actual billed cost
+     (body includes {"usage": {"include": true}} -> response usage.cost).
+     Accumulated per leg and globally in results/spend_guard.json.
+  2. Independent check: GET /api/v1/key returns lifetime key usage; the
+     baseline is snapshotted on first run and the delta is capped too.
+  3. Any breach raises Budget -> clean PAUSE (cache intact, resumable).
+
 Usage:
   python crossfamily_transfer.py qwen --test          # one live call, prints reply
   python crossfamily_transfer.py qwen [budget-secs]   # run/resume the qwen leg
@@ -42,14 +50,21 @@ os.makedirs(OUT, exist_ok=True)
 
 LEGS = {
     # leg -> (openrouter model id, $/M input est., $/M output est.)
-    "qwen": ("qwen/qwen3-4b-instruct-2507", 0.06, 0.24),
+    # estimates are fallbacks only; the guard uses API-reported usage.cost
+    # NOTE: qwen3-4b is not served on OpenRouter (2026-07); the closest
+    # analogue is qwen3-30b-a3b-instruct-2507 — a 30B MoE with 3B ACTIVE
+    # params (mirrors Gemma's 26B-total/4B-active), non-thinking instruct.
+    "qwen": ("qwen/qwen3-30b-a3b-instruct-2507", 0.05, 0.20),
     "llama": ("meta-llama/llama-3.2-3b-instruct", 0.02, 0.04),
 }
 
 QUESTIONS = json.load(open(os.path.join(
     ROOT, "experiments", "iteration-09", "data", "gsm8k_subset32.json")))
 URL = "https://openrouter.ai/api/v1/chat/completions"
-MAX_CALLS = 6000  # hard cap per leg
+KEY_INFO_URL = "https://openrouter.ai/api/v1/key"
+MAX_CALLS = 6000          # hard cap per leg
+CAP_USD = 9.00            # hard cap across BOTH legs (Bley, 2026-07-12)
+GUARD_JSON = os.path.join(OUT, "spend_guard.json")
 BUDGET_SECONDS = None
 _START = time.time()
 _LOCK = threading.Lock()
@@ -76,6 +91,66 @@ KEY = subprocess.run(
     capture_output=True, text=True, shell=True).stdout.strip()
 
 
+# ---------------- global spend guard ----------------
+
+def _guard_load():
+    if os.path.exists(GUARD_JSON):
+        return json.load(open(GUARD_JSON))
+    return {"cap_usd": CAP_USD, "reported_usd": {},
+            "key_usage_baseline": None, "key_usage_latest": None,
+            "updated": None}
+
+
+def _guard_save(g):
+    g["updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    tmp = GUARD_JSON + ".tmp"
+    json.dump(g, open(tmp, "w"), indent=1)
+    os.replace(tmp, GUARD_JSON)
+
+
+def _guard_total(g):
+    return sum(g["reported_usd"].values())
+
+
+def key_usage():
+    """Lifetime USD usage of this key per OpenRouter (independent meter)."""
+    import requests
+    try:
+        r = requests.get(KEY_INFO_URL, timeout=30,
+                         headers={"Authorization": f"Bearer {KEY}"})
+        if r.status_code == 200:
+            return float(r.json()["data"].get("usage", 0.0))
+    except Exception:
+        pass
+    return None
+
+
+def guard_check_and_update(leg, add_usd=0.0, poll_key=False):
+    """Add reported cost, enforce both meters, persist. Raises Budget."""
+    with _LOCK:
+        g = _guard_load()
+        if g["key_usage_baseline"] is None:
+            g["key_usage_baseline"] = key_usage() or 0.0
+        g["reported_usd"][leg] = g["reported_usd"].get(leg, 0.0) + add_usd
+        if poll_key:
+            u = key_usage()
+            if u is not None:
+                g["key_usage_latest"] = u
+        _guard_save(g)
+        total = _guard_total(g)
+        if total >= CAP_USD:
+            raise Budget(f"COST CAP: reported ${total:.2f} >= ${CAP_USD}")
+        if (g["key_usage_latest"] is not None
+                and g["key_usage_baseline"] is not None
+                and g["key_usage_latest"] - g["key_usage_baseline"]
+                >= CAP_USD):
+            raise Budget(
+                f"COST CAP (key meter): "
+                f"${g['key_usage_latest'] - g['key_usage_baseline']:.2f} "
+                f">= ${CAP_USD}")
+        return total
+
+
 def build_prompt(perm, q):
     steps = "\n".join(f"{i+1}. {MODULES[m]}" for i, m in enumerate(perm))
     return (f"Solve the following math problem. Work through these "
@@ -91,26 +166,39 @@ def extract(text):
 
 class Api:
     def __init__(self, leg):
+        self.leg = leg
         self.model, self.pin, self.pout = LEGS[leg]
         self.usage_csv = os.path.join(OUT, f"{leg}_token_usage.csv")
         self.calls = 0
         self.tin = 0
         self.tout = 0
+        self.cost = 0.0  # API-reported, authoritative
         if os.path.exists(self.usage_csv):
             r = list(csv.DictReader(open(self.usage_csv)))[-1]
-            self.calls, self.tin, self.tout = (int(r["calls"]),
-                                               int(r["tin"]),
-                                               int(r["tout"]))
+            self.calls = int(r["calls"])
+            self.tin = int(r["tin"])
+            self.tout = int(r["tout"])
+            self.cost = float(r.get("usd_reported", 0.0))
 
-    def save(self):
+    def save(self, poll_key=False):
         with open(self.usage_csv, "w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=["calls", "tin", "tout",
-                                              "usd_est"])
+            w = csv.DictWriter(f, fieldnames=[
+                "calls", "tin", "tout", "usd_reported", "usd_est"])
             w.writeheader()
             w.writerow({"calls": self.calls, "tin": self.tin,
                         "tout": self.tout,
+                        "usd_reported": round(self.cost, 4),
                         "usd_est": round(self.tin / 1e6 * self.pin
-                                         + self.tout / 1e6 * self.pout, 3)})
+                                         + self.tout / 1e6 * self.pout,
+                                         4)})
+        total = guard_check_and_update(self.leg, 0.0, poll_key=poll_key)
+        try:  # refresh the live dashboard; never fatal
+            subprocess.run([sys.executable, os.path.join(
+                ROOT, "scripts", "build_live_dashboard.py")],
+                capture_output=True, timeout=60)
+        except Exception:
+            pass
+        return total
 
     def ask(self, perm, qidx, retries=6):
         import requests
@@ -118,6 +206,10 @@ class Api:
             if self.calls >= MAX_CALLS:
                 raise Budget("call cap")
             self.calls += 1
+        # cheap pre-call cost check (reported totals only, no HTTP)
+        g = _guard_load()
+        if _guard_total(g) >= CAP_USD:
+            raise Budget(f"COST CAP: ${_guard_total(g):.2f}")
         q = QUESTIONS[qidx]
         body = {
             "model": self.model,
@@ -126,6 +218,7 @@ class Api:
             "temperature": 0,
             "max_tokens": 800,
             "reasoning": {"enabled": False},
+            "usage": {"include": True},
         }
         for attempt in range(retries):
             try:
@@ -134,10 +227,14 @@ class Api:
                     headers={"Authorization": f"Bearer {KEY}"})
                 if r.status_code == 200:
                     j = r.json()
-                    um = j.get("usage", {})
+                    um = j.get("usage", {}) or {}
                     with _LOCK:
                         self.tin += um.get("prompt_tokens", 0)
                         self.tout += um.get("completion_tokens", 0)
+                        self.cost += float(um.get("cost", 0.0) or 0.0)
+                    if um.get("cost") is not None:
+                        guard_check_and_update(
+                            self.leg, float(um.get("cost") or 0.0))
                     try:
                         text = j["choices"][0]["message"]["content"]
                     except (KeyError, IndexError, TypeError):
@@ -190,6 +287,9 @@ def spearman(a, b):
 
 def main(leg):
     api = Api(leg)
+    total = api.save(poll_key=True)  # snapshot baseline + verify under cap
+    print(f"[guard] reported total ${total:.2f} of ${CAP_USD} cap",
+          flush=True)
     cache_csv = os.path.join(OUT, f"{leg}_answer_cache.csv")
     src, rand, top15, bot5 = target_orderings()
     allp = rand + top15 + bot5
@@ -224,19 +324,20 @@ def main(leg):
                             cache[(k, qi)] = res
                     done += 1
                     if done % 200 == 0:
-                        api.save()
+                        t = api.save(poll_key=True)
                         print(f"  {done}/{len(jobs)} "
-                              f"({time.time()-_START:.0f}s)", flush=True)
+                              f"({time.time()-_START:.0f}s, "
+                              f"${t:.2f}/${CAP_USD})", flush=True)
                     if (BUDGET_SECONDS
                             and time.time() - _START > BUDGET_SECONDS):
                         raise Budget("wall clock")
         except Budget as e:
             f.close()
-            api.save()
+            api.save(poll_key=True)
             print(f"PAUSED ({e}); rerun to resume", flush=True)
             return
         f.close()
-        api.save()
+        api.save(poll_key=True)
 
     # ---------------- analysis (mirrors iteration-17) ----------------
     def fit(p):
@@ -327,8 +428,9 @@ def main(leg):
                  f"[{np.percentile(tops,2.5):.3f}, "
                  f"{np.percentile(tops,97.5):.3f}] vs random mean "
                  f"{rand_t.mean():.3f}")
-    usd = api.tin / 1e6 * api.pin + api.tout / 1e6 * api.pout
-    lines.append(f"\nspend: {api.calls} calls; est ~${usd:.2f}")
+    lines.append(f"\nspend: {api.calls} calls; API-reported "
+                 f"${api.cost:.2f} (guard file: "
+                 f"{json.dumps(_guard_load()['reported_usd'])})")
     text = "\n".join(lines)
     open(os.path.join(OUT, f"{leg}_transfer_report.txt"), "w").write(
         text + "\n")
@@ -341,11 +443,15 @@ def selftest(leg):
     if not KEY:
         print("NO KEY: secret OPENROUTER_API_KEY is empty/missing.")
         return
+    u = key_usage()
+    print(f"key lifetime usage: ${u}" if u is not None
+          else "key usage endpoint unavailable")
     perm = [0, 1, 2, 3, 4, 5]
     res = api.ask(perm, 0)
     q = QUESTIONS[0]
-    print(f"model={api.model}  gold={q['gold']}  graded={res}")
-    api.save()
+    print(f"model={api.model}  gold={q['gold']}  graded={res}  "
+          f"reported_cost=${api.cost:.5f}")
+    api.save(poll_key=True)
     print("SELFTEST OK" if res is not None else "SELFTEST FAILED (no reply)")
 
 
