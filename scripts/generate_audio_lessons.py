@@ -39,6 +39,7 @@ VOICES = {
     "lesson-4-research": "onyx",
     "lesson-5-critics": "nova",
     "lesson-6-paper": "onyx",
+    "lesson-7-complete-status": "onyx",
 }
 
 
