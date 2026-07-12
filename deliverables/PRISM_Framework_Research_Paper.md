@@ -90,6 +90,16 @@ predictor-plus-acquisition pattern behind our surrogates; our
 contribution there is the finding that the encoding must match the
 landscape's structure class, mirroring operator matching.
 
+ANASOD [Wan et al., 2111.04670] provides the closest complementary
+abstraction. It replaces a fully specified cell by the normalized counts of
+its operations and reports that, in the spaces studied, these distributions
+retain enough discriminating power while being easier to optimize. PRISM does
+not treat this as a competing universal claim. Instead, it asks a prior
+method-selection question: for a fixed operation distribution, does exact edge
+placement retain measurable and locally exploitable residual structure? If
+not, the ANASOD quotient space is the appropriate representation; if so,
+placement-aware search may add value within that distribution.
+
 **Permutation evolutionary algorithms.** Operator-landscape
 correspondence (swap for absolute-position, insert for precedence,
 inversion for adjacency) follows Cicirello's classification [2022]; we
@@ -424,6 +434,57 @@ uncertainty-aware surrogate acquisition; n>=9 sampled-statistics
 protocol; formal restatement of absorption under aging; primary-source
 verification of the runtime bound's assumptions.
 
+### A.6 ANASOD boundary experiment (NAS-Bench-201)
+
+Motivation: test whether the pre-flight can decide when an
+operation-distribution encoding is sufficient, rather than presuming that
+placement always deserves optimization. NAS-Bench-201 has a fixed six-edge
+cell and five operations, giving 15,625 architectures partitioned into 210
+operation-count distributions. The implementation in
+`experiments/iteration-19/anasod_boundary.py` exhaustively groups the table by
+distribution and, for each dataset and group, reports within-group standard
+deviation and range, swap-neighborhood rho1, and exact FDC to the nearest tied
+best placement. Across the full table it reports eta-squared, the fraction of
+architecture-level variance attributable to differences between operation
+distributions. The ANASOD Figure-1 example (four 3x3 and two 1x1 convolutions)
+has only 15 unique placements, so it is a transparent case study rather than
+the sole basis for inference.
+
+Interpretation was fixed before observing results. High
+eta-squared, small within-distribution effects, and near-zero locality support
+using ANASOD's quotient representation and a PRISM recommendation not to
+optimize placement. Material within-distribution effects together with swap
+locality and negative FDC identify slices for a subsequent budget-matched
+PRISM-versus-random confirmation. Mixed results support the boundary thesis:
+operation distribution is a useful coarse representation, while the
+pre-flight identifies exceptions where placement remains exploitable.
+
+The exhaustive run used `simple-hpo-bench==0.2.0`, a compact NATS-Bench backend
+containing three repeated last-epoch validation accuracies for every cell.
+Distribution membership explains 46.1% (CIFAR-10), 55.6% (CIFAR-100), and
+61.2% (ImageNet16-120) of architecture-level variance (eta-squared); the
+corresponding within-distribution fractions are 53.9%, 44.4%, and 38.8%.
+Therefore operation counts are strongly informative but are not sufficient
+statistics for these tables. Median within-slice standard deviations are
+2.10, 3.32, and 3.28 accuracy points, respectively.
+
+| Dataset | eta-squared (distribution) | Figure-1 slice range (points) | swap rho1 | exact FDC |
+| --- | ---: | ---: | ---: | ---: |
+| CIFAR-10 | 0.461 | 0.848 | 0.137 | -0.412 |
+| CIFAR-100 | 0.556 | 2.530 | -0.143 | -0.273 |
+| ImageNet16-120 | 0.612 | 4.956 | 0.223 | -0.721 |
+
+The Figure-1 slice gives the intended mixed diagnosis: exact placement has a
+small effect on CIFAR-10, a larger effect on the harder datasets, and clearly
+usable swap-local structure only on ImageNet16-120. Across the 205 non-singleton
+distributions, 98, 97, and 112 slices respectively satisfy the previously used
+pre-flight conjunction rho1 > 0.2 and FDC < -0.15. This refines rather than
+contradicts ANASOD: distribution is a valuable coarse encoding, while the value
+of placement optimization is slice- and dataset-dependent. Results are exact
+for the compact tables; replication against the official 4.7 GB archive and a
+budget-matched search confirmation remain limitations. Synthetic fixture
+output is software validation only.
+
 ## Appendix B. Convergence Statements for Replacement Variants
 
 This appendix closes the theory gap opened by Section 6.8: aging
@@ -517,6 +578,7 @@ explicit: guarantees are cheap; *rates* are landscape-conditional.
 - Real, Aggarwal, Huang, Le. Regularized Evolution for Image Classifier Architecture Search. arXiv:1802.01548.
 - Liu, Simonyan, Yang. DARTS: Differentiable Architecture Search. arXiv:1806.09055.
 - Ying et al. NAS-Bench-101. arXiv:1902.09635. Dong, Yang. NAS-Bench-201. arXiv:2001.00326.
+- Wan et al. Approximate Neural Architecture Search via Operation Distribution Learning. WACV 2022; arXiv:2111.04670.
 - Abdelfattah, Mehrotra, Dudziak, Lane. Zero-Cost Proxies for Lightweight NAS. arXiv:2101.08134.
 - Mellor, Turner, Storkey, Crowley. Neural Architecture Search without Training. arXiv:2006.04647.
 - White, Neiswanger, Savani. BANANAS: Bayesian Optimization with Neural Architectures for NAS. arXiv:1910.11858.

@@ -1,0 +1,6 @@
+# Binary formats — never apply line-ending conversion
+*.pdf binary
+*.mp3 binary
+*.png binary
+*.pptx binary
+*.ipynb -text

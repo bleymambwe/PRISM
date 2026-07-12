@@ -37,9 +37,8 @@ desktop.ini
 *.tmp
 *.swp
 
-# Generated audio lessons are local artifacts (33MB, slow uplink);
-# regenerate with scripts/generate_audio_lessons.py (key from GCP Secret Manager)
-deliverables/audio/*.mp3
+# Audio lessons are tracked as of 2026-07-12 (user request: push the whole folder).
+# Regenerable anytime via scripts/generate_audio_lessons.py (key from GCP Secret Manager).
 
 # Downloaded paper PDFs (131MB, re-downloadable from arXiv; metadata is tracked)
 research-opportunity-mapping-2026-07-06/papers/pdfs/
@@ -49,3 +48,6 @@ research-opportunity-mapping-2026-07-06/papers/expanded_2026_07_07/pdfs/
 
 # Windows shortcuts
 *.lnk
+
+secrets.env
+*.env
