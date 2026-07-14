@@ -1,5 +1,16 @@
 # PRISM Decision Log
 
+## 2026-07-14 (One-Pager): Zero-Cost Program Items Approved by Bley
+
+Decision (D22): Bley approved the three $0 items from
+`docs/NEXT_STEPS_ONE_PAGER_2026-07-14.md`: (3) the SciML pipeline-ordering
+suite (Benchmark #4, extend Experiment P to 5-8 dynamical systems), (4) the
+NAS-Bench search-stage confirmation (Benchmark #5, pre-registered forecasts
+on high/low-structure ANASOD slices), and (6) the rho1-vs-alternatives
+ablation. The paid items (Benchmark #2 Experiment S at $5-7 and the
+prompt-optimizer baselines at $5-10) remain NOT approved and must not incur
+spend. Execution order: ablation -> SciML suite -> NAS-Bench confirmation.
+
 ## 2026-07-11 (Review): Paper Framing Approved by Bley
 
 Decision (D21): Bley approved decisions 1, 2, 3, and 5 of

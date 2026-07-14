@@ -1,0 +1,57 @@
+Iteration 20 - SciML pipeline-ordering suite (6 systems x 720 orderings, deterministic, $0)
+
+== damped_oscillator ==
+  fitness: min 0.396 mean 0.859 max 0.999 std 0.200 | optimum held by 1/720
+  best  MEDIAN -> DIFF -> SUBSAMPLE -> CLIP -> SMOOTH -> TRIM
+  worst TRIM -> CLIP -> SUBSAMPLE -> SMOOTH -> MEDIAN -> DIFF (0.396)
+  pre-flight: rho1 swap=0.36, insert=0.58, inversion=0.29, scramble=0.59 | FDC -0.046 -> near-zero: random/aging (operator=insert)
+    prism   hits 21/40 CI[0.37,0.67] mean evals 38.3
+    random  hits 16/40 CI[0.26,0.55] mean evals 124.8
+
+== cubic_oscillator ==
+  fitness: min 0.698 mean 0.942 max 0.999 std 0.078 | optimum held by 3/720
+  best  MEDIAN -> CLIP -> SUBSAMPLE -> DIFF -> TRIM -> SMOOTH
+  worst CLIP -> DIFF -> TRIM -> SUBSAMPLE -> MEDIAN -> SMOOTH (0.698)
+  pre-flight: rho1 swap=0.31, insert=0.53, inversion=0.24, scramble=0.55 | FDC -0.022 -> near-zero: random/aging (operator=insert)
+    prism   hits 34/40 CI[0.71,0.93] mean evals 31.2
+    random  hits 30/40 CI[0.60,0.86] mean evals 98.6
+
+== vanderpol ==
+  fitness: min 0.312 mean 0.628 max 0.881 std 0.207 | optimum held by 2/720
+  best  DIFF -> CLIP -> MEDIAN -> SMOOTH -> TRIM -> SUBSAMPLE
+  worst CLIP -> SUBSAMPLE -> DIFF -> MEDIAN -> SMOOTH -> TRIM (0.312)
+  pre-flight: rho1 swap=0.52, insert=0.68, inversion=0.40, scramble=0.70 | FDC -0.038 -> near-zero: random/aging (operator=insert)
+    prism   hits 40/40 CI[0.91,1.00] mean evals 41.5
+    random  hits 20/40 CI[0.35,0.65] mean evals 96.0
+
+== lotka_volterra ==
+  fitness: min 0.000 mean 0.798 max 0.999 std 0.395 | optimum held by 8/720
+  best  SMOOTH -> TRIM -> MEDIAN -> CLIP -> DIFF -> SUBSAMPLE
+  worst TRIM -> MEDIAN -> SMOOTH -> CLIP -> SUBSAMPLE -> DIFF (0.000)
+  pre-flight: rho1 swap=0.31, insert=0.52, inversion=0.24, scramble=0.54 | FDC -0.093 -> near-zero: random/aging (operator=insert)
+    prism   hits 40/40 CI[0.91,1.00] mean evals 27.9
+    random  hits 37/40 CI[0.80,0.97] mean evals 75.9
+
+== lorenz63 ==
+  fitness: min 0.888 mean 0.959 max 0.993 std 0.022 | optimum held by 3/720
+  best  SMOOTH -> TRIM -> MEDIAN -> CLIP -> DIFF -> SUBSAMPLE
+  worst CLIP -> TRIM -> DIFF -> SUBSAMPLE -> MEDIAN -> SMOOTH (0.888)
+  pre-flight: rho1 swap=0.38, insert=0.48, inversion=0.30, scramble=0.58 | FDC -0.207 -> elitist search (operator=insert)
+    prism   hits 40/40 CI[0.91,1.00] mean evals 33.8
+    random  hits 23/40 CI[0.42,0.71] mean evals 110.2
+
+== rossler ==
+  fitness: min 0.367 mean 0.611 max 0.813 std 0.171 | optimum held by 1/720
+  best  TRIM -> DIFF -> CLIP -> MEDIAN -> SMOOTH -> SUBSAMPLE
+  worst SUBSAMPLE -> SMOOTH -> CLIP -> DIFF -> MEDIAN -> TRIM (0.367)
+  pre-flight: rho1 swap=0.51, insert=0.68, inversion=0.35, scramble=0.69 | FDC -0.053 -> near-zero: random/aging (operator=insert)
+    prism   hits 40/40 CI[0.91,1.00] mean evals 45.6
+    random  hits 14/40 CI[0.22,0.50] mean evals 99.0
+
+SUITE SUMMARY (system | std | range | #opt | FDC | op | regime | prism-vs-random hits):
+  damped_oscillator | 0.1999083103796866 | 0.40-1.00 | 1 | -0.05 | insert | near-zero | 21/40 vs 16/40
+  cubic_oscillator | 0.0778712358772716 | 0.70-1.00 | 3 | -0.02 | insert | near-zero | 34/40 vs 30/40
+  vanderpol | 0.2067522892620881 | 0.31-0.88 | 2 | -0.04 | insert | near-zero | 40/40 vs 20/40
+  lotka_volterra | 0.39469444256882236 | 0.00-1.00 | 8 | -0.09 | insert | near-zero | 40/40 vs 37/40
+  lorenz63 | 0.0215308989076304 | 0.89-0.99 | 3 | -0.21 | insert | elitist search | 40/40 vs 23/40
+  rossler | 0.17061736010485123 | 0.37-0.81 | 1 | -0.05 | insert | near-zero | 40/40 vs 14/40

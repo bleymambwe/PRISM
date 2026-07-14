@@ -1,0 +1,13 @@
+landscape,matched,selector,acc_B50,acc_B100,acc_B500
+hamming (n=7),swap,pair_rho1,0.86,0.975,1.0
+hamming (n=7),swap,walk_rho1,0.8,0.92,1.0
+hamming (n=7),swap,neg_mad,0.88,0.955,1.0
+kendall (n=7),insert,pair_rho1,0.865,0.95,1.0
+kendall (n=7),insert,walk_rho1,0.72,0.87,1.0
+kendall (n=7),insert,neg_mad,0.855,0.95,1.0
+adjacency (n=7),inversion,pair_rho1,0.865,0.975,1.0
+adjacency (n=7),inversion,walk_rho1,0.755,0.875,1.0
+adjacency (n=7),inversion,neg_mad,0.9,0.965,1.0
+LLM n=6 (Exp. K),insert,pair_rho1,0.735,0.8,0.99
+LLM n=6 (Exp. K),insert,walk_rho1,0.66,0.725,0.97
+LLM n=6 (Exp. K),insert,neg_mad,0.675,0.79,0.965

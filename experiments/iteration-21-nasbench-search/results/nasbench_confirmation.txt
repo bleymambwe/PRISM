@@ -1,0 +1,28 @@
+Iteration 21 - NAS-Bench-201 within-slice search confirmation (pre-registered H24)
+budget 30 distinct archs, 40 seeds, eligibility n>=60 & range>=1.0pt, score=(-FDC)+rho_swap
+
+== cifar10-valid ==
+  HIGH 2;1;0;0;3   n=60  range=29.1 FDC=-0.66 rho=+0.33 | prism 24/40 (mean 23.7) vs random 18/40 (mean 13.6) -> ~ random [forecast MISS]
+  HIGH 0;1;2;2;1   n=180 range=3.3 FDC=-0.54 rho=+0.46 | prism 17/40 (mean 25.9) vs random 6/40 (mean 17.8) -> SEARCH WINS [forecast OK]
+  HIGH 0;1;1;3;1   n=120 range=3.5 FDC=-0.59 rho=+0.45 | prism 17/40 (mean 25.1) vs random 13/40 (mean 20.5) -> ~ random [forecast MISS]
+  LOW 1;3;2;0;0   n=60  range=5.5 FDC=-0.04 rho=-0.01 | prism 27/40 (mean 19.5) vs random 22/40 (mean 11.5) -> ~ random [forecast OK]
+  LOW 2;1;0;3;0   n=60  range=6.9 FDC=-0.13 rho=-0.02 | prism 32/40 (mean 23.3) vs random 19/40 (mean 16.7) -> SEARCH WINS [forecast MISS]
+  LOW 2;0;1;3;0   n=60  range=4.3 FDC=+0.09 rho=+0.22 | prism 21/40 (mean 19.7) vs random 18/40 (mean 16.0) -> ~ random [forecast OK]
+
+== cifar100 ==
+  HIGH 0;3;2;0;1   n=60  range=13.3 FDC=-0.64 rho=+0.36 | prism 31/40 (mean 21.3) vs random 20/40 (mean 13.4) -> SEARCH WINS [forecast OK]
+  HIGH 0;3;0;2;1   n=60  range=10.3 FDC=-0.65 rho=+0.38 | prism 28/40 (mean 21.4) vs random 18/40 (mean 14.6) -> SEARCH WINS [forecast OK]
+  HIGH 0;1;2;0;3   n=60  range=17.6 FDC=-0.67 rho=+0.37 | prism 30/40 (mean 21.9) vs random 18/40 (mean 15.4) -> SEARCH WINS [forecast OK]
+  LOW 0;0;3;2;1   n=60  range=2.7 FDC=+0.06 rho=+0.04 | prism 17/40 (mean 19.9) vs random 19/40 (mean 13.9) -> ~ random [forecast OK]
+  LOW 2;1;0;3;0   n=60  range=14.1 FDC=-0.10 rho=-0.00 | prism 31/40 (mean 23.0) vs random 19/40 (mean 16.7) -> SEARCH WINS [forecast MISS]
+  LOW 3;2;0;1;0   n=60  range=66.9 FDC=+0.06 rho=+0.18 | prism 21/40 (mean 21.0) vs random 19/40 (mean 19.9) -> ~ random [forecast OK]
+
+== ImageNet16-120 ==
+  HIGH 0;2;0;2;2   n=90  range=15.2 FDC=-0.60 rho=+0.39 | prism 23/40 (mean 23.6) vs random 10/40 (mean 15.9) -> SEARCH WINS [forecast OK]
+  HIGH 0;3;2;0;1   n=60  range=8.9 FDC=-0.66 rho=+0.35 | prism 32/40 (mean 22.7) vs random 21/40 (mean 16.7) -> SEARCH WINS [forecast OK]
+  HIGH 0;3;0;2;1   n=60  range=11.0 FDC=-0.68 rho=+0.38 | prism 29/40 (mean 21.1) vs random 18/40 (mean 14.6) -> SEARCH WINS [forecast OK]
+  LOW 2;2;0;2;0   n=90  range=19.7 FDC=+0.02 rho=+0.05 | prism 26/40 (mean 22.3) vs random 13/40 (mean 14.1) -> SEARCH WINS [forecast MISS]
+  LOW 2;3;1;0;0   n=60  range=8.0 FDC=+0.12 rho=+0.18 | prism 25/40 (mean 21.6) vs random 25/40 (mean 14.7) -> ~ random [forecast OK]
+  LOW 3;2;0;0;1   n=60  range=29.4 FDC=+0.10 rho=+0.24 | prism 21/40 (mean 19.2) vs random 20/40 (mean 15.3) -> ~ random [forecast OK]
+
+H24 scorecard: HIGH forecasts correct 7/9; LOW forecasts correct 6/9

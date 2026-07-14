@@ -1,5 +1,86 @@
 # PRISM Experiment Log
 
+## 2026-07-14 (Iteration 22): rho1-vs-Alternatives Ablation — D14 STATISTIC WINS AT LOW BUDGET
+
+- Question (D21 item 5, approved D22): is rho1 (independent move-pair
+  autocorrelation) at least as reliable an operator selector as
+  classical alternatives at equal sample budget?
+- Selectors: pair_rho1 (ours) vs walk_rho1 (Weinberger random-walk
+  estimator; autocorrelation length is a monotone transform, identical
+  argmax) vs neg_mad (mean |dF| ruggedness). Landscapes: hamming /
+  kendall / adjacency n=7 (matched operators known) + LLM n=6 cache.
+  Budgets 50/100/500 move-samples, 200 resamples, pick = argmax over
+  {swap, insert, inversion}.
+- Results (mean pick accuracy): pair_rho1 0.831 / 0.925 / 0.998 at
+  B=50/100/500; walk_rho1 0.734 / 0.848 / 0.992; neg_mad 0.827 /
+  0.915 / 0.991. pair_rho1 best at every budget and clearest on the
+  real LLM landscape (0.80 vs 0.72 / 0.79 at B=100). All converge by
+  B=500.
+- Meaning: the D14 choice is now backed by an ablation — independent
+  pairs beat the walk estimator at exactly the 100-sample budget the
+  pre-flight uses; the reviewer question is answered with data.
+- Cost $0. Outputs: experiments/iteration-22-rho1-ablation/results/.
+
+## 2026-07-14 (Iteration 21): NAS-Bench-201 Within-Slice Search Confirmation — H24: 13/18 PRE-REGISTERED FORECASTS CORRECT
+
+- Question (Benchmark #5, approved D22): does the committed
+  iteration-19 ANASOD slice diagnostic predict where placement-aware
+  search beats random inside NAS-Bench-201 operation-multiset slices?
+  Completes the boundary study's "budget-matched search confirmation".
+- Pre-registration: selection basis = the iteration-19 slice_metrics
+  CSV committed 2026-07-11 (before this experiment existed). Eligible:
+  n_placements >= 60, range >= 1.0 pt. Structure score = (-FDC) +
+  rho_swap; top-3 = HIGH (forecast: search wins), bottom-3 = LOW
+  (forecast: ~ random), per dataset. Win criterion: hit-rate gap >=
+  20 pts or disjoint Wilson CIs at budget 30 distinct archs, 40 seeds.
+  Searcher = elitist swap-EA (pop 20, k=3, p_m 0.6) on multiset
+  placements; fitness = simple-hpo-bench table lookup.
+- Results: HIGH 7/9 correct (cifar100 3/3, ImageNet16 3/3 — decisive,
+  e.g. 23/40 vs 10/40; both misses on cifar10-valid, the noisiest
+  table). LOW 6/9 correct; all 3 LOW misses are slices where search
+  WON anyway (conservative direction). Overall 13/18 = 72%.
+- Meaning: the pre-flight transfers to a fresh domain (NAS) with real
+  predictive power, and its errors are one-sided — it under-calls
+  search, never wastes budget. Same directional bias as Iteration 20.
+- Caveat: compact last-epoch tables (not the official archive);
+  n_optima ties included; slice pool limited to >= 60 placements.
+- Cost $0. Outputs: experiments/iteration-21-nasbench-search/results/.
+
+## 2026-07-14 (Iteration 20): SciML Pipeline-Ordering Suite — 6 SYSTEMS, ORDERING EFFECTS UNIVERSAL; FDC UNDER-CALLS SEARCH
+
+- Question (Benchmark #4, approved D22): is the Experiment-P
+  pipeline-ordering landscape a general phenomenon across dynamical
+  systems, and does the D14/D19 pre-flight call each instance right?
+- Design: 6 systems (damped oscillator = Exp. P, cubic oscillator,
+  Van der Pol mu=5, Lotka-Volterra, Lorenz-63, Rossler), identical 6
+  pipeline ops (TRIM/MEDIAN/SMOOTH/CLIP/SUBSAMPLE/DIFF), STLSQ
+  recovery, all 720 orderings enumerated per system (deterministic,
+  $0, kill-safe). Pre-flight + 40-seed protocol-vs-random race each.
+- Benchmark-construction note: the first Lotka-Volterra config
+  (x0=[1.5,1]) orbited too near the equilibrium — the degree-3 library
+  went collinear and STLSQ failed for EVERY ordering (flat 0.000
+  landscape = non-identifiable instance, not a finding). Widened orbit
+  (x0=[3,1], thresh 0.1) restored identifiability; flat rows purged.
+- Landscape results (fitness = 1 - relative coefficient error):
+  swings by ordering alone — damped 0.40-1.00, cubic 0.70-1.00,
+  VdP 0.31-0.88, LV 0.00-1.00 (!), Lorenz 0.89-0.99, Rossler
+  0.37-0.81; optima sparse (1-8 of 720). rho1 picks INSERT on 6/6 —
+  precedence structure is general in preprocessing pipelines.
+- Pre-flight scoring: Lorenz called "elitist search" (FDC -0.21) —
+  correct (PRISM 40/40 vs random 23/40). But on VdP, Rossler, LV the
+  Cayley-FDC read near-zero (-0.04/-0.05/-0.09) while insert-PRISM
+  DOMINATED random (40/40 vs 20/40; 40/40 vs 14/40; 40/40 vs 37/40
+  with 2.7x fewer evals). One-sided miss: FDC's swap-aligned Cayley
+  distance misses precedence structure that rho1(insert) ~ 0.5-0.7
+  sees.
+- Proposed D23 (research-loop observation, for Bley's review): the
+  regime call should use BOTH statistics — argmax-rho1 >= ~0.5 with
+  near-zero FDC should read "search promising (precedence)", and/or
+  FDC should be computed with an insert-aligned (Ulam/LIS) distance.
+  Consistent with the Iteration-21 LOW-miss direction.
+- Cost $0. Outputs: experiments/iteration-20-sciml-suite/results/
+  (suite_landscape.csv = 4,320 rows, suite_report.txt).
+
 ## 2026-07-12 (Iteration 19, Experiment Q2): Cross-FAMILY Transfer — REPLICATED; GEMMA WAS THE OUTLIER
 
 - Question: is the Gemma asymmetry (Exp. Q: pathology transfers, structure

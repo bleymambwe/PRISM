@@ -1,0 +1,21 @@
+Iteration 22 - rho1-vs-alternatives operator-selection ablation
+budgets [50, 100, 500] move-samples; 200 resamples; pick = argmax over ['swap', 'insert', 'inversion']
+
+landscape          matched   selector   B=50   B=100  B=500 
+hamming (n=7)      swap      pair_rho1  0.86   0.97   1.00  
+hamming (n=7)      swap      walk_rho1  0.80   0.92   1.00  
+hamming (n=7)      swap      neg_mad    0.88   0.95   1.00  
+kendall (n=7)      insert    pair_rho1  0.86   0.95   1.00  
+kendall (n=7)      insert    walk_rho1  0.72   0.87   1.00  
+kendall (n=7)      insert    neg_mad    0.85   0.95   1.00  
+adjacency (n=7)    inversion pair_rho1  0.86   0.97   1.00  
+adjacency (n=7)    inversion walk_rho1  0.76   0.88   1.00  
+adjacency (n=7)    inversion neg_mad    0.90   0.96   1.00  
+LLM n=6 (Exp. K)   insert    pair_rho1  0.73   0.80   0.99  
+LLM n=6 (Exp. K)   insert    walk_rho1  0.66   0.72   0.97  
+LLM n=6 (Exp. K)   insert    neg_mad    0.68   0.79   0.96  
+
+Mean pick accuracy across the 4 landscapes:
+  pair_rho1  B=50:0.831 B=100:0.925 B=500:0.998
+  walk_rho1  B=50:0.734 B=100:0.848 B=500:0.992
+  neg_mad    B=50:0.827 B=100:0.915 B=500:0.991

@@ -124,6 +124,20 @@ PAST = [
      "[+0.221,+0.372]); top-15 marginal (+0.123 [+0.008,+0.234]); rank + "
      "position structure do NOT transfer (Spearman 0.158 CI spans 0; "
      "r=0.064)"),
+    ("19", "Q2", "Cross-FAMILY transfer (Qwen 3B-active, Llama-3.2-3B)",
+     "REPLICATED - Gemma was the outlier: top-ordering advantage "
+     "transfers on all 3 families; Llama structure r=0.582; new "
+     "moderator = target capability ($0.66 of $9 cap)"),
+    ("20", "suite", "SciML pipeline suite: 6 dynamical systems x 720 "
+     "orderings", "Ordering effects universal (LV 0.00-1.00 by order "
+     "alone); insert wins rho1 6/6; PRISM dominates random 4/6; "
+     "near-zero Cayley-FDC under-calls precedence search (proposed D23)"),
+    ("21", "H24", "NAS-Bench-201 within-slice search confirmation "
+     "(pre-registered)", "13/18 forecasts correct; cifar100+ImageNet16 "
+     "HIGH slices 6/6 decisive; misses one-sided (search under-called)"),
+    ("22", "ablation", "rho1 vs walk-autocorrelation vs ruggedness as "
+     "operator selector", "pair_rho1 best at every budget (0.925 mean "
+     "pick accuracy at B=100 vs 0.848/0.915)"),
 ]
 
 CSS = """
