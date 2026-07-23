@@ -1,0 +1,25 @@
+{
+ "n_pairs_per_op": 22,
+ "rho1": {
+  "swap": 0.17757704191194382,
+  "insert": -0.16941130349926684,
+  "inversion": -0.1360560905481631,
+  "scramble": -0.02812844374763244
+ },
+ "fdc": 0.196910678595062,
+ "best_known_perm": [
+  3,
+  7,
+  6,
+  4,
+  0,
+  1,
+  5,
+  2
+ ],
+ "best_known_fitness": 0.52,
+ "operator_pick": "swap",
+ "h22_forecast_search_beats_random": false,
+ "h22_forecast_text": "argmax rho1 = swap (0.178); FDC = +0.197 (not materially negative -> random likely competitive)",
+ "registered_utc": "2026-07-23 21:48:48"
+}

@@ -44,6 +44,66 @@ def report(path):
     return open(path, encoding="utf-8", errors="replace").read()
 
 
+def json_or_none(path):
+    if not os.path.exists(path):
+        return None
+    try:
+        return json.load(open(path))
+    except Exception:
+        return None
+
+
+def experiment_s_data():
+    it23 = os.path.join(ROOT, "experiments", "iteration-23-experiment-s",
+                        "results")
+    pilot = json_or_none(os.path.join(it23, "pilot_result.json"))
+    preflight = json_or_none(os.path.join(it23, "preflight_result.json"))
+    orderings = json_or_none(os.path.join(it23, "orderings.json"))
+    lock = json_or_none(os.path.join(it23, "model_lock.json"))
+    u = usage(os.path.join(it23, "token_usage.csv"))
+    guard = json_or_none(os.path.join(it23, "spend_guard.json")) or {}
+    main_done = cache_rows(os.path.join(it23, "answer_cache.csv"))
+    n_searched = len(orderings.get("searched", [])) if orderings else 0
+    main_target = 200 * 100  # (150 random + 50 guided) x 100 questions,
+    # the searched arm's target grows as the online search runs
+    main_target += n_searched * 100 if orderings else 0
+    rep = report(os.path.join(it23, "experiment_s_report.txt"))
+    pilot_passed = bool(pilot and pilot.get("passed"))
+    preflight_pairs_done = 0
+    if pilot_passed and not preflight:
+        # pre-flight cells share the cache with the pilot; anything
+        # cached beyond the pilot's fixed 200 is pre-flight progress
+        preflight_pairs_done = max(0, main_done - 200)
+    stages = [
+        {"name": "1. Pilot", "done": bool(pilot),
+         "detail": (f"accuracy {pilot['accuracy']:.2f} -> "
+                    f"{'PASS' if pilot['passed'] else 'FAIL'}")
+                   if pilot else "not started"},
+        {"name": "2. Pre-flight", "done": bool(preflight),
+         "detail": (preflight["h22_forecast_text"] if preflight
+                    else (f"running: ~{preflight_pairs_done:,} / "
+                         f"~4,400 cells cached"
+                         if preflight_pairs_done else "not started")
+                    if pilot_passed else "not started")},
+        {"name": "3. Main landscape", "done": bool(rep),
+         "detail": (f"{max(0, main_done - 201 - preflight.get('n_pairs_per_op', 22) * 4 * 2 * 25):,} "
+                    f"/ {main_target:,} cells cached (stage-3 only; "
+                    f"total cache incl. pilot+preflight: {main_done:,})"
+                    if orderings and preflight else "not started")},
+        {"name": "4. Analysis", "done": bool(rep),
+         "detail": "STUDY COMPLETE" if rep else "pending stage 3"},
+    ]
+    return {
+        "model": lock["model"] if lock else "not yet locked",
+        "cap": guard.get("cap_usd", 10.0),
+        "spend": guard.get("reported_usd", 0.0),
+        "calls": u.get("calls", "0"),
+        "stages": stages,
+        "report": rep,
+        "pilot_failed": bool(pilot and not pilot["passed"]),
+    }
+
+
 def leg_data():
     legs = []
     it17 = os.path.join(ROOT, "experiments", "iteration-17", "results")
@@ -194,6 +254,14 @@ padding:2px 8px;border-radius:99px;border:1px solid var(--border)}
 .b-done{color:var(--goodtext)}
 .b-run{color:var(--blue)}
 .b-wait{color:var(--muted)}
+.stage-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.stage{flex:1;min-width:160px;border:1px solid var(--border);
+border-radius:8px;padding:8px 10px;font-size:12px}
+.stage .name{font-weight:600;margin-bottom:3px}
+.stage.done{border-color:var(--good);background:color-mix(in srgb,
+var(--good) 10%,transparent)}
+.stage.fail{border-color:var(--crit);background:color-mix(in srgb,
+var(--crit) 10%,transparent)}
 .wrap{overflow-x:auto}
 footer{color:var(--muted);font-size:11px;margin-top:24px}
 """
@@ -254,6 +322,29 @@ def build():
   ({pct:.1f}%) &nbsp;·&nbsp; {esc(l['calls'])} API calls
   &nbsp;·&nbsp; {esc(l['cost'])}</div>{rep}</div>""")
 
+    es = experiment_s_data()
+    es_pct = min(100.0, (es["spend"] / es["cap"] * 100) if es["cap"] else 0)
+    es_state = ("FAILED PILOT", "b-wait") if es["pilot_failed"] else (
+        ("DONE", "b-done") if es["report"] else
+        ("RUNNING", "b-run") if es["spend"] > 0 else ("QUEUED", "b-wait"))
+    es_stage_html = "".join(
+        f'<div class="stage {"done" if s["done"] else ("fail" if es["pilot_failed"] and s["name"].startswith("1") else "")}">'
+        f'<div class="name">{esc(s["name"])}</div>'
+        f'<div>{esc(s["detail"])}</div></div>'
+        for s in es["stages"])
+    es_report_html = (f"<pre>{esc(es['report'])}</pre>" if es["report"]
+                      else "")
+    es_card = f"""
+<div class="card"><h3>Experiment S — Benchmark #2 (MATH-500 hard-reasoning
+  landscape) &nbsp;<span class="badge {es_state[1]}">{es_state[0]}</span></h3>
+ <div class="m">{esc(es['model'])} · dedicated ${es['cap']:.2f} cap
+  (independent of the leg cap above)</div>
+ <div class="bar"><i class="{'full' if es_pct >= 100 else ''}"
+  style="width:{es_pct:.1f}%"></i></div>
+ <div class="stats">${es['spend']:.2f} / ${es['cap']:.2f} spent
+  ({es_pct:.1f}%) &nbsp;·&nbsp; {esc(es['calls'])} API calls</div>
+ <div class="stage-row">{es_stage_html}</div>{es_report_html}</div>"""
+
     past_rows = "\n".join(
         f"<tr><td>{esc(it)}</td><td>{esc(ex)}</td><td>{esc(q)}</td>"
         f"<td>{esc(res)}</td></tr>"
@@ -270,9 +361,11 @@ def build():
  modules and prompts; source landscape = Experiment K (Gemini
  Flash-Lite, all 720 orderings enumerated)</div>
 {tiles}
-<h2>Legs</h2>
+<h2>Experiment S (Benchmark #2, approved D25)</h2>
+{es_card}
+<h2>Legs (Benchmark #1, complete)</h2>
 {''.join(cards)}
-<h2>Prior experiments (full record, iterations 2&ndash;18)</h2>
+<h2>Prior experiments (full record, iterations 2&ndash;22)</h2>
 <div class="wrap"><table>
 <tr><th>It.</th><th>Exp.</th><th>Question</th><th>Result</th></tr>
 {past_rows}

@@ -1,5 +1,18 @@
 # PRISM Decision Log
 
+## 2026-07-22 (Experiment S review): Benchmark #2 Approved by Bley
+
+Decision (D25): Bley approved Experiment S (Benchmark #2, the MATH-500
+high-resolution hard-reasoning ordering landscape) after reviewing the HTML
+brief at `deliverables/experiment_s_review.html` (hypotheses H19-H23, design,
+race methodology, procedure gates, publication-readiness verdict). Envelope:
+a fresh, dedicated $10.00 hard cost cap (the approved worst-case), tracked in
+`experiments/iteration-23-experiment-s/results/spend_guard.json`, independent
+of the iteration-19 cross-family $9 cap. Prompt-optimizer baselines remain a
+SEPARATE, still-unapproved item (~$5-10) -- not authorized by this decision.
+Execution: pilot gate -> pre-flight (H22 forecast committed to git before the
+main run) -> main landscape -> analysis, per the pre-registered procedure.
+
 ## 2026-07-14 (One-Pager): Zero-Cost Program Items Approved by Bley
 
 Decision (D22): Bley approved the three $0 items from
