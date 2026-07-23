@@ -470,7 +470,7 @@ _cache_file = open(CACHE_CSV, "a", newline="")
 _cache_writer = csv.writer(_cache_file)
 
 
-def ensure_evaluated(perm, qindices, workers=10):
+def ensure_evaluated(perm, qindices, workers=25):
     """Fill the cache for (perm, q) pairs not yet present. Respects the
     wall-clock budget and the cost cap; raises Budget to pause cleanly."""
     key = json.dumps(list(perm))
