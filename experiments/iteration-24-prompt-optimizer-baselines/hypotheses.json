@@ -1,0 +1,25 @@
+{
+  "experiment": "T (Iteration 24) — prompt-optimizer baselines",
+  "decision": "D27",
+  "registered_before_any_evaluation": true,
+  "target_model": "meta-llama/llama-3.1-8b-instruct",
+  "optimizer_model": "gemini-2.5-flash-lite",
+  "question_pool": "experiments/iteration-23-experiment-s/results/math500_pool.json (100 Q, MATH-500 L3-5, simple-answer filter, seed 23)",
+  "train_questions": "indices 0-59",
+  "heldout_questions": "indices 60-99",
+  "trackB_subset": "indices 60-89 (30 Q)",
+  "cost_cap_usd": 5.0,
+  "hypotheses": {
+    "H25": {
+      "name": "Complementarity of ordering and content optimization",
+      "prediction": "After OPRO rewrites all 8 module wordings at fixed canonical order, reordering the optimized modules keeps order-driven std >= 40% of original-wording std AND >= 0.03 absolute (Exp. S original std = 0.078).",
+      "falsified_if": "optimized-wording ordering std < 0.02 (indistinguishable from grading noise at n=40 Q)"
+    },
+    "H26": {
+      "name": "PRISM search efficiency vs generic LLM optimizer",
+      "prediction": "On the identical 8! ordering space, same 30-Q fitness, same seeds, at budget 25 fresh evals, PRISM best-found accuracy >= OPRO best-found accuracy (5-seed point estimate).",
+      "falsified_if": "OPRO best-found exceeds PRISM best-found by a margin whose 5-seed CI excludes zero",
+      "uncertainty_flag": "genuinely uncertain — published OPRO/APE is strong; either outcome is reportable"
+    }
+  }
+}

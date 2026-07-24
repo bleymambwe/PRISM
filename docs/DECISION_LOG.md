@@ -1,5 +1,24 @@
 # PRISM Decision Log
 
+## 2026-07-24 (Iteration 24, Experiment T): Prompt-Optimizer Baselines Approved
+
+Decision (D27): Bley approved Experiment T (prompt-optimizer baselines) — the
+D21-required condition before Paper B submission. It answers the standing
+reviewer objection "why does order matter vs. just writing better instructions?"
+with two pre-registered hypotheses: H25 (complementarity — after an OPRO-style
+optimizer rewrites the 8 modules' *wording* at fixed order, does *reordering*
+still move accuracy?) and H26 (efficiency — restricted to the identical ordering
+search space, does PRISM's search beat a generic LLM optimizer?). Design in
+`experiments/iteration-24-prompt-optimizer-baselines/PLAN.md`. Target model =
+Llama-3.1-8B (reused from Exp. S); optimizer model = Gemini Flash-Lite; OPRO
+hand-implemented and audited (not pip-installed, after this session's
+`math-verify` failure). GREATER (needs white-box gradients), MIPROv2/GEPA
+(heavier deps — stretch goal), and PromptBridge (a transfer citation, not a
+content-vs-order baseline) are explicitly out of scope with reasons logged.
+Dedicated $5.00 cost cap, independent of prior caps; realistic spend ≈ $1.8.
+Pre-registration = the git commit of PLAN.md + hypotheses.json BEFORE any
+evaluation runs.
+
 ## 2026-07-24 (Iteration 23, Experiment S): D20 Scope Note — Sensitivity Magnitude Not Guaranteed by Headroom Alone
 
 Decision (D26): Experiment S falsified H19 (predicted random-set fitness std
