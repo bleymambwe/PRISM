@@ -848,9 +848,18 @@ def stage_analyze(random_150, guided_50, searched, preflight):
         idx = rng.permutation(len(ks))
         return [ks[i] for i in idx]
 
+    def _guided_score(p):
+        return sum(pos8_easy[m][i] for i, m in enumerate(p))
+
     def order_guided(rng, ks):
+        # BUGFIX (2026-07-24): this previously ranked by fit[p] -- the
+        # TRUE fitness being raced for -- which is an oracle, not the
+        # transfer-guided policy (it "wins" trivially by construction).
+        # The guided policy may only use pos8_easy, the externally
+        # derived score already used to build guided_50; ranking must
+        # reflect what is knowable BEFORE evaluating this landscape.
         boot = [ks[i] for i in rng.integers(0, len(ks), len(ks))]
-        boot_sorted = sorted(set(boot), key=lambda p: fit[p], reverse=True)
+        boot_sorted = sorted(set(boot), key=_guided_score, reverse=True)
         return boot_sorted
 
     def order_prism(rng, ks):

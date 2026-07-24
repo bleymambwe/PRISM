@@ -1,0 +1,18 @@
+Experiment S: MATH-500 hard-reasoning ordering landscape (Iteration 23)
+model: meta-llama/llama-3.1-8b-instruct | pool: 250 orderings (150 random + 50 guided + 50 searched) x 100 questions
+landscape: mean 0.354 std 0.073 range [0.060,0.490]
+
+H19 (sensitivity re-emerges): random-set std = 0.078 (target >= 0.15; Q2 ceiling was 0.075) -> FALSIFIED
+H20 (sparse optima): 4/250 (1.6%) within one question of best (target <=2%) -> HOLDS
+H23 (position rules transfer to hard set): r = 0.432 (target >0.4) -> HOLDS
+
+H21 (three-way race to first top-1% ordering, 40 seeds, threshold=0.480):
+  guided  hit 40/40 mean evals 32.9 95% CI [24.3,42.3]
+  prism   hit 40/40 mean evals 37.8 95% CI [28.8,46.9]
+  random  hit 40/40 mean evals 43.6 95% CI [35.2,52.9]
+  guided-vs-random CIs disjoint: False -> H21 does not hold (guided is a warm start, not a headline)
+
+H22 (pre-flight forecast, registered 2026-07-23 21:48:48): argmax rho1 = swap (0.178); FDC = +0.197 (not materially negative -> random likely competitive)
+  outcome: guided decisively beats random = False -> forecast CORRECT
+
+spend: 31998 calls, $4.43 API-reported of $10.00 cap

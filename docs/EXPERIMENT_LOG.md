@@ -1,5 +1,72 @@
 # PRISM Experiment Log
 
+## 2026-07-24 (Iteration 23, Experiment S): MATH-500 Hard-Reasoning Landscape — MIXED, HONEST RESULT; PRE-FLIGHT FORECAST 6th CORRECT
+
+- Question (Benchmark #2, approved D25): do the K/M/O/Q/Q2 findings hold on
+  a SPARSE-OPTIMUM, high-resolution landscape (competition math vs
+  grade-school arithmetic)? Closes three weaknesses of the easy-question
+  landscapes: dense optima (M/R), mid-scale grading noise (Q), and
+  ceiling-compressed sensitivity (Q2's Qwen).
+- Model selection (D16 gate) needed 5 attempts before landing in the
+  [0.20,0.60] pilot band: qwen3-30b-a3b (76%), qwen3-8b (70%),
+  ministral-8b (70%), gemma-3-4b (66.5%) all too strong on the
+  simple-canonical-answer-filtered MATH-500 pool (367 level-3-5 problems
+  filtered to 268 with integer/fraction/decimal answers, for a frozen
+  hand-written grader -- math-verify was tested and found unusable on
+  this Windows environment, returning False on every case even with its
+  multiprocessing timeout disabled). meta-llama/llama-3.1-8b-instruct
+  passed at 27.0% (n=200) once max_tokens was raised 1500->4000
+  (eliminating truncation-driven false negatives -- verified in raw
+  output as genuine self-doubt/re-derivation looping, not a harness bug)
+  and OpenRouter routing was pinned to `provider: {sort: throughput}`
+  (fixed a ~10x throughput bottleneck on the unpinned default route,
+  which stalled for minutes per call).
+- Pre-flight (registered to git BEFORE the main run, commit 2164dfb):
+  argmax rho1 = swap (0.178, weak) and FDC = +0.197 (positive --
+  borderline/deceptive zone per D19, unlike every earlier LLM landscape's
+  clean negative FDC). Forecast: random likely competitive with
+  guided/search.
+- Main landscape: 250 orderings (150 random + 50 transfer-guided by the
+  n=8 easy-set position table + 50 online-search-selected) x 100
+  questions = 25,000 cells; 31,998 total API calls; $4.43 API-reported
+  of the $10.00 D25 cap.
+- Results: mean 0.354, std 0.073, range [0.060, 0.490].
+  - H19 (sensitivity re-emerges, target std>=0.15): **FALSIFIED** --
+    0.078, statistically indistinguishable from Q2's ceiling-compressed
+    Qwen std (0.075). D26: headroom/ceiling alone does not explain
+    sensitivity magnitude.
+  - H20 (sparse optima, target <=2%): **HOLDS** -- 4/250 (1.6%) near-best.
+  - H23 (position rules transfer to hard difficulty, target r>0.4):
+    **HOLDS** -- r = 0.432.
+  - H21 (guided beats random decisively, non-overlapping 40-seed CIs):
+    corrected result **does not hold as a headline** -- guided 32.9
+    evals [24.3,42.3] vs prism 37.8 [28.8,46.9] vs random 43.6
+    [35.2,52.9]; guided is the best point estimate but CIs overlap
+    random's. Consistent with, not contradicting, Experiment R's
+    "modest support."
+  - H22 (pre-flight forecast): **CORRECT** -- random was indeed
+    competitive; 6th validated live application in the prediction
+    ledger (after J, K, M, P, Q2's directional read).
+- Methodology note (caught before archival, see D26): the first analysis
+  pass computed the H21 "guided" race policy by ranking candidates on
+  their TRUE fitness (`fit[p]`) instead of the transfer-derived score
+  (`pos8_easy`-based) -- an oracle, not the guided policy, which produced
+  a spurious "mean 1.0 evals, H21 HOLDS (headline)" reading. Never
+  published or committed; caught by inspecting the near-optimal orderings
+  against the claimed top guided pick before writing this entry. Fixed
+  in `experiment_s.py` (`order_guided` now uses `_guided_score` from the
+  n=8 position table, matching how `guided_50` itself was selected) and
+  the analysis rerun from the frozen cache (no new API calls).
+- Infrastructure: two-meter $10 cost guard (dedicated to this
+  experiment, independent of the iteration-19 $9 cap) held throughout;
+  live dashboard extended with a 4-stage Experiment S section, refreshed
+  on every `Api.save()`.
+- Outputs: `experiments/iteration-23-experiment-s/results/` (answer
+  cache, pilot/preflight/orderings JSON, `experiment_s_report.txt`,
+  `_attempt{1,2,3}_*_too_strong/` model-search archive). Code:
+  `experiments/iteration-23-experiment-s/experiment_s.py`,
+  `_grader_test.py` (18/18 unit tests, frozen before spend).
+
 ## 2026-07-14 (Iteration 22): rho1-vs-Alternatives Ablation — D14 STATISTIC WINS AT LOW BUDGET
 
 - Question (D21 item 5, approved D22): is rho1 (independent move-pair

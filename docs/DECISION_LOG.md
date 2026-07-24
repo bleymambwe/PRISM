@@ -1,5 +1,33 @@
 # PRISM Decision Log
 
+## 2026-07-24 (Iteration 23, Experiment S): D20 Scope Note — Sensitivity Magnitude Not Guaranteed by Headroom Alone
+
+Decision (D26): Experiment S falsified H19 (predicted random-set fitness std
+>= 0.15 on the hard MATH-500 pool for a mid-band model; observed 0.078,
+statistically indistinguishable from Q2's ceiling-compressed Qwen std of
+0.075). The pre-registered interpretation matrix (status doc S11.6) calls
+this branch a scope note on D20: order-sensitivity MAGNITUDE is not fully
+explained by target-model headroom/ceiling alone -- Q2's "ceiling masking"
+hypothesis is at most a partial explanation. D20 (transferable
+instruction-order landscapes as the primary publication candidate) is
+NOT reversed: H20 (sparse optima, 1.6%) and H23 (position-effect transfer
+to hard difficulty, r=0.432) both held, and H22 (the pre-flight forecast)
+was CORRECT -- the landscape is real and structured, just with lower raw
+sensitivity on this specific model/pool than hypothesized. Candidate
+confounds for future work: grading-filter-driven difficulty homogenization
+within the hard-question pool (see Iteration 23 write-up), and
+model-specific noise (Llama-3.1-8B's baseline accuracy/verbosity) diluting
+measurable signal independent of true ordering effects.
+
+Also of note (methodology, not a reversal): the first analysis pass
+mis-implemented the H21 guided-race policy (ranked by true fitness instead
+of the transfer-derived score -- an oracle, not the guided policy),
+producing a false "H21 HOLDS (headline)" reading before any result was
+published or committed. Caught before archival; the corrected run shows
+guided (32.9 evals) as the best point estimate but not a decisive win over
+random (43.6 evals, overlapping CIs) -- consistent with, not contradicting,
+Experiment R's "modest support" finding.
+
 ## 2026-07-22 (Experiment S review): Benchmark #2 Approved by Bley
 
 Decision (D25): Bley approved Experiment S (Benchmark #2, the MATH-500
