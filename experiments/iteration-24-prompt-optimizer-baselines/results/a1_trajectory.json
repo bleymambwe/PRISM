@@ -1,0 +1,377 @@
+[
+ {
+  "wid": "orig",
+  "wordings": [
+   "RESTATE: Restate the problem briefly in your own words.",
+   "IDENTIFY: List the known quantities and what is being asked.",
+   "ESTIMATE: Make a rough order-of-magnitude estimate of the answer.",
+   "PLAN: Devise a short step-by-step strategy before calculating.",
+   "SIMPLIFY: Note any way to simplify the problem before solving.",
+   "COMPUTE: Carry out the calculations step by step.",
+   "CHECK: Verify the result against the problem statement.",
+   "ANSWER: State the final answer on its own line as 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 0
+ },
+ {
+  "wid": "250d831c37",
+  "wordings": [
+   "RESTATE: Paraphrase the problem to confirm understanding.",
+   "IDENTIFY: List given numbers/facts and the target unknown.",
+   "ESTIMATE: Predict a ballpark figure for the answer.",
+   "PLAN: Outline the sequence of operations needed.",
+   "SIMPLIFY: Look for opportunities to make the problem easier.",
+   "COMPUTE: Execute the plan with precise calculations.",
+   "CHECK: Review calculations and confirm the answer's logic.",
+   "ANSWER: Provide the final, exact solution."
+  ],
+  "score": 0.36666666666666664,
+  "round": 1
+ },
+ {
+  "wid": "62a413d0c5",
+  "wordings": [
+   "RESTATE: Rephrase the mathematical problem in a clear, concise way.",
+   "IDENTIFY: Clearly list all given numerical values and the specific value to be found.",
+   "ESTIMATE: Make a quick, approximate guess for the final answer's magnitude.",
+   "PLAN: Detail the exact sequence of mathematical operations to solve the problem.",
+   "SIMPLIFY: Identify any parts of the problem that can be reduced or pre-calculated.",
+   "COMPUTE: Perform all necessary calculations accurately, showing each step.",
+   "CHECK: Reread the original problem and confirm the computed answer makes sense and is correct.",
+   "ANSWER: State the final, precise numerical answer on a new line, formatted as 'Answer: <number>'."
+  ],
+  "score": 0.3333333333333333,
+  "round": 2
+ },
+ {
+  "wid": "1b82ece7e6",
+  "wordings": [
+   "RESTATE: Rewrite the problem statement in your own clear terms.",
+   "IDENTIFY: List all given values and clearly state the goal.",
+   "ESTIMATE: Give a rough range or approximation for the answer.",
+   "PLAN: Describe the specific steps you will take to solve the problem.",
+   "SIMPLIFY: Find any ways to make the problem easier before solving.",
+   "COMPUTE: Execute your plan, showing each calculation step by step.",
+   "CHECK: Ensure your answer logically fits the original problem and calculations.",
+   "ANSWER: Present the final answer clearly, formatted as 'Answer: <number>'."
+  ],
+  "score": 0.43333333333333335,
+  "round": 3
+ },
+ {
+  "wid": "24b31d8ef0",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement accurately in your own words to ensure understanding.",
+   "IDENTIFY: List all explicit numerical values provided and precisely define the quantity to be calculated.",
+   "ESTIMATE: Provide a reasonable approximation or a range for the final answer.",
+   "PLAN: Describe the exact logical steps and operations required to solve the problem.",
+   "SIMPLIFY: Determine if any part of the problem can be simplified, reduced, or calculated in advance.",
+   "COMPUTE: Execute the planned steps, showing all intermediate calculations clearly.",
+   "CHECK: Verify that the calculated answer logically addresses the original problem and all calculations are correct.",
+   "ANSWER: Present the final, computed numerical solution in the format 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 4
+ },
+ {
+  "wid": "381dcc3b1c",
+  "wordings": [
+   "RESTATE: Rewrite the problem in your own words to demonstrate full comprehension.",
+   "IDENTIFY: List all numbers and units given, and state precisely what needs to be calculated.",
+   "ESTIMATE: Calculate a rough, approximate value for the answer.",
+   "PLAN: Outline the precise sequence of calculations needed, including formulas.",
+   "SIMPLIFY: Identify and perform any immediate simplifications or substitutions.",
+   "COMPUTE: Execute the plan, showing every calculation step clearly and legibly.",
+   "CHECK: Review all calculations and confirm the answer logically matches the original problem.",
+   "ANSWER: State the final, exact numerical answer in the format 'Answer: <number>'."
+  ],
+  "score": 0.35,
+  "round": 5
+ },
+ {
+  "wid": "169687a39f",
+  "wordings": [
+   "RESTATE: Rephrase the problem in your own words, ensuring you understand what is being asked.",
+   "IDENTIFY: List all provided numbers and units, and clearly state the final value to find.",
+   "ESTIMATE: Calculate a rough estimate or a reasonable range for the solution.",
+   "PLAN: Outline the precise sequence of operations and formulas needed to solve the problem.",
+   "SIMPLIFY: Identify any parts of the problem that can be simplified or pre-calculated.",
+   "COMPUTE: Execute the plan step-by-step, showing all intermediate calculations clearly.",
+   "CHECK: Verify that the answer logically addresses the problem and that all calculations are accurate.",
+   "ANSWER: Present the final, exact numerical answer as 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 6
+ },
+ {
+  "wid": "94e877d224",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement to ensure complete understanding of the task.",
+   "IDENTIFY: List all known numerical values, their units, and the specific value to be found.",
+   "ESTIMATE: Calculate a reasonable approximation or range for the final answer.",
+   "PLAN: Detail the exact mathematical operations and sequence of steps to reach the solution.",
+   "SIMPLIFY: Identify any simplifications or preliminary calculations that can be made.",
+   "COMPUTE: Perform the calculations according to the plan, showing all intermediate steps.",
+   "CHECK: Verify the logical consistency of the answer with the problem and the accuracy of all calculations.",
+   "ANSWER: Provide the final, precise numerical solution in the format 'Answer: <number>'."
+  ],
+  "score": 0.4,
+  "round": 7
+ },
+ {
+  "wid": "2229edf492",
+  "wordings": [
+   "RESTATE: Restate the math problem clearly in your own words, making sure you understand exactly what is being asked.",
+   "IDENTIFY: List all the numbers and known quantities given in the problem, and clearly state what specific value you need to find.",
+   "ESTIMATE: Make a quick estimation of the answer. This should be a reasonable approximation or a range the answer is likely to fall within.",
+   "PLAN: Outline the exact mathematical operations and the precise sequence of steps you will use to solve the problem.",
+   "SIMPLIFY: Look for any ways to make the problem easier to solve. This might involve simplifying fractions, combining terms, or performing preliminary calculations.",
+   "COMPUTE: Carry out the planned mathematical steps one by one, showing every calculation clearly and precisely.",
+   "CHECK: Review your calculations to ensure accuracy and verify that your final answer logically fits the original problem statement.",
+   "ANSWER: Present the final, exact numerical answer clearly, formatted as 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 8
+ },
+ {
+  "wid": "a1b2af4827",
+  "wordings": [
+   "RESTATE: Rewrite the problem in your own words, focusing on what needs to be found.",
+   "IDENTIFY: List all numerical values provided and clearly state the specific unknown you must determine.",
+   "ESTIMATE: Provide a quick, rough estimate or a reasonable range for the final answer.",
+   "PLAN: Describe the exact mathematical operations and the precise order of steps to solve the problem.",
+   "SIMPLIFY: Identify any simplifications, such as combining terms or reducing fractions, that can be done before calculating.",
+   "COMPUTE: Execute the planned steps, showing each calculation clearly and thoroughly.",
+   "CHECK: Verify that your final answer makes sense in the context of the original problem and that all calculations are accurate.",
+   "ANSWER: State the final, exact numerical result formatted as 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 9
+ },
+ {
+  "wid": "cec850c661",
+  "wordings": [
+   "RESTATE: Rewrite the problem in your own words, ensuring you grasp exactly what needs to be solved.",
+   "IDENTIFY: List all given numerical values with their units, and clearly state the specific quantity to be calculated.",
+   "ESTIMATE: Provide a rough estimate or a logical range for the final answer to guide your calculations.",
+   "PLAN: Detail the precise mathematical operations and the exact order of steps required to solve the problem.",
+   "SIMPLIFY: Identify and perform any preliminary calculations or simplifications that will make the main computation easier.",
+   "COMPUTE: Execute the planned steps rigorously, showing each calculation clearly and completely.",
+   "CHECK: Verify that your computed answer logically addresses the original problem and that all arithmetic is accurate.",
+   "ANSWER: Present the final, exact numerical result clearly in the format 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 10
+ },
+ {
+  "wid": "eddda1149a",
+  "wordings": [
+   "RESTATE: Paraphrase the math problem in your own clear words to confirm understanding of the core question.",
+   "IDENTIFY: Explicitly list all given numerical values with their units, and state the precise unknown quantity to be determined.",
+   "ESTIMATE: Calculate a reasonable approximate value or a logical range for the answer to guide the subsequent steps.",
+   "PLAN: Outline the exact sequence of mathematical operations, formulas, and logical steps needed to solve the problem.",
+   "SIMPLIFY: Determine if any parts of the problem can be reduced, combined, or pre-calculated to make the solution process more efficient.",
+   "COMPUTE: Execute the outlined plan meticulously, showing each individual calculation and intermediate result clearly.",
+   "CHECK: Rigorously review all calculations for accuracy and confirm that the final answer logically satisfies all conditions of the original problem.",
+   "ANSWER: Present the final, exact numerical solution clearly and concisely in the specified format: 'Answer: <number>'."
+  ],
+  "score": 0.43333333333333335,
+  "round": 11
+ },
+ {
+  "wid": "e5074ca3a7",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement to ensure a clear and accurate understanding of the question being asked.",
+   "IDENTIFY: List all given numerical values, including their units, and precisely state the unknown quantity to be determined.",
+   "ESTIMATE: Calculate a sensible approximation or a logical range for the answer to serve as a benchmark.",
+   "PLAN: Detail the specific mathematical operations, formulas, and the exact sequence of steps needed to arrive at the solution.",
+   "SIMPLIFY: Find opportunities to reduce complexity before computation, such as simplifying fractions or combining terms.",
+   "COMPUTE: Execute the planned steps systematically, meticulously showing each calculation and intermediate result.",
+   "CHECK: Verify the accuracy of all calculations and confirm that the final answer logically satisfies all conditions of the original problem.",
+   "ANSWER: Provide the final, exact numerical solution in the specified format: 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 12
+ },
+ {
+  "wid": "780027acf4",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement in your own words to confirm full comprehension of the question.",
+   "IDENTIFY: List all numerical data and units provided, and explicitly state the unknown value to be found.",
+   "ESTIMATE: Provide a numerical estimate or a plausible range for the final answer.",
+   "PLAN: Describe the precise sequence of mathematical operations and formulas to be used.",
+   "SIMPLIFY: Identify and perform any preparatory steps, such as combining terms or reducing fractions, to ease computation.",
+   "COMPUTE: Execute the planned operations step-by-step, showing each intermediate calculation clearly.",
+   "CHECK: Confirm that the answer aligns logically with the problem and that all calculations are arithmetically correct.",
+   "ANSWER: State the final, exact numerical answer precisely, formatted as 'Answer: <number>'."
+  ],
+  "score": 0.3,
+  "round": 13
+ },
+ {
+  "wid": "6a0a67ecea",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement in your own words to confirm a clear understanding of the task and question.",
+   "IDENTIFY: List all given numbers, their units, and explicitly state the unknown quantity or value to be found.",
+   "ESTIMATE: Provide a rough numerical estimate or a reasonable range for the final answer.",
+   "PLAN: Outline the exact sequence of mathematical operations, formulas, and logical steps required to solve the problem.",
+   "SIMPLIFY: Identify any opportunities to simplify the problem, such as combining terms, reducing fractions, or performing pre-calculations.",
+   "COMPUTE: Execute the plan by performing each calculation step-by-step, showing all intermediate results.",
+   "CHECK: Verify that the final answer logically addresses all aspects of the problem and that all calculations are arithmetically correct.",
+   "ANSWER: Present the final, exact numerical solution clearly in the format 'Answer: <number>'."
+  ],
+  "score": 0.48333333333333334,
+  "round": 14
+ },
+ {
+  "wid": "ba683bd74d",
+  "wordings": [
+   "RESTATE: Rephrase the problem in your own words, explicitly stating the core question being asked.",
+   "IDENTIFY: List all numerical values, their associated units, and the precise unknown quantity to be calculated.",
+   "ESTIMATE: Provide a quick, approximate value or a logical range for the final answer.",
+   "PLAN: Detail the specific sequence of mathematical operations, formulas, and logical steps to be followed.",
+   "SIMPLIFY: Identify any possible simplifications, such as combining like terms or reducing fractions, before computation.",
+   "COMPUTE: Execute the planned steps rigorously, showing each intermediate calculation and its result.",
+   "CHECK: Confirm that the final answer precisely addresses the original question and that all calculations are arithmetically sound.",
+   "ANSWER: Present the final, exact numerical solution in the format 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 15
+ },
+ {
+  "wid": "dd135040f2",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement to ensure a complete and accurate understanding of the question being asked.",
+   "IDENTIFY: List all given numerical values, their associated units, and explicitly state the target unknown quantity to be determined.",
+   "ESTIMATE: Provide a reasonable numerical approximation or a plausible range for the final answer before detailed calculation.",
+   "PLAN: Detail the precise sequence of mathematical operations, formulas, and logical steps required to solve the problem.",
+   "SIMPLIFY: Identify and perform any pre-calculations, term combinations, or fraction reductions that will make the computation easier.",
+   "COMPUTE: Execute the planned steps meticulously, showing each intermediate calculation and its result clearly.",
+   "CHECK: Verify that the computed answer logically addresses all conditions of the problem and confirm the arithmetic accuracy of all calculations.",
+   "ANSWER: Present the final, exact numerical solution clearly formatted as 'Answer: <number>'."
+  ],
+  "score": 0.35,
+  "round": 16
+ },
+ {
+  "wid": "e80323c673",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement in your own words to confirm understanding of the question and the objective.",
+   "IDENTIFY: List all numerical values, their associated units, and explicitly define the unknown quantity to be calculated.",
+   "ESTIMATE: Provide a reasonable approximate value or a range for the final answer to establish a target.",
+   "PLAN: Detail the precise sequence of mathematical operations, formulas, and logical steps required to reach the solution.",
+   "SIMPLIFY: Identify and perform any algebraic simplifications, term combinations, or pre-calculations that make the problem easier.",
+   "COMPUTE: Execute the planned steps systematically, showing each intermediate calculation and its result clearly.",
+   "CHECK: Verify that the computed answer logically satisfies all problem conditions and that all arithmetic operations are accurate.",
+   "ANSWER: Present the final, exact numerical solution in the format 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 17
+ },
+ {
+  "wid": "bb7ff7686e",
+  "wordings": [
+   "RESTATE: Rephrase the problem in your own words to confirm your understanding of the question being asked.",
+   "IDENTIFY: List all numerical values, their units, and explicitly state the unknown quantity you need to calculate.",
+   "ESTIMATE: Provide a rough numerical estimate or a logical range for the final answer to guide your calculations.",
+   "PLAN: Describe the precise mathematical operations and the exact sequence of steps you will use to solve the problem.",
+   "SIMPLIFY: Identify any terms, fractions, or expressions that can be simplified or pre-calculated to make computation easier.",
+   "COMPUTE: Execute the planned steps, showing each calculation and intermediate result clearly and accurately.",
+   "CHECK: Verify that your final answer logically addresses all parts of the problem and that all calculations are arithmetically correct.",
+   "ANSWER: Present the final, exact numerical solution in the format 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 18
+ },
+ {
+  "wid": "4973529683",
+  "wordings": [
+   "RESTATE: Rephrase the problem statement in your own words to ensure you fully grasp the question and all its conditions.",
+   "IDENTIFY: List all numerical values provided, including their units, and explicitly state the exact unknown quantity you need to determine.",
+   "ESTIMATE: Provide a reasonable numerical estimate or a bounded range for the answer to help guide the solution process.",
+   "PLAN: Detail the specific sequence of mathematical operations, formulas, and logical steps required to arrive at the solution.",
+   "SIMPLIFY: Identify any opportunities to simplify the problem before computation, such as combining like terms, reducing fractions, or performing essential pre-calculations.",
+   "COMPUTE: Execute the planned steps systematically, performing each calculation precisely and showing all intermediate results clearly.",
+   "CHECK: Thoroughly review all calculations for arithmetic errors and confirm that the final answer logically and accurately addresses every aspect of the original problem.",
+   "ANSWER: Present the final, exact numerical solution clearly, using the format 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 19
+ },
+ {
+  "wid": "cb77427bb2",
+  "wordings": [
+   "RESTATE: Rewrite the problem in your own words to demonstrate a complete understanding of the question and objective.",
+   "IDENTIFY: List all numerical values, their units, and explicitly state the target unknown value.",
+   "ESTIMATE: Provide a rough numerical estimation or a plausible range for the final answer.",
+   "PLAN: Detail the specific mathematical operations, formulas, and logical sequence of steps to solve the problem.",
+   "SIMPLIFY: Identify and perform any pre-calculations, consolidations, or reductions that make the main computation easier.",
+   "COMPUTE: Execute the planned steps methodically, showing each intermediate calculation and result.",
+   "CHECK: Confirm that the computed answer logically addresses all aspects of the problem and that all arithmetic is accurate.",
+   "ANSWER: State the final, precise numerical solution in the format 'Answer: <number>'."
+  ],
+  "score": 0.38333333333333336,
+  "round": 20
+ },
+ {
+  "wid": "0f6f9eac05",
+  "wordings": [
+   "RESTATE: Rephrase the problem in your own words, demonstrating a complete understanding of what needs to be calculated and why.",
+   "IDENTIFY: List all given numerical values, their associated units, and precisely state the target unknown quantity to be determined.",
+   "ESTIMATE: Provide a reasonable numerical estimate or a logical range for the final answer to guide subsequent calculations.",
+   "PLAN: Detail the precise sequence of mathematical operations, relevant formulas, and logical steps required to arrive at the solution.",
+   "SIMPLIFY: Identify any opportunities to simplify the problem through pre-calculations, combining like terms, or reducing fractions before proceeding.",
+   "COMPUTE: Execute the planned operations meticulously, showing each intermediate calculation and its result clearly.",
+   "CHECK: Verify that the computed answer logically addresses all aspects of the original problem and that all arithmetic calculations are correct.",
+   "ANSWER: Present the final, exact numerical solution clearly and concisely in the specified format: 'Answer: <number>'."
+  ],
+  "score": 0.3,
+  "round": 21
+ },
+ {
+  "wid": "f409be272f",
+  "wordings": [
+   "RESTATE: Rephrase the problem in your own words to demonstrate a thorough understanding of the question being asked.",
+   "IDENTIFY: List all given numerical values and their associated units, and explicitly state the unknown quantity or target value.",
+   "ESTIMATE: Provide a reasonable numerical approximation or a plausible range for the final answer to guide the solution process.",
+   "PLAN: Detail the precise sequence of mathematical operations, formulas, and logical steps required to solve the problem accurately.",
+   "SIMPLIFY: Identify any opportunities to simplify expressions, combine like terms, or perform preliminary calculations to streamline the solving process.",
+   "COMPUTE: Execute the planned sequence of operations meticulously, showing each intermediate calculation and its result clearly.",
+   "CHECK: Verify that the final answer logically addresses all aspects of the original problem statement and that all arithmetic calculations are correct.",
+   "ANSWER: Present the final, exact numerical solution clearly and unambiguously in the format 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 22
+ },
+ {
+  "wid": "d07de6787f",
+  "wordings": [
+   "RESTATE: Rephrase the problem in your own words to ensure you understand the question being asked and what needs to be found.",
+   "IDENTIFY: List all numerical values and their associated units provided in the problem. Clearly state the unknown quantity you need to calculate.",
+   "ESTIMATE: Provide a rough estimate or a logical range for the final answer. This helps to sanity-check the computed result.",
+   "PLAN: Detail the precise sequence of mathematical operations, formulas, and logical steps required to solve the problem.",
+   "SIMPLIFY: Identify any opportunities to simplify the problem before computation, such as combining like terms, reducing fractions, or performing pre-calculations.",
+   "COMPUTE: Execute the plan step-by-step, showing all intermediate calculations and results clearly.",
+   "CHECK: Verify that the final answer logically addresses all aspects of the problem and that all calculations are arithmetically correct.",
+   "ANSWER: Present the final, exact numerical solution clearly in the format 'Answer: <number>'."
+  ],
+  "score": 0.3,
+  "round": 23
+ },
+ {
+  "wid": "43ba97d49a",
+  "wordings": [
+   "RESTATE: Rewrite the problem in your own words, confirming your understanding of the core question and all constraints.",
+   "IDENTIFY: List all given numerical values and their units. State the precise unknown quantity or value to be found.",
+   "ESTIMATE: Provide a numerical approximation or a logical range for the final answer to guide calculations.",
+   "PLAN: Detail the precise sequence of mathematical operations, formulas, and logical steps needed to solve the problem.",
+   "SIMPLIFY: Identify any terms to combine, fractions to reduce, or pre-calculations that can make the problem simpler before computing.",
+   "COMPUTE: Execute the plan by performing each calculation step-by-step, clearly showing all intermediate results.",
+   "CHECK: Verify that the final answer logically addresses all parts of the original problem and that all calculations are arithmetically sound.",
+   "ANSWER: Present the final, exact numerical solution clearly, formatted as 'Answer: <number>'."
+  ],
+  "score": 0.36666666666666664,
+  "round": 24
+ }
+]

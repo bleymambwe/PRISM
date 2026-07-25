@@ -1,0 +1,15 @@
+{
+ "wid": "6a0a67ecea",
+ "wordings": [
+  "RESTATE: Rephrase the problem statement in your own words to confirm a clear understanding of the task and question.",
+  "IDENTIFY: List all given numbers, their units, and explicitly state the unknown quantity or value to be found.",
+  "ESTIMATE: Provide a rough numerical estimate or a reasonable range for the final answer.",
+  "PLAN: Outline the exact sequence of mathematical operations, formulas, and logical steps required to solve the problem.",
+  "SIMPLIFY: Identify any opportunities to simplify the problem, such as combining terms, reducing fractions, or performing pre-calculations.",
+  "COMPUTE: Execute the plan by performing each calculation step-by-step, showing all intermediate results.",
+  "CHECK: Verify that the final answer logically addresses all aspects of the problem and that all calculations are arithmetically correct.",
+  "ANSWER: Present the final, exact numerical solution clearly in the format 'Answer: <number>'."
+ ],
+ "score": 0.48333333333333334,
+ "round": 14
+}

@@ -104,6 +104,82 @@ def experiment_s_data():
     }
 
 
+def experiment_t_data():
+    it24 = os.path.join(ROOT, "experiments",
+                        "iteration-24-prompt-optimizer-baselines", "results")
+    summary = json_or_none(os.path.join(it24, "T_RESULTS_SUMMARY.json"))
+    state = json_or_none(os.path.join(it24, "state.json")) or {}
+    done = set(state.get("stages_done", []))
+    u = usage(os.path.join(it24, "token_usage.csv"))
+    guard = json_or_none(os.path.join(it24, "spend_guard.json")) or {}
+    complete = bool(summary) and "C" in done
+    if summary:
+        a1 = summary["A1"]
+        h25 = summary["H25"]
+        h26 = summary["H26"]
+        b = summary["B_search"]
+        sweep = summary["A2_A3_sweep"]
+        a1_detail = (f"orig train {a1['orig_train_acc']:.3f} -> best "
+                     f"optimized {a1['best_opt_train_acc']:.3f} "
+                     f"(round {a1['best_round']})")
+        a23_detail = (f"orig-wording std {sweep['original_wording']['std']:.3f} "
+                      f"vs opt-wording std "
+                      f"{sweep['optimized_wording']['std']:.3f}; "
+                      f"level lift +{sweep['paired_level_lift_mean']:.3f} "
+                      f"CI [{sweep['paired_level_lift_ci'][0]:+.3f},"
+                      f"{sweep['paired_level_lift_ci'][1]:+.3f}]")
+        b_detail = (f"PRISM {b['prism_best'][0]:.3f} "
+                    f"[{b['prism_best'][1]:.3f},{b['prism_best'][2]:.3f}] vs "
+                    f"OPRO {b['opro_best'][0]:.3f} "
+                    f"[{b['opro_best'][1]:.3f},{b['opro_best'][2]:.3f}] @ "
+                    f"budget {b['budget']}")
+        c_detail = (f"H25 (complementarity) {h25['verdict']} "
+                    f"(ratio {h25['ratio']}); H26 (search) {h26['verdict']}")
+    else:
+        a1_detail = a23_detail = b_detail = c_detail = "not started"
+    stages = [
+        {"name": "A1. OPRO wording opt", "done": "A1" in done,
+         "detail": a1_detail if "A1" in done else "running"},
+        {"name": "A2/A3. Ordering sweeps", "done": "A3" in done,
+         "detail": a23_detail if "A3" in done else
+                   ("running" if "A1" in done else "queued")},
+        {"name": "B. PRISM vs OPRO search", "done": "B" in done,
+         "detail": b_detail if "B" in done else
+                   ("running" if "A3" in done else "queued")},
+        {"name": "C. Analysis", "done": "C" in done,
+         "detail": c_detail if complete else "pending stage B"},
+    ]
+    return {
+        "model": (summary["target_model"] if summary
+                  else "meta-llama/llama-3.1-8b-instruct"),
+        "optimizer": (summary["optimizer_model"] if summary
+                      else "gemini-2.5-flash-lite"),
+        "cap": guard.get("cap_usd", 5.0),
+        "spend": guard.get("reported_usd", 0.0),
+        "calls": u.get("calls", "0"),
+        "stages": stages,
+        "complete": complete,
+        "report": (summary and complete and
+                   "H25 (ordering-content complementarity): HOLDS -- after "
+                   "OPRO rewrites all 8 module wordings (train "
+                   f"{summary['A1']['orig_train_acc']:.3f}->"
+                   f"{summary['A1']['best_opt_train_acc']:.3f}; held-out level "
+                   f"lift +{summary['A2_A3_sweep']['paired_level_lift_mean']:.3f}"
+                   ", CI excludes zero), ordering-driven std is undiminished "
+                   f"(opt {summary['H25']['opt_std']:.3f} vs orig "
+                   f"{summary['H25']['orig_std']:.3f}, ratio "
+                   f"{summary['H25']['ratio']}). Ordering and content "
+                   "optimization are complementary axes.\n"
+                   "H26 (search vs generic LLM optimizer): statistical tie, "
+                   "NOT falsified -- PRISM best-found @25 "
+                   f"{summary['B_search']['prism_best'][0]:.3f} vs OPRO "
+                   f"{summary['B_search']['opro_best'][0]:.3f} "
+                   f"(diff {summary['B_search']['prism_minus_opro'][0]:+.3f}, "
+                   "CI spans zero); PRISM converges faster early, OPRO edges "
+                   "past by budget 25.") or "",
+    }
+
+
 def leg_data():
     legs = []
     it17 = os.path.join(ROOT, "experiments", "iteration-17", "results")
@@ -345,6 +421,28 @@ def build():
   ({es_pct:.1f}%) &nbsp;·&nbsp; {esc(es['calls'])} API calls</div>
  <div class="stage-row">{es_stage_html}</div>{es_report_html}</div>"""
 
+    et = experiment_t_data()
+    et_pct = min(100.0, (et["spend"] / et["cap"] * 100) if et["cap"] else 0)
+    et_state = ("DONE", "b-done") if et["complete"] else (
+        ("RUNNING", "b-run") if et["spend"] > 0 else ("QUEUED", "b-wait"))
+    et_stage_html = "".join(
+        f'<div class="stage {"done" if s["done"] else ""}">'
+        f'<div class="name">{esc(s["name"])}</div>'
+        f'<div>{esc(s["detail"])}</div></div>'
+        for s in et["stages"])
+    et_report_html = (f"<pre>{esc(et['report'])}</pre>" if et["report"]
+                      else "")
+    et_card = f"""
+<div class="card"><h3>Experiment T — Prompt-Optimizer Baselines
+  (OPRO vs PRISM) &nbsp;<span class="badge {et_state[1]}">{et_state[0]}</span></h3>
+ <div class="m">target {esc(et['model'])} · optimizer {esc(et['optimizer'])}
+  · dedicated ${et['cap']:.2f} cap (hand-implemented OPRO, no library)</div>
+ <div class="bar"><i class="{'full' if et_pct >= 100 else ''}"
+  style="width:{et_pct:.1f}%"></i></div>
+ <div class="stats">${et['spend']:.2f} / ${et['cap']:.2f} spent
+  ({et_pct:.1f}%) &nbsp;·&nbsp; {esc(et['calls'])} API calls</div>
+ <div class="stage-row">{et_stage_html}</div>{et_report_html}</div>"""
+
     past_rows = "\n".join(
         f"<tr><td>{esc(it)}</td><td>{esc(ex)}</td><td>{esc(q)}</td>"
         f"<td>{esc(res)}</td></tr>"
@@ -361,6 +459,8 @@ def build():
  modules and prompts; source landscape = Experiment K (Gemini
  Flash-Lite, all 720 orderings enumerated)</div>
 {tiles}
+<h2>Experiment T (Paper-B blocker: prompt-optimizer baselines, approved D27)</h2>
+{et_card}
 <h2>Experiment S (Benchmark #2, approved D25)</h2>
 {es_card}
 <h2>Legs (Benchmark #1, complete)</h2>

@@ -1,0 +1,20 @@
+Experiment T: prompt-optimizer baselines (Iteration 24)
+target meta-llama/llama-3.1-8b-instruct | optimizer gemini-2.5-flash-lite
+
+[A1] OPRO wording optimization (24 rounds, 60 train Q):
+  original wording train acc 0.367 -> best optimized train acc 0.483 (round 14)
+
+[A2/A3] ordering sweep, 50 orderings x 40 held-out Q:
+  ORIGINAL wording: mean 0.371 std 0.062 range [0.225,0.475]
+  OPTIMIZED wording: mean 0.404 std 0.059 range [0.275,0.600]
+  paired level lift (opt-orig) mean +0.032 CI [+0.013,+0.052]  (did OPRO raise accuracy at all?)
+  H25 (ordering still matters after content optimization): opt std 0.059 vs orig 0.062 (ratio 0.94) -> HOLDS
+
+[B] ordering search, 5 seeds x 25 evals x 30-Q fitness (best-found at budget):
+  PRISM b3:0.407  b5:0.420  b10:0.493  b15:0.500  b20:0.500  b25:0.500
+  OPRO  b3:0.407  b5:0.427  b10:0.447  b15:0.460  b20:0.487  b25:0.507
+  best-found at budget 25: PRISM 0.500 [0.467,0.527] vs OPRO 0.507 [0.480,0.540]
+  PRISM-minus-OPRO -0.007 CI [-0.053,+0.040]
+  H26 (PRISM search >= generic LLM optimizer): directional: OPRO higher point estimate, CI overlaps
+
+spend: 12724 target calls, $2.68 of $5.0 cap

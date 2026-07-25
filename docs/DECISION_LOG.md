@@ -19,6 +19,21 @@ Dedicated $5.00 cost cap, independent of prior caps; realistic spend ≈ $1.8.
 Pre-registration = the git commit of PLAN.md + hypotheses.json BEFORE any
 evaluation runs.
 
+**Outcome (2026-07-25, $2.68 of $5, 12,724 calls):** H25 **HOLDS** — OPRO
+genuinely raised the level (train 0.367→0.483; held-out paired lift +0.032, CI
+[+0.013,+0.052] excludes zero), yet ordering-driven std was undiminished
+(optimized-wording 0.059 vs original 0.062, ratio 0.94, above the pre-registered
+≥0.40-ratio/≥0.03-absolute bar). Ordering and content optimization are
+complementary — the "just rewrite the instructions" objection is answered with
+data. H26 = **statistical tie, NOT falsified** — PRISM best-found @25 0.500
+[0.467,0.527] vs OPRO 0.507 [0.480,0.540], diff −0.007 CI [−0.053,+0.040] spans
+zero; PRISM converges faster early (b15 0.500 vs 0.460) but OPRO edges past by
+b25. Consistent with the FDC≈0 near-random locality of LLM ordering landscapes:
+on such landscapes the pre-flight protocol expects any reasonable optimizer to be
+competitive, so PRISM's contribution is the *predictive protocol* (D21), not a
+raw search-speed win. Both blocker questions for Paper B now have pre-registered,
+CI-backed answers. Full write-up: `iterations/2026-07-25-iteration-24-experiment-t.md`.
+
 ## 2026-07-24 (Iteration 23, Experiment S): D20 Scope Note — Sensitivity Magnitude Not Guaranteed by Headroom Alone
 
 Decision (D26): Experiment S falsified H19 (predicted random-set fitness std

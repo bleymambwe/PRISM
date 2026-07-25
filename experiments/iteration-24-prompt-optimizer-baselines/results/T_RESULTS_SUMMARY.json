@@ -1,0 +1,86 @@
+{
+  "experiment": "T",
+  "iteration": 24,
+  "decision": "D27",
+  "target_model": "meta-llama/llama-3.1-8b-instruct",
+  "optimizer_model": "gemini-2.5-flash-lite",
+  "spend_usd_reported": 2.68,
+  "cap_usd": 5.0,
+  "target_calls": 12724,
+  "A1": {
+    "orig_train_acc": 0.367,
+    "best_opt_train_acc": 0.483,
+    "best_round": 14
+  },
+  "A2_A3_sweep": {
+    "original_wording": {
+      "n": 51,
+      "mean": 0.37,
+      "std": 0.0626,
+      "lo": 0.225,
+      "hi": 0.475
+    },
+    "optimized_wording": {
+      "n": 50,
+      "mean": 0.4035,
+      "std": 0.0587,
+      "lo": 0.275,
+      "hi": 0.6
+    },
+    "paired_level_lift_mean": 0.032,
+    "paired_level_lift_ci": [
+      0.013,
+      0.052
+    ]
+  },
+  "H25": {
+    "name": "ordering-content complementarity",
+    "opt_std": 0.0587,
+    "orig_std": 0.0626,
+    "ratio": 0.938,
+    "threshold": ">=0.40 ratio AND >=0.03 abs",
+    "verdict": "HOLDS"
+  },
+  "B_search": {
+    "seeds": 5,
+    "budget": 25,
+    "fitness_Q": 30,
+    "prism_best": [
+      0.5,
+      0.468,
+      0.532
+    ],
+    "opro_best": [
+      0.5067,
+      0.478,
+      0.5353
+    ],
+    "prism_minus_opro": [
+      -0.0067,
+      -0.0534,
+      0.0401
+    ],
+    "prism_traj": {
+      "3": 0.407,
+      "5": 0.42,
+      "10": 0.493,
+      "15": 0.5,
+      "20": 0.5,
+      "25": 0.5
+    },
+    "opro_traj": {
+      "3": 0.407,
+      "5": 0.427,
+      "10": 0.447,
+      "15": 0.46,
+      "20": 0.487,
+      "25": 0.507
+    }
+  },
+  "H26": {
+    "name": "PRISM search vs generic LLM optimizer",
+    "prediction": "PRISM>=OPRO point est",
+    "falsified_if": "OPRO exceeds with CI excluding zero",
+    "verdict": "NOT FALSIFIED (statistical tie); OPRO higher point est, CI overlaps zero; PRISM faster early"
+  }
+}

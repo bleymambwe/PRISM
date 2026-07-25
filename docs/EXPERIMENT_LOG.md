@@ -1,5 +1,56 @@
 # PRISM Experiment Log
 
+## 2026-07-25 (Iteration 24, Experiment T): Prompt-Optimizer Baselines — H25 COMPLEMENTARITY HOLDS; H26 SEARCH TIE
+
+- Question (Paper-B blocker, approved D27): are PRISM's *ordering* gains
+  subsumed by a generic LLM prompt optimizer that rewrites the module
+  *content*? And on the identical ordering space, does PRISM search beat
+  a generic LLM optimizer (OPRO) at a fixed eval budget? Two tracks, one
+  runner, hand-implemented OPRO (Yang et al. 2023) — no library.
+- Setup: target `meta-llama/llama-3.1-8b-instruct` (the Exp-S-calibrated
+  model), optimizer `gemini-2.5-flash-lite`, 8 reasoning modules
+  (RESTATE/IDENTIFY/ESTIMATE/PLAN/SIMPLIFY/COMPUTE/CHECK/ANSWER), the
+  frozen Exp-S 100-Q MATH-500 pool split train 0-59 / held-out 60-99 /
+  Track-B subset 60-89. $5.00 two-meter cost guard; hypotheses
+  registered to git BEFORE any evaluation (commit c970894).
+- **Track A / H25 (ordering-content complementarity):** OPRO wording
+  optimization (24 rounds, best-first trajectory of top-6, 60 train Q)
+  genuinely raised the level — original wording train acc 0.367 -> best
+  optimized 0.483 (round 14). On the held-out 50-ordering x 40-Q sweep
+  the optimized wording lifts the *level* by a paired +0.032, CI
+  [+0.013,+0.052] (excludes zero — OPRO worked). But the ordering-driven
+  spread is essentially undiminished: **optimized-wording std 0.059 vs
+  original-wording std 0.062 (ratio 0.94)** — far above the pre-registered
+  >=0.40-ratio AND >=0.03-absolute threshold. **H25 HOLDS.** Reordering
+  the modules still swings accuracy just as much *after* a generic LLM
+  optimizer has rewritten every module's wording. Ordering and content
+  optimization are complementary axes, not substitutes.
+- **Track B / H26 (search efficiency vs generic optimizer):** identical
+  8! ordering space, same 30-Q fitness, 5 shared seeds, 25 fresh evals
+  each. Best-found at budget 25: **PRISM 0.500 [0.467,0.527] vs OPRO
+  0.507 [0.480,0.540]**; PRISM-minus-OPRO -0.007, CI [-0.053,+0.040]
+  spans zero. **NOT FALSIFIED** (falsified only if OPRO exceeded with a
+  CI excluding zero) but not a directional PRISM win either — a
+  statistical tie. Trajectory nuance worth reporting: PRISM converges
+  faster early (b10 0.493 vs 0.447, b15 0.500 vs 0.460) then plateaus at
+  0.500 while OPRO grinds up to 0.507 by b25. On this small space with a
+  low-resolution 30-Q fitness the two are indistinguishable; pre-flight
+  had flagged H26 as genuinely uncertain (either outcome reportable).
+- Spend: 12,724 target calls, **$2.68 of the $5.00 cap**. Optimizer
+  (Gemini) calls billed separately on GOOGLE_API_KEY, negligible.
+- Interpretation for the paper: H25 is the load-bearing result — it
+  defends the ordering contribution against the obvious "just use
+  APE/OPRO on the content" reviewer objection. H26 says PRISM is not
+  *worse* than a strong generic optimizer on the ordering axis, and is
+  faster to a good-enough solution, but does not claim a clean win at
+  this scale — honest, and consistent with the FDC~0 / near-random
+  locality of LLM ordering landscapes established since Experiment J.
+- Outputs: `experiments/iteration-24-prompt-optimizer-baselines/`
+  (`prompt_optimizer_baselines.py`, `PLAN.md`, `hypotheses.json`,
+  `results/{a1_trajectory,best_wording,sweep_orderings,wordings_registry,
+  b_state,answer_cache,optimizer_calls,spend_guard}.*`,
+  `results/T_RESULTS_SUMMARY.json`).
+
 ## 2026-07-24 (Iteration 23, Experiment S): MATH-500 Hard-Reasoning Landscape — MIXED, HONEST RESULT; PRE-FLIGHT FORECAST 6th CORRECT
 
 - Question (Benchmark #2, approved D25): do the K/M/O/Q/Q2 findings hold on
