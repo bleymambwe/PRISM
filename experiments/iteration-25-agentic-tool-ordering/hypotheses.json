@@ -1,0 +1,44 @@
+{
+  "experiment": "U (Iteration 25) — agentic tool-ordering landscape (BFCL)",
+  "status": "PRE-REGISTERED — UNAPPROVED, no spend authorized",
+  "decision": "pending Bley approval (would become D28)",
+  "registered_before_any_evaluation": true,
+  "benchmark": "Berkeley Function-Calling Leaderboard (BFCL), deterministic AST-checkable categories only (simple / multiple / parallel / parallel_multiple and live_* variants)",
+  "object": "permutation of N tool-description slots in the agent tool-schema list, fixed N-tool menu, fixed task set (a pure permutation; execution-order/DAG is out of scope)",
+  "target_models": ["meta-llama/llama-3.1-8b-instruct (primary, subject to D16 [0.20,0.80] pilot gate)", "a second tool-calling family for the H29 transfer leg"],
+  "optimizer_model": "gemini-2.5-flash-lite (OPRO ordering proposer, reused from Experiment T)",
+  "searcher": "PRISM portfolio EA (prism-research/core/prism.py)",
+  "N_tools": "7 (enumerable, 5040) or 8 (sampled, 40320)",
+  "proposed_cost_cap_usd": 15.0,
+  "realistic_spend_usd": 8.0,
+  "prior_framing": "TOOL-SHADOW v1 (clawRxiv 2604.01646) argues position-induced tool-choice bias exists but supplies only a pre-validation framework and states there is no pre-registered audit; this experiment supplies the missing measurement",
+  "hypotheses": {
+    "H27": {
+      "name": "Agentic ordering sensitivity",
+      "prediction": "For a fixed N-tool menu on the AST-checkable BFCL subset, random-ordering tool-call-accuracy std >= 0.05 (predict 0.05-0.15).",
+      "falsified_if": "std < 0.02 (indistinguishable from AST-grading noise) — a reportable 'tool selection is order-robust' negative"
+    },
+    "H28": {
+      "name": "Pre-flight forecast (7th validated live application)",
+      "prediction": "rho1 (swap/insert/inversion) + FDC on the tool-ordering landscape, registered to git before the main sweep, correctly forecasts whether guided/search beats random.",
+      "falsified_if": "the registered search-helps-vs-random-competitive forecast is contradicted by the measured search-vs-random outcome",
+      "ledger_note": "adds the 7th entry after J, K, M, Q2-directional, S"
+    },
+    "H29": {
+      "name": "Position-effect transfer across models",
+      "prediction": "cross-model position-rank correlation r > 0.4 (which slot the correct tool occupies transfers across >=2 model families; mirrors Q2 r=0.582 on Llama).",
+      "falsified_if": "the 2-model position-rank CI spans 0 (structure is model-specific)"
+    },
+    "H30": {
+      "name": "Multi-turn persistence (STRETCH, gated, may be dropped)",
+      "prediction": "if a stateful/multi-turn BFCL subset is run, ordering std >= 40% of the single-turn std.",
+      "gate": "runs only if Track-A resolution passes AND budget remains; exploratory not confirmatory; carries the LLM-judge/state-matching grader-noise caveat (arXiv 2607.02577)"
+    }
+  },
+  "out_of_scope": {
+    "dag_execution_order": "topology optimization, not a permutation — needs graph-edit-distance FDC + topology operator; future 'PRISM-DAG' extension",
+    "stateful_multiturn_llm_judge_primary": "grader noise (18.5% misalignment, up to 18.9pt run-to-run spread) would swamp the effect",
+    "tau_bench_appworld_toolace_mcp_atlas": "higher-fidelity but pricier/noisier agentic benchmarks; separate higher-budget decisions catalogued in docs/BENCHMARK_DISCOVERY_2026-07-25.md",
+    "any_spend": "nothing runs until Bley approves the cost cap"
+  }
+}
