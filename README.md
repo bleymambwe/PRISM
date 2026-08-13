@@ -1,58 +1,75 @@
-# PRISM Research Workspace
+# PRISM — code and reproducibility artifacts
 
-This workspace contains research material for PRISM, the Permutation-based
-Reasoning and Intelligence Search Method, plus related GNGN/NEAT notes,
-presentations, notebooks, and generated PDFs.
+Companion repository for **PRISM: A Predictive Protocol for Permutation Optimization via
+Landscape Diagnostics** — [arXiv:2608.08344](https://arxiv.org/abs/2608.08344).
 
-## Current State
+PRISM measures a fitness landscape *before* choosing a search strategy. It uses inexpensive
+landscape diagnostics — one-step move autocorrelation and fitness–distance correlation — to
+predict useful mutation operators, identify when structured search is likely to beat random
+sampling, and detect regimes where search provides little advantage.
 
-As of 2026-07-05, the project appears to be in a documented validation stage:
+The paper positions PRISM **not as a universally superior optimizer**, but as a framework for
+deciding *whether* permutation search is worth running, *which* representation and operator to
+use, and *when* simpler alternatives are preferable.
 
-- `research.md` reports complete theoretical framing, toy-problem validation,
-  and readiness for scale-up experiments.
-- `GNGN_Toy_Problems.ipynb` contains the toy convergence validation notebook.
-- `other.md` records additional analysis on innovation numbers, speciation,
-  NEAT-style topology evolution, and usage examples.
-- `PRISM_Research_Blog.tex` and `PRISM_Presentation.tex` are publication and
-  presentation sources.
-- The workspace was not initially a Git repository; as of 2026-07-06 it is
-  initialized on branch `main` and pushed to the private GitHub remote
-  `https://github.com/bleymambwe/PRISM`.
+## What is here
 
-The claims above are inherited from existing project documents and should be
-reproduced before being treated as independently verified results.
-
-## Start Here
-
-1. Read `docs/HANDOVER.md` for the current handover.
-2. Read `docs/ARTIFACT_INDEX.md` to understand each file and its role.
-3. Use `docs/CONTINUITY_PROTOCOL.md` before starting any new research iteration.
-4. Create a new file under `iterations/` using `docs/ITERATION_TEMPLATE.md`.
-5. Record decisions, experiments, literature, and risks in the relevant files
-   under `docs/`.
-
-## Documentation System
-
-The documentation layer implements the requirements in `instructions.md`.
-
-| File | Purpose |
+| Path | Contents |
 | --- | --- |
-| `docs/CONTINUITY_PROTOCOL.md` | Operating protocol for each research iteration. |
-| `docs/HANDOVER.md` | Current concise handover for the next researcher. |
-| `docs/ARTIFACT_INDEX.md` | Inventory of files and their relationship to the project. |
-| `docs/DECISION_LOG.md` | Significant decisions and evidence supporting them. |
-| `docs/EXPERIMENT_LOG.md` | Experiment summaries, locations, and reproducibility status. |
-| `docs/LITERATURE_LOG.md` | Reviewed or referenced literature and source notes. |
-| `docs/RISK_REGISTER.md` | Risks, assumptions, limitations, and unresolved questions. |
-| `iterations/` | Per-iteration working notes and handovers. |
-| `experiments/` | Future experiment packages, configs, outputs, and summaries. |
-| `artifacts/` | Future generated figures, tables, model outputs, and exports. |
-| `references/` | Future papers, citation notes, and reference metadata. |
-| `scripts/` | Future reproducibility and automation scripts. |
+| `experiments/` | 23 pre-registered experiment iterations. Each carries a `PLAN.md` stating the hypothesis before the run, `hypotheses.json`, the runner code, and `results/` including per-run token and cost accounting. |
+| `docs/` | The research record: `EXPERIMENT_LOG.md`, `DECISION_LOG.md`, `LITERATURE_LOG.md`, `RISK_REGISTER.md`, `ITERATION_TEMPLATE.md`, `ARTIFACT_INDEX.md`, and the July 2026 experiments audit report. |
+| `scripts/` | Figure generation, dashboard and report build scripts. |
+| `deliverables/book_figures/` | Generated figures. |
+| `deliverables/PRISM_Framework_Research_Paper.md` | Long-form framework write-up. |
+| `GNGN_Toy_Problems.ipynb` | Early toy-problem convergence notebook (XOR, OR, AND, 3-bit parity, polynomial regression). |
 
-## Working Rule
+Experiments cover synthetic permutation landscapes, neural architecture benchmarks, scientific
+machine-learning pipelines, LLM instruction ordering, cross-model transfer, and prompt-optimizer
+baselines.
 
-Every meaningful research or implementation step should leave enough context for
-another researcher to resume without private knowledge from prior contributors.
-Record the objective, method, result, interpretation, decision, and next action
-while the work is performed, not only at the end.
+## How the experiments are organised
+
+Each iteration is pre-registered: the plan and hypotheses are written and committed **before**
+the run, and the result is recorded afterwards whether or not it supported the hypothesis.
+Iteration 23 is labelled a mixed, honest result in its own commit message — that is deliberate.
+`docs/EXPERIMENT_LOG.md` is the index; `docs/DECISION_LOG.md` records why each direction was
+taken or dropped.
+
+Runs that call hosted models read their API key at runtime from Google Secret Manager by name
+(`--secret=OPENROUTER_API_KEY`). No credentials are stored in this repository.
+
+## Reproducing a run
+
+```bash
+git clone https://github.com/bleymambwe/PRISM.git
+cd PRISM
+# each iteration is self-contained; read its PLAN.md first
+python experiments/iteration-24-prompt-optimizer-baselines/prompt_optimizer_baselines.py
+```
+
+Iterations that query hosted LLMs need an `OPENROUTER_API_KEY` available to the mechanism named
+in that iteration's runner, and will incur cost. Each `PLAN.md` states the cost cap that was set
+before the run, and `results/token_usage.csv` records what was actually spent.
+
+## Scope
+
+This repository holds the code and reproducibility artifacts. Working notes, drafts, slide decks,
+narrated audio and third-party reading material live in a separate private workspace and are
+deliberately not published here. See [`REPO_SCOPE.md`](REPO_SCOPE.md) for the rule and the reasoning.
+
+## Citation
+
+```bibtex
+@misc{mambwe2026prism,
+  title  = {PRISM: A Predictive Protocol for Permutation Optimization via Landscape Diagnostics},
+  author = {Mambwe, Blessings},
+  year   = {2026},
+  eprint = {2608.08344},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+```
+
+## License
+
+[MIT](LICENSE) © 2026 Blessings Mambwe.

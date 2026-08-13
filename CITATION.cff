@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or its artifacts, please cite the paper below."
+title: "PRISM: code and reproducibility artifacts"
+authors:
+  - family-names: Mambwe
+    given-names: Blessings
+    orcid: ""
+license: MIT
+repository-code: "https://github.com/bleymambwe/PRISM"
+preferred-citation:
+  type: article
+  title: "PRISM: A Predictive Protocol for Permutation Optimization via Landscape Diagnostics"
+  authors:
+    - family-names: Mambwe
+      given-names: Blessings
+  year: 2026
+  journal: "arXiv preprint"
+  url: "https://arxiv.org/abs/2608.08344"

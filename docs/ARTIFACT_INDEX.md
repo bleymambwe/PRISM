@@ -1,5 +1,11 @@
 # PRISM Artifact Index
 
+> **Scope note.** This index describes the full PRISM workspace. Rows referring to root
+> drafts, `.tex` sources, historical PDFs and working notes describe files held in the
+> private workspace repository; they are not part of this public artifact repository.
+> See [`REPO_SCOPE.md`](../REPO_SCOPE.md).
+
+
 Last updated: 2026-07-08
 
 This index records the purpose and status of visible project artifacts. It

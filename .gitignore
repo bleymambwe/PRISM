@@ -51,3 +51,51 @@ research-opportunity-mapping-2026-07-06/papers/expanded_2026_07_07/pdfs/
 
 secrets.env
 *.env
+
+# ---------------------------------------------------------------------------
+# Scope guard - see REPO_SCOPE.md. These live in the private workspace repo.
+# ---------------------------------------------------------------------------
+deliverables/audio/
+*.mp3
+*.wav
+*.m4a
+*.pptx
+deliverables/PRISM_Book*.pdf
+deliverables/PRISM_TEAM_BRIEFING.txt
+deliverables/PRISM_*_Presentation*
+deliverables/PRISM_Iteration_Journey.html
+deliverables/PRISM_Live_Dashboard.html
+deliverables/PRISM_Research_Compendium.html
+
+# Third-party reading material - do not redistribute
+Approximate Neural Architecture Search*.pdf
+
+# Superseded drafts - arXiv is authoritative
+main.pdf
+PRISM Algorithm.pdf
+Prism Comphersive Algorithm.pdf
+prism vt.pdf
+
+# Working notes and planning - private workspace
+research.md
+research-v2.md
+other.md
+instructions.md
+presentation.md
+skills.md
+screenshot.png
+codex */
+claude */
+review/
+prism-research/
+iterations/
+research-opportunity-mapping-*/
+docs/PUBLICATION_PLAN.md
+docs/PUBLICATION_GUIDE_*.md
+docs/ICML_READINESS_AUDIT.md
+docs/NEXT_STEPS_ONE_PAGER_*.md
+docs/HANDOVER.md
+docs/CONTINUITY_PROTOCOL.md
+docs/RESEARCH_STATUS_COMPREHENSIVE_*.md
+docs/RECENT_DEVELOPMENTS_*.md
+docs/BENCHMARK_DISCOVERY_*.md
