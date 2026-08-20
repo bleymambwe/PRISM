@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4779,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Chapter 7 — How the\nexperimental standard matured",
+    "startMs": 4779,
+    "endMs": 9558,
+    "timestampMs": 4779,
+    "confidence": null
+  },
+  {
+    "text": "(5–6 minutes). First, identify the\nresearch question before looking at",
+    "startMs": 9558,
+    "endMs": 14337,
+    "timestampMs": 9558,
+    "confidence": null
+  },
+  {
+    "text": "the answer. The question asks whether the\nfixed components create",
+    "startMs": 14337,
+    "endMs": 19116,
+    "timestampMs": 14337,
+    "confidence": null
+  },
+  {
+    "text": "a meaningful ordering surface, whether a\nparticular neighborhood provides",
+    "startMs": 19116,
+    "endMs": 23417,
+    "timestampMs": 19116,
+    "confidence": null
+  },
+  {
+    "text": "useful guidance on that surface, or\nwhether a cheaper executor",
+    "startMs": 23417,
+    "endMs": 28196,
+    "timestampMs": 23417,
+    "confidence": null
+  },
+  {
+    "text": "is equally effective. The sample is 40\nseeds, and the",
+    "startMs": 28196,
+    "endMs": 32975,
+    "timestampMs": 28196,
+    "confidence": null
+  },
+  {
+    "text": "source artifact is production brief and\npaper source. The horizontal",
+    "startMs": 32975,
+    "endMs": 37754,
+    "timestampMs": 32975,
+    "confidence": null
+  },
+  {
+    "text": "axis names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 37754,
+    "endMs": 42055,
+    "timestampMs": 37754,
+    "confidence": null
+  },
+  {
+    "text": "position, distance, or distinct\nevaluations. The vertical axis names the",
+    "startMs": 42055,
+    "endMs": 46834,
+    "timestampMs": 42055,
+    "confidence": null
+  },
+  {
+    "text": "measured outcome—such as accuracy, error,\nhit probability, regret,",
+    "startMs": 46834,
+    "endMs": 50657,
+    "timestampMs": 46834,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 50657,
+    "endMs": 55436,
+    "timestampMs": 50657,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 55436,
+    "endMs": 60215,
+    "timestampMs": 55436,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 60215,
+    "endMs": 64994,
+    "timestampMs": 60215,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 64994,
+    "endMs": 69773,
+    "timestampMs": 64994,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: Define",
+    "startMs": 69773,
+    "endMs": 74074,
+    "timestampMs": 69773,
+    "confidence": null
+  },
+  {
+    "text": "all metrics visually: fitness\ndistribution; optimum density; distinct",
+    "startMs": 74074,
+    "endMs": 77897,
+    "timestampMs": 74074,
+    "confidence": null
+  },
+  {
+    "text": "evaluations; hit rate; regret; Wilson\ninterval for proportions; bootstrap",
+    "startMs": 77897,
+    "endMs": 82198,
+    "timestampMs": 77897,
+    "confidence": null
+  },
+  {
+    "text": "interval for mean evaluations; Pearson\nversus Spearman correlation. The",
+    "startMs": 82198,
+    "endMs": 86499,
+    "timestampMs": 82198,
+    "confidence": null
+  },
+  {
+    "text": "correct limitation is: The conclusion is\nscoped to the recorded",
+    "startMs": 86499,
+    "endMs": 91278,
+    "timestampMs": 86499,
+    "confidence": null
+  },
+  {
+    "text": "evaluator, landscape, and budget. That\nlimitation rules out a broader",
+    "startMs": 91278,
+    "endMs": 96057,
+    "timestampMs": 91278,
+    "confidence": null
+  },
+  {
+    "text": "promotional interpretation while\npreserving the result actually measured.",
+    "startMs": 96057,
+    "endMs": 99880,
+    "timestampMs": 96057,
+    "confidence": null
+  },
+  {
+    "text": "The decision carried into the research\nprogram is: Carry this",
+    "startMs": 99880,
+    "endMs": 104659,
+    "timestampMs": 99880,
+    "confidence": null
+  },
+  {
+    "text": "constraint into the next experiment and\ncompare methods at equal",
+    "startMs": 104659,
+    "endMs": 109438,
+    "timestampMs": 104659,
+    "confidence": null
+  },
+  {
+    "text": "cost. Finally, compare against the\nequal-budget alternative. Generations,",
+    "startMs": 109438,
+    "endMs": 113261,
+    "timestampMs": 109438,
+    "confidence": null
+  },
+  {
+    "text": "repeated cache hits, and distinct\nevaluations are not interchangeable. A",
+    "startMs": 113261,
+    "endMs": 118040,
+    "timestampMs": 113261,
+    "confidence": null
+  },
+  {
+    "text": "method earns a search-efficiency claim\nonly when uncertainty, evaluator",
+    "startMs": 118040,
+    "endMs": 122341,
+    "timestampMs": 118040,
+    "confidence": null
+  },
+  {
+    "text": "resolution, optimum density, and\nevaluation cost have all been accounted",
+    "startMs": 122341,
+    "endMs": 127120,
+    "timestampMs": 122341,
+    "confidence": null
+  },
+  {
+    "text": "for.",
+    "startMs": 127120,
+    "endMs": 127609,
+    "timestampMs": 127120,
+    "confidence": null
+  }
+]

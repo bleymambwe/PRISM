@@ -1,0 +1,8027 @@
+{
+  "overview-headlines": {
+    "id": "overview-headlines",
+    "kind": "bar",
+    "title": "Ordering can matter without guaranteeing search advantage",
+    "xLabel": "evidence panel",
+    "yLabel": "reported range",
+    "sample": "three audited observations",
+    "points": [
+      {
+        "x": 0,
+        "y": 90.6,
+        "label": "LLM accuracy swing"
+      },
+      {
+        "x": 1,
+        "y": 23.1,
+        "label": "SINDy error swing"
+      },
+      {
+        "x": 2,
+        "y": 1.0,
+        "label": "random-competitive boundary"
+      }
+    ],
+    "source": {
+      "artifact": "PRISM_Remotion_Kokoro_Production_Brief.md",
+      "rowCount": 3,
+      "filters": [],
+      "transforms": [
+        "reported summary values only"
+      ],
+      "xAxis": "evidence panel",
+      "yAxis": "reported range"
+    },
+    "summary": "Headline ranges introduce the distinction between order sensitivity and optimizer advantage."
+  },
+  "T1-search-space": {
+    "id": "T1-search-space",
+    "kind": "line",
+    "title": "Search-space growth",
+    "xLabel": "number of slots or items n",
+    "yLabel": "candidate count (log scale)",
+    "sample": "n=2…16",
+    "points": [
+      {
+        "x": 2,
+        "y": 25,
+        "series": "5^n"
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "series": "n factorial"
+      },
+      {
+        "x": 3,
+        "y": 125,
+        "series": "5^n"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "series": "n factorial"
+      },
+      {
+        "x": 4,
+        "y": 625,
+        "series": "5^n"
+      },
+      {
+        "x": 4,
+        "y": 24,
+        "series": "n factorial"
+      },
+      {
+        "x": 5,
+        "y": 3125,
+        "series": "5^n"
+      },
+      {
+        "x": 5,
+        "y": 120,
+        "series": "n factorial"
+      },
+      {
+        "x": 6,
+        "y": 15625,
+        "series": "5^n"
+      },
+      {
+        "x": 6,
+        "y": 720,
+        "series": "n factorial"
+      },
+      {
+        "x": 7,
+        "y": 78125,
+        "series": "5^n"
+      },
+      {
+        "x": 7,
+        "y": 5040,
+        "series": "n factorial"
+      },
+      {
+        "x": 8,
+        "y": 390625,
+        "series": "5^n"
+      },
+      {
+        "x": 8,
+        "y": 40320,
+        "series": "n factorial"
+      },
+      {
+        "x": 9,
+        "y": 1953125,
+        "series": "5^n"
+      },
+      {
+        "x": 9,
+        "y": 362880,
+        "series": "n factorial"
+      },
+      {
+        "x": 10,
+        "y": 9765625,
+        "series": "5^n"
+      },
+      {
+        "x": 10,
+        "y": 3628800,
+        "series": "n factorial"
+      },
+      {
+        "x": 11,
+        "y": 48828125,
+        "series": "5^n"
+      },
+      {
+        "x": 11,
+        "y": 39916800,
+        "series": "n factorial"
+      },
+      {
+        "x": 12,
+        "y": 244140625,
+        "series": "5^n"
+      },
+      {
+        "x": 12,
+        "y": 479001600,
+        "series": "n factorial"
+      },
+      {
+        "x": 13,
+        "y": 1220703125,
+        "series": "5^n"
+      },
+      {
+        "x": 13,
+        "y": 6227020800,
+        "series": "n factorial"
+      },
+      {
+        "x": 14,
+        "y": 6103515625,
+        "series": "5^n"
+      },
+      {
+        "x": 14,
+        "y": 87178291200,
+        "series": "n factorial"
+      },
+      {
+        "x": 15,
+        "y": 30517578125,
+        "series": "5^n"
+      },
+      {
+        "x": 15,
+        "y": 1307674368000,
+        "series": "n factorial"
+      },
+      {
+        "x": 16,
+        "y": 152587890625,
+        "series": "5^n"
+      },
+      {
+        "x": 16,
+        "y": 20922789888000,
+        "series": "n factorial"
+      }
+    ],
+    "source": {
+      "artifact": "Paper Table 1",
+      "rowCount": 30,
+      "filters": [],
+      "transforms": [
+        "exact combinatorial formulas",
+        "logarithmic y-axis requested"
+      ],
+      "xAxis": "number of slots or items n",
+      "yAxis": "candidate count (log scale)"
+    },
+    "summary": "Factorial permutation growth remains rapid even though the component set is fixed."
+  },
+  "T4-scaling": {
+    "id": "T4-scaling",
+    "kind": "scatter",
+    "title": "Empirical hitting-time scaling",
+    "xLabel": "permutation size n",
+    "yLabel": "mean hit generation",
+    "sample": "14 aggregate cells from 210 runs",
+    "points": [
+      {
+        "x": 4.0,
+        "y": 3.3333333333333335,
+        "series": "hamming"
+      },
+      {
+        "x": 5.0,
+        "y": 7.733333333333333,
+        "series": "hamming"
+      },
+      {
+        "x": 6.0,
+        "y": 22.666666666666668,
+        "series": "hamming"
+      },
+      {
+        "x": 7.0,
+        "y": 31.666666666666668,
+        "series": "hamming"
+      },
+      {
+        "x": 8.0,
+        "y": 66.4,
+        "series": "hamming"
+      },
+      {
+        "x": 10.0,
+        "y": 113.53333333333333,
+        "series": "hamming"
+      },
+      {
+        "x": 12.0,
+        "y": 188.46666666666667,
+        "series": "hamming"
+      },
+      {
+        "x": 4.0,
+        "y": 3.933333333333333,
+        "series": "kendall"
+      },
+      {
+        "x": 5.0,
+        "y": 10.333333333333334,
+        "series": "kendall"
+      },
+      {
+        "x": 6.0,
+        "y": 28.066666666666666,
+        "series": "kendall"
+      },
+      {
+        "x": 7.0,
+        "y": 48.46666666666667,
+        "series": "kendall"
+      },
+      {
+        "x": 8.0,
+        "y": 85.26666666666667,
+        "series": "kendall"
+      },
+      {
+        "x": 10.0,
+        "y": 156.46666666666667,
+        "series": "kendall"
+      },
+      {
+        "x": 12.0,
+        "y": 199.06666666666666,
+        "series": "kendall"
+      }
+    ],
+    "source": {
+      "artifact": "prism-research/outputs/scaling_summary.csv",
+      "rowCount": 14,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "permutation size n",
+      "yAxis": "mean hit generation"
+    },
+    "summary": "Matched smooth synthetic cases are consistent with the proposed cubic-log trend over the tested range."
+  },
+  "A-validation": {
+    "id": "A-validation",
+    "kind": "bar",
+    "title": "Historical reproduction outcomes",
+    "xLabel": "task",
+    "yLabel": "best recorded fitness",
+    "sample": "five tasks",
+    "points": [
+      {
+        "x": 0,
+        "y": 1.0,
+        "label": "XOR"
+      },
+      {
+        "x": 1,
+        "y": 1.0,
+        "label": "OR"
+      },
+      {
+        "x": 2,
+        "y": 1.0,
+        "label": "AND"
+      },
+      {
+        "x": 3,
+        "y": 1.0,
+        "label": "3-bit Parity"
+      },
+      {
+        "x": 4,
+        "y": -0.007038836367428303,
+        "label": "Polynomial"
+      }
+    ],
+    "source": {
+      "artifact": "prism-research/outputs/validation_results.csv",
+      "rowCount": 5,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "task",
+      "yAxis": "best recorded fitness"
+    },
+    "summary": "Headline values reproduce, while the variance audit narrows interpretation."
+  },
+  "CD-operators": {
+    "id": "CD-operators",
+    "kind": "scatter",
+    "title": "Operator × landscape hitting time",
+    "xLabel": "permutation size n",
+    "yLabel": "mean generations; cap marked separately",
+    "sample": "78 aggregate cells from 1,170 runs",
+    "points": [
+      {
+        "x": 6.0,
+        "y": 261.6,
+        "series": "insert"
+      },
+      {
+        "x": 6.0,
+        "y": 27.8,
+        "series": "inversion"
+      },
+      {
+        "x": 6.0,
+        "y": 399.3,
+        "series": "scramble"
+      },
+      {
+        "x": 6.0,
+        "y": 6007.5,
+        "series": "swap"
+      },
+      {
+        "x": 8.0,
+        "y": 1606.1,
+        "series": "insert"
+      },
+      {
+        "x": 8.0,
+        "y": 134.1,
+        "series": "inversion"
+      },
+      {
+        "x": 8.0,
+        "y": 3997.3,
+        "series": "scramble"
+      },
+      {
+        "x": 8.0,
+        "y": 6696.9,
+        "series": "swap"
+      },
+      {
+        "x": 10.0,
+        "y": 4655.5,
+        "series": "insert"
+      },
+      {
+        "x": 10.0,
+        "y": 390.3,
+        "series": "inversion"
+      },
+      {
+        "x": 10.0,
+        "y": 9363.5,
+        "series": "scramble"
+      },
+      {
+        "x": 10.0,
+        "y": 8883.1,
+        "series": "swap"
+      },
+      {
+        "x": 12.0,
+        "y": 8213.1,
+        "series": "insert"
+      },
+      {
+        "x": 12.0,
+        "y": 345.5,
+        "series": "inversion"
+      },
+      {
+        "x": 12.0,
+        "y": 10000.0,
+        "series": "scramble"
+      },
+      {
+        "x": 12.0,
+        "y": 10000.0,
+        "series": "swap"
+      },
+      {
+        "x": 14.0,
+        "y": 9935.1,
+        "series": "insert"
+      },
+      {
+        "x": 14.0,
+        "y": 529.4,
+        "series": "inversion"
+      },
+      {
+        "x": 14.0,
+        "y": 10000.0,
+        "series": "scramble"
+      },
+      {
+        "x": 14.0,
+        "y": 10000.0,
+        "series": "swap"
+      },
+      {
+        "x": 16.0,
+        "y": 10000.0,
+        "series": "insert"
+      },
+      {
+        "x": 16.0,
+        "y": 1199.3,
+        "series": "inversion"
+      },
+      {
+        "x": 16.0,
+        "y": 10000.0,
+        "series": "scramble"
+      },
+      {
+        "x": 16.0,
+        "y": 10000.0,
+        "series": "swap"
+      },
+      {
+        "x": 6.0,
+        "y": 3759.0,
+        "series": "inversion"
+      },
+      {
+        "x": 6.0,
+        "y": 9333.3,
+        "series": "swap"
+      },
+      {
+        "x": 8.0,
+        "y": 9924.5,
+        "series": "inversion"
+      },
+      {
+        "x": 8.0,
+        "y": 10000.0,
+        "series": "swap"
+      },
+      {
+        "x": 10.0,
+        "y": 10000.0,
+        "series": "inversion"
+      },
+      {
+        "x": 10.0,
+        "y": 10000.0,
+        "series": "swap"
+      },
+      {
+        "x": 6.0,
+        "y": 4690.7,
+        "series": "insert"
+      },
+      {
+        "x": 6.0,
+        "y": 2066.5,
+        "series": "inversion"
+      },
+      {
+        "x": 6.0,
+        "y": 734.3,
+        "series": "scramble"
+      },
+      {
+        "x": 6.0,
+        "y": 22.7,
+        "series": "swap"
+      },
+      {
+        "x": 8.0,
+        "y": 9357.3,
+        "series": "insert"
+      },
+      {
+        "x": 8.0,
+        "y": 5426.3,
+        "series": "inversion"
+      },
+      {
+        "x": 8.0,
+        "y": 3153.9,
+        "series": "scramble"
+      },
+      {
+        "x": 8.0,
+        "y": 66.4,
+        "series": "swap"
+      },
+      {
+        "x": 10.0,
+        "y": 10000.0,
+        "series": "insert"
+      },
+      {
+        "x": 10.0,
+        "y": 8274.2,
+        "series": "inversion"
+      },
+      {
+        "x": 10.0,
+        "y": 8016.7,
+        "series": "scramble"
+      },
+      {
+        "x": 10.0,
+        "y": 113.5,
+        "series": "swap"
+      },
+      {
+        "x": 12.0,
+        "y": 10000.0,
+        "series": "insert"
+      },
+      {
+        "x": 12.0,
+        "y": 9388.3,
+        "series": "inversion"
+      },
+      {
+        "x": 12.0,
+        "y": 8587.3,
+        "series": "scramble"
+      },
+      {
+        "x": 12.0,
+        "y": 188.5,
+        "series": "swap"
+      },
+      {
+        "x": 14.0,
+        "y": 10000.0,
+        "series": "insert"
+      },
+      {
+        "x": 14.0,
+        "y": 10000.0,
+        "series": "inversion"
+      },
+      {
+        "x": 14.0,
+        "y": 10000.0,
+        "series": "scramble"
+      },
+      {
+        "x": 14.0,
+        "y": 234.0,
+        "series": "swap"
+      },
+      {
+        "x": 16.0,
+        "y": 10000.0,
+        "series": "insert"
+      },
+      {
+        "x": 16.0,
+        "y": 10000.0,
+        "series": "inversion"
+      },
+      {
+        "x": 16.0,
+        "y": 10000.0,
+        "series": "scramble"
+      },
+      {
+        "x": 16.0,
+        "y": 404.7,
+        "series": "swap"
+      },
+      {
+        "x": 6.0,
+        "y": 21.3,
+        "series": "insert"
+      },
+      {
+        "x": 6.0,
+        "y": 32.1,
+        "series": "inversion"
+      },
+      {
+        "x": 6.0,
+        "y": 32.2,
+        "series": "scramble"
+      },
+      {
+        "x": 6.0,
+        "y": 28.1,
+        "series": "swap"
+      },
+      {
+        "x": 8.0,
+        "y": 70.2,
+        "series": "insert"
+      },
+      {
+        "x": 8.0,
+        "y": 88.3,
+        "series": "inversion"
+      },
+      {
+        "x": 8.0,
+        "y": 79.7,
+        "series": "scramble"
+      },
+      {
+        "x": 8.0,
+        "y": 85.3,
+        "series": "swap"
+      },
+      {
+        "x": 10.0,
+        "y": 121.1,
+        "series": "insert"
+      },
+      {
+        "x": 10.0,
+        "y": 154.3,
+        "series": "inversion"
+      },
+      {
+        "x": 10.0,
+        "y": 150.8,
+        "series": "scramble"
+      },
+      {
+        "x": 10.0,
+        "y": 156.5,
+        "series": "swap"
+      },
+      {
+        "x": 12.0,
+        "y": 223.9,
+        "series": "insert"
+      },
+      {
+        "x": 12.0,
+        "y": 282.9,
+        "series": "inversion"
+      },
+      {
+        "x": 12.0,
+        "y": 237.8,
+        "series": "scramble"
+      },
+      {
+        "x": 12.0,
+        "y": 199.1,
+        "series": "swap"
+      },
+      {
+        "x": 14.0,
+        "y": 322.3,
+        "series": "insert"
+      },
+      {
+        "x": 14.0,
+        "y": 441.5,
+        "series": "inversion"
+      },
+      {
+        "x": 14.0,
+        "y": 352.7,
+        "series": "scramble"
+      },
+      {
+        "x": 14.0,
+        "y": 339.4,
+        "series": "swap"
+      },
+      {
+        "x": 16.0,
+        "y": 396.1,
+        "series": "insert"
+      },
+      {
+        "x": 16.0,
+        "y": 587.9,
+        "series": "inversion"
+      },
+      {
+        "x": 16.0,
+        "y": 540.0,
+        "series": "scramble"
+      },
+      {
+        "x": 16.0,
+        "y": 440.3,
+        "series": "swap"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-03/results/operator_summary.csv",
+      "rowCount": 78,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "permutation size n",
+      "yAxis": "mean generations; cap marked separately"
+    },
+    "summary": "Matched operators lead while mismatch and deception censor under realistic budgets."
+  },
+  "E-flat": {
+    "id": "E-flat",
+    "kind": "scatter",
+    "title": "Failed all-positions neural redesign",
+    "xLabel": "attempted task",
+    "yLabel": "accuracy",
+    "sample": "two task summaries; all stage-one orders reported at 0.500",
+    "points": [
+      {
+        "x": 0,
+        "y": 0.5,
+        "label": "XOR-v3"
+      },
+      {
+        "x": 1,
+        "y": 0.5,
+        "label": "Parity-v3"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-03/results/toy_v3_results.csv",
+      "rowCount": 2,
+      "filters": [],
+      "transforms": [
+        "0.500 reconstructed from recorded stage-one summary",
+        "no connecting trend line"
+      ],
+      "xAxis": "attempted task",
+      "yAxis": "accuracy"
+    },
+    "summary": "The redesigned plain stack has zero useful ordering variance."
+  },
+  "F-portfolio": {
+    "id": "F-portfolio",
+    "kind": "scatter",
+    "title": "Portfolio overhead versus matched operator",
+    "xLabel": "permutation size n",
+    "yLabel": "overhead ratio",
+    "sample": "36 aggregate cells from 540 runs",
+    "points": [
+      {
+        "x": 6.0,
+        "y": 2.24,
+        "series": "portfolio"
+      },
+      {
+        "x": 6.0,
+        "y": 2.55,
+        "series": "adaptive"
+      },
+      {
+        "x": 8.0,
+        "y": 2.17,
+        "series": "portfolio"
+      },
+      {
+        "x": 8.0,
+        "y": 2.46,
+        "series": "adaptive"
+      },
+      {
+        "x": 10.0,
+        "y": 2.68,
+        "series": "portfolio"
+      },
+      {
+        "x": 10.0,
+        "y": 2.42,
+        "series": "adaptive"
+      },
+      {
+        "x": 12.0,
+        "y": 2.12,
+        "series": "portfolio"
+      },
+      {
+        "x": 12.0,
+        "y": 1.97,
+        "series": "adaptive"
+      },
+      {
+        "x": 14.0,
+        "y": 3.14,
+        "series": "portfolio"
+      },
+      {
+        "x": 14.0,
+        "y": 2.98,
+        "series": "adaptive"
+      },
+      {
+        "x": 16.0,
+        "y": 2.82,
+        "series": "portfolio"
+      },
+      {
+        "x": 16.0,
+        "y": 2.18,
+        "series": "adaptive"
+      },
+      {
+        "x": 6.0,
+        "y": 1.87,
+        "series": "portfolio"
+      },
+      {
+        "x": 6.0,
+        "y": 1.39,
+        "series": "adaptive"
+      },
+      {
+        "x": 8.0,
+        "y": 1.14,
+        "series": "portfolio"
+      },
+      {
+        "x": 8.0,
+        "y": 1.33,
+        "series": "adaptive"
+      },
+      {
+        "x": 10.0,
+        "y": 1.05,
+        "series": "portfolio"
+      },
+      {
+        "x": 10.0,
+        "y": 1.14,
+        "series": "adaptive"
+      },
+      {
+        "x": 12.0,
+        "y": 0.9,
+        "series": "portfolio"
+      },
+      {
+        "x": 12.0,
+        "y": 1.14,
+        "series": "adaptive"
+      },
+      {
+        "x": 14.0,
+        "y": 1.07,
+        "series": "portfolio"
+      },
+      {
+        "x": 14.0,
+        "y": 1.03,
+        "series": "adaptive"
+      },
+      {
+        "x": 16.0,
+        "y": 1.27,
+        "series": "portfolio"
+      },
+      {
+        "x": 16.0,
+        "y": 1.16,
+        "series": "adaptive"
+      },
+      {
+        "x": 6.0,
+        "y": 2.82,
+        "series": "portfolio"
+      },
+      {
+        "x": 6.0,
+        "y": 2.41,
+        "series": "adaptive"
+      },
+      {
+        "x": 8.0,
+        "y": 1.8,
+        "series": "portfolio"
+      },
+      {
+        "x": 8.0,
+        "y": 1.43,
+        "series": "adaptive"
+      },
+      {
+        "x": 10.0,
+        "y": 2.4,
+        "series": "portfolio"
+      },
+      {
+        "x": 10.0,
+        "y": 2.24,
+        "series": "adaptive"
+      },
+      {
+        "x": 12.0,
+        "y": 2.27,
+        "series": "portfolio"
+      },
+      {
+        "x": 12.0,
+        "y": 5.8,
+        "series": "adaptive"
+      },
+      {
+        "x": 14.0,
+        "y": 4.06,
+        "series": "portfolio"
+      },
+      {
+        "x": 14.0,
+        "y": 2.21,
+        "series": "adaptive"
+      },
+      {
+        "x": 16.0,
+        "y": 1.6,
+        "series": "portfolio"
+      },
+      {
+        "x": 16.0,
+        "y": 2.16,
+        "series": "adaptive"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-04/results/portfolio_summary.csv",
+      "rowCount": 36,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "permutation size n",
+      "yAxis": "overhead ratio"
+    },
+    "summary": "Uniform portfolio avoids censoring at bounded overhead."
+  },
+  "G-landscape": {
+    "id": "G-landscape",
+    "kind": "scatter",
+    "title": "Exact v4 neural landscapes",
+    "xLabel": "enumerated ordering rank",
+    "yLabel": "deterministic fitness",
+    "sample": "240 rows: 120 orders for each task",
+    "points": [
+      {
+        "x": 0,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 1,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 2,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 3,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 4,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 5,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 6,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 7,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 8,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 9,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 10,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 11,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 12,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 13,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 14,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 15,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 16,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 17,
+        "y": 0.5,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 18,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 19,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 20,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 21,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 22,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 23,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 24,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 25,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 26,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 27,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 28,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 29,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 30,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 31,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 32,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 33,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 34,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 35,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 36,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 37,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 38,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 39,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 40,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 41,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 42,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 43,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 44,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 45,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 46,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 47,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 48,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 49,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 50,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 51,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 52,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 53,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 54,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 55,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 56,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 57,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 58,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 59,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 60,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 61,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 62,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 63,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 64,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 65,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 66,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 67,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 68,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 69,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 70,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 71,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 72,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 73,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 74,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 75,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 76,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 77,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 78,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 79,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 80,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 81,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 82,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 83,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 84,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 85,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 86,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 87,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 88,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 89,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 90,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 91,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 92,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 93,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 94,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 95,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 96,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 97,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 98,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 99,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 100,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 101,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 102,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 103,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 104,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 105,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 106,
+        "y": 0.6666666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 107,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 108,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 109,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 110,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 111,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 112,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 113,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 114,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 115,
+        "y": 0.5833333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 116,
+        "y": 0.75,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 117,
+        "y": 0.9166666666666666,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 118,
+        "y": 1.0,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 119,
+        "y": 0.8333333333333334,
+        "series": "XOR-v4"
+      },
+      {
+        "x": 120,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 121,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 122,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 123,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 124,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 125,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 126,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 127,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 128,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 129,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 130,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 131,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 132,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 133,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 134,
+        "y": 0.4583333333333333,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 135,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 136,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 137,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 138,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 139,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 140,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 141,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 142,
+        "y": 0.875,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 143,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 144,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 145,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 146,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 147,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 148,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 149,
+        "y": 0.5833333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 150,
+        "y": 0.5833333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 151,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 152,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 153,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 154,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 155,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 156,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 157,
+        "y": 0.4583333333333333,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 158,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 159,
+        "y": 0.5416666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 160,
+        "y": 0.5,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 161,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 162,
+        "y": 0.5416666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 163,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 164,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 165,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 166,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 167,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 168,
+        "y": 0.9583333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 169,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 170,
+        "y": 0.5,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 171,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 172,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 173,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 174,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 175,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 176,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 177,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 178,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 179,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 180,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 181,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 182,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 183,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 184,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 185,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 186,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 187,
+        "y": 0.875,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 188,
+        "y": 0.5416666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 189,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 190,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 191,
+        "y": 0.875,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 192,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 193,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 194,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 195,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 196,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 197,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 198,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 199,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 200,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 201,
+        "y": 0.5416666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 202,
+        "y": 0.875,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 203,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 204,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 205,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 206,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 207,
+        "y": 0.5416666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 208,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 209,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 210,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 211,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 212,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 213,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 214,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 215,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 216,
+        "y": 0.5833333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 217,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 218,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 219,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 220,
+        "y": 0.9166666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 221,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 222,
+        "y": 0.9583333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 223,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 224,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 225,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 226,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 227,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 228,
+        "y": 0.7916666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 229,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 230,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 231,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 232,
+        "y": 0.7083333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 233,
+        "y": 0.8333333333333334,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 234,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 235,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 236,
+        "y": 0.625,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 237,
+        "y": 0.6666666666666666,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 238,
+        "y": 0.75,
+        "series": "Parity-v4"
+      },
+      {
+        "x": 239,
+        "y": 0.5416666666666666,
+        "series": "Parity-v4"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-05/results/v4_landscape.csv",
+      "rowCount": 240,
+      "filters": [],
+      "transforms": [
+        "raw enumerated points sorted only for display"
+      ],
+      "xAxis": "enumerated ordering rank",
+      "yAxis": "deterministic fitness"
+    },
+    "summary": "XOR and parity have different optimum densities and search difficulty."
+  },
+  "H-scaleup": {
+    "id": "H-scaleup",
+    "kind": "histogram",
+    "title": "Six-block XOR exact landscape",
+    "xLabel": "fitness bin",
+    "yLabel": "ordering count",
+    "sample": "720 exact orderings",
+    "points": [
+      {
+        "x": 0.42708333333333337,
+        "y": 1,
+        "label": "bin 1"
+      },
+      {
+        "x": 0.4479166666666667,
+        "y": 0,
+        "label": "bin 2"
+      },
+      {
+        "x": 0.46875,
+        "y": 0,
+        "label": "bin 3"
+      },
+      {
+        "x": 0.48958333333333337,
+        "y": 0,
+        "label": "bin 4"
+      },
+      {
+        "x": 0.5104166666666666,
+        "y": 9,
+        "label": "bin 5"
+      },
+      {
+        "x": 0.53125,
+        "y": 0,
+        "label": "bin 6"
+      },
+      {
+        "x": 0.5520833333333334,
+        "y": 0,
+        "label": "bin 7"
+      },
+      {
+        "x": 0.5729166666666666,
+        "y": 0,
+        "label": "bin 8"
+      },
+      {
+        "x": 0.59375,
+        "y": 43,
+        "label": "bin 9"
+      },
+      {
+        "x": 0.6145833333333334,
+        "y": 0,
+        "label": "bin 10"
+      },
+      {
+        "x": 0.6354166666666666,
+        "y": 0,
+        "label": "bin 11"
+      },
+      {
+        "x": 0.65625,
+        "y": 0,
+        "label": "bin 12"
+      },
+      {
+        "x": 0.6770833333333333,
+        "y": 121,
+        "label": "bin 13"
+      },
+      {
+        "x": 0.6979166666666666,
+        "y": 0,
+        "label": "bin 14"
+      },
+      {
+        "x": 0.71875,
+        "y": 0,
+        "label": "bin 15"
+      },
+      {
+        "x": 0.7395833333333333,
+        "y": 0,
+        "label": "bin 16"
+      },
+      {
+        "x": 0.7604166666666666,
+        "y": 169,
+        "label": "bin 17"
+      },
+      {
+        "x": 0.78125,
+        "y": 0,
+        "label": "bin 18"
+      },
+      {
+        "x": 0.8020833333333333,
+        "y": 0,
+        "label": "bin 19"
+      },
+      {
+        "x": 0.8229166666666666,
+        "y": 0,
+        "label": "bin 20"
+      },
+      {
+        "x": 0.84375,
+        "y": 216,
+        "label": "bin 21"
+      },
+      {
+        "x": 0.8645833333333333,
+        "y": 0,
+        "label": "bin 22"
+      },
+      {
+        "x": 0.8854166666666666,
+        "y": 0,
+        "label": "bin 23"
+      },
+      {
+        "x": 0.90625,
+        "y": 0,
+        "label": "bin 24"
+      },
+      {
+        "x": 0.9270833333333333,
+        "y": 128,
+        "label": "bin 25"
+      },
+      {
+        "x": 0.9479166666666665,
+        "y": 0,
+        "label": "bin 26"
+      },
+      {
+        "x": 0.96875,
+        "y": 0,
+        "label": "bin 27"
+      },
+      {
+        "x": 0.9895833333333333,
+        "y": 33,
+        "label": "bin 28"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-06/results/n6_landscape.csv",
+      "rowCount": 720,
+      "filters": [],
+      "transforms": [
+        "28-bin histogram of raw fitness"
+      ],
+      "xAxis": "fitness bin",
+      "yAxis": "ordering count"
+    },
+    "summary": "Dense optima make method comparisons saturate."
+  },
+  "I-audit": {
+    "id": "I-audit",
+    "kind": "histogram",
+    "title": "Sparse n=7 parity landscape",
+    "xLabel": "fitness bin",
+    "yLabel": "ordering count",
+    "sample": "5,040 exact orderings; 40-seed audit",
+    "points": [
+      {
+        "x": 0.3836805555555556,
+        "y": 3,
+        "label": "bin 1"
+      },
+      {
+        "x": 0.4010416666666667,
+        "y": 0,
+        "label": "bin 2"
+      },
+      {
+        "x": 0.4184027777777778,
+        "y": 10,
+        "label": "bin 3"
+      },
+      {
+        "x": 0.4357638888888889,
+        "y": 0,
+        "label": "bin 4"
+      },
+      {
+        "x": 0.453125,
+        "y": 46,
+        "label": "bin 5"
+      },
+      {
+        "x": 0.4704861111111111,
+        "y": 0,
+        "label": "bin 6"
+      },
+      {
+        "x": 0.4878472222222222,
+        "y": 0,
+        "label": "bin 7"
+      },
+      {
+        "x": 0.5052083333333334,
+        "y": 279,
+        "label": "bin 8"
+      },
+      {
+        "x": 0.5225694444444444,
+        "y": 0,
+        "label": "bin 9"
+      },
+      {
+        "x": 0.5399305555555556,
+        "y": 497,
+        "label": "bin 10"
+      },
+      {
+        "x": 0.5572916666666666,
+        "y": 0,
+        "label": "bin 11"
+      },
+      {
+        "x": 0.5746527777777778,
+        "y": 0,
+        "label": "bin 12"
+      },
+      {
+        "x": 0.5920138888888888,
+        "y": 485,
+        "label": "bin 13"
+      },
+      {
+        "x": 0.609375,
+        "y": 0,
+        "label": "bin 14"
+      },
+      {
+        "x": 0.6267361111111112,
+        "y": 610,
+        "label": "bin 15"
+      },
+      {
+        "x": 0.6440972222222222,
+        "y": 0,
+        "label": "bin 16"
+      },
+      {
+        "x": 0.6614583333333333,
+        "y": 755,
+        "label": "bin 17"
+      },
+      {
+        "x": 0.6788194444444444,
+        "y": 0,
+        "label": "bin 18"
+      },
+      {
+        "x": 0.6961805555555556,
+        "y": 0,
+        "label": "bin 19"
+      },
+      {
+        "x": 0.7135416666666667,
+        "y": 670,
+        "label": "bin 20"
+      },
+      {
+        "x": 0.7309027777777778,
+        "y": 0,
+        "label": "bin 21"
+      },
+      {
+        "x": 0.7482638888888888,
+        "y": 500,
+        "label": "bin 22"
+      },
+      {
+        "x": 0.765625,
+        "y": 0,
+        "label": "bin 23"
+      },
+      {
+        "x": 0.7829861111111112,
+        "y": 0,
+        "label": "bin 24"
+      },
+      {
+        "x": 0.8003472222222222,
+        "y": 469,
+        "label": "bin 25"
+      },
+      {
+        "x": 0.8177083333333333,
+        "y": 0,
+        "label": "bin 26"
+      },
+      {
+        "x": 0.8350694444444444,
+        "y": 379,
+        "label": "bin 27"
+      },
+      {
+        "x": 0.8524305555555556,
+        "y": 0,
+        "label": "bin 28"
+      },
+      {
+        "x": 0.8697916666666667,
+        "y": 156,
+        "label": "bin 29"
+      },
+      {
+        "x": 0.8871527777777778,
+        "y": 0,
+        "label": "bin 30"
+      },
+      {
+        "x": 0.9045138888888888,
+        "y": 0,
+        "label": "bin 31"
+      },
+      {
+        "x": 0.921875,
+        "y": 89,
+        "label": "bin 32"
+      },
+      {
+        "x": 0.9392361111111112,
+        "y": 0,
+        "label": "bin 33"
+      },
+      {
+        "x": 0.9565972222222222,
+        "y": 78,
+        "label": "bin 34"
+      },
+      {
+        "x": 0.9739583333333334,
+        "y": 0,
+        "label": "bin 35"
+      },
+      {
+        "x": 0.9913194444444444,
+        "y": 14,
+        "label": "bin 36"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-07/results/n7_parity_landscape.csv",
+      "rowCount": 5040,
+      "filters": [],
+      "transforms": [
+        "36-bin histogram of all raw fitness values"
+      ],
+      "xAxis": "fitness bin",
+      "yAxis": "ordering count"
+    },
+    "summary": "Only fourteen orderings are optimal and audited evolution does not beat random."
+  },
+  "J-locality": {
+    "id": "J-locality",
+    "kind": "scatter",
+    "title": "Operator-specific locality and F D C",
+    "xLabel": "landscape",
+    "yLabel": "correlation",
+    "sample": "eight enumerated landscapes",
+    "points": [
+      {
+        "x": 0,
+        "y": 0.014,
+        "label": "XOR-v4 (n=5)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 0,
+        "y": 0.029,
+        "label": "XOR-v4 (n=5)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 0,
+        "y": 0.049,
+        "label": "XOR-v4 (n=5)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 0,
+        "y": 0.281,
+        "label": "XOR-v4 (n=5)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 0,
+        "y": -0.252,
+        "label": "XOR-v4 (n=5)",
+        "series": "fdc"
+      },
+      {
+        "x": 1,
+        "y": 0.058,
+        "label": "Parity-v4 (n=5)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 1,
+        "y": -0.047,
+        "label": "Parity-v4 (n=5)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 1,
+        "y": 0.036,
+        "label": "Parity-v4 (n=5)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 1,
+        "y": 0.231,
+        "label": "Parity-v4 (n=5)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 1,
+        "y": -0.248,
+        "label": "Parity-v4 (n=5)",
+        "series": "fdc"
+      },
+      {
+        "x": 2,
+        "y": 0.044,
+        "label": "XOR-v4 (n=6)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 2,
+        "y": 0.005,
+        "label": "XOR-v4 (n=6)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 2,
+        "y": -0.016,
+        "label": "XOR-v4 (n=6)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 2,
+        "y": 0.248,
+        "label": "XOR-v4 (n=6)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 2,
+        "y": -0.202,
+        "label": "XOR-v4 (n=6)",
+        "series": "fdc"
+      },
+      {
+        "x": 3,
+        "y": 0.021,
+        "label": "Parity-v4 (n=7)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 3,
+        "y": 0.02,
+        "label": "Parity-v4 (n=7)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 3,
+        "y": 0.011,
+        "label": "Parity-v4 (n=7)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 3,
+        "y": 0.224,
+        "label": "Parity-v4 (n=7)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 3,
+        "y": -0.063,
+        "label": "Parity-v4 (n=7)",
+        "series": "fdc"
+      },
+      {
+        "x": 4,
+        "y": 0.655,
+        "label": "hamming (n=7)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 4,
+        "y": 0.364,
+        "label": "hamming (n=7)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 4,
+        "y": 0.477,
+        "label": "hamming (n=7)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 4,
+        "y": 0.574,
+        "label": "hamming (n=7)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 4,
+        "y": -0.829,
+        "label": "hamming (n=7)",
+        "series": "fdc"
+      },
+      {
+        "x": 5,
+        "y": 0.657,
+        "label": "kendall (n=7)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 5,
+        "y": 0.777,
+        "label": "kendall (n=7)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 5,
+        "y": 0.518,
+        "label": "kendall (n=7)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 5,
+        "y": 0.777,
+        "label": "kendall (n=7)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 5,
+        "y": -0.321,
+        "label": "kendall (n=7)",
+        "series": "fdc"
+      },
+      {
+        "x": 6,
+        "y": 0.433,
+        "label": "adjacency (n=7)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 6,
+        "y": 0.49,
+        "label": "adjacency (n=7)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 6,
+        "y": 0.675,
+        "label": "adjacency (n=7)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 6,
+        "y": 0.461,
+        "label": "adjacency (n=7)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 6,
+        "y": -0.254,
+        "label": "adjacency (n=7)",
+        "series": "fdc"
+      },
+      {
+        "x": 7,
+        "y": 0.649,
+        "label": "deceptive (n=7)",
+        "series": "rho1_swap"
+      },
+      {
+        "x": 7,
+        "y": 0.381,
+        "label": "deceptive (n=7)",
+        "series": "rho1_insert"
+      },
+      {
+        "x": 7,
+        "y": 0.464,
+        "label": "deceptive (n=7)",
+        "series": "rho1_inversion"
+      },
+      {
+        "x": 7,
+        "y": 0.542,
+        "label": "deceptive (n=7)",
+        "series": "rho1_scramble"
+      },
+      {
+        "x": 7,
+        "y": 0.783,
+        "label": "deceptive (n=7)",
+        "series": "fdc"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-08/results/locality.csv",
+      "rowCount": 8,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "landscape",
+      "yAxis": "correlation"
+    },
+    "summary": "Rho one selects neighborhoods while FDC distinguishes guidance from deception."
+  },
+  "K-llm": {
+    "id": "K-llm",
+    "kind": "histogram",
+    "title": "Six-module LLM ordering accuracy",
+    "xLabel": "accuracy bin",
+    "yLabel": "ordering count",
+    "sample": "720 exact orderings × 32 questions",
+    "points": [
+      {
+        "x": 0.07760416666666667,
+        "y": 3,
+        "label": "bin 1"
+      },
+      {
+        "x": 0.1078125,
+        "y": 0,
+        "label": "bin 2"
+      },
+      {
+        "x": 0.13802083333333331,
+        "y": 1,
+        "label": "bin 3"
+      },
+      {
+        "x": 0.16822916666666665,
+        "y": 3,
+        "label": "bin 4"
+      },
+      {
+        "x": 0.1984375,
+        "y": 5,
+        "label": "bin 5"
+      },
+      {
+        "x": 0.22864583333333333,
+        "y": 1,
+        "label": "bin 6"
+      },
+      {
+        "x": 0.25885416666666666,
+        "y": 2,
+        "label": "bin 7"
+      },
+      {
+        "x": 0.2890625,
+        "y": 10,
+        "label": "bin 8"
+      },
+      {
+        "x": 0.31927083333333334,
+        "y": 9,
+        "label": "bin 9"
+      },
+      {
+        "x": 0.3494791666666667,
+        "y": 15,
+        "label": "bin 10"
+      },
+      {
+        "x": 0.3796875,
+        "y": 30,
+        "label": "bin 11"
+      },
+      {
+        "x": 0.40989583333333335,
+        "y": 37,
+        "label": "bin 12"
+      },
+      {
+        "x": 0.4401041666666667,
+        "y": 31,
+        "label": "bin 13"
+      },
+      {
+        "x": 0.4703125,
+        "y": 29,
+        "label": "bin 14"
+      },
+      {
+        "x": 0.5005208333333333,
+        "y": 19,
+        "label": "bin 15"
+      },
+      {
+        "x": 0.5307291666666667,
+        "y": 24,
+        "label": "bin 16"
+      },
+      {
+        "x": 0.5609375,
+        "y": 13,
+        "label": "bin 17"
+      },
+      {
+        "x": 0.5911458333333334,
+        "y": 14,
+        "label": "bin 18"
+      },
+      {
+        "x": 0.6213541666666667,
+        "y": 15,
+        "label": "bin 19"
+      },
+      {
+        "x": 0.6515625,
+        "y": 18,
+        "label": "bin 20"
+      },
+      {
+        "x": 0.6817708333333333,
+        "y": 10,
+        "label": "bin 21"
+      },
+      {
+        "x": 0.7119791666666667,
+        "y": 10,
+        "label": "bin 22"
+      },
+      {
+        "x": 0.7421875,
+        "y": 12,
+        "label": "bin 23"
+      },
+      {
+        "x": 0.7723958333333333,
+        "y": 11,
+        "label": "bin 24"
+      },
+      {
+        "x": 0.8026041666666667,
+        "y": 20,
+        "label": "bin 25"
+      },
+      {
+        "x": 0.8328125,
+        "y": 62,
+        "label": "bin 26"
+      },
+      {
+        "x": 0.8630208333333333,
+        "y": 89,
+        "label": "bin 27"
+      },
+      {
+        "x": 0.8932291666666666,
+        "y": 79,
+        "label": "bin 28"
+      },
+      {
+        "x": 0.9234375,
+        "y": 88,
+        "label": "bin 29"
+      },
+      {
+        "x": 0.9536458333333333,
+        "y": 60,
+        "label": "bin 30"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-09/results/llm_landscape.csv",
+      "rowCount": 720,
+      "filters": [],
+      "transforms": [
+        "30-bin histogram of raw cached fitness"
+      ],
+      "xAxis": "accuracy bin",
+      "yAxis": "ordering count"
+    },
+    "summary": "Accuracy spans 0.063–0.969 across fixed-wording orderings."
+  },
+  "L-methods": {
+    "id": "L-methods",
+    "kind": "scatter",
+    "title": "Replacement and surrogate variants",
+    "xLabel": "recorded run",
+    "yLabel": "distinct evaluations to optimum",
+    "sample": "180 runs",
+    "points": [
+      {
+        "x": 0,
+        "y": 17.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 1,
+        "y": 13.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 2,
+        "y": 5.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 3,
+        "y": 34.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 4,
+        "y": 48.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 5,
+        "y": 72.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 6,
+        "y": 16.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 7,
+        "y": 2.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 8,
+        "y": 1.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 9,
+        "y": 22.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 10,
+        "y": 6.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 11,
+        "y": 1.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 12,
+        "y": 4.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 13,
+        "y": 33.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 14,
+        "y": 3.0,
+        "series": "prism",
+        "label": "xor_n6"
+      },
+      {
+        "x": 15,
+        "y": 17.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 16,
+        "y": 13.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 17,
+        "y": 5.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 18,
+        "y": 74.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 19,
+        "y": 54.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 20,
+        "y": 66.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 21,
+        "y": 16.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 22,
+        "y": 2.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 23,
+        "y": 1.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 24,
+        "y": 95.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 25,
+        "y": 6.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 26,
+        "y": 1.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 27,
+        "y": 4.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 28,
+        "y": 74.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 29,
+        "y": 3.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 30,
+        "y": 33.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 31,
+        "y": 19.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 32,
+        "y": 5.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 33,
+        "y": 29.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 34,
+        "y": 13.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 35,
+        "y": 16.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 36,
+        "y": 48.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 37,
+        "y": 2.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 38,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 39,
+        "y": 30.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 40,
+        "y": 6.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 41,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 42,
+        "y": 4.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 43,
+        "y": 96.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 44,
+        "y": 3.0,
+        "series": "surrogate",
+        "label": "xor_n6"
+      },
+      {
+        "x": 45,
+        "y": 28.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 46,
+        "y": 25.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 47,
+        "y": 14.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 48,
+        "y": 5.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 49,
+        "y": 33.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 50,
+        "y": 6.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 51,
+        "y": 3.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 52,
+        "y": 112.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 53,
+        "y": 33.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 54,
+        "y": 108.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 55,
+        "y": 16.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 56,
+        "y": 4.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 57,
+        "y": 20.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 58,
+        "y": 32.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 59,
+        "y": 11.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 60,
+        "y": -1.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 61,
+        "y": 93.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 62,
+        "y": 57.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 63,
+        "y": -1.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 64,
+        "y": 143.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 65,
+        "y": -1.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 66,
+        "y": -1.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 67,
+        "y": -1.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 68,
+        "y": 224.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 69,
+        "y": -1.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 70,
+        "y": 38.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 71,
+        "y": 267.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 72,
+        "y": 172.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 73,
+        "y": 28.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 74,
+        "y": 217.0,
+        "series": "prism",
+        "label": "parity_n7"
+      },
+      {
+        "x": 75,
+        "y": 119.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 76,
+        "y": 46.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 77,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 78,
+        "y": 434.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 79,
+        "y": 342.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 80,
+        "y": 53.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 81,
+        "y": 266.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 82,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 83,
+        "y": 79.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 84,
+        "y": 77.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 85,
+        "y": 156.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 86,
+        "y": 73.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 87,
+        "y": 363.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 88,
+        "y": 475.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 89,
+        "y": 175.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 90,
+        "y": 13.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 91,
+        "y": 63.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 92,
+        "y": 430.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 93,
+        "y": 118.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 94,
+        "y": -1.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 95,
+        "y": -1.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 96,
+        "y": -1.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 97,
+        "y": -1.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 98,
+        "y": -1.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 99,
+        "y": -1.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 100,
+        "y": 181.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 101,
+        "y": 381.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 102,
+        "y": 67.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 103,
+        "y": 18.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 104,
+        "y": 151.0,
+        "series": "surrogate",
+        "label": "parity_n7"
+      },
+      {
+        "x": 105,
+        "y": 412.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 106,
+        "y": 175.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 107,
+        "y": 161.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 108,
+        "y": 188.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 109,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 110,
+        "y": 213.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 111,
+        "y": 72.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 112,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 113,
+        "y": 111.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 114,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 115,
+        "y": 152.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 116,
+        "y": 285.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 117,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 118,
+        "y": 423.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 119,
+        "y": 165.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 120,
+        "y": 12.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 121,
+        "y": 5.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 122,
+        "y": 1.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 123,
+        "y": 2.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 124,
+        "y": 18.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 125,
+        "y": 1.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 126,
+        "y": 1.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 127,
+        "y": 10.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 128,
+        "y": 4.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 129,
+        "y": 1.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 130,
+        "y": 3.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 131,
+        "y": 21.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 132,
+        "y": 1.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 133,
+        "y": 7.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 134,
+        "y": 6.0,
+        "series": "prism",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 135,
+        "y": 12.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 136,
+        "y": 5.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 137,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 138,
+        "y": 2.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 139,
+        "y": 18.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 140,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 141,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 142,
+        "y": 10.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 143,
+        "y": 4.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 144,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 145,
+        "y": 3.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 146,
+        "y": 26.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 147,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 148,
+        "y": 7.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 149,
+        "y": 6.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 150,
+        "y": 18.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 151,
+        "y": 5.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 152,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 153,
+        "y": 2.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 154,
+        "y": 14.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 155,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 156,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 157,
+        "y": 10.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 158,
+        "y": 4.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 159,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 160,
+        "y": 3.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 161,
+        "y": 13.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 162,
+        "y": 1.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 163,
+        "y": 7.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 164,
+        "y": 6.0,
+        "series": "surrogate",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 165,
+        "y": 5.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 166,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 167,
+        "y": 7.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 168,
+        "y": 3.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 169,
+        "y": 12.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 170,
+        "y": 4.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 171,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 172,
+        "y": 1.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 173,
+        "y": 12.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 174,
+        "y": 2.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 175,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 176,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 177,
+        "y": 6.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 178,
+        "y": 3.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 179,
+        "y": 16.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-10/results/improved_search.csv",
+      "rowCount": 180,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "recorded run",
+      "yAxis": "distinct evaluations to optimum"
+    },
+    "summary": "Aging improves robustness but does not manufacture locality."
+  },
+  "M-eight-module": {
+    "id": "M-eight-module",
+    "kind": "bar",
+    "title": "Eight-module sampled search",
+    "xLabel": "method-seed run",
+    "yLabel": "best accuracy by 120 evaluations",
+    "sample": "eight search rows; 222 diagnostic orders",
+    "points": [
+      {
+        "x": 0,
+        "y": 1.0,
+        "series": "prism"
+      },
+      {
+        "x": 1,
+        "y": 1.0,
+        "series": "random"
+      },
+      {
+        "x": 2,
+        "y": 1.0,
+        "series": "prism"
+      },
+      {
+        "x": 3,
+        "y": 1.0,
+        "series": "random"
+      },
+      {
+        "x": 4,
+        "y": 1.0,
+        "series": "prism"
+      },
+      {
+        "x": 5,
+        "y": 1.0,
+        "series": "random"
+      },
+      {
+        "x": 6,
+        "y": 1.0,
+        "series": "prism"
+      },
+      {
+        "x": 7,
+        "y": 1.0,
+        "series": "random"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-11/results/search_results.csv",
+      "rowCount": 8,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "method-seed run",
+      "yAxis": "best accuracy by 120 evaluations"
+    },
+    "summary": "Both methods saturate on a coarse twenty-question evaluator."
+  },
+  "N-surrogate": {
+    "id": "N-surrogate",
+    "kind": "scatter",
+    "title": "Encoding-matched surrogate comparison",
+    "xLabel": "recorded run",
+    "yLabel": "distinct evaluations to optimum",
+    "sample": "510 runs",
+    "points": [
+      {
+        "x": 0,
+        "y": 17.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 1,
+        "y": 13.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 2,
+        "y": 5.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 3,
+        "y": 34.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 4,
+        "y": 48.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 5,
+        "y": 72.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 6,
+        "y": 16.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 7,
+        "y": 2.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 8,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 9,
+        "y": 22.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 10,
+        "y": 6.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 11,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 12,
+        "y": 4.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 13,
+        "y": 33.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 14,
+        "y": 3.0,
+        "series": "elitist",
+        "label": "xor_n6"
+      },
+      {
+        "x": 15,
+        "y": 17.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 16,
+        "y": 13.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 17,
+        "y": 5.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 18,
+        "y": 74.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 19,
+        "y": 54.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 20,
+        "y": 66.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 21,
+        "y": 16.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 22,
+        "y": 2.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 23,
+        "y": 1.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 24,
+        "y": 95.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 25,
+        "y": 6.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 26,
+        "y": 1.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 27,
+        "y": 4.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 28,
+        "y": 74.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 29,
+        "y": 3.0,
+        "series": "aging",
+        "label": "xor_n6"
+      },
+      {
+        "x": 30,
+        "y": 17.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 31,
+        "y": 13.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 32,
+        "y": 5.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 33,
+        "y": 31.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 34,
+        "y": 26.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 35,
+        "y": 49.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 36,
+        "y": 16.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 37,
+        "y": 2.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 38,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 39,
+        "y": 33.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 40,
+        "y": 6.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 41,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 42,
+        "y": 4.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 43,
+        "y": 54.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 44,
+        "y": 3.0,
+        "series": "hybrid",
+        "label": "xor_n6"
+      },
+      {
+        "x": 45,
+        "y": 33.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 46,
+        "y": 19.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 47,
+        "y": 5.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 48,
+        "y": 29.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 49,
+        "y": 13.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 50,
+        "y": 16.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 51,
+        "y": 48.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 52,
+        "y": 2.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 53,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 54,
+        "y": 30.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 55,
+        "y": 6.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 56,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 57,
+        "y": 4.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 58,
+        "y": 96.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 59,
+        "y": 3.0,
+        "series": "surr-pos",
+        "label": "xor_n6"
+      },
+      {
+        "x": 60,
+        "y": 28.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 61,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 62,
+        "y": 5.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 63,
+        "y": 20.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 64,
+        "y": 12.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 65,
+        "y": 32.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 66,
+        "y": 17.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 67,
+        "y": 2.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 68,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 69,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 70,
+        "y": 6.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 71,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 72,
+        "y": 4.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 73,
+        "y": 44.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 74,
+        "y": 3.0,
+        "series": "surr-prec",
+        "label": "xor_n6"
+      },
+      {
+        "x": 75,
+        "y": 28.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 76,
+        "y": 25.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 77,
+        "y": 14.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 78,
+        "y": 5.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 79,
+        "y": 33.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 80,
+        "y": 6.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 81,
+        "y": 3.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 82,
+        "y": 112.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 83,
+        "y": 33.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 84,
+        "y": 108.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 85,
+        "y": 16.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 86,
+        "y": 4.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 87,
+        "y": 20.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 88,
+        "y": 32.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 89,
+        "y": 11.0,
+        "series": "random",
+        "label": "xor_n6"
+      },
+      {
+        "x": 90,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 91,
+        "y": 93.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 92,
+        "y": 57.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 93,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 94,
+        "y": 143.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 95,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 96,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 97,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 98,
+        "y": 224.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 99,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 100,
+        "y": 38.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 101,
+        "y": 267.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 102,
+        "y": 172.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 103,
+        "y": 28.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 104,
+        "y": 217.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 105,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 106,
+        "y": 135.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 107,
+        "y": 86.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 108,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 109,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 110,
+        "y": 309.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 111,
+        "y": 59.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 112,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 113,
+        "y": 21.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 114,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 115,
+        "y": 16.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 116,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 117,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 118,
+        "y": 28.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 119,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 120,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 121,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 122,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 123,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 124,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 125,
+        "y": 139.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 126,
+        "y": 142.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 127,
+        "y": 40.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 128,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 129,
+        "y": -1.0,
+        "series": "elitist",
+        "label": "parity_n7"
+      },
+      {
+        "x": 130,
+        "y": 119.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 131,
+        "y": 46.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 132,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 133,
+        "y": 434.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 134,
+        "y": 342.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 135,
+        "y": 53.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 136,
+        "y": 266.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 137,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 138,
+        "y": 79.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 139,
+        "y": 77.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 140,
+        "y": 156.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 141,
+        "y": 73.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 142,
+        "y": 363.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 143,
+        "y": 475.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 144,
+        "y": 175.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 145,
+        "y": 276.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 146,
+        "y": 460.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 147,
+        "y": 212.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 148,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 149,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 150,
+        "y": 40.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 151,
+        "y": 219.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 152,
+        "y": 47.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 153,
+        "y": 394.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 154,
+        "y": 474.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 155,
+        "y": 16.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 156,
+        "y": 396.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 157,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 158,
+        "y": 33.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 159,
+        "y": 130.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 160,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 161,
+        "y": 275.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 162,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 163,
+        "y": 102.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 164,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 165,
+        "y": 235.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 166,
+        "y": 379.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 167,
+        "y": 423.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 168,
+        "y": -1.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 169,
+        "y": 130.0,
+        "series": "aging",
+        "label": "parity_n7"
+      },
+      {
+        "x": 170,
+        "y": 261.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 171,
+        "y": 155.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 172,
+        "y": 186.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 173,
+        "y": 141.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 174,
+        "y": 95.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 175,
+        "y": 185.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 176,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 177,
+        "y": 63.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 178,
+        "y": 411.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 179,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 180,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 181,
+        "y": 22.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 182,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 183,
+        "y": 413.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 184,
+        "y": 267.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 185,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 186,
+        "y": 217.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 187,
+        "y": 224.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 188,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 189,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 190,
+        "y": 136.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 191,
+        "y": 56.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 192,
+        "y": 120.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 193,
+        "y": 323.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 194,
+        "y": 327.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 195,
+        "y": 16.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 196,
+        "y": 417.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 197,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 198,
+        "y": 172.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 199,
+        "y": 63.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 200,
+        "y": 353.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 201,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 202,
+        "y": 356.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 203,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 204,
+        "y": 467.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 205,
+        "y": 404.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 206,
+        "y": -1.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 207,
+        "y": 100.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 208,
+        "y": 307.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 209,
+        "y": 242.0,
+        "series": "hybrid",
+        "label": "parity_n7"
+      },
+      {
+        "x": 210,
+        "y": 13.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 211,
+        "y": 63.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 212,
+        "y": 430.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 213,
+        "y": 118.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 214,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 215,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 216,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 217,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 218,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 219,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 220,
+        "y": 181.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 221,
+        "y": 381.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 222,
+        "y": 67.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 223,
+        "y": 18.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 224,
+        "y": 151.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 225,
+        "y": 168.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 226,
+        "y": 179.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 227,
+        "y": 53.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 228,
+        "y": 72.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 229,
+        "y": 231.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 230,
+        "y": 300.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 231,
+        "y": 249.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 232,
+        "y": 70.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 233,
+        "y": 248.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 234,
+        "y": 368.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 235,
+        "y": 76.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 236,
+        "y": 106.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 237,
+        "y": 83.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 238,
+        "y": 185.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 239,
+        "y": 374.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 240,
+        "y": 369.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 241,
+        "y": 111.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 242,
+        "y": 194.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 243,
+        "y": 221.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 244,
+        "y": 241.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 245,
+        "y": 117.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 246,
+        "y": 153.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 247,
+        "y": -1.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 248,
+        "y": 487.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 249,
+        "y": 238.0,
+        "series": "surr-pos",
+        "label": "parity_n7"
+      },
+      {
+        "x": 250,
+        "y": 257.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 251,
+        "y": 68.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 252,
+        "y": 106.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 253,
+        "y": 258.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 254,
+        "y": 350.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 255,
+        "y": 49.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 256,
+        "y": 492.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 257,
+        "y": 17.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 258,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 259,
+        "y": 26.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 260,
+        "y": 390.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 261,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 262,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 263,
+        "y": 126.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 264,
+        "y": 193.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 265,
+        "y": 304.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 266,
+        "y": 187.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 267,
+        "y": 15.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 268,
+        "y": 440.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 269,
+        "y": 32.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 270,
+        "y": 227.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 271,
+        "y": 139.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 272,
+        "y": 28.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 273,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 274,
+        "y": 207.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 275,
+        "y": 410.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 276,
+        "y": 416.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 277,
+        "y": 359.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 278,
+        "y": 13.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 279,
+        "y": 18.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 280,
+        "y": 185.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 281,
+        "y": 400.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 282,
+        "y": 160.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 283,
+        "y": 81.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 284,
+        "y": 365.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 285,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 286,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 287,
+        "y": -1.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 288,
+        "y": 108.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 289,
+        "y": 74.0,
+        "series": "surr-prec",
+        "label": "parity_n7"
+      },
+      {
+        "x": 290,
+        "y": 412.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 291,
+        "y": 175.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 292,
+        "y": 161.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 293,
+        "y": 188.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 294,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 295,
+        "y": 213.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 296,
+        "y": 72.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 297,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 298,
+        "y": 111.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 299,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 300,
+        "y": 152.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 301,
+        "y": 285.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 302,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 303,
+        "y": 423.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 304,
+        "y": 165.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 305,
+        "y": 391.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 306,
+        "y": 130.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 307,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 308,
+        "y": 300.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 309,
+        "y": 423.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 310,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 311,
+        "y": 41.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 312,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 313,
+        "y": 56.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 314,
+        "y": 211.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 315,
+        "y": 286.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 316,
+        "y": 110.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 317,
+        "y": 114.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 318,
+        "y": 251.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 319,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 320,
+        "y": 115.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 321,
+        "y": 90.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 322,
+        "y": 361.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 323,
+        "y": 168.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 324,
+        "y": 230.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 325,
+        "y": 216.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 326,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 327,
+        "y": 142.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 328,
+        "y": -1.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 329,
+        "y": 311.0,
+        "series": "random",
+        "label": "parity_n7"
+      },
+      {
+        "x": 330,
+        "y": 12.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 331,
+        "y": 5.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 332,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 333,
+        "y": 2.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 334,
+        "y": 18.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 335,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 336,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 337,
+        "y": 10.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 338,
+        "y": 4.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 339,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 340,
+        "y": 3.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 341,
+        "y": 21.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 342,
+        "y": 1.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 343,
+        "y": 7.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 344,
+        "y": 6.0,
+        "series": "elitist",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 345,
+        "y": 12.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 346,
+        "y": 5.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 347,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 348,
+        "y": 2.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 349,
+        "y": 18.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 350,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 351,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 352,
+        "y": 10.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 353,
+        "y": 4.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 354,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 355,
+        "y": 3.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 356,
+        "y": 26.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 357,
+        "y": 1.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 358,
+        "y": 7.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 359,
+        "y": 6.0,
+        "series": "aging",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 360,
+        "y": 12.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 361,
+        "y": 5.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 362,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 363,
+        "y": 2.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 364,
+        "y": 18.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 365,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 366,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 367,
+        "y": 10.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 368,
+        "y": 4.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 369,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 370,
+        "y": 3.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 371,
+        "y": 39.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 372,
+        "y": 1.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 373,
+        "y": 7.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 374,
+        "y": 6.0,
+        "series": "hybrid",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 375,
+        "y": 18.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 376,
+        "y": 5.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 377,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 378,
+        "y": 2.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 379,
+        "y": 14.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 380,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 381,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 382,
+        "y": 10.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 383,
+        "y": 4.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 384,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 385,
+        "y": 3.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 386,
+        "y": 13.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 387,
+        "y": 1.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 388,
+        "y": 7.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 389,
+        "y": 6.0,
+        "series": "surr-pos",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 390,
+        "y": 18.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 391,
+        "y": 5.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 392,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 393,
+        "y": 2.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 394,
+        "y": 16.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 395,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 396,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 397,
+        "y": 10.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 398,
+        "y": 4.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 399,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 400,
+        "y": 3.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 401,
+        "y": 19.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 402,
+        "y": 1.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 403,
+        "y": 7.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 404,
+        "y": 6.0,
+        "series": "surr-prec",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 405,
+        "y": 5.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 406,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 407,
+        "y": 7.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 408,
+        "y": 3.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 409,
+        "y": 12.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 410,
+        "y": 4.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 411,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 412,
+        "y": 1.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 413,
+        "y": 12.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 414,
+        "y": 2.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 415,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 416,
+        "y": 8.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 417,
+        "y": 6.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 418,
+        "y": 3.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 419,
+        "y": 16.0,
+        "series": "random",
+        "label": "llm_chain_n6"
+      },
+      {
+        "x": 420,
+        "y": 53.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 421,
+        "y": 60.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 422,
+        "y": 62.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 423,
+        "y": 70.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 424,
+        "y": 54.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 425,
+        "y": 32.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 426,
+        "y": 40.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 427,
+        "y": 56.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 428,
+        "y": 65.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 429,
+        "y": 71.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 430,
+        "y": 49.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 431,
+        "y": 49.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 432,
+        "y": 76.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 433,
+        "y": 34.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 434,
+        "y": 64.0,
+        "series": "elitist",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 435,
+        "y": 48.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 436,
+        "y": 37.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 437,
+        "y": 56.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 438,
+        "y": 43.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 439,
+        "y": 45.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 440,
+        "y": 104.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 441,
+        "y": 59.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 442,
+        "y": 55.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 443,
+        "y": 104.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 444,
+        "y": 52.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 445,
+        "y": 68.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 446,
+        "y": 53.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 447,
+        "y": 99.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 448,
+        "y": 111.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 449,
+        "y": 157.0,
+        "series": "aging",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 450,
+        "y": 26.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 451,
+        "y": 76.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 452,
+        "y": 102.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 453,
+        "y": 83.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 454,
+        "y": 159.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 455,
+        "y": 85.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 456,
+        "y": 58.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 457,
+        "y": 70.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 458,
+        "y": 137.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 459,
+        "y": 76.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 460,
+        "y": 126.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 461,
+        "y": 111.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 462,
+        "y": 55.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 463,
+        "y": 104.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 464,
+        "y": 75.0,
+        "series": "hybrid",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 465,
+        "y": 336.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 466,
+        "y": 280.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 467,
+        "y": 397.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 468,
+        "y": 399.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 469,
+        "y": 13.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 470,
+        "y": 15.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 471,
+        "y": 82.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 472,
+        "y": 25.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 473,
+        "y": 449.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 474,
+        "y": 42.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 475,
+        "y": 395.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 476,
+        "y": 86.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 477,
+        "y": 35.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 478,
+        "y": 371.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 479,
+        "y": 71.0,
+        "series": "surr-pos",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 480,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 481,
+        "y": 13.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 482,
+        "y": 16.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 483,
+        "y": 12.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 484,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 485,
+        "y": 12.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 486,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 487,
+        "y": 12.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 488,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 489,
+        "y": 13.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 490,
+        "y": 14.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 491,
+        "y": 12.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 492,
+        "y": 15.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 493,
+        "y": 15.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 494,
+        "y": 12.0,
+        "series": "surr-prec",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 495,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 496,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 497,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 498,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 499,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 500,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 501,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 502,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 503,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 504,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 505,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 506,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 507,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 508,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      },
+      {
+        "x": 509,
+        "y": -1.0,
+        "series": "random",
+        "label": "kendall_n7"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-12/results/hybrid_surrogate.csv",
+      "rowCount": 510,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "recorded run",
+      "yAxis": "distinct evaluations to optimum"
+    },
+    "summary": "Precedence features produce the decisive Kendall result."
+  },
+  "O-transfer": {
+    "id": "O-transfer",
+    "kind": "scatter",
+    "title": "Cross-task versus cross-size transfer",
+    "xLabel": "source score",
+    "yLabel": "target score",
+    "sample": "120 neural pairs; 222 LLM candidates",
+    "points": [
+      {
+        "x": 0,
+        "y": -0.004,
+        "label": "XOR to parity",
+        "series": "neural"
+      },
+      {
+        "x": 1,
+        "y": 0.665,
+        "label": "n=6 to n=8",
+        "series": "LLM"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-16/results/transfer.txt",
+      "rowCount": 2,
+      "filters": [],
+      "transforms": [
+        "reported correlation summaries only"
+      ],
+      "xAxis": "source score",
+      "yAxis": "target score"
+    },
+    "summary": "Transfer is absent across neural tasks but strong within the LLM instruction family."
+  },
+  "P-sciml": {
+    "id": "P-sciml",
+    "kind": "histogram",
+    "title": "SINDy pipeline-order landscape",
+    "xLabel": "fitness bin",
+    "yLabel": "pipeline count",
+    "sample": "720 exact pipelines",
+    "points": [
+      {
+        "x": 0.7714373666666666,
+        "y": 34,
+        "label": "bin 1"
+      },
+      {
+        "x": 0.7791641,
+        "y": 42,
+        "label": "bin 2"
+      },
+      {
+        "x": 0.7868908333333333,
+        "y": 0,
+        "label": "bin 3"
+      },
+      {
+        "x": 0.7946175666666666,
+        "y": 14,
+        "label": "bin 4"
+      },
+      {
+        "x": 0.8023443,
+        "y": 0,
+        "label": "bin 5"
+      },
+      {
+        "x": 0.8100710333333333,
+        "y": 0,
+        "label": "bin 6"
+      },
+      {
+        "x": 0.8177977666666667,
+        "y": 2,
+        "label": "bin 7"
+      },
+      {
+        "x": 0.8255245,
+        "y": 10,
+        "label": "bin 8"
+      },
+      {
+        "x": 0.8332512333333333,
+        "y": 0,
+        "label": "bin 9"
+      },
+      {
+        "x": 0.8409779666666667,
+        "y": 0,
+        "label": "bin 10"
+      },
+      {
+        "x": 0.8487047,
+        "y": 1,
+        "label": "bin 11"
+      },
+      {
+        "x": 0.8564314333333334,
+        "y": 0,
+        "label": "bin 12"
+      },
+      {
+        "x": 0.8641581666666667,
+        "y": 0,
+        "label": "bin 13"
+      },
+      {
+        "x": 0.8718849,
+        "y": 5,
+        "label": "bin 14"
+      },
+      {
+        "x": 0.8796116333333334,
+        "y": 0,
+        "label": "bin 15"
+      },
+      {
+        "x": 0.8873383666666667,
+        "y": 36,
+        "label": "bin 16"
+      },
+      {
+        "x": 0.8950651000000001,
+        "y": 24,
+        "label": "bin 17"
+      },
+      {
+        "x": 0.9027918333333333,
+        "y": 2,
+        "label": "bin 18"
+      },
+      {
+        "x": 0.9105185666666666,
+        "y": 8,
+        "label": "bin 19"
+      },
+      {
+        "x": 0.9182453,
+        "y": 6,
+        "label": "bin 20"
+      },
+      {
+        "x": 0.9259720333333333,
+        "y": 2,
+        "label": "bin 21"
+      },
+      {
+        "x": 0.9336987666666667,
+        "y": 6,
+        "label": "bin 22"
+      },
+      {
+        "x": 0.9414255,
+        "y": 18,
+        "label": "bin 23"
+      },
+      {
+        "x": 0.9491522333333333,
+        "y": 0,
+        "label": "bin 24"
+      },
+      {
+        "x": 0.9568789666666667,
+        "y": 0,
+        "label": "bin 25"
+      },
+      {
+        "x": 0.9646057,
+        "y": 0,
+        "label": "bin 26"
+      },
+      {
+        "x": 0.9723324333333334,
+        "y": 0,
+        "label": "bin 27"
+      },
+      {
+        "x": 0.9800591666666667,
+        "y": 0,
+        "label": "bin 28"
+      },
+      {
+        "x": 0.9877859,
+        "y": 6,
+        "label": "bin 29"
+      },
+      {
+        "x": 0.9955126333333334,
+        "y": 504,
+        "label": "bin 30"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-16/results/sciml_landscape.csv",
+      "rowCount": 720,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "fitness bin",
+      "yAxis": "pipeline count"
+    },
+    "summary": "Order changes recovery error greatly even though random is the better executor."
+  },
+  "Q-progress": {
+    "id": "Q-progress",
+    "kind": "bar",
+    "title": "Gemma transfer progress at the paper cut",
+    "xLabel": "progress state",
+    "yLabel": "target cells",
+    "sample": "212 of 3,840 cells",
+    "points": [
+      {
+        "x": 0,
+        "y": 212,
+        "label": "cached"
+      },
+      {
+        "x": 1,
+        "y": 3628,
+        "label": "remaining"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-17 paper-cut record",
+      "rowCount": 2,
+      "filters": [],
+      "transforms": [
+        "paper-cut progress values only"
+      ],
+      "xAxis": "progress state",
+      "yAxis": "target cells"
+    },
+    "summary": "The target experiment is registered but incomplete at Iteration 18."
+  },
+  "R-guided": {
+    "id": "R-guided",
+    "kind": "bar",
+    "title": "Transfer-guided low-budget evaluation",
+    "xLabel": "budget or group",
+    "yLabel": "reported score",
+    "sample": "222 candidates; 12 perfect",
+    "points": [
+      {
+        "x": 0,
+        "y": 5,
+        "label": "guided perfect-hit budget"
+      },
+      {
+        "x": 1,
+        "y": 0.248,
+        "label": "random probability by five"
+      },
+      {
+        "x": 2,
+        "y": 0.9,
+        "label": "transferred top decile"
+      },
+      {
+        "x": 3,
+        "y": 0.725,
+        "label": "pool mean"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-18/results/transfer_guided_selection.txt",
+      "rowCount": 4,
+      "filters": [],
+      "transforms": [
+        "reported summary values only"
+      ],
+      "xAxis": "budget or group",
+      "yAxis": "reported score"
+    },
+    "summary": "Guided ranking yields an early hit, but dense optima make random success plausible."
+  },
+  "EP-S-math": {
+    "id": "EP-S-math",
+    "kind": "bar",
+    "title": "MATH-500 method comparison",
+    "xLabel": "method",
+    "yLabel": "mean evaluations to near-best",
+    "sample": "250 orders; 31,998 calls",
+    "points": [
+      {
+        "x": 0,
+        "y": 32.9,
+        "label": "guided"
+      },
+      {
+        "x": 1,
+        "y": 37.8,
+        "label": "PRISM"
+      },
+      {
+        "x": 2,
+        "y": 43.6,
+        "label": "random"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-23-experiment-s/results/experiment_s_report.txt",
+      "rowCount": 3,
+      "filters": [],
+      "transforms": [
+        "reported audited means only"
+      ],
+      "xAxis": "method",
+      "yAxis": "mean evaluations to near-best"
+    },
+    "summary": "Intervals overlap and the sensitivity hypothesis is falsified."
+  },
+  "EP-I22-rho": {
+    "id": "EP-I22-rho",
+    "kind": "scatter",
+    "title": "Rho-one estimator accuracy",
+    "xLabel": "sample budget",
+    "yLabel": "operator-pick accuracy",
+    "sample": "12 aggregate rows; 200 resamples",
+    "points": [
+      {
+        "x": 50,
+        "y": 0.86,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.975,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.8,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.92,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.88,
+        "series": "neg_mad"
+      },
+      {
+        "x": 100,
+        "y": 0.955,
+        "series": "neg_mad"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "neg_mad"
+      },
+      {
+        "x": 50,
+        "y": 0.865,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.95,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.72,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.87,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.855,
+        "series": "neg_mad"
+      },
+      {
+        "x": 100,
+        "y": 0.95,
+        "series": "neg_mad"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "neg_mad"
+      },
+      {
+        "x": 50,
+        "y": 0.865,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.975,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.755,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.875,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.9,
+        "series": "neg_mad"
+      },
+      {
+        "x": 100,
+        "y": 0.965,
+        "series": "neg_mad"
+      },
+      {
+        "x": 500,
+        "y": 1.0,
+        "series": "neg_mad"
+      },
+      {
+        "x": 50,
+        "y": 0.735,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.8,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 500,
+        "y": 0.99,
+        "series": "pair_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.66,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 100,
+        "y": 0.725,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 500,
+        "y": 0.97,
+        "series": "walk_rho1"
+      },
+      {
+        "x": 50,
+        "y": 0.675,
+        "series": "neg_mad"
+      },
+      {
+        "x": 100,
+        "y": 0.79,
+        "series": "neg_mad"
+      },
+      {
+        "x": 500,
+        "y": 0.965,
+        "series": "neg_mad"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-22-rho1-ablation/results/rho1_ablation.csv",
+      "rowCount": 12,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "sample budget",
+      "yAxis": "operator-pick accuracy"
+    },
+    "summary": "Independent pairs lead at the protocol's low budget."
+  },
+  "EP-I21-nasbench": {
+    "id": "EP-I21-nasbench",
+    "kind": "bar",
+    "title": "NAS-Bench forecast confirmation",
+    "xLabel": "registered slice",
+    "yLabel": "forecast correct",
+    "sample": "18 slices; 40 seeds each",
+    "points": [
+      {
+        "x": 0,
+        "y": 0,
+        "series": "HIGH"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "series": "HIGH"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "series": "LOW"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "series": "LOW"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "series": "LOW"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 7,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 8,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 9,
+        "y": 1,
+        "series": "LOW"
+      },
+      {
+        "x": 10,
+        "y": 0,
+        "series": "LOW"
+      },
+      {
+        "x": 11,
+        "y": 1,
+        "series": "LOW"
+      },
+      {
+        "x": 12,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 13,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 14,
+        "y": 1,
+        "series": "HIGH"
+      },
+      {
+        "x": 15,
+        "y": 0,
+        "series": "LOW"
+      },
+      {
+        "x": 16,
+        "y": 1,
+        "series": "LOW"
+      },
+      {
+        "x": 17,
+        "y": 1,
+        "series": "LOW"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-21-nasbench-search/results/nasbench_confirmation.csv",
+      "rowCount": 18,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "registered slice",
+      "yAxis": "forecast correct"
+    },
+    "summary": "Thirteen of eighteen pre-registered calls are correct."
+  },
+  "EP-I20-sciml": {
+    "id": "EP-I20-sciml",
+    "kind": "bar",
+    "title": "Six-system SciML search margins",
+    "xLabel": "system",
+    "yLabel": "PRISM minus random hits",
+    "sample": "six systems; 720 exact orders each",
+    "points": [
+      {
+        "x": 0,
+        "y": 3.0,
+        "label": "lotka_volterra"
+      },
+      {
+        "x": 1,
+        "y": 4.0,
+        "label": "cubic_oscillator"
+      },
+      {
+        "x": 2,
+        "y": 5.0,
+        "label": "damped_oscillator"
+      },
+      {
+        "x": 3,
+        "y": 17.0,
+        "label": "lorenz63"
+      },
+      {
+        "x": 4,
+        "y": 20.0,
+        "label": "vanderpol"
+      },
+      {
+        "x": 5,
+        "y": 26.0,
+        "label": "rossler"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-20-sciml-suite/results/d23_fdc_comparison.csv",
+      "rowCount": 6,
+      "filters": [],
+      "transforms": [
+        "numeric fields parsed without smoothing"
+      ],
+      "xAxis": "system",
+      "yAxis": "PRISM minus random hits"
+    },
+    "summary": "Swap-aligned FDC under-calls insert-friendly systems."
+  },
+  "EP-Q-gemma": {
+    "id": "EP-Q-gemma",
+    "kind": "bar",
+    "title": "Gemma transfer groups",
+    "xLabel": "source group",
+    "yLabel": "target mean accuracy",
+    "sample": "120 target orders",
+    "points": [
+      {
+        "x": 0,
+        "y": 0.565,
+        "label": "source top 15"
+      },
+      {
+        "x": 1,
+        "y": 0.442,
+        "label": "random 100"
+      },
+      {
+        "x": 2,
+        "y": 0.15,
+        "label": "source bottom 5"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-17/results/slm_transfer_report.txt",
+      "rowCount": 3,
+      "filters": [],
+      "transforms": [
+        "reported bootstrap means only"
+      ],
+      "xAxis": "source group",
+      "yAxis": "target mean accuracy"
+    },
+    "summary": "Extremes transfer while fine-grained rank correlation crosses zero."
+  },
+  "EP-Q2-family": {
+    "id": "EP-Q2-family",
+    "kind": "bar",
+    "title": "Cross-family rank transfer",
+    "xLabel": "target model",
+    "yLabel": "Spearman correlation",
+    "sample": "120 orders per model",
+    "points": [
+      {
+        "x": 0,
+        "y": 0.158,
+        "label": "Gemma"
+      },
+      {
+        "x": 1,
+        "y": 0.375,
+        "label": "Llama"
+      },
+      {
+        "x": 2,
+        "y": 0.25,
+        "label": "Qwen"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-19-crossfamily/results/*_transfer_report.txt",
+      "rowCount": 3,
+      "filters": [],
+      "transforms": [
+        "reported correlations only"
+      ],
+      "xAxis": "target model",
+      "yAxis": "Spearman correlation"
+    },
+    "summary": "Transfer depends on capability and compresses near ceiling."
+  },
+  "EP-T-opro": {
+    "id": "EP-T-opro",
+    "kind": "bar",
+    "title": "PRISM versus OPRO at budget 25",
+    "xLabel": "method",
+    "yLabel": "best accuracy",
+    "sample": "five shared seeds",
+    "points": [
+      {
+        "x": 0,
+        "y": 0.5,
+        "label": "PRISM"
+      },
+      {
+        "x": 1,
+        "y": 0.507,
+        "label": "OPRO"
+      }
+    ],
+    "source": {
+      "artifact": "experiments/iteration-24-prompt-optimizer-baselines/results/T_RESULTS_SUMMARY.json",
+      "rowCount": 2,
+      "filters": [],
+      "transforms": [
+        "audited reported means; interval shown in narration"
+      ],
+      "xAxis": "method",
+      "yAxis": "best accuracy"
+    },
+    "summary": "Wording raises mean level while ordering variance persists; final search result is a tie."
+  }
+}

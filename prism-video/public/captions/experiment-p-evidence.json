@@ -1,0 +1,184 @@
+[
+  {
+    "text": "Pause on P-sciml for a complete evidence\nreading of Experiment",
+    "startMs": 0,
+    "endMs": 5156,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "P — sin-dee scientific pipeline ordering.\nFirst, identify the research",
+    "startMs": 5156,
+    "endMs": 10312,
+    "timestampMs": 5156,
+    "confidence": null
+  },
+  {
+    "text": "question before looking at the answer. The\nquestion asks whether",
+    "startMs": 10312,
+    "endMs": 15468,
+    "timestampMs": 10312,
+    "confidence": null
+  },
+  {
+    "text": "the fixed components create a meaningful\nordering surface, whether a",
+    "startMs": 15468,
+    "endMs": 20624,
+    "timestampMs": 15468,
+    "confidence": null
+  },
+  {
+    "text": "particular neighborhood provides useful\nguidance on that surface, or whether",
+    "startMs": 20624,
+    "endMs": 25780,
+    "timestampMs": 20624,
+    "confidence": null
+  },
+  {
+    "text": "a cheaper executor is equally effective.\nThe sample is All",
+    "startMs": 25780,
+    "endMs": 30936,
+    "timestampMs": 25780,
+    "confidence": null
+  },
+  {
+    "text": "720 orderings, and the source artifact is",
+    "startMs": 30936,
+    "endMs": 34546,
+    "timestampMs": 30936,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-16/results/sciml_landscape.csv.\nThe horizontal axis",
+    "startMs": 34546,
+    "endMs": 36609,
+    "timestampMs": 34546,
+    "confidence": null
+  },
+  {
+    "text": "names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 36609,
+    "endMs": 41250,
+    "timestampMs": 36609,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 41250,
+    "endMs": 46406,
+    "timestampMs": 41250,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 46406,
+    "endMs": 51047,
+    "timestampMs": 46406,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 51047,
+    "endMs": 56203,
+    "timestampMs": 51047,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 56203,
+    "endMs": 61359,
+    "timestampMs": 56203,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 61359,
+    "endMs": 66515,
+    "timestampMs": 61359,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 66515,
+    "endMs": 71671,
+    "timestampMs": 66515,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nResult: recovery error ranged",
+    "startMs": 71671,
+    "endMs": 76827,
+    "timestampMs": 71671,
+    "confidence": null
+  },
+  {
+    "text": "from 0.1% to 23.2% by ordering alone. The\ncorrect limitation",
+    "startMs": 76827,
+    "endMs": 81983,
+    "timestampMs": 76827,
+    "confidence": null
+  },
+  {
+    "text": "is: The conclusion is scoped to the\nrecorded evaluator, landscape,",
+    "startMs": 81983,
+    "endMs": 87139,
+    "timestampMs": 81983,
+    "confidence": null
+  },
+  {
+    "text": "and budget. That limitation rules out a\nbroader promotional interpretation",
+    "startMs": 87139,
+    "endMs": 92295,
+    "timestampMs": 87139,
+    "confidence": null
+  },
+  {
+    "text": "while preserving the result actually\nmeasured. The decision carried into",
+    "startMs": 92295,
+    "endMs": 97451,
+    "timestampMs": 92295,
+    "confidence": null
+  },
+  {
+    "text": "the research program is: Pre-flight: F D C\n+0.109, treated",
+    "startMs": 97451,
+    "endMs": 102607,
+    "timestampMs": 97451,
+    "confidence": null
+  },
+  {
+    "text": "as borderline under Decision D19. Finally,\ncompare against the equal-budget",
+    "startMs": 102607,
+    "endMs": 107763,
+    "timestampMs": 102607,
+    "confidence": null
+  },
+  {
+    "text": "alternative. Generations, repeated cache\nhits, and distinct evaluations are",
+    "startMs": 107763,
+    "endMs": 112404,
+    "timestampMs": 107763,
+    "confidence": null
+  },
+  {
+    "text": "not interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 112404,
+    "endMs": 117560,
+    "timestampMs": 112404,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 117560,
+    "endMs": 122201,
+    "timestampMs": 117560,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 122201,
+    "endMs": 124270,
+    "timestampMs": 122201,
+    "confidence": null
+  }
+]

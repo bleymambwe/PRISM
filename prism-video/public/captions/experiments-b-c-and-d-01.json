@@ -1,0 +1,233 @@
+[
+  {
+    "text": "This section examines Experiments B, C,\nand D — Scaling,",
+    "startMs": 0,
+    "endMs": 5419,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "operator matching, and deception from\nfirst principles. Keep two questions",
+    "startMs": 5419,
+    "endMs": 10838,
+    "timestampMs": 5419,
+    "confidence": null
+  },
+  {
+    "text": "separate: does changing the order change\nthe measured outcome, and",
+    "startMs": 10838,
+    "endMs": 16257,
+    "timestampMs": 10838,
+    "confidence": null
+  },
+  {
+    "text": "does the proposed search method beat a\nmatched alternative at",
+    "startMs": 16257,
+    "endMs": 21676,
+    "timestampMs": 16257,
+    "confidence": null
+  },
+  {
+    "text": "the same distinct-evaluation budget? Typed\nlandscapes:",
+    "startMs": 21676,
+    "endMs": 24927,
+    "timestampMs": 21676,
+    "confidence": null
+  },
+  {
+    "text": "Hamming/absolute-position,\nKendall/precedence, and adjacency/routing.",
+    "startMs": 24927,
+    "endMs": 27094,
+    "timestampMs": 24927,
+    "confidence": null
+  },
+  {
+    "text": "Operators: swap, insert, inversion,\nscramble. Sizes: nin{6,8,10,12,14,16}.",
+    "startMs": 27094,
+    "endMs": 30887,
+    "timestampMs": 27094,
+    "confidence": null
+  },
+  {
+    "text": "Repeats: 15 seeds per cell. Censoring cap:\n10,000 generations in",
+    "startMs": 30887,
+    "endMs": 36306,
+    "timestampMs": 30887,
+    "confidence": null
+  },
+  {
+    "text": "the final protocol. Matched results at\nn=16: swap on Hamming,",
+    "startMs": 36306,
+    "endMs": 41725,
+    "timestampMs": 36306,
+    "confidence": null
+  },
+  {
+    "text": "mean 405 generations; insert on Kendall,\nmean 396; inversion on",
+    "startMs": 41725,
+    "endMs": 47144,
+    "timestampMs": 41725,
+    "confidence": null
+  },
+  {
+    "text": "adjacency, mean 1,199. Scaling exponents\nfrom the log: approximately 2.79,",
+    "startMs": 47144,
+    "endMs": 52563,
+    "timestampMs": 47144,
+    "confidence": null
+  },
+  {
+    "text": "2.98, and 3.44 for the matched cases,\nconsistent with the",
+    "startMs": 52563,
+    "endMs": 57982,
+    "timestampMs": 52563,
+    "confidence": null
+  },
+  {
+    "text": "expected cubic-log trend over the tested\nrange. Failure mode: mismatched",
+    "startMs": 57982,
+    "endMs": 63401,
+    "timestampMs": 57982,
+    "confidence": null
+  },
+  {
+    "text": "operators on plateau-rich landscapes could\ncensor completely; deceptive",
+    "startMs": 63401,
+    "endMs": 67736,
+    "timestampMs": 63401,
+    "confidence": null
+  },
+  {
+    "text": "landscapes censored most runs by n=8–10\neven with apparently smooth",
+    "startMs": 67736,
+    "endMs": 73155,
+    "timestampMs": 67736,
+    "confidence": null
+  },
+  {
+    "text": "local structure. Visual: a 3×4 heat map of\noperator versus",
+    "startMs": 73155,
+    "endMs": 78574,
+    "timestampMs": 73155,
+    "confidence": null
+  },
+  {
+    "text": "landscape, followed by scaling curves.\nCensored cells must have a",
+    "startMs": 78574,
+    "endMs": 83993,
+    "timestampMs": 78574,
+    "confidence": null
+  },
+  {
+    "text": "distinct hatch, not a fabricated numeric\nvalue. Now read evidence",
+    "startMs": 83993,
+    "endMs": 89412,
+    "timestampMs": 83993,
+    "confidence": null
+  },
+  {
+    "text": "panel T4-scaling. The axes, units, and\nsample are stated on",
+    "startMs": 89412,
+    "endMs": 94831,
+    "timestampMs": 89412,
+    "confidence": null
+  },
+  {
+    "text": "screen. The sample represented here is 15\nseeds. Raw observations",
+    "startMs": 94831,
+    "endMs": 100250,
+    "timestampMs": 94831,
+    "confidence": null
+  },
+  {
+    "text": "remain visible wherever the artifact\nprovides them. Censored observations",
+    "startMs": 100250,
+    "endMs": 105127,
+    "timestampMs": 100250,
+    "confidence": null
+  },
+  {
+    "text": "stay marked at the cap rather than\nbecoming invented hitting",
+    "startMs": 105127,
+    "endMs": 110546,
+    "timestampMs": 105127,
+    "confidence": null
+  },
+  {
+    "text": "times, and sampled landscapes leave\nunobserved permutations blank. The",
+    "startMs": 110546,
+    "endMs": 115423,
+    "timestampMs": 110546,
+    "confidence": null
+  },
+  {
+    "text": "supported finding is: Matched results at\nn=16: swap on Hamming,",
+    "startMs": 115423,
+    "endMs": 120842,
+    "timestampMs": 115423,
+    "confidence": null
+  },
+  {
+    "text": "mean 405 generations; insert on Kendall,\nmean 396; inversion on",
+    "startMs": 120842,
+    "endMs": 126261,
+    "timestampMs": 120842,
+    "confidence": null
+  },
+  {
+    "text": "adjacency, mean 1,199. The broader claim\nnot established here is:",
+    "startMs": 126261,
+    "endMs": 131680,
+    "timestampMs": 126261,
+    "confidence": null
+  },
+  {
+    "text": "The conclusion is scoped to the recorded\nevaluator, landscape, and",
+    "startMs": 131680,
+    "endMs": 137099,
+    "timestampMs": 131680,
+    "confidence": null
+  },
+  {
+    "text": "budget. This evidence changed the program\nas follows: Carry this",
+    "startMs": 137099,
+    "endMs": 142518,
+    "timestampMs": 137099,
+    "confidence": null
+  },
+  {
+    "text": "constraint into the next experiment and\ncompare methods at equal",
+    "startMs": 142518,
+    "endMs": 147937,
+    "timestampMs": 142518,
+    "confidence": null
+  },
+  {
+    "text": "cost. The distinction is part of the\nresult. A large",
+    "startMs": 147937,
+    "endMs": 153356,
+    "timestampMs": 147937,
+    "confidence": null
+  },
+  {
+    "text": "ordering effect does not automatically\nimply an evolutionary-search",
+    "startMs": 153356,
+    "endMs": 157691,
+    "timestampMs": 153356,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 157691,
+    "endMs": 162026,
+    "timestampMs": 157691,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 162026,
+    "endMs": 162560,
+    "timestampMs": 162026,
+    "confidence": null
+  }
+]

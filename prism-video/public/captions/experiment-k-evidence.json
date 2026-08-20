@@ -1,0 +1,184 @@
+[
+  {
+    "text": "Pause on K-llm for a complete evidence\nreading of Experiment",
+    "startMs": 0,
+    "endMs": 5300,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "K — Six-module LLM instruction ordering.\nFirst, identify the research",
+    "startMs": 5300,
+    "endMs": 10600,
+    "timestampMs": 5300,
+    "confidence": null
+  },
+  {
+    "text": "question before looking at the answer. The\nquestion asks whether",
+    "startMs": 10600,
+    "endMs": 15900,
+    "timestampMs": 10600,
+    "confidence": null
+  },
+  {
+    "text": "the fixed components create a meaningful\nordering surface, whether a",
+    "startMs": 15900,
+    "endMs": 21200,
+    "timestampMs": 15900,
+    "confidence": null
+  },
+  {
+    "text": "particular neighborhood provides useful\nguidance on that surface, or whether",
+    "startMs": 21200,
+    "endMs": 26500,
+    "timestampMs": 21200,
+    "confidence": null
+  },
+  {
+    "text": "a cheaper executor is equally effective.\nThe sample is 720",
+    "startMs": 26500,
+    "endMs": 31800,
+    "timestampMs": 26500,
+    "confidence": null
+  },
+  {
+    "text": "orderings, and the source artifact is",
+    "startMs": 31800,
+    "endMs": 34980,
+    "timestampMs": 31800,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-09/results/llm_landscape.csv;",
+    "startMs": 34980,
+    "endMs": 35510,
+    "timestampMs": 34980,
+    "confidence": null
+  },
+  {
+    "text": "llm_position_effects.csv. The horizontal\naxis names the recorded independent",
+    "startMs": 35510,
+    "endMs": 39750,
+    "timestampMs": 35510,
+    "confidence": null
+  },
+  {
+    "text": "quantity—such as permutation size,\nposition, distance, or distinct",
+    "startMs": 39750,
+    "endMs": 43990,
+    "timestampMs": 39750,
+    "confidence": null
+  },
+  {
+    "text": "evaluations. The vertical axis names the\nmeasured outcome—such as accuracy,",
+    "startMs": 43990,
+    "endMs": 49290,
+    "timestampMs": 43990,
+    "confidence": null
+  },
+  {
+    "text": "error, hit probability, regret,\ncorrelation, or hitting time. Raw points",
+    "startMs": 49290,
+    "endMs": 54590,
+    "timestampMs": 49290,
+    "confidence": null
+  },
+  {
+    "text": "remain visible when their count permits. A\nsummary line or",
+    "startMs": 54590,
+    "endMs": 59890,
+    "timestampMs": 54590,
+    "confidence": null
+  },
+  {
+    "text": "bar describes those points; it does not\nreplace them. A",
+    "startMs": 59890,
+    "endMs": 65190,
+    "timestampMs": 59890,
+    "confidence": null
+  },
+  {
+    "text": "capped observation receives a censor\nmarker, and a sampled landscape",
+    "startMs": 65190,
+    "endMs": 70490,
+    "timestampMs": 65190,
+    "confidence": null
+  },
+  {
+    "text": "never pretends to be exhaustively\nenumerated. The central pattern supports",
+    "startMs": 70490,
+    "endMs": 75790,
+    "timestampMs": 70490,
+    "confidence": null
+  },
+  {
+    "text": "this finding: Modules: RESTATE, IDENTIFY,\nPLAN, COMPUTE, CHECK,",
+    "startMs": 75790,
+    "endMs": 80030,
+    "timestampMs": 75790,
+    "confidence": null
+  },
+  {
+    "text": "ANSWER/FORMAT. The correct limitation is:\nDo not claim a decisive",
+    "startMs": 80030,
+    "endMs": 85330,
+    "timestampMs": 80030,
+    "confidence": null
+  },
+  {
+    "text": "search-speed advantage. That limitation\nrules out a broader promotional",
+    "startMs": 85330,
+    "endMs": 90100,
+    "timestampMs": 85330,
+    "confidence": null
+  },
+  {
+    "text": "interpretation while preserving the result\nactually measured. The decision",
+    "startMs": 90100,
+    "endMs": 94870,
+    "timestampMs": 90100,
+    "confidence": null
+  },
+  {
+    "text": "carried into the research program is:\nCarry this constraint into",
+    "startMs": 94870,
+    "endMs": 100170,
+    "timestampMs": 94870,
+    "confidence": null
+  },
+  {
+    "text": "the next experiment and compare methods at\nequal cost. Finally,",
+    "startMs": 100170,
+    "endMs": 105470,
+    "timestampMs": 100170,
+    "confidence": null
+  },
+  {
+    "text": "compare against the equal-budget\nalternative. Generations, repeated cache",
+    "startMs": 105470,
+    "endMs": 109710,
+    "timestampMs": 105470,
+    "confidence": null
+  },
+  {
+    "text": "hits, and distinct evaluations are not\ninterchangeable. A method earns",
+    "startMs": 109710,
+    "endMs": 115010,
+    "timestampMs": 109710,
+    "confidence": null
+  },
+  {
+    "text": "a search-efficiency claim only when\nuncertainty, evaluator resolution,",
+    "startMs": 115010,
+    "endMs": 119250,
+    "timestampMs": 115010,
+    "confidence": null
+  },
+  {
+    "text": "optimum density, and evaluation cost have\nall been accounted for.",
+    "startMs": 119250,
+    "endMs": 124545,
+    "timestampMs": 119250,
+    "confidence": null
+  }
+]

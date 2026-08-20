@@ -1,0 +1,114 @@
+[
+  {
+    "text": "This section examines Chapter 6 — XOR\nwalkthrough (5–6 minutes)",
+    "startMs": 0,
+    "endMs": 5014,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 5014,
+    "endMs": 10028,
+    "timestampMs": 5014,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 10028,
+    "endMs": 15042,
+    "timestampMs": 10028,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 15042,
+    "endMs": 20056,
+    "timestampMs": 15042,
+    "confidence": null
+  },
+  {
+    "text": "Reconstruct one search story from\ninitialization to breakthrough: generate",
+    "startMs": 20056,
+    "endMs": 24568,
+    "timestampMs": 20056,
+    "confidence": null
+  },
+  {
+    "text": "20 random orderings; evaluate each\ncandidate network; show a tournament",
+    "startMs": 24568,
+    "endMs": 29582,
+    "timestampMs": 24568,
+    "confidence": null
+  },
+  {
+    "text": "of three; preserve the elite; perform a\nswap; track diversity",
+    "startMs": 29582,
+    "endMs": 34596,
+    "timestampMs": 29582,
+    "confidence": null
+  },
+  {
+    "text": "falling over generations; show an extended\naccuracy plateau; animate a",
+    "startMs": 34596,
+    "endMs": 39610,
+    "timestampMs": 34596,
+    "confidence": null
+  },
+  {
+    "text": "critical mutation producing a perfect XOR\nordering near the reported",
+    "startMs": 39610,
+    "endMs": 44624,
+    "timestampMs": 39610,
+    "confidence": null
+  },
+  {
+    "text": "100–150-generation range. Explicitly\nexplain that the plotted trajectory is",
+    "startMs": 44624,
+    "endMs": 49136,
+    "timestampMs": 44624,
+    "confidence": null
+  },
+  {
+    "text": "an explanatory example of the mechanism\nand must not be",
+    "startMs": 49136,
+    "endMs": 54150,
+    "timestampMs": 49136,
+    "confidence": null
+  },
+  {
+    "text": "used to erase the reproduction correction\nthat noisy historical best-ever",
+    "startMs": 54150,
+    "endMs": 59164,
+    "timestampMs": 54150,
+    "confidence": null
+  },
+  {
+    "text": "fitness could be inflated. The distinction\nis part of the",
+    "startMs": 59164,
+    "endMs": 64178,
+    "timestampMs": 59164,
+    "confidence": null
+  },
+  {
+    "text": "result. A large ordering effect does not\nautomatically imply an",
+    "startMs": 64178,
+    "endMs": 69192,
+    "timestampMs": 64178,
+    "confidence": null
+  },
+  {
+    "text": "evolutionary-search advantage, and\nalmost-sure convergence does not promise",
+    "startMs": 69192,
+    "endMs": 73203,
+    "timestampMs": 69192,
+    "confidence": null
+  },
+  {
+    "text": "practical efficiency.",
+    "startMs": 73203,
+    "endMs": 74205,
+    "timestampMs": 73203,
+    "confidence": null
+  }
+]

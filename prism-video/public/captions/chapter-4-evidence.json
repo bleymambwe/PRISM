@@ -1,0 +1,219 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4754,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Chapter 4 — From a permutation\nto a",
+    "startMs": 4754,
+    "endMs": 9508,
+    "timestampMs": 4754,
+    "confidence": null
+  },
+  {
+    "text": "neural network (5–6 minutes). First,\nidentify the research question before",
+    "startMs": 9508,
+    "endMs": 14262,
+    "timestampMs": 9508,
+    "confidence": null
+  },
+  {
+    "text": "looking at the answer. The question asks\nwhether the fixed",
+    "startMs": 14262,
+    "endMs": 19016,
+    "timestampMs": 14262,
+    "confidence": null
+  },
+  {
+    "text": "components create a meaningful ordering\nsurface, whether a particular",
+    "startMs": 19016,
+    "endMs": 23294,
+    "timestampMs": 19016,
+    "confidence": null
+  },
+  {
+    "text": "neighborhood provides useful guidance on\nthat surface, or whether a",
+    "startMs": 23294,
+    "endMs": 28048,
+    "timestampMs": 23294,
+    "confidence": null
+  },
+  {
+    "text": "cheaper executor is equally effective. The\nsample is the sample",
+    "startMs": 28048,
+    "endMs": 32802,
+    "timestampMs": 28048,
+    "confidence": null
+  },
+  {
+    "text": "reported in the source, and the source\nartifact is production",
+    "startMs": 32802,
+    "endMs": 37556,
+    "timestampMs": 32802,
+    "confidence": null
+  },
+  {
+    "text": "brief and paper source. The horizontal\naxis names the recorded",
+    "startMs": 37556,
+    "endMs": 42310,
+    "timestampMs": 37556,
+    "confidence": null
+  },
+  {
+    "text": "independent quantity—such as permutation\nsize, position, distance, or",
+    "startMs": 42310,
+    "endMs": 46113,
+    "timestampMs": 42310,
+    "confidence": null
+  },
+  {
+    "text": "distinct evaluations. The vertical axis\nnames the measured outcome—such as",
+    "startMs": 46113,
+    "endMs": 50867,
+    "timestampMs": 46113,
+    "confidence": null
+  },
+  {
+    "text": "accuracy, error, hit probability, regret,\ncorrelation, or hitting time. Raw",
+    "startMs": 50867,
+    "endMs": 55621,
+    "timestampMs": 50867,
+    "confidence": null
+  },
+  {
+    "text": "points remain visible when their count\npermits. A summary line",
+    "startMs": 55621,
+    "endMs": 60375,
+    "timestampMs": 55621,
+    "confidence": null
+  },
+  {
+    "text": "or bar describes those points; it does not\nreplace them.",
+    "startMs": 60375,
+    "endMs": 65129,
+    "timestampMs": 60375,
+    "confidence": null
+  },
+  {
+    "text": "A capped observation receives a censor\nmarker, and a sampled",
+    "startMs": 65129,
+    "endMs": 69883,
+    "timestampMs": 65129,
+    "confidence": null
+  },
+  {
+    "text": "landscape never pretends to be\nexhaustively enumerated. The central",
+    "startMs": 69883,
+    "endMs": 74637,
+    "timestampMs": 69883,
+    "confidence": null
+  },
+  {
+    "text": "supports this finding: Explain the five\nhistorical branch types: Linear;",
+    "startMs": 74637,
+    "endMs": 79391,
+    "timestampMs": 74637,
+    "confidence": null
+  },
+  {
+    "text": "Deep MLP; Linear + Tanh; Linear + Sigmoid;\nmedium-width MLP.",
+    "startMs": 79391,
+    "endMs": 84145,
+    "timestampMs": 79391,
+    "confidence": null
+  },
+  {
+    "text": "The correct limitation is: Then\ndistinguish three designs: early",
+    "startMs": 84145,
+    "endMs": 88899,
+    "timestampMs": 84145,
+    "confidence": null
+  },
+  {
+    "text": "where only three of five positions were\ntruly functional; failed",
+    "startMs": 88899,
+    "endMs": 93653,
+    "timestampMs": 88899,
+    "confidence": null
+  },
+  {
+    "text": "deeper plain-stack redesign, where every\nordering collapsed to chance; v4",
+    "startMs": 93653,
+    "endMs": 98407,
+    "timestampMs": 93653,
+    "confidence": null
+  },
+  {
+    "text": "residual bottleneck design, where all\npositions mattered and deterministic",
+    "startMs": 98407,
+    "endMs": 102685,
+    "timestampMs": 98407,
+    "confidence": null
+  },
+  {
+    "text": "ground truth could be enumerated. That\nlimitation rules out a",
+    "startMs": 102685,
+    "endMs": 107439,
+    "timestampMs": 102685,
+    "confidence": null
+  },
+  {
+    "text": "broader promotional interpretation while\npreserving the result actually",
+    "startMs": 107439,
+    "endMs": 111242,
+    "timestampMs": 107439,
+    "confidence": null
+  },
+  {
+    "text": "measured. The decision carried into the\nresearch program is: Carry",
+    "startMs": 111242,
+    "endMs": 115996,
+    "timestampMs": 111242,
+    "confidence": null
+  },
+  {
+    "text": "this constraint into the next experiment\nand compare methods at",
+    "startMs": 115996,
+    "endMs": 120750,
+    "timestampMs": 115996,
+    "confidence": null
+  },
+  {
+    "text": "equal cost. Finally, compare against the\nequal-budget alternative.",
+    "startMs": 120750,
+    "endMs": 124553,
+    "timestampMs": 120750,
+    "confidence": null
+  },
+  {
+    "text": "Generations, repeated cache hits, and\ndistinct evaluations are not",
+    "startMs": 124553,
+    "endMs": 128831,
+    "timestampMs": 124553,
+    "confidence": null
+  },
+  {
+    "text": "interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 128831,
+    "endMs": 133109,
+    "timestampMs": 128831,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 133109,
+    "endMs": 137387,
+    "timestampMs": 133109,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 137387,
+    "endMs": 139285,
+    "timestampMs": 137387,
+    "confidence": null
+  }
+]

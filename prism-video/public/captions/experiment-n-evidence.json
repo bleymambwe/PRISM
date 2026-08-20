@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on N-surrogate for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 5479,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "N — Hybrid restart and precedence\nsurrogate. First, identify the",
+    "startMs": 5479,
+    "endMs": 10958,
+    "timestampMs": 5479,
+    "confidence": null
+  },
+  {
+    "text": "research question before looking at the\nanswer. The question asks",
+    "startMs": 10958,
+    "endMs": 16437,
+    "timestampMs": 10958,
+    "confidence": null
+  },
+  {
+    "text": "whether the fixed components create a\nmeaningful ordering surface, whether",
+    "startMs": 16437,
+    "endMs": 21916,
+    "timestampMs": 16437,
+    "confidence": null
+  },
+  {
+    "text": "a particular neighborhood provides useful\nguidance on that surface, or",
+    "startMs": 21916,
+    "endMs": 27395,
+    "timestampMs": 21916,
+    "confidence": null
+  },
+  {
+    "text": "whether a cheaper executor is equally\neffective. The sample is",
+    "startMs": 27395,
+    "endMs": 32874,
+    "timestampMs": 27395,
+    "confidence": null
+  },
+  {
+    "text": "5,040 orderings, and the source artifact\nis",
+    "startMs": 32874,
+    "endMs": 36709,
+    "timestampMs": 32874,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-12/results/hybrid_surrogate.csv.\nThe horizontal axis",
+    "startMs": 36709,
+    "endMs": 38901,
+    "timestampMs": 36709,
+    "confidence": null
+  },
+  {
+    "text": "names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 38901,
+    "endMs": 43832,
+    "timestampMs": 38901,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 43832,
+    "endMs": 49311,
+    "timestampMs": 43832,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 49311,
+    "endMs": 54242,
+    "timestampMs": 49311,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 54242,
+    "endMs": 59721,
+    "timestampMs": 54242,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 59721,
+    "endMs": 65200,
+    "timestampMs": 59721,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 65200,
+    "endMs": 70679,
+    "timestampMs": 65200,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 70679,
+    "endMs": 76158,
+    "timestampMs": 70679,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nAudited result reported in",
+    "startMs": 76158,
+    "endMs": 81637,
+    "timestampMs": 76158,
+    "confidence": null
+  },
+  {
+    "text": "the paper: precedence surrogate 14.8\n[14,15] mean evaluations; elitist prism",
+    "startMs": 81637,
+    "endMs": 87116,
+    "timestampMs": 81637,
+    "confidence": null
+  },
+  {
+    "text": "54.2 [50,59]; random only 2/40 hits within\na 500-evaluation cap.",
+    "startMs": 87116,
+    "endMs": 92595,
+    "timestampMs": 87116,
+    "confidence": null
+  },
+  {
+    "text": "The correct limitation is: Audited result\nreported in the paper:",
+    "startMs": 92595,
+    "endMs": 98074,
+    "timestampMs": 92595,
+    "confidence": null
+  },
+  {
+    "text": "precedence surrogate 14.8 [14,15] mean\nevaluations; elitist prism 54.2",
+    "startMs": 98074,
+    "endMs": 103005,
+    "timestampMs": 98074,
+    "confidence": null
+  },
+  {
+    "text": "[50,59]; random only 2/40 hits within a\n500-evaluation cap. That",
+    "startMs": 103005,
+    "endMs": 108484,
+    "timestampMs": 103005,
+    "confidence": null
+  },
+  {
+    "text": "limitation rules out a broader promotional\ninterpretation while preserving",
+    "startMs": 108484,
+    "endMs": 113415,
+    "timestampMs": 108484,
+    "confidence": null
+  },
+  {
+    "text": "the result actually measured. The decision\ncarried into the research",
+    "startMs": 113415,
+    "endMs": 118894,
+    "timestampMs": 113415,
+    "confidence": null
+  },
+  {
+    "text": "program is: Carry this constraint into the\nnext experiment and",
+    "startMs": 118894,
+    "endMs": 124373,
+    "timestampMs": 118894,
+    "confidence": null
+  },
+  {
+    "text": "compare methods at equal cost. Finally,\ncompare against the equal-budget",
+    "startMs": 124373,
+    "endMs": 129852,
+    "timestampMs": 124373,
+    "confidence": null
+  },
+  {
+    "text": "alternative. Generations, repeated cache\nhits, and distinct evaluations are",
+    "startMs": 129852,
+    "endMs": 134783,
+    "timestampMs": 129852,
+    "confidence": null
+  },
+  {
+    "text": "not interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 134783,
+    "endMs": 140262,
+    "timestampMs": 134783,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 140262,
+    "endMs": 145193,
+    "timestampMs": 140262,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 145193,
+    "endMs": 147385,
+    "timestampMs": 145193,
+    "confidence": null
+  }
+]

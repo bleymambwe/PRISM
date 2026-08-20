@@ -1,0 +1,48 @@
+{
+  "name": "prism-video",
+  "version": "1.0.0",
+  "description": "Long-form Remotion documentary explaining the PRISM paper",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/captions": "4.0.509",
+    "@remotion/cli": "4.0.509",
+    "@remotion/media": "4.0.509",
+    "@remotion/tailwind-v4": "4.0.509",
+    "@remotion/transitions": "4.0.509",
+    "mediabunny": "1.50.8",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.509",
+    "tailwindcss": "4.0.0"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.509",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3",
+    "tsx": "4.20.6"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "data": "python scripts/build_film_data.py && python scripts/extract_graph_data.py",
+    "narration:audition": "python scripts/generate_narration.py --auditions-only",
+    "narration": "python scripts/run_narration_resumable.py",
+    "audio:qc": "tsx scripts/measure_audio.ts",
+    "content:validate": "tsx scripts/validate_content.ts",
+    "render:1080p": "remotion render src/index.ts PRISM-Paper-Explained-1080p renders/prism-paper-explained-1080p.mp4 --codec=h264 --crf=17 --concurrency=6",
+    "render:4k": "remotion render src/index.ts PRISM-Paper-Explained-4K renders/prism-paper-explained-4k.mp4 --codec=h264 --crf=17 --concurrency=6",
+    "render:epilogue": "remotion render src/index.ts PRISM-Experiment-Epilogue renders/prism-experiment-epilogue-4k.mp4 --codec=h264 --crf=17 --concurrency=6",
+    "render:chapters": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/render_chapters.ps1",
+    "render:thumbnails": "remotion still src/index.ts PRISM-Thumbnail renders/thumbnails/thumbnail-1.png && remotion still src/index.ts PRISM-Thumbnail-2 renders/thumbnails/thumbnail-2.png && remotion still src/index.ts PRISM-Thumbnail-3 renders/thumbnails/thumbnail-3.png"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

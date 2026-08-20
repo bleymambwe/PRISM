@@ -1,0 +1,35 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Blessings Mambwe
+
+This licence covers the RESEARCH ARTIFACTS in this repository — the material
+the paper's Artifact paragraph enumerates:
+
+  experiments/**          pre-registered plans, hypotheses, result records
+  experiments/**/results/ evaluation caches, frozen question pools,
+                          per-experiment result tables, the forecast record
+  docs/                   the research record (experiment log, decision log,
+                          literature log, risk register, audit report)
+  deliverables/book_figures/**
+  deliverables/PRISM_Framework_Research_Paper.md
+  GNGN_Toy_Problems.ipynb
+
+It matches the release statement in arXiv:2608.08344:
+
+  "Seeded scripts, append-only evaluation caches, frozen question pools,
+   per-experiment result tables and the forecast record are released with
+   this paper under CC BY 4.0 at https://github.com/bleymambwe/PRISM"
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made.
+
+To view a copy of this licence, visit
+https://creativecommons.org/licenses/by/4.0/
+or read the full legal code at
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+THE SOFTWARE in this repository is licensed separately under the MIT Licence.
+See LICENSE. That covers src/prism_search/, evals/, tests/, scripts/ and
+.github/. CC BY 4.0 is not an OSI-approved software licence, which is why the
+code carries MIT instead.

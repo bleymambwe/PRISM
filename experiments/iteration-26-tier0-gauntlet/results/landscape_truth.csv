@@ -1,0 +1,16 @@
+landscape,family,n,rho1_swap,rho1_insert,rho1_inversion,true_operator,distance,true_fdc,true_regime,margin_to_threshold
+llm_gsm8k_n6,llm,6,0.4235,0.5464,0.3243,insert,ulam,-0.364,search_pays,0.214
+parity_n7,neural,7,0.0235,0.0183,0.0165,swap,cayley,-0.0524,random_competitive,0.0976
+xor_n6,neural,6,0.0108,0.0139,-0.0052,insert,ulam,-0.2245,search_pays,0.0745
+xor_n5,neural,5,0.0193,0.0355,0.0442,inversion,kendall,-0.3406,search_pays,0.1906
+parity_n5,neural,5,0.0217,-0.0421,0.0171,swap,cayley,-0.2483,search_pays,0.0983
+sciml_damped_oscillator,sciml,6,0.3861,0.5633,0.3002,insert,ulam,-0.2969,search_pays,0.1469
+sciml_cubic_oscillator,sciml,6,0.3329,0.5179,0.2622,insert,ulam,-0.0432,random_competitive,0.1068
+sciml_vanderpol,sciml,6,0.5198,0.6851,0.4026,insert,ulam,-0.1934,search_pays,0.0434
+sciml_lorenz63,sciml,6,0.3682,0.5112,0.3135,insert,ulam,-0.4323,search_pays,0.2823
+sciml_rossler,sciml,6,0.4962,0.6796,0.361,insert,ulam,-0.2725,search_pays,0.1225
+sciml_lotka_volterra,sciml,6,0.3301,0.4952,0.2558,insert,ulam,-0.0972,random_competitive,0.0528
+hamming_n7,synthetic,7,0.6592,0.3878,0.4583,swap,cayley,-0.8244,search_pays,0.6744
+kendall_n7,synthetic,7,0.6501,0.7804,0.5515,insert,ulam,-0.7537,search_pays,0.6037
+adjacency_n7,synthetic,7,0.4349,0.4958,0.6669,inversion,kendall,-0.281,search_pays,0.131
+deceptive_n7,synthetic,7,0.6234,0.3711,0.4238,swap,cayley,0.8104,do_not_search,0.5104

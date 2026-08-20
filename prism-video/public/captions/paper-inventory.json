@@ -1,0 +1,86 @@
+[
+  {
+    "text": "This inventory confirms that the film has\nreconstructed all twelve",
+    "startMs": 0,
+    "endMs": 4822,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "numbered figures, all eight numbered\ntables, and all three algorithms.",
+    "startMs": 4822,
+    "endMs": 9644,
+    "timestampMs": 4822,
+    "confidence": null
+  },
+  {
+    "text": "Figures one through twelve cover ordering\neffects, algorithm flow, the",
+    "startMs": 9644,
+    "endMs": 14466,
+    "timestampMs": 9644,
+    "confidence": null
+  },
+  {
+    "text": "supernet decoder, absorbing states,\nspectral decay, XOR convergence, a",
+    "startMs": 14466,
+    "endMs": 18806,
+    "timestampMs": 14466,
+    "confidence": null
+  },
+  {
+    "text": "complete generation, the S three Cayley\ngraph, diversity, convergence",
+    "startMs": 18806,
+    "endMs": 23146,
+    "timestampMs": 18806,
+    "confidence": null
+  },
+  {
+    "text": "assumptions, the proposed weight-sharing\nstrategy, and the research roadmap.",
+    "startMs": 23146,
+    "endMs": 27486,
+    "timestampMs": 23146,
+    "confidence": null
+  },
+  {
+    "text": "Tables one through eight cover search\nspaces, operator matching, the",
+    "startMs": 27486,
+    "endMs": 32308,
+    "timestampMs": 27486,
+    "confidence": null
+  },
+  {
+    "text": "experiment ledger, exact landscape sizes,\nneural outcomes, operator results,",
+    "startMs": 32308,
+    "endMs": 36648,
+    "timestampMs": 32308,
+    "confidence": null
+  },
+  {
+    "text": "the language-model study, and proposed\ndomains. The three algorithms cover",
+    "startMs": 36648,
+    "endMs": 41470,
+    "timestampMs": 36648,
+    "confidence": null
+  },
+  {
+    "text": "the main loop, tournament selection, and\ngeneric mutation. Each item",
+    "startMs": 41470,
+    "endMs": 46292,
+    "timestampMs": 41470,
+    "confidence": null
+  },
+  {
+    "text": "appears first in its substantive teaching\nscene; this inventory is",
+    "startMs": 46292,
+    "endMs": 51114,
+    "timestampMs": 46292,
+    "confidence": null
+  },
+  {
+    "text": "the final completeness check.",
+    "startMs": 51114,
+    "endMs": 53040,
+    "timestampMs": 51114,
+    "confidence": null
+  }
+]

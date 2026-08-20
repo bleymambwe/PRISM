@@ -1,0 +1,191 @@
+[
+  {
+    "text": "Pause on I-audit for a complete evidence\nreading of Experiment",
+    "startMs": 0,
+    "endMs": 5472,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "I — Sparse n=7 parity boundary. First,\nidentify the research",
+    "startMs": 5472,
+    "endMs": 10944,
+    "timestampMs": 5472,
+    "confidence": null
+  },
+  {
+    "text": "question before looking at the answer. The\nquestion asks whether",
+    "startMs": 10944,
+    "endMs": 16416,
+    "timestampMs": 10944,
+    "confidence": null
+  },
+  {
+    "text": "the fixed components create a meaningful\nordering surface, whether a",
+    "startMs": 16416,
+    "endMs": 21888,
+    "timestampMs": 16416,
+    "confidence": null
+  },
+  {
+    "text": "particular neighborhood provides useful\nguidance on that surface, or whether",
+    "startMs": 21888,
+    "endMs": 27360,
+    "timestampMs": 21888,
+    "confidence": null
+  },
+  {
+    "text": "a cheaper executor is equally effective.\nThe sample is all",
+    "startMs": 27360,
+    "endMs": 32832,
+    "timestampMs": 27360,
+    "confidence": null
+  },
+  {
+    "text": "5,040 orderings, and the source artifact\nis",
+    "startMs": 32832,
+    "endMs": 36662,
+    "timestampMs": 32832,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-07/results/n7_parity_landscape.csv;",
+    "startMs": 36662,
+    "endMs": 37209,
+    "timestampMs": 36662,
+    "confidence": null
+  },
+  {
+    "text": "iteration-14/headline_cis.csv. The\nhorizontal axis names the recorded",
+    "startMs": 37209,
+    "endMs": 41039,
+    "timestampMs": 37209,
+    "confidence": null
+  },
+  {
+    "text": "independent quantity—such as permutation\nsize, position, distance, or",
+    "startMs": 41039,
+    "endMs": 45417,
+    "timestampMs": 41039,
+    "confidence": null
+  },
+  {
+    "text": "distinct evaluations. The vertical axis\nnames the measured outcome—such as",
+    "startMs": 45417,
+    "endMs": 50889,
+    "timestampMs": 45417,
+    "confidence": null
+  },
+  {
+    "text": "accuracy, error, hit probability, regret,\ncorrelation, or hitting time. Raw",
+    "startMs": 50889,
+    "endMs": 56361,
+    "timestampMs": 50889,
+    "confidence": null
+  },
+  {
+    "text": "points remain visible when their count\npermits. A summary line",
+    "startMs": 56361,
+    "endMs": 61833,
+    "timestampMs": 56361,
+    "confidence": null
+  },
+  {
+    "text": "or bar describes those points; it does not\nreplace them.",
+    "startMs": 61833,
+    "endMs": 67305,
+    "timestampMs": 61833,
+    "confidence": null
+  },
+  {
+    "text": "A capped observation receives a censor\nmarker, and a sampled",
+    "startMs": 67305,
+    "endMs": 72777,
+    "timestampMs": 67305,
+    "confidence": null
+  },
+  {
+    "text": "landscape never pretends to be\nexhaustively enumerated. The central",
+    "startMs": 72777,
+    "endMs": 78249,
+    "timestampMs": 72777,
+    "confidence": null
+  },
+  {
+    "text": "supports this finding: Conclusion:\nevolution had no reliable advantage on",
+    "startMs": 78249,
+    "endMs": 83721,
+    "timestampMs": 78249,
+    "confidence": null
+  },
+  {
+    "text": "this near-zero-locality landscape. The\ncorrect limitation is: Optimum:",
+    "startMs": 83721,
+    "endMs": 88099,
+    "timestampMs": 83721,
+    "confidence": null
+  },
+  {
+    "text": "1.0000 held by 14 orderings, only 0.28%;\nlandscape standard deviation",
+    "startMs": 88099,
+    "endMs": 93571,
+    "timestampMs": 88099,
+    "confidence": null
+  },
+  {
+    "text": "0.113. That limitation rules out a broader\npromotional interpretation while",
+    "startMs": 93571,
+    "endMs": 99043,
+    "timestampMs": 93571,
+    "confidence": null
+  },
+  {
+    "text": "preserving the result actually measured.\nThe decision carried into the",
+    "startMs": 99043,
+    "endMs": 104515,
+    "timestampMs": 99043,
+    "confidence": null
+  },
+  {
+    "text": "research program is: Carry this constraint\ninto the next experiment",
+    "startMs": 104515,
+    "endMs": 109987,
+    "timestampMs": 104515,
+    "confidence": null
+  },
+  {
+    "text": "and compare methods at equal cost.\nFinally, compare against the",
+    "startMs": 109987,
+    "endMs": 115459,
+    "timestampMs": 109987,
+    "confidence": null
+  },
+  {
+    "text": "equal-budget alternative. Generations,\nrepeated cache hits, and distinct",
+    "startMs": 115459,
+    "endMs": 119837,
+    "timestampMs": 115459,
+    "confidence": null
+  },
+  {
+    "text": "evaluations are not interchangeable. A\nmethod earns a search-efficiency",
+    "startMs": 119837,
+    "endMs": 124762,
+    "timestampMs": 119837,
+    "confidence": null
+  },
+  {
+    "text": "claim only when uncertainty, evaluator\nresolution, optimum density, and",
+    "startMs": 124762,
+    "endMs": 129687,
+    "timestampMs": 124762,
+    "confidence": null
+  },
+  {
+    "text": "evaluation cost have all been accounted\nfor.",
+    "startMs": 129687,
+    "endMs": 133519,
+    "timestampMs": 129687,
+    "confidence": null
+  }
+]

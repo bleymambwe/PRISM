@@ -1,0 +1,205 @@
+[
+  {
+    "text": "This section examines Experiment R —\nTransfer-guided evaluation from first",
+    "startMs": 0,
+    "endMs": 4997,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 4997,
+    "endMs": 9994,
+    "timestampMs": 4997,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 9994,
+    "endMs": 14991,
+    "timestampMs": 9994,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? Input: the",
+    "startMs": 14991,
+    "endMs": 19988,
+    "timestampMs": 14991,
+    "confidence": null
+  },
+  {
+    "text": "complete six-module source landscape and\n222 cached eight-module candidates.",
+    "startMs": 19988,
+    "endMs": 24485,
+    "timestampMs": 19988,
+    "confidence": null
+  },
+  {
+    "text": "Correlations: Spearman approximately 0.656\nand Pearson 0.685 in the final",
+    "startMs": 24485,
+    "endMs": 29482,
+    "timestampMs": 24485,
+    "confidence": null
+  },
+  {
+    "text": "cached policy analysis. Guided order: rank\ncandidates using the transferred",
+    "startMs": 29482,
+    "endMs": 34479,
+    "timestampMs": 29482,
+    "confidence": null
+  },
+  {
+    "text": "score, not their true target fitness.\nOutcome: a perfect eight-module",
+    "startMs": 34479,
+    "endMs": 39476,
+    "timestampMs": 34479,
+    "confidence": null
+  },
+  {
+    "text": "ordering was found by budget five. Random\nprobability: 0.248 of",
+    "startMs": 39476,
+    "endMs": 44473,
+    "timestampMs": 39476,
+    "confidence": null
+  },
+  {
+    "text": "at least one perfect hit by budget five\nbecause 12/222",
+    "startMs": 44473,
+    "endMs": 49470,
+    "timestampMs": 44473,
+    "confidence": null
+  },
+  {
+    "text": "candidates were perfect. Top 10%\ntransferred candidates: mean target",
+    "startMs": 49470,
+    "endMs": 53967,
+    "timestampMs": 49470,
+    "confidence": null
+  },
+  {
+    "text": "accuracy 0.900 versus 0.725 for the pool.\nCaveat: optima were",
+    "startMs": 53967,
+    "endMs": 58964,
+    "timestampMs": 53967,
+    "confidence": null
+  },
+  {
+    "text": "not sparse, so this is supporting evidence\nrather than a",
+    "startMs": 58964,
+    "endMs": 63961,
+    "timestampMs": 58964,
+    "confidence": null
+  },
+  {
+    "text": "standalone top-tier result. Now read\nevidence panel R-guided. The axes,",
+    "startMs": 63961,
+    "endMs": 68958,
+    "timestampMs": 63961,
+    "confidence": null
+  },
+  {
+    "text": "units, and sample are stated on screen.\nThe sample represented",
+    "startMs": 68958,
+    "endMs": 73955,
+    "timestampMs": 68958,
+    "confidence": null
+  },
+  {
+    "text": "here is the sample reported in the source.\nRaw observations",
+    "startMs": 73955,
+    "endMs": 78952,
+    "timestampMs": 73955,
+    "confidence": null
+  },
+  {
+    "text": "remain visible wherever the artifact\nprovides them. Censored observations",
+    "startMs": 78952,
+    "endMs": 83449,
+    "timestampMs": 78952,
+    "confidence": null
+  },
+  {
+    "text": "stay marked at the cap rather than\nbecoming invented hitting",
+    "startMs": 83449,
+    "endMs": 88446,
+    "timestampMs": 83449,
+    "confidence": null
+  },
+  {
+    "text": "times, and sampled landscapes leave\nunobserved permutations blank. The",
+    "startMs": 88446,
+    "endMs": 92943,
+    "timestampMs": 88446,
+    "confidence": null
+  },
+  {
+    "text": "supported finding is: Caveat: optima were\nnot sparse, so this",
+    "startMs": 92943,
+    "endMs": 97940,
+    "timestampMs": 92943,
+    "confidence": null
+  },
+  {
+    "text": "is supporting evidence rather than a\nstandalone top-tier result. The",
+    "startMs": 97940,
+    "endMs": 102937,
+    "timestampMs": 97940,
+    "confidence": null
+  },
+  {
+    "text": "broader claim not established here is:\nCaveat: optima were not",
+    "startMs": 102937,
+    "endMs": 107934,
+    "timestampMs": 102937,
+    "confidence": null
+  },
+  {
+    "text": "sparse, so this is supporting evidence\nrather than a standalone",
+    "startMs": 107934,
+    "endMs": 112931,
+    "timestampMs": 107934,
+    "confidence": null
+  },
+  {
+    "text": "top-tier result. This evidence changed the\nprogram as follows: Carry",
+    "startMs": 112931,
+    "endMs": 117928,
+    "timestampMs": 112931,
+    "confidence": null
+  },
+  {
+    "text": "this constraint into the next experiment\nand compare methods at",
+    "startMs": 117928,
+    "endMs": 122925,
+    "timestampMs": 117928,
+    "confidence": null
+  },
+  {
+    "text": "equal cost. The distinction is part of the\nresult. A",
+    "startMs": 122925,
+    "endMs": 127922,
+    "timestampMs": 122925,
+    "confidence": null
+  },
+  {
+    "text": "large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 127922,
+    "endMs": 132419,
+    "timestampMs": 127922,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 132419,
+    "endMs": 136416,
+    "timestampMs": 132419,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 136416,
+    "endMs": 136910,
+    "timestampMs": 136416,
+    "confidence": null
+  }
+]

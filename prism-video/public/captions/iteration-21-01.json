@@ -1,0 +1,114 @@
+[
+  {
+    "text": "This section examines Iteration 21 —\nNAS-Bench-201 within-slice confirmation",
+    "startMs": 0,
+    "endMs": 4542,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 4542,
+    "endMs": 9588,
+    "timestampMs": 4542,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 9588,
+    "endMs": 14634,
+    "timestampMs": 9588,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 14634,
+    "endMs": 19680,
+    "timestampMs": 14634,
+    "confidence": null
+  },
+  {
+    "text": "Use operation-multiset slices with at\nleast 60 placements and at",
+    "startMs": 19680,
+    "endMs": 24726,
+    "timestampMs": 19680,
+    "confidence": null
+  },
+  {
+    "text": "least a one-point accuracy range.\nPre-register high-structure and",
+    "startMs": 24726,
+    "endMs": 28763,
+    "timestampMs": 24726,
+    "confidence": null
+  },
+  {
+    "text": "low-structure slices from previously\ncommitted metrics. Searcher: elitist",
+    "startMs": 28763,
+    "endMs": 32800,
+    "timestampMs": 28763,
+    "confidence": null
+  },
+  {
+    "text": "swap EA, population 20, tournament 3,\nmutation 0.6; budget 30",
+    "startMs": 32800,
+    "endMs": 37846,
+    "timestampMs": 32800,
+    "confidence": null
+  },
+  {
+    "text": "distinct architectures; 40 seeds. Forecast\naccuracy: 13/18, or 72%; seven",
+    "startMs": 37846,
+    "endMs": 42892,
+    "timestampMs": 37846,
+    "confidence": null
+  },
+  {
+    "text": "of nine high-structure calls and six of\nnine low-structure calls",
+    "startMs": 42892,
+    "endMs": 47938,
+    "timestampMs": 42892,
+    "confidence": null
+  },
+  {
+    "text": "correct. Errors were conservative: the\nlow-structure misses were cases where",
+    "startMs": 47938,
+    "endMs": 52984,
+    "timestampMs": 47938,
+    "confidence": null
+  },
+  {
+    "text": "search won, so the pre-flight under-called\nrather than wasted search",
+    "startMs": 52984,
+    "endMs": 58030,
+    "timestampMs": 52984,
+    "confidence": null
+  },
+  {
+    "text": "budget. The distinction is part of the\nresult. A large",
+    "startMs": 58030,
+    "endMs": 63076,
+    "timestampMs": 58030,
+    "confidence": null
+  },
+  {
+    "text": "ordering effect does not automatically\nimply an evolutionary-search",
+    "startMs": 63076,
+    "endMs": 67113,
+    "timestampMs": 63076,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 67113,
+    "endMs": 71150,
+    "timestampMs": 67113,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 71150,
+    "endMs": 71655,
+    "timestampMs": 71150,
+    "confidence": null
+  }
+]

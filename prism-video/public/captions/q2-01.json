@@ -1,0 +1,107 @@
+[
+  {
+    "text": "This section examines Q2 — Qwen and Llama\ncross-family replication",
+    "startMs": 0,
+    "endMs": 6978,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 6978,
+    "endMs": 13956,
+    "timestampMs": 6978,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 13956,
+    "endMs": 20934,
+    "timestampMs": 13956,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 20934,
+    "endMs": 27912,
+    "timestampMs": 20934,
+    "confidence": null
+  },
+  {
+    "text": "Same 120-ordering, 32-question design.\nLlama mean 0.254: rank correlation",
+    "startMs": 27912,
+    "endMs": 34192,
+    "timestampMs": 27912,
+    "confidence": null
+  },
+  {
+    "text": "0.375 [0.181,0.554], position-table\ncorrelation 0.582, order standard",
+    "startMs": 34192,
+    "endMs": 39076,
+    "timestampMs": 34192,
+    "confidence": null
+  },
+  {
+    "text": "deviation 0.153, range 0–0.62. Qwen mean\n0.918: rank correlation 0.250",
+    "startMs": 39076,
+    "endMs": 46054,
+    "timestampMs": 39076,
+    "confidence": null
+  },
+  {
+    "text": "[0.098,0.490], position-table correlation\n0.401, compressed standard",
+    "startMs": 46054,
+    "endMs": 50241,
+    "timestampMs": 46054,
+    "confidence": null
+  },
+  {
+    "text": "deviation about 0.075, range 0.66–0.97.\nTop-ordering advantage transferred",
+    "startMs": 50241,
+    "endMs": 55823,
+    "timestampMs": 50241,
+    "confidence": null
+  },
+  {
+    "text": "on all three families; bottom-avoidance\ntransferred strongly on targets with",
+    "startMs": 55823,
+    "endMs": 62801,
+    "timestampMs": 55823,
+    "confidence": null
+  },
+  {
+    "text": "headroom. Revised conclusion: Gemma was an\noutlier for positional structure;",
+    "startMs": 62801,
+    "endMs": 69779,
+    "timestampMs": 62801,
+    "confidence": null
+  },
+  {
+    "text": "transfer is capability-dependent and\ncompresses near ceiling. The",
+    "startMs": 69779,
+    "endMs": 75361,
+    "timestampMs": 69779,
+    "confidence": null
+  },
+  {
+    "text": "distinction is part of the result. A large\nordering effect",
+    "startMs": 75361,
+    "endMs": 82339,
+    "timestampMs": 75361,
+    "confidence": null
+  },
+  {
+    "text": "does not automatically imply an\nevolutionary-search advantage, and",
+    "startMs": 82339,
+    "endMs": 87921,
+    "timestampMs": 82339,
+    "confidence": null
+  },
+  {
+    "text": "almost-sure convergence does not promise\npractical efficiency.",
+    "startMs": 87921,
+    "endMs": 92804,
+    "timestampMs": 87921,
+    "confidence": null
+  }
+]

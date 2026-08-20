@@ -1,0 +1,177 @@
+[
+  {
+    "text": "This section examines Experiment H —\nScale-up to 720 and",
+    "startMs": 0,
+    "endMs": 5436,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "beyond from first principles. Keep two\nquestions separate: does changing",
+    "startMs": 5436,
+    "endMs": 10872,
+    "timestampMs": 5436,
+    "confidence": null
+  },
+  {
+    "text": "the order change the measured outcome, and\ndoes the proposed",
+    "startMs": 10872,
+    "endMs": 16308,
+    "timestampMs": 10872,
+    "confidence": null
+  },
+  {
+    "text": "search method beat a matched alternative\nat the same distinct-evaluation",
+    "startMs": 16308,
+    "endMs": 21744,
+    "timestampMs": 16308,
+    "confidence": null
+  },
+  {
+    "text": "budget? Stage A: six-block XOR, 720\norderings, 33 optima, standard",
+    "startMs": 21744,
+    "endMs": 27180,
+    "timestampMs": 21744,
+    "confidence": null
+  },
+  {
+    "text": "deviation 0.1103; portfolio prism, 80\ngenerations, 10 seeds; 90% hit",
+    "startMs": 27180,
+    "endMs": 32616,
+    "timestampMs": 27180,
+    "confidence": null
+  },
+  {
+    "text": "rate and mean regret 0.0083. Stage B:\nseven-block XOR, one-trial",
+    "startMs": 32616,
+    "endMs": 38052,
+    "timestampMs": 32616,
+    "confidence": null
+  },
+  {
+    "text": "objective, 800-evaluation budget, four\nseeds; both prism and random reached",
+    "startMs": 38052,
+    "endMs": 43488,
+    "timestampMs": 38052,
+    "confidence": null
+  },
+  {
+    "text": "1.0 because the optimum set was too dense.\nProtocol lesson:",
+    "startMs": 43488,
+    "endMs": 48924,
+    "timestampMs": 43488,
+    "confidence": null
+  },
+  {
+    "text": "record evaluations to first optimum and\nuse a sparse-optimum benchmark.",
+    "startMs": 48924,
+    "endMs": 54360,
+    "timestampMs": 48924,
+    "confidence": null
+  },
+  {
+    "text": "This directly motivates Experiment I. Now\nread evidence panel H-scaleup.",
+    "startMs": 54360,
+    "endMs": 59796,
+    "timestampMs": 54360,
+    "confidence": null
+  },
+  {
+    "text": "The axes, units, and sample are stated on\nscreen. The",
+    "startMs": 59796,
+    "endMs": 65232,
+    "timestampMs": 59796,
+    "confidence": null
+  },
+  {
+    "text": "sample represented here is 720 orderings.\nRaw observations remain visible",
+    "startMs": 65232,
+    "endMs": 70668,
+    "timestampMs": 65232,
+    "confidence": null
+  },
+  {
+    "text": "wherever the artifact provides them.\nCensored observations stay marked at",
+    "startMs": 70668,
+    "endMs": 76104,
+    "timestampMs": 70668,
+    "confidence": null
+  },
+  {
+    "text": "the cap rather than becoming invented\nhitting times, and sampled",
+    "startMs": 76104,
+    "endMs": 81540,
+    "timestampMs": 76104,
+    "confidence": null
+  },
+  {
+    "text": "landscapes leave unobserved permutations\nblank. The supported finding is:",
+    "startMs": 81540,
+    "endMs": 86432,
+    "timestampMs": 81540,
+    "confidence": null
+  },
+  {
+    "text": "Stage A: six-block XOR, 720 orderings, 33\noptima, standard deviation",
+    "startMs": 86432,
+    "endMs": 91868,
+    "timestampMs": 86432,
+    "confidence": null
+  },
+  {
+    "text": "0.1103; portfolio prism, 80 generations,\n10 seeds; 90% hit rate",
+    "startMs": 91868,
+    "endMs": 97304,
+    "timestampMs": 91868,
+    "confidence": null
+  },
+  {
+    "text": "and mean regret 0.0083. The broader claim\nnot established here",
+    "startMs": 97304,
+    "endMs": 102740,
+    "timestampMs": 97304,
+    "confidence": null
+  },
+  {
+    "text": "is: The conclusion is scoped to the\nrecorded evaluator, landscape,",
+    "startMs": 102740,
+    "endMs": 108176,
+    "timestampMs": 102740,
+    "confidence": null
+  },
+  {
+    "text": "and budget. This evidence changed the\nprogram as follows: This",
+    "startMs": 108176,
+    "endMs": 113612,
+    "timestampMs": 108176,
+    "confidence": null
+  },
+  {
+    "text": "directly motivates Experiment I. The\ndistinction is part of the",
+    "startMs": 113612,
+    "endMs": 119048,
+    "timestampMs": 113612,
+    "confidence": null
+  },
+  {
+    "text": "result. A large ordering effect does not\nautomatically imply an",
+    "startMs": 119048,
+    "endMs": 124484,
+    "timestampMs": 119048,
+    "confidence": null
+  },
+  {
+    "text": "evolutionary-search advantage, and\nalmost-sure convergence does not promise",
+    "startMs": 124484,
+    "endMs": 128833,
+    "timestampMs": 124484,
+    "confidence": null
+  },
+  {
+    "text": "practical efficiency.",
+    "startMs": 128833,
+    "endMs": 129919,
+    "timestampMs": 128833,
+    "confidence": null
+  }
+]

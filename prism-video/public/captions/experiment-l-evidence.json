@@ -1,0 +1,198 @@
+[
+  {
+    "text": "Pause on L-methods for a complete evidence\nreading of Experiment",
+    "startMs": 0,
+    "endMs": 5042,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "L — Aging, hybrid ideas, and a positional\nsurrogate. First,",
+    "startMs": 5042,
+    "endMs": 10084,
+    "timestampMs": 5042,
+    "confidence": null
+  },
+  {
+    "text": "identify the research question before\nlooking at the answer. The",
+    "startMs": 10084,
+    "endMs": 15126,
+    "timestampMs": 10084,
+    "confidence": null
+  },
+  {
+    "text": "question asks whether the fixed components\ncreate a meaningful ordering",
+    "startMs": 15126,
+    "endMs": 20168,
+    "timestampMs": 15126,
+    "confidence": null
+  },
+  {
+    "text": "surface, whether a particular neighborhood\nprovides useful guidance on that",
+    "startMs": 20168,
+    "endMs": 25210,
+    "timestampMs": 20168,
+    "confidence": null
+  },
+  {
+    "text": "surface, or whether a cheaper executor is\nequally effective. The",
+    "startMs": 25210,
+    "endMs": 30252,
+    "timestampMs": 25210,
+    "confidence": null
+  },
+  {
+    "text": "sample is 15 seeds, and the source\nartifact is",
+    "startMs": 30252,
+    "endMs": 34790,
+    "timestampMs": 30252,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-10/results/improved_search.csv.\nThe horizontal axis",
+    "startMs": 34790,
+    "endMs": 36807,
+    "timestampMs": 34790,
+    "confidence": null
+  },
+  {
+    "text": "names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 36807,
+    "endMs": 41345,
+    "timestampMs": 36807,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 41345,
+    "endMs": 46387,
+    "timestampMs": 41345,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 46387,
+    "endMs": 50925,
+    "timestampMs": 46387,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 50925,
+    "endMs": 55967,
+    "timestampMs": 50925,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 55967,
+    "endMs": 61009,
+    "timestampMs": 55967,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 61009,
+    "endMs": 66051,
+    "timestampMs": 61009,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 66051,
+    "endMs": 71093,
+    "timestampMs": 66051,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nParity: aging improved hit",
+    "startMs": 71093,
+    "endMs": 76135,
+    "timestampMs": 71093,
+    "confidence": null
+  },
+  {
+    "text": "rate from roughly 48% to 78%, but random\nwas about",
+    "startMs": 76135,
+    "endMs": 81177,
+    "timestampMs": 76135,
+    "confidence": null
+  },
+  {
+    "text": "75%; it fixed premature convergence\nwithout creating locality. The correct",
+    "startMs": 81177,
+    "endMs": 86219,
+    "timestampMs": 81177,
+    "confidence": null
+  },
+  {
+    "text": "limitation is: The conclusion is scoped to\nthe recorded evaluator,",
+    "startMs": 86219,
+    "endMs": 91261,
+    "timestampMs": 86219,
+    "confidence": null
+  },
+  {
+    "text": "landscape, and budget. That limitation\nrules out a broader promotional",
+    "startMs": 91261,
+    "endMs": 96303,
+    "timestampMs": 91261,
+    "confidence": null
+  },
+  {
+    "text": "interpretation while preserving the result\nactually measured. The decision",
+    "startMs": 96303,
+    "endMs": 100841,
+    "timestampMs": 96303,
+    "confidence": null
+  },
+  {
+    "text": "carried into the research program is:\nDecision: F D C-negative",
+    "startMs": 100841,
+    "endMs": 105883,
+    "timestampMs": 100841,
+    "confidence": null
+  },
+  {
+    "text": "suggests elitist search with a matched or\nportfolio operator; F",
+    "startMs": 105883,
+    "endMs": 110925,
+    "timestampMs": 105883,
+    "confidence": null
+  },
+  {
+    "text": "D C near zero suggests random or aging.\nFinally, compare",
+    "startMs": 110925,
+    "endMs": 115967,
+    "timestampMs": 110925,
+    "confidence": null
+  },
+  {
+    "text": "against the equal-budget alternative.\nGenerations, repeated cache hits, and",
+    "startMs": 115967,
+    "endMs": 120505,
+    "timestampMs": 115967,
+    "confidence": null
+  },
+  {
+    "text": "distinct evaluations are not\ninterchangeable. A method earns a",
+    "startMs": 120505,
+    "endMs": 125043,
+    "timestampMs": 120505,
+    "confidence": null
+  },
+  {
+    "text": "search-efficiency claim only when\nuncertainty, evaluator resolution, optimum",
+    "startMs": 125043,
+    "endMs": 129076,
+    "timestampMs": 125043,
+    "confidence": null
+  },
+  {
+    "text": "density, and evaluation cost have all been\naccounted for.",
+    "startMs": 129076,
+    "endMs": 133609,
+    "timestampMs": 129076,
+    "confidence": null
+  }
+]

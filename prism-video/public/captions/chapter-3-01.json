@@ -1,0 +1,163 @@
+[
+  {
+    "text": "This section examines Chapter 3 — Mutation\nis a hypothesis",
+    "startMs": 0,
+    "endMs": 4505,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "about locality (7–8 minutes) from first\nprinciples. Keep two questions",
+    "startMs": 4505,
+    "endMs": 9010,
+    "timestampMs": 4505,
+    "confidence": null
+  },
+  {
+    "text": "separate: does changing the order change\nthe measured outcome, and",
+    "startMs": 9010,
+    "endMs": 13515,
+    "timestampMs": 9010,
+    "confidence": null
+  },
+  {
+    "text": "does the proposed search method beat a\nmatched alternative at",
+    "startMs": 13515,
+    "endMs": 18020,
+    "timestampMs": 13515,
+    "confidence": null
+  },
+  {
+    "text": "the same distinct-evaluation budget? Use\nthe same starting ordering for",
+    "startMs": 18020,
+    "endMs": 22525,
+    "timestampMs": 18020,
+    "confidence": null
+  },
+  {
+    "text": "all operators: Swap: exchange two\npositions. Insert: remove one item",
+    "startMs": 22525,
+    "endMs": 27030,
+    "timestampMs": 22525,
+    "confidence": null
+  },
+  {
+    "text": "and reinsert it. Inversion: reverse a\ncontiguous segment. Scramble: randomly",
+    "startMs": 27030,
+    "endMs": 31535,
+    "timestampMs": 27030,
+    "confidence": null
+  },
+  {
+    "text": "shuffle a segment. Portfolio: choose an\noperator uniformly per mutation",
+    "startMs": 31535,
+    "endMs": 36040,
+    "timestampMs": 31535,
+    "confidence": null
+  },
+  {
+    "text": "event. Adaptive: reweight operators using\nrecent improvements. For each",
+    "startMs": 36040,
+    "endMs": 40095,
+    "timestampMs": 36040,
+    "confidence": null
+  },
+  {
+    "text": "operator, show the exact before-and-after\nordering, then the structure it",
+    "startMs": 40095,
+    "endMs": 44600,
+    "timestampMs": 40095,
+    "confidence": null
+  },
+  {
+    "text": "changes efficiently: . Landscape structure\n. Matched operator . Intuition",
+    "startMs": 44600,
+    "endMs": 49105,
+    "timestampMs": 44600,
+    "confidence": null
+  },
+  {
+    "text": ". . --- . --- . --- . . item",
+    "startMs": 49105,
+    "endMs": 53610,
+    "timestampMs": 49105,
+    "confidence": null
+  },
+  {
+    "text": "belongs in a slot . swap . directly\nrepairs two",
+    "startMs": 53610,
+    "endMs": 58115,
+    "timestampMs": 53610,
+    "confidence": null
+  },
+  {
+    "text": "locations . . item must precede another .\ninsert .",
+    "startMs": 58115,
+    "endMs": 62620,
+    "timestampMs": 58115,
+    "confidence": null
+  },
+  {
+    "text": "changes many before/after relations\nefficiently . . neighboring pairs matter",
+    "startMs": 62620,
+    "endMs": 67125,
+    "timestampMs": 62620,
+    "confidence": null
+  },
+  {
+    "text": ". inversion . repairs routes and adjacency\nwhile preserving segments",
+    "startMs": 67125,
+    "endMs": 71630,
+    "timestampMs": 67125,
+    "confidence": null
+  },
+  {
+    "text": ". Build the Cayley graph of S_3 node by\nnode.",
+    "startMs": 71630,
+    "endMs": 76135,
+    "timestampMs": 71630,
+    "confidence": null
+  },
+  {
+    "text": "Explain that a mutation operator defines\nthe graph’s edges, so",
+    "startMs": 76135,
+    "endMs": 80640,
+    "timestampMs": 76135,
+    "confidence": null
+  },
+  {
+    "text": "“nearby” is operator-dependent. State the\nmature lesson: choosing a mutation",
+    "startMs": 80640,
+    "endMs": 85145,
+    "timestampMs": 80640,
+    "confidence": null
+  },
+  {
+    "text": "is choosing a representation of local\nstructure. The distinction is",
+    "startMs": 85145,
+    "endMs": 89650,
+    "timestampMs": 85145,
+    "confidence": null
+  },
+  {
+    "text": "part of the result. A large ordering\neffect does not",
+    "startMs": 89650,
+    "endMs": 94155,
+    "timestampMs": 89650,
+    "confidence": null
+  },
+  {
+    "text": "automatically imply an evolutionary-search\nadvantage, and almost-sure",
+    "startMs": 94155,
+    "endMs": 97309,
+    "timestampMs": 94155,
+    "confidence": null
+  },
+  {
+    "text": "convergence does not promise practical\nefficiency.",
+    "startMs": 97309,
+    "endMs": 100020,
+    "timestampMs": 97309,
+    "confidence": null
+  }
+]

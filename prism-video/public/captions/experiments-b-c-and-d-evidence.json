@@ -1,0 +1,198 @@
+[
+  {
+    "text": "Pause on T4-scaling for a complete\nevidence reading of Experiments",
+    "startMs": 0,
+    "endMs": 5101,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "B, C, and D — Scaling, operator matching,\nand deception.",
+    "startMs": 5101,
+    "endMs": 10202,
+    "timestampMs": 5101,
+    "confidence": null
+  },
+  {
+    "text": "First, identify the research question\nbefore looking at the answer.",
+    "startMs": 10202,
+    "endMs": 15303,
+    "timestampMs": 10202,
+    "confidence": null
+  },
+  {
+    "text": "The question asks whether the fixed\ncomponents create a meaningful",
+    "startMs": 15303,
+    "endMs": 20404,
+    "timestampMs": 15303,
+    "confidence": null
+  },
+  {
+    "text": "ordering surface, whether a particular\nneighborhood provides useful guidance",
+    "startMs": 20404,
+    "endMs": 24995,
+    "timestampMs": 20404,
+    "confidence": null
+  },
+  {
+    "text": "on that surface, or whether a cheaper\nexecutor is equally",
+    "startMs": 24995,
+    "endMs": 30096,
+    "timestampMs": 24995,
+    "confidence": null
+  },
+  {
+    "text": "effective. The sample is 15 seeds, and the\nsource artifact",
+    "startMs": 30096,
+    "endMs": 35197,
+    "timestampMs": 30096,
+    "confidence": null
+  },
+  {
+    "text": "is\nprism-research/outputs/scaling_results.csv;",
+    "startMs": 35197,
+    "endMs": 37237,
+    "timestampMs": 35197,
+    "confidence": null
+  },
+  {
+    "text": "horizontal axis names the recorded\nindependent quantity—such as permutation",
+    "startMs": 37237,
+    "endMs": 41828,
+    "timestampMs": 37237,
+    "confidence": null
+  },
+  {
+    "text": "size, position, distance, or distinct\nevaluations. The vertical axis names",
+    "startMs": 41828,
+    "endMs": 46929,
+    "timestampMs": 41828,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome—such as accuracy,\nerror, hit probability, regret,",
+    "startMs": 46929,
+    "endMs": 51520,
+    "timestampMs": 46929,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 51520,
+    "endMs": 56621,
+    "timestampMs": 51520,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 56621,
+    "endMs": 61722,
+    "timestampMs": 56621,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 61722,
+    "endMs": 66823,
+    "timestampMs": 61722,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 66823,
+    "endMs": 71924,
+    "timestampMs": 66823,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: Matched",
+    "startMs": 71924,
+    "endMs": 76515,
+    "timestampMs": 71924,
+    "confidence": null
+  },
+  {
+    "text": "results at n=16: swap on Hamming, mean 405\ngenerations; insert",
+    "startMs": 76515,
+    "endMs": 81616,
+    "timestampMs": 76515,
+    "confidence": null
+  },
+  {
+    "text": "on Kendall, mean 396; inversion on\nadjacency, mean 1,199. The",
+    "startMs": 81616,
+    "endMs": 86717,
+    "timestampMs": 81616,
+    "confidence": null
+  },
+  {
+    "text": "correct limitation is: The conclusion is\nscoped to the recorded",
+    "startMs": 86717,
+    "endMs": 91818,
+    "timestampMs": 86717,
+    "confidence": null
+  },
+  {
+    "text": "evaluator, landscape, and budget. That\nlimitation rules out a broader",
+    "startMs": 91818,
+    "endMs": 96919,
+    "timestampMs": 91818,
+    "confidence": null
+  },
+  {
+    "text": "promotional interpretation while\npreserving the result actually measured.",
+    "startMs": 96919,
+    "endMs": 101000,
+    "timestampMs": 96919,
+    "confidence": null
+  },
+  {
+    "text": "The decision carried into the research\nprogram is: Carry this",
+    "startMs": 101000,
+    "endMs": 106101,
+    "timestampMs": 101000,
+    "confidence": null
+  },
+  {
+    "text": "constraint into the next experiment and\ncompare methods at equal",
+    "startMs": 106101,
+    "endMs": 111202,
+    "timestampMs": 106101,
+    "confidence": null
+  },
+  {
+    "text": "cost. Finally, compare against the\nequal-budget alternative. Generations,",
+    "startMs": 111202,
+    "endMs": 115283,
+    "timestampMs": 111202,
+    "confidence": null
+  },
+  {
+    "text": "repeated cache hits, and distinct\nevaluations are not interchangeable. A",
+    "startMs": 115283,
+    "endMs": 120384,
+    "timestampMs": 115283,
+    "confidence": null
+  },
+  {
+    "text": "method earns a search-efficiency claim\nonly when uncertainty, evaluator",
+    "startMs": 120384,
+    "endMs": 124975,
+    "timestampMs": 120384,
+    "confidence": null
+  },
+  {
+    "text": "resolution, optimum density, and\nevaluation cost have all been accounted",
+    "startMs": 124975,
+    "endMs": 130076,
+    "timestampMs": 124975,
+    "confidence": null
+  },
+  {
+    "text": "for.",
+    "startMs": 130076,
+    "endMs": 130585,
+    "timestampMs": 130076,
+    "confidence": null
+  }
+]

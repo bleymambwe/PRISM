@@ -1,0 +1,33 @@
+site_name: PRISM
+site_description: Landscape diagnostics and search for permutation-valued decisions
+repo_url: https://github.com/bleymambwe/PRISM
+repo_name: bleymambwe/PRISM
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Quick start: quickstart.md
+  - API: api.md
+  - Reproducibility: reproducibility.md
+  - Governance: governance.md
+  - Release process: release-process.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+
+# The research record lives in docs/ for GitHub readers but is not part of the
+# user documentation site. Excluded so its cross-links out of the docs tree do
+# not fail `mkdocs build --strict`.
+exclude_docs: |
+  ARTIFACT_INDEX.md
+  DECISION_LOG.md
+  EXPERIMENT_LOG.md
+  EXPERIMENTS_AUDIT_REPORT_*.md
+  EXPERIMENTS_AUDIT_REPORT_*.pdf
+  ITERATION_TEMPLATE.md
+  LITERATURE_LOG.md
+  RISK_REGISTER.md

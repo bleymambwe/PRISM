@@ -1,0 +1,80 @@
+{
+  "iteration": 26,
+  "name": "Tier 0 zero-cost program",
+  "registered": "2026-08-13",
+  "registered_before_execution": true,
+  "cost_usd": 0.0,
+  "purpose": "Close the empirical-rigor objections for an ICLR 2027 submission without spending API budget, by replaying optimizers against already-enumerated landscapes.",
+  "conventions": {
+    "charging": "distinct evaluated permutations; repeats served from cache and not charged",
+    "reference_method": "uniform sampling without replacement at equal total budget",
+    "optima": "exact, from full enumeration, not best-observed proxies",
+    "seeds": 40,
+    "budget_grid": [15, 25, 50, 100, 200],
+    "interval": "Wilson score interval at 95%",
+    "decisive": "one method's Wilson lower bound exceeds the other's Wilson upper bound"
+  },
+  "hypotheses": [
+    {
+      "id": "H27",
+      "experiment": "E0.1",
+      "claim": "On landscapes whose pre-flight regime call is 'search pays' (operator-aligned FDC <= -0.15), at least one structured search method beats uniform sampling decisively at budget 100.",
+      "direction": "structured > uniform",
+      "threshold": "Wilson lower bound of some method > Wilson upper bound of uniform, success@100",
+      "falsified_if": "no method achieves this on any landscape called 'search pays'",
+      "reversal_consequence": "The decision band does not identify landscapes where search pays; the rule needs re-derivation, not re-description."
+    },
+    {
+      "id": "H28",
+      "experiment": "E0.1",
+      "claim": "On the exhaustive LLM instruction-ordering landscape, no method beats uniform sampling decisively at budget 50 -- the published 'PRISM approximately equals random' result survives a full 13-method gauntlet.",
+      "direction": "no method decisively > uniform",
+      "threshold": "no method's Wilson lower bound on success@50 exceeds uniform's Wilson upper bound",
+      "falsified_if": "any method clears that bar",
+      "note": "This hypothesis predicts a NEGATIVE result and is registered deliberately. The paper's argument is that the protocol forecasts its own failures.",
+      "reversal_consequence": "A method that decisively beats random on this landscape would be a stronger result than the null and would be reported as the headline."
+    },
+    {
+      "id": "H29",
+      "experiment": "E0.1",
+      "claim": "The precedence-pair surrogate is among the two strongest non-uniform methods on precedence-structured landscapes, replicating Iteration 12 (kendall n=7 reached in ~13.5 evaluations against 55.7 for elitist).",
+      "direction": "surrogate_precedence top-2",
+      "threshold": "top-2 by mean evaluations-to-first-optimum on kendall_n7",
+      "falsified_if": "it ranks third or worse"
+    },
+    {
+      "id": "H30",
+      "experiment": "E0.1",
+      "claim": "Charging the pre-flight probe to the budget does not sink the protocol: prism_protocol stays within 10 percentage points of uniform's success@100 on every landscape.",
+      "direction": "prism_protocol >= uniform - 0.10",
+      "threshold": "10 percentage points of success rate at budget 100",
+      "falsified_if": "prism_protocol falls more than 10pp below uniform on any landscape",
+      "reversal_consequence": "The pre-flight is too expensive at small budgets; the paper must state the budget below which the protocol should not be run."
+    },
+    {
+      "id": "H31",
+      "experiment": "E0.2",
+      "claim": "Regime-call accuracy against the full-enumeration truth rises with probe size m and reaches at least 90% at m=200 on landscapes whose |FDC - threshold| >= 0.10.",
+      "direction": "accuracy increases with m",
+      "threshold": "0.90 accuracy at m=200 on clear-margin landscapes",
+      "falsified_if": "accuracy at m=200 is below 0.90 on such landscapes"
+    },
+    {
+      "id": "H32",
+      "experiment": "E0.2",
+      "claim": "Operator selection by argmax rho1 agrees with the full-enumeration argmax at least 90% of the time once m >= 100 pairs, on typed synthetic landscapes.",
+      "direction": "agreement increases with m",
+      "threshold": "0.90 agreement at m=100",
+      "falsified_if": "agreement below 0.90 at m=100 on typed synthetics"
+    },
+    {
+      "id": "H33",
+      "experiment": "E0.3",
+      "claim": "The LLM landscape's regime call is unstable below 16 questions: agreement with the full 32-question call drops below 80% at q=8.",
+      "direction": "stability falls with fewer questions",
+      "threshold": "0.80 agreement at q=8",
+      "falsified_if": "agreement at q=8 remains at or above 0.80",
+      "reversal_consequence": "If the call is stable even at q=8, the resolution objection is weaker than assumed and the paid resolution upgrade (E1) is less urgent."
+    }
+  ]
+}

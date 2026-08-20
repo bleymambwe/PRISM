@@ -1,0 +1,51 @@
+{
+  "_note": [
+    "TEMPLATE. Copy to hypotheses.json, replace every value, and COMMIT it",
+    "before the first submit. The commit timestamp is the registration, so a",
+    "file written after results exist is worthless as evidence. e1_batch.py",
+    "refuses to submit unless hypotheses.json exists and is tracked by git.",
+    "Each entry needs a direction, a decision threshold, and a reversal",
+    "condition -- what result would make you withdraw the claim (D18/D25/D27).",
+    "The examples below are illustrative, not endorsed: set your own numbers,",
+    "and remember Tier 0 falsified H33, which is why the ledger is credible."
+  ],
+  "experiment": "E1 -- flagship instruction-order landscape at 200 GSM8K questions",
+  "registered": "YYYY-MM-DD",
+  "registered_by": "",
+  "model": "gemini-2.5-flash-lite",
+  "preconditions": {
+    "smoke_gate": "batch and sync grades agree on 20/20 cells",
+    "drift_gate": "cell-level agreement with Experiment K reported before any enumeration"
+  },
+  "hypotheses": [
+    {
+      "id": "H34",
+      "claim": "The worst-to-best span survives the resolution upgrade",
+      "direction": "span at 200 questions >= 0.60",
+      "threshold": 0.60,
+      "reversal": "span < 0.60 means the published 6.3%-96.9% figure was substantially a low-resolution artifact; report that as the headline finding and revise every claim that rests on the span",
+      "forecast_made_before_data": true
+    },
+    {
+      "id": "H35",
+      "claim": "Optimum density falls far enough for the success metric to discriminate",
+      "direction": "optimum density at 200 questions < 1.67%, the level at which every correct 'search pays' call in Tier 0 sat",
+      "threshold": 0.0167,
+      "reversal": "density still >= 4.58% means E1 did not buy discriminating power and the saturation problem is intrinsic to this landscape, not to the question count"
+    },
+    {
+      "id": "H36",
+      "claim": "The regime call is unchanged by resolution",
+      "direction": "the pre-flight call at 200 questions matches the published call at 32",
+      "threshold": "exact match",
+      "reversal": "a changed call at fixed model and prompt would contradict Tier 0's margin law (H33) and must be reported as such"
+    },
+    {
+      "id": "H37",
+      "claim": "Uniform sampling no longer saturates",
+      "direction": "success@50 for uniform < 1.00 on the re-run gauntlet",
+      "threshold": 1.0,
+      "reversal": "still 1.00 means the honest comparison stays at budget 15 and the paper says so"
+    }
+  ]
+}

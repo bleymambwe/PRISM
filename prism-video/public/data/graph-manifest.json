@@ -1,0 +1,316 @@
+[
+  {
+    "id": "overview-headlines",
+    "artifact": "PRISM_Remotion_Kokoro_Production_Brief.md",
+    "rowCount": 3,
+    "filters": [],
+    "transforms": [
+      "reported summary values only"
+    ],
+    "xAxis": "evidence panel",
+    "yAxis": "reported range",
+    "displayedSummary": "Headline ranges introduce the distinction between order sensitivity and optimizer advantage."
+  },
+  {
+    "id": "T1-search-space",
+    "artifact": "Paper Table 1",
+    "rowCount": 30,
+    "filters": [],
+    "transforms": [
+      "exact combinatorial formulas",
+      "logarithmic y-axis requested"
+    ],
+    "xAxis": "number of slots or items n",
+    "yAxis": "candidate count (log scale)",
+    "displayedSummary": "Factorial permutation growth remains rapid even though the component set is fixed."
+  },
+  {
+    "id": "T4-scaling",
+    "artifact": "prism-research/outputs/scaling_summary.csv",
+    "rowCount": 14,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "permutation size n",
+    "yAxis": "mean hit generation",
+    "displayedSummary": "Matched smooth synthetic cases are consistent with the proposed cubic-log trend over the tested range."
+  },
+  {
+    "id": "A-validation",
+    "artifact": "prism-research/outputs/validation_results.csv",
+    "rowCount": 5,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "task",
+    "yAxis": "best recorded fitness",
+    "displayedSummary": "Headline values reproduce, while the variance audit narrows interpretation."
+  },
+  {
+    "id": "CD-operators",
+    "artifact": "experiments/iteration-03/results/operator_summary.csv",
+    "rowCount": 78,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "permutation size n",
+    "yAxis": "mean generations; cap marked separately",
+    "displayedSummary": "Matched operators lead while mismatch and deception censor under realistic budgets."
+  },
+  {
+    "id": "E-flat",
+    "artifact": "experiments/iteration-03/results/toy_v3_results.csv",
+    "rowCount": 2,
+    "filters": [],
+    "transforms": [
+      "0.500 reconstructed from recorded stage-one summary",
+      "no connecting trend line"
+    ],
+    "xAxis": "attempted task",
+    "yAxis": "accuracy",
+    "displayedSummary": "The redesigned plain stack has zero useful ordering variance."
+  },
+  {
+    "id": "F-portfolio",
+    "artifact": "experiments/iteration-04/results/portfolio_summary.csv",
+    "rowCount": 36,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "permutation size n",
+    "yAxis": "overhead ratio",
+    "displayedSummary": "Uniform portfolio avoids censoring at bounded overhead."
+  },
+  {
+    "id": "G-landscape",
+    "artifact": "experiments/iteration-05/results/v4_landscape.csv",
+    "rowCount": 240,
+    "filters": [],
+    "transforms": [
+      "raw enumerated points sorted only for display"
+    ],
+    "xAxis": "enumerated ordering rank",
+    "yAxis": "deterministic fitness",
+    "displayedSummary": "XOR and parity have different optimum densities and search difficulty."
+  },
+  {
+    "id": "H-scaleup",
+    "artifact": "experiments/iteration-06/results/n6_landscape.csv",
+    "rowCount": 720,
+    "filters": [],
+    "transforms": [
+      "28-bin histogram of raw fitness"
+    ],
+    "xAxis": "fitness bin",
+    "yAxis": "ordering count",
+    "displayedSummary": "Dense optima make method comparisons saturate."
+  },
+  {
+    "id": "I-audit",
+    "artifact": "experiments/iteration-07/results/n7_parity_landscape.csv",
+    "rowCount": 5040,
+    "filters": [],
+    "transforms": [
+      "36-bin histogram of all raw fitness values"
+    ],
+    "xAxis": "fitness bin",
+    "yAxis": "ordering count",
+    "displayedSummary": "Only fourteen orderings are optimal and audited evolution does not beat random."
+  },
+  {
+    "id": "J-locality",
+    "artifact": "experiments/iteration-08/results/locality.csv",
+    "rowCount": 8,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "landscape",
+    "yAxis": "correlation",
+    "displayedSummary": "Rho one selects neighborhoods while FDC distinguishes guidance from deception."
+  },
+  {
+    "id": "K-llm",
+    "artifact": "experiments/iteration-09/results/llm_landscape.csv",
+    "rowCount": 720,
+    "filters": [],
+    "transforms": [
+      "30-bin histogram of raw cached fitness"
+    ],
+    "xAxis": "accuracy bin",
+    "yAxis": "ordering count",
+    "displayedSummary": "Accuracy spans 0.063–0.969 across fixed-wording orderings."
+  },
+  {
+    "id": "L-methods",
+    "artifact": "experiments/iteration-10/results/improved_search.csv",
+    "rowCount": 180,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "recorded run",
+    "yAxis": "distinct evaluations to optimum",
+    "displayedSummary": "Aging improves robustness but does not manufacture locality."
+  },
+  {
+    "id": "M-eight-module",
+    "artifact": "experiments/iteration-11/results/search_results.csv",
+    "rowCount": 8,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "method-seed run",
+    "yAxis": "best accuracy by 120 evaluations",
+    "displayedSummary": "Both methods saturate on a coarse twenty-question evaluator."
+  },
+  {
+    "id": "N-surrogate",
+    "artifact": "experiments/iteration-12/results/hybrid_surrogate.csv",
+    "rowCount": 510,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "recorded run",
+    "yAxis": "distinct evaluations to optimum",
+    "displayedSummary": "Precedence features produce the decisive Kendall result."
+  },
+  {
+    "id": "O-transfer",
+    "artifact": "experiments/iteration-16/results/transfer.txt",
+    "rowCount": 2,
+    "filters": [],
+    "transforms": [
+      "reported correlation summaries only"
+    ],
+    "xAxis": "source score",
+    "yAxis": "target score",
+    "displayedSummary": "Transfer is absent across neural tasks but strong within the LLM instruction family."
+  },
+  {
+    "id": "P-sciml",
+    "artifact": "experiments/iteration-16/results/sciml_landscape.csv",
+    "rowCount": 720,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "fitness bin",
+    "yAxis": "pipeline count",
+    "displayedSummary": "Order changes recovery error greatly even though random is the better executor."
+  },
+  {
+    "id": "Q-progress",
+    "artifact": "experiments/iteration-17 paper-cut record",
+    "rowCount": 2,
+    "filters": [],
+    "transforms": [
+      "paper-cut progress values only"
+    ],
+    "xAxis": "progress state",
+    "yAxis": "target cells",
+    "displayedSummary": "The target experiment is registered but incomplete at Iteration 18."
+  },
+  {
+    "id": "R-guided",
+    "artifact": "experiments/iteration-18/results/transfer_guided_selection.txt",
+    "rowCount": 4,
+    "filters": [],
+    "transforms": [
+      "reported summary values only"
+    ],
+    "xAxis": "budget or group",
+    "yAxis": "reported score",
+    "displayedSummary": "Guided ranking yields an early hit, but dense optima make random success plausible."
+  },
+  {
+    "id": "EP-S-math",
+    "artifact": "experiments/iteration-23-experiment-s/results/experiment_s_report.txt",
+    "rowCount": 3,
+    "filters": [],
+    "transforms": [
+      "reported audited means only"
+    ],
+    "xAxis": "method",
+    "yAxis": "mean evaluations to near-best",
+    "displayedSummary": "Intervals overlap and the sensitivity hypothesis is falsified."
+  },
+  {
+    "id": "EP-I22-rho",
+    "artifact": "experiments/iteration-22-rho1-ablation/results/rho1_ablation.csv",
+    "rowCount": 12,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "sample budget",
+    "yAxis": "operator-pick accuracy",
+    "displayedSummary": "Independent pairs lead at the protocol's low budget."
+  },
+  {
+    "id": "EP-I21-nasbench",
+    "artifact": "experiments/iteration-21-nasbench-search/results/nasbench_confirmation.csv",
+    "rowCount": 18,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "registered slice",
+    "yAxis": "forecast correct",
+    "displayedSummary": "Thirteen of eighteen pre-registered calls are correct."
+  },
+  {
+    "id": "EP-I20-sciml",
+    "artifact": "experiments/iteration-20-sciml-suite/results/d23_fdc_comparison.csv",
+    "rowCount": 6,
+    "filters": [],
+    "transforms": [
+      "numeric fields parsed without smoothing"
+    ],
+    "xAxis": "system",
+    "yAxis": "PRISM minus random hits",
+    "displayedSummary": "Swap-aligned FDC under-calls insert-friendly systems."
+  },
+  {
+    "id": "EP-Q-gemma",
+    "artifact": "experiments/iteration-17/results/slm_transfer_report.txt",
+    "rowCount": 3,
+    "filters": [],
+    "transforms": [
+      "reported bootstrap means only"
+    ],
+    "xAxis": "source group",
+    "yAxis": "target mean accuracy",
+    "displayedSummary": "Extremes transfer while fine-grained rank correlation crosses zero."
+  },
+  {
+    "id": "EP-Q2-family",
+    "artifact": "experiments/iteration-19-crossfamily/results/*_transfer_report.txt",
+    "rowCount": 3,
+    "filters": [],
+    "transforms": [
+      "reported correlations only"
+    ],
+    "xAxis": "target model",
+    "yAxis": "Spearman correlation",
+    "displayedSummary": "Transfer depends on capability and compresses near ceiling."
+  },
+  {
+    "id": "EP-T-opro",
+    "artifact": "experiments/iteration-24-prompt-optimizer-baselines/results/T_RESULTS_SUMMARY.json",
+    "rowCount": 2,
+    "filters": [],
+    "transforms": [
+      "audited reported means; interval shown in narration"
+    ],
+    "xAxis": "method",
+    "yAxis": "best accuracy",
+    "displayedSummary": "Wording raises mean level while ordering variance persists; final search result is a tie."
+  }
+]

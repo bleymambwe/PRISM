@@ -1,0 +1,105 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-search"
+version = "0.1.0"
+description = "Landscape diagnostics and evolutionary search for permutation-valued decisions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  {name = "Blessings Mambwe"},
+]
+keywords = [
+  "evolutionary computation",
+  "fitness landscape",
+  "permutation optimization",
+  "research software",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+# The Inspect AI evals under evals/ are demonstrations of use, not part of the
+# prism_search runtime. Keeping inspect-ai optional preserves the package's
+# single required dependency (numpy).
+eval = [
+  "inspect-ai>=0.3.60",
+]
+eval-math500 = [
+  "inspect-ai>=0.3.60",
+  "datasets>=2.19",
+]
+test = [
+  "pytest>=8",
+  "pytest-cov>=5",
+]
+dev = [
+  "build>=1.2",
+  "mypy>=1.10",
+  "pre-commit>=3.7",
+  "pytest>=8",
+  "pytest-cov>=5",
+  "ruff>=0.6",
+  "twine>=5",
+]
+docs = [
+  "mkdocs>=1.6",
+  "mkdocs-material>=9.5",
+  "mkdocstrings[python]>=0.26",
+]
+
+[project.urls]
+Homepage = "https://github.com/bleymambwe/PRISM"
+Repository = "https://github.com/bleymambwe/PRISM"
+Issues = "https://github.com/bleymambwe/PRISM/issues"
+Documentation = "https://github.com/bleymambwe/PRISM/tree/main/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+prism_search = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers -ra"
+# "." puts the repo root on the path so `evals.instruction_order` imports.
+pythonpath = ["src", "."]
+testpaths = ["tests", "evals"]
+
+[tool.coverage.run]
+branch = true
+source = ["prism_search"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 90
+
+[tool.ruff]
+target-version = "py310"
+line-length = 99
+src = ["src", "tests", "tools"]
+
+[tool.ruff.lint]
+select = ["B", "C4", "E", "F", "I", "N", "NPY", "PERF", "RUF", "SIM", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["prism_search"]

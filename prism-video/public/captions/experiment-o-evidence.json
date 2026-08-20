@@ -1,0 +1,184 @@
+[
+  {
+    "text": "Pause on O-transfer for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 5136,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "O — Transfer across tasks and sizes.\nFirst, identify the",
+    "startMs": 5136,
+    "endMs": 10272,
+    "timestampMs": 5136,
+    "confidence": null
+  },
+  {
+    "text": "research question before looking at the\nanswer. The question asks",
+    "startMs": 10272,
+    "endMs": 15408,
+    "timestampMs": 10272,
+    "confidence": null
+  },
+  {
+    "text": "whether the fixed components create a\nmeaningful ordering surface, whether",
+    "startMs": 15408,
+    "endMs": 20544,
+    "timestampMs": 15408,
+    "confidence": null
+  },
+  {
+    "text": "a particular neighborhood provides useful\nguidance on that surface, or",
+    "startMs": 20544,
+    "endMs": 25680,
+    "timestampMs": 20544,
+    "confidence": null
+  },
+  {
+    "text": "whether a cheaper executor is equally\neffective. The sample is",
+    "startMs": 25680,
+    "endMs": 30816,
+    "timestampMs": 25680,
+    "confidence": null
+  },
+  {
+    "text": "the sample reported in the source, and the\nsource artifact",
+    "startMs": 30816,
+    "endMs": 35952,
+    "timestampMs": 30816,
+    "confidence": null
+  },
+  {
+    "text": "is\nexperiments/iteration-16/results/transfer.txt;",
+    "startMs": 35952,
+    "endMs": 38006,
+    "timestampMs": 35952,
+    "confidence": null
+  },
+  {
+    "text": "horizontal axis names the recorded\nindependent quantity—such as permutation",
+    "startMs": 38006,
+    "endMs": 42628,
+    "timestampMs": 38006,
+    "confidence": null
+  },
+  {
+    "text": "size, position, distance, or distinct\nevaluations. The vertical axis names",
+    "startMs": 42628,
+    "endMs": 47764,
+    "timestampMs": 42628,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome—such as accuracy,\nerror, hit probability, regret,",
+    "startMs": 47764,
+    "endMs": 52386,
+    "timestampMs": 47764,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 52386,
+    "endMs": 57522,
+    "timestampMs": 52386,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 57522,
+    "endMs": 62658,
+    "timestampMs": 57522,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 62658,
+    "endMs": 67794,
+    "timestampMs": 62658,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 67794,
+    "endMs": 72930,
+    "timestampMs": 67794,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: Result:",
+    "startMs": 72930,
+    "endMs": 77552,
+    "timestampMs": 72930,
+    "confidence": null
+  },
+  {
+    "text": "Spearman 0.665 [0.582,0.725]. The correct\nlimitation is: The conclusion is",
+    "startMs": 77552,
+    "endMs": 82688,
+    "timestampMs": 77552,
+    "confidence": null
+  },
+  {
+    "text": "scoped to the recorded evaluator,\nlandscape, and budget. That limitation",
+    "startMs": 82688,
+    "endMs": 87824,
+    "timestampMs": 82688,
+    "confidence": null
+  },
+  {
+    "text": "rules out a broader promotional\ninterpretation while preserving the result",
+    "startMs": 87824,
+    "endMs": 92960,
+    "timestampMs": 87824,
+    "confidence": null
+  },
+  {
+    "text": "actually measured. The decision carried\ninto the research program is:",
+    "startMs": 92960,
+    "endMs": 98096,
+    "timestampMs": 92960,
+    "confidence": null
+  },
+  {
+    "text": "Carry this constraint into the next\nexperiment and compare methods",
+    "startMs": 98096,
+    "endMs": 103232,
+    "timestampMs": 98096,
+    "confidence": null
+  },
+  {
+    "text": "at equal cost. Finally, compare against\nthe equal-budget alternative.",
+    "startMs": 103232,
+    "endMs": 107854,
+    "timestampMs": 103232,
+    "confidence": null
+  },
+  {
+    "text": "Generations, repeated cache hits, and\ndistinct evaluations are not",
+    "startMs": 107854,
+    "endMs": 112476,
+    "timestampMs": 107854,
+    "confidence": null
+  },
+  {
+    "text": "interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 112476,
+    "endMs": 117098,
+    "timestampMs": 112476,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 117098,
+    "endMs": 121720,
+    "timestampMs": 117098,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 121720,
+    "endMs": 123770,
+    "timestampMs": 121720,
+    "confidence": null
+  }
+]

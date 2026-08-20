@@ -1,0 +1,177 @@
+{
+  "H27": {
+    "landscapes_called_search_pays": [
+      "adjacency_n7",
+      "hamming_n7",
+      "kendall_n7",
+      "llm_gsm8k_n6",
+      "parity_n5",
+      "sciml_damped_oscillator",
+      "sciml_lorenz63",
+      "sciml_rossler",
+      "sciml_vanderpol",
+      "xor_n5",
+      "xor_n6"
+    ],
+    "decisive_winners_by_landscape": {
+      "adjacency_n7": [
+        "ea_aging",
+        "ea_elitist",
+        "ea_portfolio",
+        "ls_inversion",
+        "ls_swap",
+        "simulated_annealing",
+        "surrogate_positional",
+        "surrogate_precedence"
+      ],
+      "hamming_n7": [
+        "ea_aging",
+        "ea_elitist",
+        "ea_portfolio",
+        "ls_inversion",
+        "ls_swap",
+        "surrogate_positional",
+        "surrogate_precedence"
+      ],
+      "kendall_n7": [
+        "ea_aging",
+        "ea_elitist",
+        "ea_portfolio",
+        "eda_precedence",
+        "iterated_local_search",
+        "ls_insert",
+        "ls_inversion",
+        "ls_swap",
+        "simulated_annealing",
+        "surrogate_positional",
+        "surrogate_precedence"
+      ],
+      "llm_gsm8k_n6": [],
+      "parity_n5": [],
+      "sciml_damped_oscillator": [
+        "ea_elitist",
+        "ea_portfolio",
+        "iterated_local_search",
+        "ls_insert",
+        "ls_inversion",
+        "ls_swap",
+        "surrogate_positional",
+        "surrogate_precedence"
+      ],
+      "sciml_lorenz63": [
+        "ea_aging",
+        "ea_elitist",
+        "ea_portfolio",
+        "eda_precedence",
+        "iterated_local_search",
+        "ls_insert",
+        "ls_swap",
+        "surrogate_precedence"
+      ],
+      "sciml_rossler": [
+        "ea_aging",
+        "ea_elitist",
+        "ea_portfolio",
+        "eda_precedence",
+        "iterated_local_search",
+        "ls_insert",
+        "ls_inversion",
+        "ls_swap",
+        "surrogate_precedence"
+      ],
+      "sciml_vanderpol": [
+        "ea_portfolio",
+        "iterated_local_search",
+        "ls_insert",
+        "ls_swap"
+      ],
+      "xor_n5": [],
+      "xor_n6": []
+    },
+    "supported": true
+  },
+  "H28": {
+    "uniform_success_at_50": 1.0,
+    "decisive_winners": [],
+    "supported": true
+  },
+  "H29": {
+    "ranking_by_mean_evals_to_optimum": [
+      [
+        "surrogate_precedence",
+        14.88
+      ],
+      [
+        "surrogate_positional",
+        59.23
+      ],
+      [
+        "eda_precedence",
+        82.12
+      ],
+      [
+        "ls_swap",
+        85.08
+      ],
+      [
+        "iterated_local_search",
+        94.67
+      ]
+    ],
+    "supported": true
+  },
+  "H30": {
+    "protocol_minus_uniform_at_100": {
+      "adjacency_n7": 0.1,
+      "deceptive_n7": 0.0,
+      "hamming_n7": 0.075,
+      "kendall_n7": 0.075,
+      "llm_gsm8k_n6": 0.0,
+      "parity_n5": -0.025,
+      "parity_n7": 0.225,
+      "sciml_cubic_oscillator": 0.15,
+      "sciml_damped_oscillator": 0.1,
+      "sciml_lorenz63": 0.15,
+      "sciml_lotka_volterra": 0.225,
+      "sciml_rossler": 0.175,
+      "sciml_vanderpol": 0.075,
+      "xor_n5": 0.0,
+      "xor_n6": 0.05
+    },
+    "worst": -0.025,
+    "supported": true
+  },
+  "H31": {
+    "clear_margin_landscapes": 10,
+    "mean_regime_agreement_at_m200": 0.9855,
+    "worst_landscape": "sciml_damped_oscillator",
+    "worst_agreement": 0.955,
+    "supported": true
+  },
+  "H32": {
+    "typed_synthetics": [
+      "adjacency_n7",
+      "hamming_n7",
+      "kendall_n7"
+    ],
+    "operator_agreement_by_m": {
+      "100": 0.9533,
+      "200": 0.9983,
+      "500": 1.0
+    },
+    "worst_at_m100": 0.92,
+    "supported": true
+  },
+  "H33": {
+    "flagship_agreement_at_q8": 0.9333,
+    "all_landscapes_at_q8": {
+      "llm_gsm8k_n6": 0.9333,
+      "llm_gsm8k_n8": 0.9667,
+      "llm_gemma_n6": 0.9667,
+      "llm_llama_n6": 0.3167,
+      "llm_qwen_n6": 0.95,
+      "llm_math500_n8": 0.35
+    },
+    "supported": false
+  }
+}

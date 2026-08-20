@@ -1,0 +1,191 @@
+[
+  {
+    "text": "This section examines Experiment O —\nTransfer across tasks and",
+    "startMs": 0,
+    "endMs": 5813,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "sizes from first principles. Keep two\nquestions separate: does changing",
+    "startMs": 5813,
+    "endMs": 11626,
+    "timestampMs": 5813,
+    "confidence": null
+  },
+  {
+    "text": "the order change the measured outcome, and\ndoes the proposed",
+    "startMs": 11626,
+    "endMs": 17439,
+    "timestampMs": 11626,
+    "confidence": null
+  },
+  {
+    "text": "search method beat a matched alternative\nat the same distinct-evaluation",
+    "startMs": 17439,
+    "endMs": 23252,
+    "timestampMs": 17439,
+    "confidence": null
+  },
+  {
+    "text": "budget? O1, cross-task neural transfer:\nXOR-v4 versus parity-v4 over 120",
+    "startMs": 23252,
+    "endMs": 29065,
+    "timestampMs": 23252,
+    "confidence": null
+  },
+  {
+    "text": "shared orderings; correlation r=-0.004,\neffectively zero; top-decile overlap",
+    "startMs": 29065,
+    "endMs": 33715,
+    "timestampMs": 29065,
+    "confidence": null
+  },
+  {
+    "text": "at chance. O2/O3, same-family cross-size\nLLM transfer: derive six-module",
+    "startMs": 33715,
+    "endMs": 38946,
+    "timestampMs": 33715,
+    "confidence": null
+  },
+  {
+    "text": "position effects and use them to score 222\nunbiased eight-module",
+    "startMs": 38946,
+    "endMs": 44759,
+    "timestampMs": 38946,
+    "confidence": null
+  },
+  {
+    "text": "orderings. Result: Spearman 0.665\n[0.582,0.725]. Top decile by transferred",
+    "startMs": 44759,
+    "endMs": 49990,
+    "timestampMs": 44759,
+    "confidence": null
+  },
+  {
+    "text": "score had mean target accuracy 0.900\n[0.873,0.925], versus random-pool mean",
+    "startMs": 49990,
+    "endMs": 55803,
+    "timestampMs": 49990,
+    "confidence": null
+  },
+  {
+    "text": "0.725. Interpretation: transfer was absent\nacross different neural tasks but",
+    "startMs": 55803,
+    "endMs": 61616,
+    "timestampMs": 55803,
+    "confidence": null
+  },
+  {
+    "text": "strong across sizes within the same LLM\ninstruction family. Visual:",
+    "startMs": 61616,
+    "endMs": 67429,
+    "timestampMs": 61616,
+    "confidence": null
+  },
+  {
+    "text": "one broken correlation plot for XOR→parity\nand one upward-trending plot",
+    "startMs": 67429,
+    "endMs": 73242,
+    "timestampMs": 67429,
+    "confidence": null
+  },
+  {
+    "text": "for n=6→n=8. Now read evidence panel\nO-transfer. The axes, units,",
+    "startMs": 73242,
+    "endMs": 79055,
+    "timestampMs": 73242,
+    "confidence": null
+  },
+  {
+    "text": "and sample are stated on screen. The\nsample represented here",
+    "startMs": 79055,
+    "endMs": 84868,
+    "timestampMs": 79055,
+    "confidence": null
+  },
+  {
+    "text": "is the sample reported in the source. Raw\nobservations remain",
+    "startMs": 84868,
+    "endMs": 90681,
+    "timestampMs": 84868,
+    "confidence": null
+  },
+  {
+    "text": "visible wherever the artifact provides\nthem. Censored observations stay",
+    "startMs": 90681,
+    "endMs": 95912,
+    "timestampMs": 90681,
+    "confidence": null
+  },
+  {
+    "text": "marked at the cap rather than becoming\ninvented hitting times,",
+    "startMs": 95912,
+    "endMs": 101725,
+    "timestampMs": 95912,
+    "confidence": null
+  },
+  {
+    "text": "and sampled landscapes leave unobserved\npermutations blank. The supported",
+    "startMs": 101725,
+    "endMs": 106956,
+    "timestampMs": 101725,
+    "confidence": null
+  },
+  {
+    "text": "finding is: Result: Spearman 0.665\n[0.582,0.725]. The broader claim not",
+    "startMs": 106956,
+    "endMs": 112769,
+    "timestampMs": 106956,
+    "confidence": null
+  },
+  {
+    "text": "established here is: The conclusion is\nscoped to the recorded",
+    "startMs": 112769,
+    "endMs": 118582,
+    "timestampMs": 112769,
+    "confidence": null
+  },
+  {
+    "text": "evaluator, landscape, and budget. This\nevidence changed the program as",
+    "startMs": 118582,
+    "endMs": 124395,
+    "timestampMs": 118582,
+    "confidence": null
+  },
+  {
+    "text": "follows: Carry this constraint into the\nnext experiment and compare",
+    "startMs": 124395,
+    "endMs": 130208,
+    "timestampMs": 124395,
+    "confidence": null
+  },
+  {
+    "text": "methods at equal cost. The distinction is\npart of the",
+    "startMs": 130208,
+    "endMs": 136021,
+    "timestampMs": 130208,
+    "confidence": null
+  },
+  {
+    "text": "result. A large ordering effect does not\nautomatically imply an",
+    "startMs": 136021,
+    "endMs": 141834,
+    "timestampMs": 136021,
+    "confidence": null
+  },
+  {
+    "text": "evolutionary-search advantage, and\nalmost-sure convergence does not promise",
+    "startMs": 141834,
+    "endMs": 146484,
+    "timestampMs": 141834,
+    "confidence": null
+  },
+  {
+    "text": "practical efficiency.",
+    "startMs": 146484,
+    "endMs": 147644,
+    "timestampMs": 146484,
+    "confidence": null
+  }
+]

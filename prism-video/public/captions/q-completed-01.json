@@ -1,0 +1,177 @@
+[
+  {
+    "text": "This section examines Q completed — Gemma\ntransfer from first",
+    "startMs": 0,
+    "endMs": 6335,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 6335,
+    "endMs": 12670,
+    "timestampMs": 6335,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 12670,
+    "endMs": 19005,
+    "timestampMs": 12670,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? 4,101 calls;",
+    "startMs": 19005,
+    "endMs": 25340,
+    "timestampMs": 19005,
+    "confidence": null
+  },
+  {
+    "text": "120 orderings × 32 questions plus\nretries/accounting; temperature zero.",
+    "startMs": 25340,
+    "endMs": 31041,
+    "timestampMs": 25340,
+    "confidence": null
+  },
+  {
+    "text": "Target order sensitivity: standard\ndeviation 0.247, range 0.06–0.91.",
+    "startMs": 31041,
+    "endMs": 36109,
+    "timestampMs": 31041,
+    "confidence": null
+  },
+  {
+    "text": "Fine-grained source-target rank\ncorrelation: Spearman 0.158",
+    "startMs": 36109,
+    "endMs": 40543,
+    "timestampMs": 36109,
+    "confidence": null
+  },
+  {
+    "text": "weak and crossing zero. Position-effect\ncorrelation: 0.064. Source top 15:",
+    "startMs": 40543,
+    "endMs": 46878,
+    "timestampMs": 40543,
+    "confidence": null
+  },
+  {
+    "text": "Gemma mean 0.565 [0.460,0.665]. Random\n100: 0.442 [0.395,0.490]. Source",
+    "startMs": 46878,
+    "endMs": 52579,
+    "timestampMs": 46878,
+    "confidence": null
+  },
+  {
+    "text": "bottom five: 0.150 [0.088,0.200].\nInterpretation at that point: bad extremes",
+    "startMs": 52579,
+    "endMs": 58914,
+    "timestampMs": 52579,
+    "confidence": null
+  },
+  {
+    "text": "transferred decisively; top performance\ntransferred weakly; fine-grained",
+    "startMs": 58914,
+    "endMs": 63348,
+    "timestampMs": 58914,
+    "confidence": null
+  },
+  {
+    "text": "structure did not. Now read evidence panel\nQ-progress. The axes,",
+    "startMs": 63348,
+    "endMs": 69683,
+    "timestampMs": 63348,
+    "confidence": null
+  },
+  {
+    "text": "units, and sample are stated on screen.\nThe sample represented",
+    "startMs": 69683,
+    "endMs": 76018,
+    "timestampMs": 69683,
+    "confidence": null
+  },
+  {
+    "text": "here is 4,101 calls. Raw observations\nremain visible wherever the",
+    "startMs": 76018,
+    "endMs": 82353,
+    "timestampMs": 76018,
+    "confidence": null
+  },
+  {
+    "text": "artifact provides them. Censored\nobservations stay marked at the cap",
+    "startMs": 82353,
+    "endMs": 88688,
+    "timestampMs": 82353,
+    "confidence": null
+  },
+  {
+    "text": "rather than becoming invented hitting\ntimes, and sampled landscapes leave",
+    "startMs": 88688,
+    "endMs": 95023,
+    "timestampMs": 88688,
+    "confidence": null
+  },
+  {
+    "text": "unobserved permutations blank. The\nsupported finding is: Target order",
+    "startMs": 95023,
+    "endMs": 100724,
+    "timestampMs": 95023,
+    "confidence": null
+  },
+  {
+    "text": "sensitivity: standard deviation 0.247,\nrange 0.06–0.91. The broader claim",
+    "startMs": 100724,
+    "endMs": 106425,
+    "timestampMs": 100724,
+    "confidence": null
+  },
+  {
+    "text": "not established here is: The conclusion is\nscoped to the",
+    "startMs": 106425,
+    "endMs": 112760,
+    "timestampMs": 106425,
+    "confidence": null
+  },
+  {
+    "text": "recorded evaluator, landscape, and budget.\nThis evidence changed the program",
+    "startMs": 112760,
+    "endMs": 119095,
+    "timestampMs": 112760,
+    "confidence": null
+  },
+  {
+    "text": "as follows: Carry this constraint into the\nnext experiment and",
+    "startMs": 119095,
+    "endMs": 125430,
+    "timestampMs": 119095,
+    "confidence": null
+  },
+  {
+    "text": "compare methods at equal cost. The\ndistinction is part of",
+    "startMs": 125430,
+    "endMs": 131765,
+    "timestampMs": 125430,
+    "confidence": null
+  },
+  {
+    "text": "the result. A large ordering effect does\nnot automatically imply",
+    "startMs": 131765,
+    "endMs": 138100,
+    "timestampMs": 131765,
+    "confidence": null
+  },
+  {
+    "text": "an evolutionary-search advantage, and\nalmost-sure convergence does not",
+    "startMs": 138100,
+    "endMs": 143168,
+    "timestampMs": 138100,
+    "confidence": null
+  },
+  {
+    "text": "promise practical efficiency.",
+    "startMs": 143168,
+    "endMs": 145070,
+    "timestampMs": 143168,
+    "confidence": null
+  }
+]

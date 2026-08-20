@@ -1,0 +1,128 @@
+[
+  {
+    "text": "This section examines Scaling and\napplications (5–6 minutes) from first",
+    "startMs": 0,
+    "endMs": 4962,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 4962,
+    "endMs": 9924,
+    "timestampMs": 4962,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 9924,
+    "endMs": 14886,
+    "timestampMs": 9924,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? Explain the",
+    "startMs": 14886,
+    "endMs": 19848,
+    "timestampMs": 14886,
+    "confidence": null
+  },
+  {
+    "text": "proposed three-stage weight-sharing\nstrategy: pre-train a compatible",
+    "startMs": 19848,
+    "endMs": 23322,
+    "timestampMs": 19848,
+    "confidence": null
+  },
+  {
+    "text": "supernet once; freeze shared weights and\nscore many orderings cheaply;",
+    "startMs": 23322,
+    "endMs": 28284,
+    "timestampMs": 23322,
+    "confidence": null
+  },
+  {
+    "text": "retrain or fine-tune only the top k\norderings from scratch.",
+    "startMs": 28284,
+    "endMs": 33246,
+    "timestampMs": 28284,
+    "confidence": null
+  },
+  {
+    "text": "Clearly label this as a scaling proposal,\nnot a completed",
+    "startMs": 33246,
+    "endMs": 38208,
+    "timestampMs": 33246,
+    "confidence": null
+  },
+  {
+    "text": "result in the supplied paper. Show target\ndomains as concrete",
+    "startMs": 38208,
+    "endMs": 43170,
+    "timestampMs": 38208,
+    "confidence": null
+  },
+  {
+    "text": "ordering variables rather than speculative\nicons: LLM/SLM",
+    "startMs": 43170,
+    "endMs": 46644,
+    "timestampMs": 43170,
+    "confidence": null
+  },
+  {
+    "text": "reasoning-instruction order; SciML\npreprocessing and discovery steps;",
+    "startMs": 46644,
+    "endMs": 50118,
+    "timestampMs": 46644,
+    "confidence": null
+  },
+  {
+    "text": "compiler optimization passes; molecular\noperation sequences; neural block",
+    "startMs": 50118,
+    "endMs": 54088,
+    "timestampMs": 50118,
+    "confidence": null
+  },
+  {
+    "text": "placement. For every domain, display\n“fixed components,” “variable order,”",
+    "startMs": 54088,
+    "endMs": 58554,
+    "timestampMs": 54088,
+    "confidence": null
+  },
+  {
+    "text": "and “fitness measurement.” Do not attach\nquantitative expected improvements",
+    "startMs": 58554,
+    "endMs": 63020,
+    "timestampMs": 58554,
+    "confidence": null
+  },
+  {
+    "text": "unless they were actually measured. The\ndistinction is part of",
+    "startMs": 63020,
+    "endMs": 67982,
+    "timestampMs": 63020,
+    "confidence": null
+  },
+  {
+    "text": "the result. A large ordering effect does\nnot automatically imply",
+    "startMs": 67982,
+    "endMs": 72944,
+    "timestampMs": 67982,
+    "confidence": null
+  },
+  {
+    "text": "an evolutionary-search advantage, and\nalmost-sure convergence does not",
+    "startMs": 72944,
+    "endMs": 76914,
+    "timestampMs": 72944,
+    "confidence": null
+  },
+  {
+    "text": "promise practical efficiency.",
+    "startMs": 76914,
+    "endMs": 78405,
+    "timestampMs": 76914,
+    "confidence": null
+  }
+]

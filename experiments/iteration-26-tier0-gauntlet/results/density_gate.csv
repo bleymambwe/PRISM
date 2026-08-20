@@ -1,0 +1,16 @@
+landscape,family,size,n_optima,optimum_density,distinct_values,fdc,regime_call,informative_budget,uniform_success,n_decisive_winners,search_decisively_won
+adjacency_n7,synthetic,5040,2,0.0004,7,-0.281,search_pays,100,0.0,8,1
+deceptive_n7,synthetic,5040,1,0.0002,7,0.8104,do_not_search,100,0.0,0,0
+hamming_n7,synthetic,5040,1,0.0002,7,-0.8244,search_pays,100,0.0,7,1
+kendall_n7,synthetic,5040,1,0.0002,22,-0.7537,search_pays,100,0.0,11,1
+llm_gsm8k_n6,llm,720,60,0.08333,29,-0.364,search_pays,25,0.9,0,0
+parity_n5,neural,120,2,0.01667,13,-0.2483,search_pays,50,0.475,1,1
+parity_n7,neural,5040,14,0.00278,16,-0.0524,random_competitive,100,0.1,0,0
+sciml_cubic_oscillator,sciml,720,3,0.00417,315,-0.0432,random_competitive,100,0.275,6,1
+sciml_damped_oscillator,sciml,720,1,0.00139,124,-0.2969,search_pays,100,0.025,8,1
+sciml_lorenz63,sciml,720,3,0.00417,485,-0.4323,search_pays,100,0.35,8,1
+sciml_lotka_volterra,sciml,720,8,0.01111,188,-0.0972,random_competitive,100,0.525,5,1
+sciml_rossler,sciml,720,1,0.00139,511,-0.2725,search_pays,100,0.05,9,1
+sciml_vanderpol,sciml,720,2,0.00278,565,-0.1934,search_pays,100,0.375,4,1
+xor_n5,neural,120,8,0.06667,7,-0.3406,search_pays,25,0.8,0,0
+xor_n6,neural,720,33,0.04583,8,-0.2245,search_pays,100,0.95,0,0

@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4770,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Chapter 1 — The ordering\nproblem (4–5 minutes).",
+    "startMs": 4770,
+    "endMs": 9540,
+    "timestampMs": 4770,
+    "confidence": null
+  },
+  {
+    "text": "First, identify the research question\nbefore looking at the answer.",
+    "startMs": 9540,
+    "endMs": 14310,
+    "timestampMs": 9540,
+    "confidence": null
+  },
+  {
+    "text": "The question asks whether the fixed\ncomponents create a meaningful",
+    "startMs": 14310,
+    "endMs": 19080,
+    "timestampMs": 14310,
+    "confidence": null
+  },
+  {
+    "text": "ordering surface, whether a particular\nneighborhood provides useful guidance",
+    "startMs": 19080,
+    "endMs": 23373,
+    "timestampMs": 19080,
+    "confidence": null
+  },
+  {
+    "text": "on that surface, or whether a cheaper\nexecutor is equally",
+    "startMs": 23373,
+    "endMs": 28143,
+    "timestampMs": 23373,
+    "confidence": null
+  },
+  {
+    "text": "effective. The sample is the sample\nreported in the source,",
+    "startMs": 28143,
+    "endMs": 32913,
+    "timestampMs": 28143,
+    "confidence": null
+  },
+  {
+    "text": "and the source artifact is production\nbrief and paper source.",
+    "startMs": 32913,
+    "endMs": 37683,
+    "timestampMs": 32913,
+    "confidence": null
+  },
+  {
+    "text": "The horizontal axis names the recorded\nindependent quantity—such as",
+    "startMs": 37683,
+    "endMs": 41976,
+    "timestampMs": 37683,
+    "confidence": null
+  },
+  {
+    "text": "permutation size, position, distance, or\ndistinct evaluations. The vertical",
+    "startMs": 41976,
+    "endMs": 46269,
+    "timestampMs": 41976,
+    "confidence": null
+  },
+  {
+    "text": "axis names the measured outcome—such as\naccuracy, error, hit probability,",
+    "startMs": 46269,
+    "endMs": 51039,
+    "timestampMs": 46269,
+    "confidence": null
+  },
+  {
+    "text": "regret, correlation, or hitting time. Raw\npoints remain visible when",
+    "startMs": 51039,
+    "endMs": 55809,
+    "timestampMs": 51039,
+    "confidence": null
+  },
+  {
+    "text": "their count permits. A summary line or bar\ndescribes those",
+    "startMs": 55809,
+    "endMs": 60579,
+    "timestampMs": 55809,
+    "confidence": null
+  },
+  {
+    "text": "points; it does not replace them. A capped\nobservation receives",
+    "startMs": 60579,
+    "endMs": 65349,
+    "timestampMs": 60579,
+    "confidence": null
+  },
+  {
+    "text": "a censor marker, and a sampled landscape\nnever pretends to",
+    "startMs": 65349,
+    "endMs": 70119,
+    "timestampMs": 65349,
+    "confidence": null
+  },
+  {
+    "text": "be exhaustively enumerated. The central\npattern supports this finding:",
+    "startMs": 70119,
+    "endMs": 74412,
+    "timestampMs": 70119,
+    "confidence": null
+  },
+  {
+    "text": "Explain function composition with two\nanimated transformations:",
+    "startMs": 74412,
+    "endMs": 77751,
+    "timestampMs": 74412,
+    "confidence": null
+  },
+  {
+    "text": "Tanh(Linear(x)) versus Linear(Tanh(x)).\nThe correct limitation is: Do not",
+    "startMs": 77751,
+    "endMs": 82044,
+    "timestampMs": 77751,
+    "confidence": null
+  },
+  {
+    "text": "say factorial growth is “small.” Say it is\na restricted",
+    "startMs": 82044,
+    "endMs": 86814,
+    "timestampMs": 82044,
+    "confidence": null
+  },
+  {
+    "text": "but still rapidly growing space that can\nbe tractable at",
+    "startMs": 86814,
+    "endMs": 91584,
+    "timestampMs": 86814,
+    "confidence": null
+  },
+  {
+    "text": "moderate n, especially when evaluations\nare cached, transferred, or",
+    "startMs": 91584,
+    "endMs": 95877,
+    "timestampMs": 91584,
+    "confidence": null
+  },
+  {
+    "text": "approximated. That limitation rules out a\nbroader promotional interpretation",
+    "startMs": 95877,
+    "endMs": 100170,
+    "timestampMs": 95877,
+    "confidence": null
+  },
+  {
+    "text": "while preserving the result actually\nmeasured. The decision carried into",
+    "startMs": 100170,
+    "endMs": 104940,
+    "timestampMs": 100170,
+    "confidence": null
+  },
+  {
+    "text": "the research program is: Carry this\nconstraint into the next",
+    "startMs": 104940,
+    "endMs": 109710,
+    "timestampMs": 104940,
+    "confidence": null
+  },
+  {
+    "text": "experiment and compare methods at equal\ncost. Finally, compare against",
+    "startMs": 109710,
+    "endMs": 114480,
+    "timestampMs": 109710,
+    "confidence": null
+  },
+  {
+    "text": "the equal-budget alternative. Generations,\nrepeated cache hits, and distinct",
+    "startMs": 114480,
+    "endMs": 118773,
+    "timestampMs": 114480,
+    "confidence": null
+  },
+  {
+    "text": "evaluations are not interchangeable. A\nmethod earns a search-efficiency",
+    "startMs": 118773,
+    "endMs": 123066,
+    "timestampMs": 118773,
+    "confidence": null
+  },
+  {
+    "text": "claim only when uncertainty, evaluator\nresolution, optimum density, and",
+    "startMs": 123066,
+    "endMs": 127359,
+    "timestampMs": 123066,
+    "confidence": null
+  },
+  {
+    "text": "evaluation cost have all been accounted\nfor.",
+    "startMs": 127359,
+    "endMs": 130710,
+    "timestampMs": 127359,
+    "confidence": null
+  }
+]

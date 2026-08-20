@@ -1,0 +1,128 @@
+[
+  {
+    "text": "This section examines Chapter 7 — How the\nexperimental standard",
+    "startMs": 0,
+    "endMs": 4951,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "matured (5–6 minutes) from first\nprinciples. Keep two questions separate:",
+    "startMs": 4951,
+    "endMs": 9902,
+    "timestampMs": 4951,
+    "confidence": null
+  },
+  {
+    "text": "does changing the order change the\nmeasured outcome, and does",
+    "startMs": 9902,
+    "endMs": 14853,
+    "timestampMs": 9902,
+    "confidence": null
+  },
+  {
+    "text": "the proposed search method beat a matched\nalternative at the",
+    "startMs": 14853,
+    "endMs": 19804,
+    "timestampMs": 14853,
+    "confidence": null
+  },
+  {
+    "text": "same distinct-evaluation budget? Present\nthe five audit questions as a",
+    "startMs": 19804,
+    "endMs": 24755,
+    "timestampMs": 19804,
+    "confidence": null
+  },
+  {
+    "text": "scientific checklist: Does ordering\nproduce meaningful fitness variance? Is",
+    "startMs": 24755,
+    "endMs": 29211,
+    "timestampMs": 24755,
+    "confidence": null
+  },
+  {
+    "text": "evaluation deterministic or sufficiently\naveraged? Is exact ground truth",
+    "startMs": 29211,
+    "endMs": 33667,
+    "timestampMs": 29211,
+    "confidence": null
+  },
+  {
+    "text": "known for small instances? Is random\nsampling compared at the",
+    "startMs": 33667,
+    "endMs": 38618,
+    "timestampMs": 33667,
+    "confidence": null
+  },
+  {
+    "text": "same distinct-evaluation budget? Are\nheadline claims supported by exact",
+    "startMs": 38618,
+    "endMs": 43074,
+    "timestampMs": 38618,
+    "confidence": null
+  },
+  {
+    "text": "enumeration or at least 40 seeds with\nintervals? Define all",
+    "startMs": 43074,
+    "endMs": 48025,
+    "timestampMs": 43074,
+    "confidence": null
+  },
+  {
+    "text": "metrics visually: fitness distribution;\noptimum density; distinct",
+    "startMs": 48025,
+    "endMs": 51490,
+    "timestampMs": 48025,
+    "confidence": null
+  },
+  {
+    "text": "evaluations; hit rate; regret; Wilson\ninterval for proportions; bootstrap",
+    "startMs": 51490,
+    "endMs": 55946,
+    "timestampMs": 51490,
+    "confidence": null
+  },
+  {
+    "text": "interval for mean evaluations; Pearson\nversus Spearman correlation. Use one",
+    "startMs": 55946,
+    "endMs": 60897,
+    "timestampMs": 55946,
+    "confidence": null
+  },
+  {
+    "text": "numerical micro-example for hit rate and\nregret before beginning the",
+    "startMs": 60897,
+    "endMs": 65848,
+    "timestampMs": 60897,
+    "confidence": null
+  },
+  {
+    "text": "experiment ledger. The distinction is part\nof the result. A",
+    "startMs": 65848,
+    "endMs": 70799,
+    "timestampMs": 65848,
+    "confidence": null
+  },
+  {
+    "text": "large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 70799,
+    "endMs": 75255,
+    "timestampMs": 70799,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 75255,
+    "endMs": 79215,
+    "timestampMs": 75255,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 79215,
+    "endMs": 79705,
+    "timestampMs": 79215,
+    "confidence": null
+  }
+]

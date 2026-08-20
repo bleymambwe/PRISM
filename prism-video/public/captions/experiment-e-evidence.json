@@ -1,0 +1,184 @@
+[
+  {
+    "text": "Pause on E-flat for a complete evidence\nreading of Experiment",
+    "startMs": 0,
+    "endMs": 4939,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "E — Failed all-positions neural redesign.\nFirst, identify the research",
+    "startMs": 4939,
+    "endMs": 9878,
+    "timestampMs": 4939,
+    "confidence": null
+  },
+  {
+    "text": "question before looking at the answer. The\nquestion asks whether",
+    "startMs": 9878,
+    "endMs": 14817,
+    "timestampMs": 9878,
+    "confidence": null
+  },
+  {
+    "text": "the fixed components create a meaningful\nordering surface, whether a",
+    "startMs": 14817,
+    "endMs": 19756,
+    "timestampMs": 14817,
+    "confidence": null
+  },
+  {
+    "text": "particular neighborhood provides useful\nguidance on that surface, or whether",
+    "startMs": 19756,
+    "endMs": 24695,
+    "timestampMs": 19756,
+    "confidence": null
+  },
+  {
+    "text": "a cheaper executor is equally effective.\nThe sample is the",
+    "startMs": 24695,
+    "endMs": 29634,
+    "timestampMs": 24695,
+    "confidence": null
+  },
+  {
+    "text": "sample reported in the source, and the\nsource artifact is",
+    "startMs": 29634,
+    "endMs": 34573,
+    "timestampMs": 29634,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-03/results/toy_v3_results.csv.\nThe horizontal axis",
+    "startMs": 34573,
+    "endMs": 36549,
+    "timestampMs": 34573,
+    "confidence": null
+  },
+  {
+    "text": "names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 36549,
+    "endMs": 40994,
+    "timestampMs": 36549,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 40994,
+    "endMs": 45933,
+    "timestampMs": 40994,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 45933,
+    "endMs": 50378,
+    "timestampMs": 45933,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 50378,
+    "endMs": 55317,
+    "timestampMs": 50378,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 55317,
+    "endMs": 60256,
+    "timestampMs": 55317,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 60256,
+    "endMs": 65195,
+    "timestampMs": 60256,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 65195,
+    "endMs": 70134,
+    "timestampMs": 65195,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nResult: variance fell to",
+    "startMs": 70134,
+    "endMs": 75073,
+    "timestampMs": 70134,
+    "confidence": null
+  },
+  {
+    "text": "exactly zero; all stage-one orderings\nremained at chance accuracy 0.500.",
+    "startMs": 75073,
+    "endMs": 80012,
+    "timestampMs": 75073,
+    "confidence": null
+  },
+  {
+    "text": "The correct limitation is: The conclusion\nis scoped to the",
+    "startMs": 80012,
+    "endMs": 84951,
+    "timestampMs": 80012,
+    "confidence": null
+  },
+  {
+    "text": "recorded evaluator, landscape, and budget.\nThat limitation rules out a",
+    "startMs": 84951,
+    "endMs": 89890,
+    "timestampMs": 84951,
+    "confidence": null
+  },
+  {
+    "text": "broader promotional interpretation while\npreserving the result actually",
+    "startMs": 89890,
+    "endMs": 93841,
+    "timestampMs": 89890,
+    "confidence": null
+  },
+  {
+    "text": "measured. The decision carried into the\nresearch program is: Decision:",
+    "startMs": 93841,
+    "endMs": 98780,
+    "timestampMs": 93841,
+    "confidence": null
+  },
+  {
+    "text": "reject the plain deeper stack and redesign\nwith residual blocks.",
+    "startMs": 98780,
+    "endMs": 103719,
+    "timestampMs": 98780,
+    "confidence": null
+  },
+  {
+    "text": "Finally, compare against the equal-budget\nalternative. Generations, repeated",
+    "startMs": 103719,
+    "endMs": 107670,
+    "timestampMs": 103719,
+    "confidence": null
+  },
+  {
+    "text": "cache hits, and distinct evaluations are\nnot interchangeable. A method",
+    "startMs": 107670,
+    "endMs": 112609,
+    "timestampMs": 107670,
+    "confidence": null
+  },
+  {
+    "text": "earns a search-efficiency claim only when\nuncertainty, evaluator resolution,",
+    "startMs": 112609,
+    "endMs": 117054,
+    "timestampMs": 112609,
+    "confidence": null
+  },
+  {
+    "text": "optimum density, and evaluation cost have\nall been accounted for.",
+    "startMs": 117054,
+    "endMs": 121994,
+    "timestampMs": 117054,
+    "confidence": null
+  }
+]

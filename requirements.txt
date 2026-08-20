@@ -1,0 +1,10 @@
+# Compatibility installer for the package plus plotting used by legacy scripts.
+# New environments should prefer: python -m pip install -e ".[plot]"
+-e .[plot]
+
+# Optional experiment-only dependencies are intentionally not installed here:
+# torch     neural-network toy benchmarks
+# requests  archived external-model experiments
+# scipy     statistical and scientific-pipeline analyses
+# pandas    selected result-table derivations
+

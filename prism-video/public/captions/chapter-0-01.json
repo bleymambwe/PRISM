@@ -1,0 +1,142 @@
+[
+  {
+    "text": "This section examines Chapter 0 — Cold\nopen: the same",
+    "startMs": 0,
+    "endMs": 5021,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "pieces, a different result (2–3 minutes)\nfrom first principles. Keep",
+    "startMs": 5021,
+    "endMs": 10042,
+    "timestampMs": 5021,
+    "confidence": null
+  },
+  {
+    "text": "two questions separate: does changing the\norder change the measured",
+    "startMs": 10042,
+    "endMs": 15063,
+    "timestampMs": 10042,
+    "confidence": null
+  },
+  {
+    "text": "outcome, and does the proposed search\nmethod beat a matched",
+    "startMs": 15063,
+    "endMs": 20084,
+    "timestampMs": 15063,
+    "confidence": null
+  },
+  {
+    "text": "alternative at the same\ndistinct-evaluation budget? Open on six",
+    "startMs": 20084,
+    "endMs": 25105,
+    "timestampMs": 20084,
+    "confidence": null
+  },
+  {
+    "text": "instruction cards. Run the same arithmetic\nquestion through two different",
+    "startMs": 25105,
+    "endMs": 30126,
+    "timestampMs": 25105,
+    "confidence": null
+  },
+  {
+    "text": "orders. One ordering produces a poor\nresult; the other produces",
+    "startMs": 30126,
+    "endMs": 35147,
+    "timestampMs": 30126,
+    "confidence": null
+  },
+  {
+    "text": "a correct result. Do not initially reveal\nprism. Then show:",
+    "startMs": 35147,
+    "endMs": 40168,
+    "timestampMs": 35147,
+    "confidence": null
+  },
+  {
+    "text": "> “What if the components are already\nfixed, but their",
+    "startMs": 40168,
+    "endMs": 45189,
+    "timestampMs": 40168,
+    "confidence": null
+  },
+  {
+    "text": "order is the hidden variable?” Reveal the\npaper title, author,",
+    "startMs": 45189,
+    "endMs": 50210,
+    "timestampMs": 45189,
+    "confidence": null
+  },
+  {
+    "text": "affiliation, and central question. Preview\nthree headline observations",
+    "startMs": 50210,
+    "endMs": 54227,
+    "timestampMs": 50210,
+    "confidence": null
+  },
+  {
+    "text": "without turning them into unsupported\ncausal claims: six LLM instruction",
+    "startMs": 54227,
+    "endMs": 59248,
+    "timestampMs": 54227,
+    "confidence": null
+  },
+  {
+    "text": "modules produced a 6.3%–96.9% accuracy\nrange across orderings; six sin-dee",
+    "startMs": 59248,
+    "endMs": 64269,
+    "timestampMs": 59248,
+    "confidence": null
+  },
+  {
+    "text": "preprocessing components produced\n0.1%–23.2% recovery error; some landscapes",
+    "startMs": 64269,
+    "endMs": 68286,
+    "timestampMs": 64269,
+    "confidence": null
+  },
+  {
+    "text": "gave evolutionary search no advantage over\nrandom sampling. End with",
+    "startMs": 68286,
+    "endMs": 73307,
+    "timestampMs": 68286,
+    "confidence": null
+  },
+  {
+    "text": "the film’s thesis: prism became a protocol\nfor deciding whether",
+    "startMs": 73307,
+    "endMs": 78328,
+    "timestampMs": 73307,
+    "confidence": null
+  },
+  {
+    "text": "and how an ordering problem should be\nsearched. The distinction",
+    "startMs": 78328,
+    "endMs": 83349,
+    "timestampMs": 78328,
+    "confidence": null
+  },
+  {
+    "text": "is part of the result. A large ordering\neffect does",
+    "startMs": 83349,
+    "endMs": 88370,
+    "timestampMs": 83349,
+    "confidence": null
+  },
+  {
+    "text": "not automatically imply an\nevolutionary-search advantage, and",
+    "startMs": 88370,
+    "endMs": 92387,
+    "timestampMs": 88370,
+    "confidence": null
+  },
+  {
+    "text": "convergence does not promise practical\nefficiency.",
+    "startMs": 92387,
+    "endMs": 95395,
+    "timestampMs": 92387,
+    "confidence": null
+  }
+]

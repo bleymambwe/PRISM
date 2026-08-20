@@ -1,0 +1,191 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 5224,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Q2 — Qwen and Llama\ncross-family replication. First,",
+    "startMs": 5224,
+    "endMs": 10448,
+    "timestampMs": 5224,
+    "confidence": null
+  },
+  {
+    "text": "identify the research question before\nlooking at the answer. The",
+    "startMs": 10448,
+    "endMs": 15672,
+    "timestampMs": 10448,
+    "confidence": null
+  },
+  {
+    "text": "question asks whether the fixed components\ncreate a meaningful ordering",
+    "startMs": 15672,
+    "endMs": 20896,
+    "timestampMs": 15672,
+    "confidence": null
+  },
+  {
+    "text": "surface, whether a particular neighborhood\nprovides useful guidance on that",
+    "startMs": 20896,
+    "endMs": 26120,
+    "timestampMs": 20896,
+    "confidence": null
+  },
+  {
+    "text": "surface, or whether a cheaper executor is\nequally effective. The",
+    "startMs": 26120,
+    "endMs": 31344,
+    "timestampMs": 26120,
+    "confidence": null
+  },
+  {
+    "text": "sample is the sample reported in the\nsource, and the",
+    "startMs": 31344,
+    "endMs": 36568,
+    "timestampMs": 31344,
+    "confidence": null
+  },
+  {
+    "text": "source artifact is production brief and\npaper source. The horizontal",
+    "startMs": 36568,
+    "endMs": 41792,
+    "timestampMs": 36568,
+    "confidence": null
+  },
+  {
+    "text": "axis names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 41792,
+    "endMs": 46494,
+    "timestampMs": 41792,
+    "confidence": null
+  },
+  {
+    "text": "position, distance, or distinct\nevaluations. The vertical axis names the",
+    "startMs": 46494,
+    "endMs": 51718,
+    "timestampMs": 46494,
+    "confidence": null
+  },
+  {
+    "text": "measured outcome—such as accuracy, error,\nhit probability, regret,",
+    "startMs": 51718,
+    "endMs": 55897,
+    "timestampMs": 51718,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 55897,
+    "endMs": 61121,
+    "timestampMs": 55897,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 61121,
+    "endMs": 66345,
+    "timestampMs": 61121,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 66345,
+    "endMs": 71569,
+    "timestampMs": 66345,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 71569,
+    "endMs": 76793,
+    "timestampMs": 71569,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: Llama",
+    "startMs": 76793,
+    "endMs": 81495,
+    "timestampMs": 76793,
+    "confidence": null
+  },
+  {
+    "text": "mean 0.254: rank correlation 0.375\n[0.181,0.554], position-table correlation",
+    "startMs": 81495,
+    "endMs": 85674,
+    "timestampMs": 81495,
+    "confidence": null
+  },
+  {
+    "text": "0.582, order standard deviation 0.153,\nrange 0–0.62. The correct limitation",
+    "startMs": 85674,
+    "endMs": 90898,
+    "timestampMs": 85674,
+    "confidence": null
+  },
+  {
+    "text": "is: The conclusion is scoped to the\nrecorded evaluator, landscape,",
+    "startMs": 90898,
+    "endMs": 96122,
+    "timestampMs": 90898,
+    "confidence": null
+  },
+  {
+    "text": "and budget. That limitation rules out a\nbroader promotional interpretation",
+    "startMs": 96122,
+    "endMs": 101346,
+    "timestampMs": 96122,
+    "confidence": null
+  },
+  {
+    "text": "while preserving the result actually\nmeasured. The decision carried into",
+    "startMs": 101346,
+    "endMs": 106570,
+    "timestampMs": 101346,
+    "confidence": null
+  },
+  {
+    "text": "the research program is: Carry this\nconstraint into the next",
+    "startMs": 106570,
+    "endMs": 111794,
+    "timestampMs": 106570,
+    "confidence": null
+  },
+  {
+    "text": "experiment and compare methods at equal\ncost. Finally, compare against",
+    "startMs": 111794,
+    "endMs": 117018,
+    "timestampMs": 111794,
+    "confidence": null
+  },
+  {
+    "text": "the equal-budget alternative. Generations,\nrepeated cache hits, and distinct",
+    "startMs": 117018,
+    "endMs": 121720,
+    "timestampMs": 117018,
+    "confidence": null
+  },
+  {
+    "text": "evaluations are not interchangeable. A\nmethod earns a search-efficiency",
+    "startMs": 121720,
+    "endMs": 126422,
+    "timestampMs": 121720,
+    "confidence": null
+  },
+  {
+    "text": "claim only when uncertainty, evaluator\nresolution, optimum density, and",
+    "startMs": 126422,
+    "endMs": 131124,
+    "timestampMs": 126422,
+    "confidence": null
+  },
+  {
+    "text": "evaluation cost have all been accounted\nfor.",
+    "startMs": 131124,
+    "endMs": 134785,
+    "timestampMs": 131124,
+    "confidence": null
+  }
+]

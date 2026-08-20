@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4784,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Chapter 5 — Convergence theory,\ncarefully stated (8–10",
+    "startMs": 4784,
+    "endMs": 9568,
+    "timestampMs": 4784,
+    "confidence": null
+  },
+  {
+    "text": "minutes). First, identify the research\nquestion before looking at the",
+    "startMs": 9568,
+    "endMs": 14352,
+    "timestampMs": 9568,
+    "confidence": null
+  },
+  {
+    "text": "answer. The question asks whether the\nfixed components create a",
+    "startMs": 14352,
+    "endMs": 19136,
+    "timestampMs": 14352,
+    "confidence": null
+  },
+  {
+    "text": "meaningful ordering surface, whether a\nparticular neighborhood provides",
+    "startMs": 19136,
+    "endMs": 22963,
+    "timestampMs": 19136,
+    "confidence": null
+  },
+  {
+    "text": "useful guidance on that surface, or\nwhether a cheaper executor",
+    "startMs": 22963,
+    "endMs": 27747,
+    "timestampMs": 22963,
+    "confidence": null
+  },
+  {
+    "text": "is equally effective. The sample is the\nsample reported in",
+    "startMs": 27747,
+    "endMs": 32531,
+    "timestampMs": 27747,
+    "confidence": null
+  },
+  {
+    "text": "the source, and the source artifact is\nproduction brief and",
+    "startMs": 32531,
+    "endMs": 37315,
+    "timestampMs": 32531,
+    "confidence": null
+  },
+  {
+    "text": "paper source. The horizontal axis names\nthe recorded independent",
+    "startMs": 37315,
+    "endMs": 41620,
+    "timestampMs": 37315,
+    "confidence": null
+  },
+  {
+    "text": "quantity—such as permutation size,\nposition, distance, or distinct",
+    "startMs": 41620,
+    "endMs": 45447,
+    "timestampMs": 41620,
+    "confidence": null
+  },
+  {
+    "text": "evaluations. The vertical axis names the\nmeasured outcome—such as accuracy,",
+    "startMs": 45447,
+    "endMs": 50231,
+    "timestampMs": 45447,
+    "confidence": null
+  },
+  {
+    "text": "error, hit probability, regret,\ncorrelation, or hitting time. Raw points",
+    "startMs": 50231,
+    "endMs": 55015,
+    "timestampMs": 50231,
+    "confidence": null
+  },
+  {
+    "text": "remain visible when their count permits. A\nsummary line or",
+    "startMs": 55015,
+    "endMs": 59799,
+    "timestampMs": 55015,
+    "confidence": null
+  },
+  {
+    "text": "bar describes those points; it does not\nreplace them. A",
+    "startMs": 59799,
+    "endMs": 64583,
+    "timestampMs": 59799,
+    "confidence": null
+  },
+  {
+    "text": "capped observation receives a censor\nmarker, and a sampled landscape",
+    "startMs": 64583,
+    "endMs": 69367,
+    "timestampMs": 64583,
+    "confidence": null
+  },
+  {
+    "text": "never pretends to be exhaustively\nenumerated. The central pattern supports",
+    "startMs": 69367,
+    "endMs": 74151,
+    "timestampMs": 69367,
+    "confidence": null
+  },
+  {
+    "text": "this finding: Build the Markov-chain\nargument in this order: A",
+    "startMs": 74151,
+    "endMs": 78935,
+    "timestampMs": 74151,
+    "confidence": null
+  },
+  {
+    "text": "state is the entire population, not one\npermutation. The correct",
+    "startMs": 78935,
+    "endMs": 83719,
+    "timestampMs": 78935,
+    "confidence": null
+  },
+  {
+    "text": "limitation is: Present the paper’s\nO(n^3log n) claim specifically in",
+    "startMs": 83719,
+    "endMs": 88503,
+    "timestampMs": 83719,
+    "confidence": null
+  },
+  {
+    "text": "the stated swap-mutation setting and\nimmediately attach the empirical",
+    "startMs": 88503,
+    "endMs": 92808,
+    "timestampMs": 88503,
+    "confidence": null
+  },
+  {
+    "text": "limitation: deceptive or\noperator-mismatched landscapes can be",
+    "startMs": 92808,
+    "endMs": 96635,
+    "timestampMs": 92808,
+    "confidence": null
+  },
+  {
+    "text": "under realistic budgets. That limitation\nrules out a broader promotional",
+    "startMs": 96635,
+    "endMs": 101419,
+    "timestampMs": 96635,
+    "confidence": null
+  },
+  {
+    "text": "interpretation while preserving the result\nactually measured. The decision",
+    "startMs": 101419,
+    "endMs": 105724,
+    "timestampMs": 101419,
+    "confidence": null
+  },
+  {
+    "text": "carried into the research program is:\nCarry this constraint into",
+    "startMs": 105724,
+    "endMs": 110508,
+    "timestampMs": 105724,
+    "confidence": null
+  },
+  {
+    "text": "the next experiment and compare methods at\nequal cost. Finally,",
+    "startMs": 110508,
+    "endMs": 115292,
+    "timestampMs": 110508,
+    "confidence": null
+  },
+  {
+    "text": "compare against the equal-budget\nalternative. Generations, repeated cache",
+    "startMs": 115292,
+    "endMs": 119119,
+    "timestampMs": 115292,
+    "confidence": null
+  },
+  {
+    "text": "hits, and distinct evaluations are not\ninterchangeable. A method earns",
+    "startMs": 119119,
+    "endMs": 123903,
+    "timestampMs": 119119,
+    "confidence": null
+  },
+  {
+    "text": "a search-efficiency claim only when\nuncertainty, evaluator resolution,",
+    "startMs": 123903,
+    "endMs": 127730,
+    "timestampMs": 123903,
+    "confidence": null
+  },
+  {
+    "text": "optimum density, and evaluation cost have\nall been accounted for.",
+    "startMs": 127730,
+    "endMs": 132510,
+    "timestampMs": 127730,
+    "confidence": null
+  }
+]

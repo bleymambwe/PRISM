@@ -1,0 +1,7 @@
+source,derived,n,n_orderings,questions_per_ordering,min_fitness,max_fitness,distinct_values
+experiments/iteration-09/results/answer_cache.csv,experiments/iteration-09/results/derived_landscape.csv,6,720,32,0.0625,0.96875,29
+experiments/iteration-11/results/answer_cache.csv,experiments/iteration-11/results/n8_landscape.csv,8,1170,20,0.05,1.0,20
+experiments/iteration-17/results/gemma_answer_cache.csv,experiments/iteration-17/results/gemma_landscape.csv,6,120,32,0.03125,0.90625,29
+experiments/iteration-19-crossfamily/results/qwen_answer_cache.csv,experiments/iteration-19-crossfamily/results/qwen_landscape.csv,6,120,32,0.65625,0.96875,10
+experiments/iteration-19-crossfamily/results/llama_answer_cache.csv,experiments/iteration-19-crossfamily/results/llama_landscape.csv,6,120,32,0.0,0.625,20
+experiments/iteration-23-experiment-s/results/answer_cache.csv,experiments/iteration-23-experiment-s/results/math500_landscape.csv,8,429,20-101,0.0,0.52,47

@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+.env
+
+# Ignore the output video from Git but not videos you import into src/.
+out
+
+# Generated narration audio (~375 MB of uncompressed WAV). Regenerate with
+# `python scripts/generate_narration.py` against requirements-narration.txt;
+# src/data/audioManifest.json records the expected files and durations.
+public/audio/
+
+# Rendered chapter/film output
+renders/*.mp4
+renders/*.mov

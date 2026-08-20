@@ -1,0 +1,198 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4828,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of From experiments to the mature\nprism protocol (6–7",
+    "startMs": 4828,
+    "endMs": 9656,
+    "timestampMs": 4828,
+    "confidence": null
+  },
+  {
+    "text": "minutes). First, identify the research\nquestion before looking at the",
+    "startMs": 9656,
+    "endMs": 14484,
+    "timestampMs": 9656,
+    "confidence": null
+  },
+  {
+    "text": "answer. The question asks whether the\nfixed components create a",
+    "startMs": 14484,
+    "endMs": 19312,
+    "timestampMs": 14484,
+    "confidence": null
+  },
+  {
+    "text": "meaningful ordering surface, whether a\nparticular neighborhood provides",
+    "startMs": 19312,
+    "endMs": 23175,
+    "timestampMs": 19312,
+    "confidence": null
+  },
+  {
+    "text": "useful guidance on that surface, or\nwhether a cheaper executor",
+    "startMs": 23175,
+    "endMs": 28003,
+    "timestampMs": 23175,
+    "confidence": null
+  },
+  {
+    "text": "is equally effective. The sample is the\nsample reported in",
+    "startMs": 28003,
+    "endMs": 32831,
+    "timestampMs": 28003,
+    "confidence": null
+  },
+  {
+    "text": "the source, and the source artifact is\nproduction brief and",
+    "startMs": 32831,
+    "endMs": 37659,
+    "timestampMs": 32831,
+    "confidence": null
+  },
+  {
+    "text": "paper source. The horizontal axis names\nthe recorded independent",
+    "startMs": 37659,
+    "endMs": 42004,
+    "timestampMs": 37659,
+    "confidence": null
+  },
+  {
+    "text": "quantity—such as permutation size,\nposition, distance, or distinct",
+    "startMs": 42004,
+    "endMs": 45867,
+    "timestampMs": 42004,
+    "confidence": null
+  },
+  {
+    "text": "evaluations. The vertical axis names the\nmeasured outcome—such as accuracy,",
+    "startMs": 45867,
+    "endMs": 50695,
+    "timestampMs": 45867,
+    "confidence": null
+  },
+  {
+    "text": "error, hit probability, regret,\ncorrelation, or hitting time. Raw points",
+    "startMs": 50695,
+    "endMs": 55523,
+    "timestampMs": 50695,
+    "confidence": null
+  },
+  {
+    "text": "remain visible when their count permits. A\nsummary line or",
+    "startMs": 55523,
+    "endMs": 60351,
+    "timestampMs": 55523,
+    "confidence": null
+  },
+  {
+    "text": "bar describes those points; it does not\nreplace them. A",
+    "startMs": 60351,
+    "endMs": 65179,
+    "timestampMs": 60351,
+    "confidence": null
+  },
+  {
+    "text": "capped observation receives a censor\nmarker, and a sampled landscape",
+    "startMs": 65179,
+    "endMs": 70007,
+    "timestampMs": 65179,
+    "confidence": null
+  },
+  {
+    "text": "never pretends to be exhaustively\nenumerated. The central pattern supports",
+    "startMs": 70007,
+    "endMs": 74835,
+    "timestampMs": 70007,
+    "confidence": null
+  },
+  {
+    "text": "this finding: Honest reporting:\nrandom-without-replacement, distinct",
+    "startMs": 74835,
+    "endMs": 77732,
+    "timestampMs": 74835,
+    "confidence": null
+  },
+  {
+    "text": "evaluation budgets, hit rate, regret,\nintervals, API calls, and cost.",
+    "startMs": 77732,
+    "endMs": 82560,
+    "timestampMs": 77732,
+    "confidence": null
+  },
+  {
+    "text": "The correct limitation is: The conclusion\nis scoped to the",
+    "startMs": 82560,
+    "endMs": 87388,
+    "timestampMs": 82560,
+    "confidence": null
+  },
+  {
+    "text": "recorded evaluator, landscape, and budget.\nThat limitation rules out a",
+    "startMs": 87388,
+    "endMs": 92216,
+    "timestampMs": 87388,
+    "confidence": null
+  },
+  {
+    "text": "broader promotional interpretation while\npreserving the result actually",
+    "startMs": 92216,
+    "endMs": 96079,
+    "timestampMs": 92216,
+    "confidence": null
+  },
+  {
+    "text": "measured. The decision carried into the\nresearch program is: Animate",
+    "startMs": 96079,
+    "endMs": 100907,
+    "timestampMs": 96079,
+    "confidence": null
+  },
+  {
+    "text": "a five-gate decision procedure: Variance\ngate: evaluate about 30 random",
+    "startMs": 100907,
+    "endMs": 105735,
+    "timestampMs": 100907,
+    "confidence": null
+  },
+  {
+    "text": "orderings. Finally, compare against the\nequal-budget alternative.",
+    "startMs": 105735,
+    "endMs": 109115,
+    "timestampMs": 105735,
+    "confidence": null
+  },
+  {
+    "text": "Generations, repeated cache hits, and\ndistinct evaluations are not",
+    "startMs": 109115,
+    "endMs": 113460,
+    "timestampMs": 109115,
+    "confidence": null
+  },
+  {
+    "text": "interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 113460,
+    "endMs": 117805,
+    "timestampMs": 113460,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 117805,
+    "endMs": 122150,
+    "timestampMs": 117805,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 122150,
+    "endMs": 124085,
+    "timestampMs": 122150,
+    "confidence": null
+  }
+]

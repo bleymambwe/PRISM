@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4794,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Main-film conclusion (3–4\nminutes). First, identify the research",
+    "startMs": 4794,
+    "endMs": 9588,
+    "timestampMs": 4794,
+    "confidence": null
+  },
+  {
+    "text": "question before looking at the answer. The\nquestion asks whether",
+    "startMs": 9588,
+    "endMs": 14382,
+    "timestampMs": 9588,
+    "confidence": null
+  },
+  {
+    "text": "the fixed components create a meaningful\nordering surface, whether a",
+    "startMs": 14382,
+    "endMs": 19176,
+    "timestampMs": 14382,
+    "confidence": null
+  },
+  {
+    "text": "particular neighborhood provides useful\nguidance on that surface, or whether",
+    "startMs": 19176,
+    "endMs": 23970,
+    "timestampMs": 19176,
+    "confidence": null
+  },
+  {
+    "text": "a cheaper executor is equally effective.\nThe sample is the",
+    "startMs": 23970,
+    "endMs": 28764,
+    "timestampMs": 23970,
+    "confidence": null
+  },
+  {
+    "text": "sample reported in the source, and the\nsource artifact is",
+    "startMs": 28764,
+    "endMs": 33558,
+    "timestampMs": 28764,
+    "confidence": null
+  },
+  {
+    "text": "production brief and paper source. The\nhorizontal axis names the",
+    "startMs": 33558,
+    "endMs": 38352,
+    "timestampMs": 33558,
+    "confidence": null
+  },
+  {
+    "text": "recorded independent quantity—such as\npermutation size, position, distance,",
+    "startMs": 38352,
+    "endMs": 42187,
+    "timestampMs": 38352,
+    "confidence": null
+  },
+  {
+    "text": "or distinct evaluations. The vertical axis\nnames the measured outcome—such",
+    "startMs": 42187,
+    "endMs": 46981,
+    "timestampMs": 42187,
+    "confidence": null
+  },
+  {
+    "text": "as accuracy, error, hit probability,\nregret, correlation, or hitting time.",
+    "startMs": 46981,
+    "endMs": 51775,
+    "timestampMs": 46981,
+    "confidence": null
+  },
+  {
+    "text": "Raw points remain visible when their count\npermits. A summary",
+    "startMs": 51775,
+    "endMs": 56569,
+    "timestampMs": 51775,
+    "confidence": null
+  },
+  {
+    "text": "line or bar describes those points; it\ndoes not replace",
+    "startMs": 56569,
+    "endMs": 61363,
+    "timestampMs": 56569,
+    "confidence": null
+  },
+  {
+    "text": "them. A capped observation receives a\ncensor marker, and a",
+    "startMs": 61363,
+    "endMs": 66157,
+    "timestampMs": 61363,
+    "confidence": null
+  },
+  {
+    "text": "sampled landscape never pretends to be\nexhaustively enumerated. The central",
+    "startMs": 66157,
+    "endMs": 70951,
+    "timestampMs": 66157,
+    "confidence": null
+  },
+  {
+    "text": "pattern supports this finding: Return to\nthe six instruction cards",
+    "startMs": 70951,
+    "endMs": 75745,
+    "timestampMs": 70951,
+    "confidence": null
+  },
+  {
+    "text": "from the cold open. The correct limitation\nis: Summarize: order",
+    "startMs": 75745,
+    "endMs": 80539,
+    "timestampMs": 75745,
+    "confidence": null
+  },
+  {
+    "text": "can create large performance variation\neven when components do not",
+    "startMs": 80539,
+    "endMs": 85333,
+    "timestampMs": 80539,
+    "confidence": null
+  },
+  {
+    "text": "change; mutation, representation, and\nreplacement must match the landscape;",
+    "startMs": 85333,
+    "endMs": 89647,
+    "timestampMs": 85333,
+    "confidence": null
+  },
+  {
+    "text": "convergence in the limit does not\nguarantee budget-efficient search; exact",
+    "startMs": 89647,
+    "endMs": 94441,
+    "timestampMs": 89647,
+    "confidence": null
+  },
+  {
+    "text": "enumeration and random baselines exposed\nboth successes and bound That",
+    "startMs": 94441,
+    "endMs": 99235,
+    "timestampMs": 94441,
+    "confidence": null
+  },
+  {
+    "text": "limitation rules out a broader promotional\ninterpretation while preserving",
+    "startMs": 99235,
+    "endMs": 103549,
+    "timestampMs": 99235,
+    "confidence": null
+  },
+  {
+    "text": "the result actually measured. The decision\ncarried into the research",
+    "startMs": 103549,
+    "endMs": 108343,
+    "timestampMs": 103549,
+    "confidence": null
+  },
+  {
+    "text": "program is: Carry this constraint into the\nnext experiment and",
+    "startMs": 108343,
+    "endMs": 113137,
+    "timestampMs": 108343,
+    "confidence": null
+  },
+  {
+    "text": "compare methods at equal cost. Finally,\ncompare against the equal-budget",
+    "startMs": 113137,
+    "endMs": 117931,
+    "timestampMs": 113137,
+    "confidence": null
+  },
+  {
+    "text": "alternative. Generations, repeated cache\nhits, and distinct evaluations are",
+    "startMs": 117931,
+    "endMs": 122245,
+    "timestampMs": 117931,
+    "confidence": null
+  },
+  {
+    "text": "not interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 122245,
+    "endMs": 127039,
+    "timestampMs": 122245,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 127039,
+    "endMs": 131353,
+    "timestampMs": 127039,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 131353,
+    "endMs": 133260,
+    "timestampMs": 131353,
+    "confidence": null
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "text": "This section examines Experiment M —\nEight-module LLM landscape from",
+    "startMs": 0,
+    "endMs": 5420,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "first principles. Keep two questions\nseparate: does changing the order",
+    "startMs": 5420,
+    "endMs": 10840,
+    "timestampMs": 5420,
+    "confidence": null
+  },
+  {
+    "text": "change the measured outcome, and does the\nproposed search method",
+    "startMs": 10840,
+    "endMs": 16260,
+    "timestampMs": 10840,
+    "confidence": null
+  },
+  {
+    "text": "beat a matched alternative at the same\ndistinct-evaluation budget? Search",
+    "startMs": 16260,
+    "endMs": 21680,
+    "timestampMs": 16260,
+    "confidence": null
+  },
+  {
+    "text": "space: 8!=40,320 possible prompts.\nEvaluation: 20 G S M eight",
+    "startMs": 21680,
+    "endMs": 27100,
+    "timestampMs": 21680,
+    "confidence": null
+  },
+  {
+    "text": "K questions; Gemini Flash-Lite; 23,805\ncached calls; reported spend $5.56;",
+    "startMs": 27100,
+    "endMs": 32520,
+    "timestampMs": 27100,
+    "confidence": null
+  },
+  {
+    "text": "hard cost cap. Sample: 222 unbiased\ncompleted orderings for diagnostics.",
+    "startMs": 32520,
+    "endMs": 37940,
+    "timestampMs": 32520,
+    "confidence": null
+  },
+  {
+    "text": "Gate result: accuracy 0.10–1.00, standard\ndeviation 0.240. Pre-flight:",
+    "startMs": 37940,
+    "endMs": 42276,
+    "timestampMs": 37940,
+    "confidence": null
+  },
+  {
+    "text": "insert rho_1=0.75; approximate F D C =\n−0.095, predicting random",
+    "startMs": 42276,
+    "endMs": 47696,
+    "timestampMs": 42276,
+    "confidence": null
+  },
+  {
+    "text": "competitiveness. Search: prism and random\nboth reached 1.000 at every",
+    "startMs": 47696,
+    "endMs": 53116,
+    "timestampMs": 47696,
+    "confidence": null
+  },
+  {
+    "text": "tested budget in the four-seed search\nstage. Lesson: only 20",
+    "startMs": 53116,
+    "endMs": 58536,
+    "timestampMs": 53116,
+    "confidence": null
+  },
+  {
+    "text": "questions made the accuracy grid coarse\nand exact optima dense.",
+    "startMs": 58536,
+    "endMs": 63956,
+    "timestampMs": 58536,
+    "confidence": null
+  },
+  {
+    "text": "Measurement resolution must be selected\nbefore search spend. Now read",
+    "startMs": 63956,
+    "endMs": 69376,
+    "timestampMs": 63956,
+    "confidence": null
+  },
+  {
+    "text": "evidence panel M-eight-module. The axes,\nunits, and sample are stated",
+    "startMs": 69376,
+    "endMs": 74796,
+    "timestampMs": 69376,
+    "confidence": null
+  },
+  {
+    "text": "on screen. The sample represented here is\n20 questions. Raw",
+    "startMs": 74796,
+    "endMs": 80216,
+    "timestampMs": 74796,
+    "confidence": null
+  },
+  {
+    "text": "observations remain visible wherever the\nartifact provides them. Censored",
+    "startMs": 80216,
+    "endMs": 85094,
+    "timestampMs": 80216,
+    "confidence": null
+  },
+  {
+    "text": "observations stay marked at the cap rather\nthan becoming invented",
+    "startMs": 85094,
+    "endMs": 90514,
+    "timestampMs": 85094,
+    "confidence": null
+  },
+  {
+    "text": "hitting times, and sampled landscapes\nleave unobserved permutations blank.",
+    "startMs": 90514,
+    "endMs": 95392,
+    "timestampMs": 90514,
+    "confidence": null
+  },
+  {
+    "text": "The supported finding is: Gate result:\naccuracy 0.10–1.00, standard",
+    "startMs": 95392,
+    "endMs": 100270,
+    "timestampMs": 95392,
+    "confidence": null
+  },
+  {
+    "text": "deviation 0.240. The broader claim not\nestablished here is: Lesson:",
+    "startMs": 100270,
+    "endMs": 105690,
+    "timestampMs": 100270,
+    "confidence": null
+  },
+  {
+    "text": "only 20 questions made the accuracy grid\ncoarse and exact",
+    "startMs": 105690,
+    "endMs": 111110,
+    "timestampMs": 105690,
+    "confidence": null
+  },
+  {
+    "text": "optima dense. This evidence changed the\nprogram as follows: Carry",
+    "startMs": 111110,
+    "endMs": 116530,
+    "timestampMs": 111110,
+    "confidence": null
+  },
+  {
+    "text": "this constraint into the next experiment\nand compare methods at",
+    "startMs": 116530,
+    "endMs": 121950,
+    "timestampMs": 116530,
+    "confidence": null
+  },
+  {
+    "text": "equal cost. The distinction is part of the\nresult. A",
+    "startMs": 121950,
+    "endMs": 127370,
+    "timestampMs": 121950,
+    "confidence": null
+  },
+  {
+    "text": "large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 127370,
+    "endMs": 132248,
+    "timestampMs": 127370,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 132248,
+    "endMs": 136584,
+    "timestampMs": 132248,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 136584,
+    "endMs": 137120,
+    "timestampMs": 136584,
+    "confidence": null
+  }
+]

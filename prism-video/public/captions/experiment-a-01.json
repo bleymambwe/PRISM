@@ -1,0 +1,226 @@
+[
+  {
+    "text": "This section examines Experiment A —\nHistorical reproduction from first",
+    "startMs": 0,
+    "endMs": 5269,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 5269,
+    "endMs": 10538,
+    "timestampMs": 5269,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 10538,
+    "endMs": 15807,
+    "timestampMs": 10538,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? Question: do",
+    "startMs": 15807,
+    "endMs": 21076,
+    "timestampMs": 15807,
+    "confidence": null
+  },
+  {
+    "text": "the original five benchmark headlines\nreproduce from a clean environment?",
+    "startMs": 21076,
+    "endMs": 26345,
+    "timestampMs": 21076,
+    "confidence": null
+  },
+  {
+    "text": "Setup: XOR, OR, AND, 3-bit parity, and\npolynomial regression; seed",
+    "startMs": 26345,
+    "endMs": 31614,
+    "timestampMs": 26345,
+    "confidence": null
+  },
+  {
+    "text": "42; 150 generations; population 20;\ntournament 3; mutation probability 0.05;",
+    "startMs": 31614,
+    "endMs": 36883,
+    "timestampMs": 31614,
+    "confidence": null
+  },
+  {
+    "text": "elitism 1; CPU environment. Result:\nclassification accuracy reached 1.0000",
+    "startMs": 36883,
+    "endMs": 41625,
+    "timestampMs": 36883,
+    "confidence": null
+  },
+  {
+    "text": "on XOR, OR, AND, and parity; polynomial\nMSE was 0.0070",
+    "startMs": 41625,
+    "endMs": 46894,
+    "timestampMs": 41625,
+    "confidence": null
+  },
+  {
+    "text": "versus the earlier 0.0068. Corrections:\norder mattered on four of",
+    "startMs": 46894,
+    "endMs": 52163,
+    "timestampMs": 46894,
+    "confidence": null
+  },
+  {
+    "text": "five tasks; AND had essentially zero\nvariance; repeated noisy maximum",
+    "startMs": 52163,
+    "endMs": 57432,
+    "timestampMs": 52163,
+    "confidence": null
+  },
+  {
+    "text": "fitness biased the historical best-ever\nvalue upward; only positions zero",
+    "startMs": 57432,
+    "endMs": 62701,
+    "timestampMs": 57432,
+    "confidence": null
+  },
+  {
+    "text": "through two were functional. Visual: first\nshow green reproduced checks,",
+    "startMs": 62701,
+    "endMs": 67970,
+    "timestampMs": 62701,
+    "confidence": null
+  },
+  {
+    "text": "then reveal three amber correction cards.\nNarration must say reproduction",
+    "startMs": 67970,
+    "endMs": 73239,
+    "timestampMs": 67970,
+    "confidence": null
+  },
+  {
+    "text": "preserved the numeric headlines but\nnarrowed their interpretation. Now read",
+    "startMs": 73239,
+    "endMs": 78508,
+    "timestampMs": 73239,
+    "confidence": null
+  },
+  {
+    "text": "evidence panel A-validation. The axes,\nunits, and sample are stated",
+    "startMs": 78508,
+    "endMs": 83777,
+    "timestampMs": 78508,
+    "confidence": null
+  },
+  {
+    "text": "on screen. The sample represented here is\nthe sample reported",
+    "startMs": 83777,
+    "endMs": 89046,
+    "timestampMs": 83777,
+    "confidence": null
+  },
+  {
+    "text": "in the source. Raw observations remain\nvisible wherever the artifact",
+    "startMs": 89046,
+    "endMs": 94315,
+    "timestampMs": 89046,
+    "confidence": null
+  },
+  {
+    "text": "provides them. Censored observations stay\nmarked at the cap rather",
+    "startMs": 94315,
+    "endMs": 99584,
+    "timestampMs": 94315,
+    "confidence": null
+  },
+  {
+    "text": "than becoming invented hitting times, and\nsampled landscapes leave",
+    "startMs": 99584,
+    "endMs": 104326,
+    "timestampMs": 99584,
+    "confidence": null
+  },
+  {
+    "text": "unobserved permutations blank. The\nsupported finding is: Result:",
+    "startMs": 104326,
+    "endMs": 108541,
+    "timestampMs": 104326,
+    "confidence": null
+  },
+  {
+    "text": "classification accuracy reached 1.0000 on\nXOR, OR, AND, and parity;",
+    "startMs": 108541,
+    "endMs": 113810,
+    "timestampMs": 108541,
+    "confidence": null
+  },
+  {
+    "text": "polynomial MSE was 0.0070 versus the\nearlier 0.0068. The broader",
+    "startMs": 113810,
+    "endMs": 119079,
+    "timestampMs": 113810,
+    "confidence": null
+  },
+  {
+    "text": "claim not established here is:\nCorrections: order mattered on four",
+    "startMs": 119079,
+    "endMs": 124348,
+    "timestampMs": 119079,
+    "confidence": null
+  },
+  {
+    "text": "of five tasks; AND had essentially zero\nvariance; repeated noisy",
+    "startMs": 124348,
+    "endMs": 129617,
+    "timestampMs": 124348,
+    "confidence": null
+  },
+  {
+    "text": "maximum fitness biased the historical\nbest-ever value upward; only positions",
+    "startMs": 129617,
+    "endMs": 134886,
+    "timestampMs": 129617,
+    "confidence": null
+  },
+  {
+    "text": "zero through two were functional. This\nevidence changed the program",
+    "startMs": 134886,
+    "endMs": 140155,
+    "timestampMs": 134886,
+    "confidence": null
+  },
+  {
+    "text": "as follows: Carry this constraint into the\nnext experiment and",
+    "startMs": 140155,
+    "endMs": 145424,
+    "timestampMs": 140155,
+    "confidence": null
+  },
+  {
+    "text": "compare methods at equal cost. The\ndistinction is part of",
+    "startMs": 145424,
+    "endMs": 150693,
+    "timestampMs": 145424,
+    "confidence": null
+  },
+  {
+    "text": "the result. A large ordering effect does\nnot automatically imply",
+    "startMs": 150693,
+    "endMs": 155962,
+    "timestampMs": 150693,
+    "confidence": null
+  },
+  {
+    "text": "an evolutionary-search advantage, and\nalmost-sure convergence does not",
+    "startMs": 155962,
+    "endMs": 160177,
+    "timestampMs": 155962,
+    "confidence": null
+  },
+  {
+    "text": "promise practical efficiency.",
+    "startMs": 160177,
+    "endMs": 161750,
+    "timestampMs": 160177,
+    "confidence": null
+  }
+]

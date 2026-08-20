@@ -1,0 +1,191 @@
+[
+  {
+    "text": "This section examines Experiment P —\nsin-dee scientific pipeline ordering",
+    "startMs": 0,
+    "endMs": 5669,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 5669,
+    "endMs": 11338,
+    "timestampMs": 5669,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 11338,
+    "endMs": 17007,
+    "timestampMs": 11338,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 17007,
+    "endMs": 22676,
+    "timestampMs": 17007,
+    "confidence": null
+  },
+  {
+    "text": "Pipeline components: CLIP, SUBSAMPLE,\nSMOOTH, TRIM, MEDIAN, and",
+    "startMs": 22676,
+    "endMs": 27211,
+    "timestampMs": 22676,
+    "confidence": null
+  },
+  {
+    "text": "DIFFERENTIATE. All 720 orderings\nenumerated deterministically. Objective:",
+    "startMs": 27211,
+    "endMs": 31179,
+    "timestampMs": 27211,
+    "confidence": null
+  },
+  {
+    "text": "recover governing equations; fitness\nderived from relative coefficient",
+    "startMs": 31179,
+    "endMs": 35714,
+    "timestampMs": 31179,
+    "confidence": null
+  },
+  {
+    "text": "error. Result: recovery error ranged from\n0.1% to 23.2% by",
+    "startMs": 35714,
+    "endMs": 41383,
+    "timestampMs": 35714,
+    "confidence": null
+  },
+  {
+    "text": "ordering alone. Best reported ordering:",
+    "startMs": 41383,
+    "endMs": 44217,
+    "timestampMs": 41383,
+    "confidence": null
+  },
+  {
+    "text": "CLIP→SUBSAMPLE→SMOOTH→TRIM→MEDIAN→DIFFERENTIATE.\nPre-flight: F D C +0.109,",
+    "startMs": 44217,
+    "endMs": 47618,
+    "timestampMs": 44217,
+    "confidence": null
+  },
+  {
+    "text": "treated as borderline under Decision D19.\nSearch race: random succeeded",
+    "startMs": 47618,
+    "endMs": 53287,
+    "timestampMs": 47618,
+    "confidence": null
+  },
+  {
+    "text": "40/40, prism 38/40. Interpretation: order\nmattered greatly, but evolutionary",
+    "startMs": 53287,
+    "endMs": 58389,
+    "timestampMs": 53287,
+    "confidence": null
+  },
+  {
+    "text": "locality was not the best exploitation\nmechanism. Now read evidence",
+    "startMs": 58389,
+    "endMs": 64058,
+    "timestampMs": 58389,
+    "confidence": null
+  },
+  {
+    "text": "panel P-sciml. The axes, units, and sample\nare stated on",
+    "startMs": 64058,
+    "endMs": 69727,
+    "timestampMs": 64058,
+    "confidence": null
+  },
+  {
+    "text": "screen. The sample represented here is All\n720 orderings. Raw",
+    "startMs": 69727,
+    "endMs": 75396,
+    "timestampMs": 69727,
+    "confidence": null
+  },
+  {
+    "text": "observations remain visible wherever the\nartifact provides them. Censored",
+    "startMs": 75396,
+    "endMs": 80498,
+    "timestampMs": 75396,
+    "confidence": null
+  },
+  {
+    "text": "observations stay marked at the cap rather\nthan becoming invented",
+    "startMs": 80498,
+    "endMs": 86167,
+    "timestampMs": 80498,
+    "confidence": null
+  },
+  {
+    "text": "hitting times, and sampled landscapes\nleave unobserved permutations blank.",
+    "startMs": 86167,
+    "endMs": 91269,
+    "timestampMs": 86167,
+    "confidence": null
+  },
+  {
+    "text": "The supported finding is: Result: recovery\nerror ranged from 0.1%",
+    "startMs": 91269,
+    "endMs": 96938,
+    "timestampMs": 91269,
+    "confidence": null
+  },
+  {
+    "text": "to 23.2% by ordering alone. The broader\nclaim not established",
+    "startMs": 96938,
+    "endMs": 102607,
+    "timestampMs": 96938,
+    "confidence": null
+  },
+  {
+    "text": "here is: The conclusion is scoped to the\nrecorded evaluator,",
+    "startMs": 102607,
+    "endMs": 108276,
+    "timestampMs": 102607,
+    "confidence": null
+  },
+  {
+    "text": "landscape, and budget. This evidence\nchanged the program as follows:",
+    "startMs": 108276,
+    "endMs": 113945,
+    "timestampMs": 108276,
+    "confidence": null
+  },
+  {
+    "text": "Pre-flight: F D C +0.109, treated as\nborderline under Decision",
+    "startMs": 113945,
+    "endMs": 119614,
+    "timestampMs": 113945,
+    "confidence": null
+  },
+  {
+    "text": "D19. The distinction is part of the\nresult. A large",
+    "startMs": 119614,
+    "endMs": 125283,
+    "timestampMs": 119614,
+    "confidence": null
+  },
+  {
+    "text": "ordering effect does not automatically\nimply an evolutionary-search",
+    "startMs": 125283,
+    "endMs": 129818,
+    "timestampMs": 125283,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 129818,
+    "endMs": 134353,
+    "timestampMs": 129818,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 134353,
+    "endMs": 134920,
+    "timestampMs": 134353,
+    "confidence": null
+  }
+]

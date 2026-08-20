@@ -1,0 +1,93 @@
+[
+  {
+    "text": "This section examines Iteration 22 — rho_1\nablation from first",
+    "startMs": 0,
+    "endMs": 6126,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 6126,
+    "endMs": 12252,
+    "timestampMs": 6126,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 12252,
+    "endMs": 18378,
+    "timestampMs": 12252,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? Compare",
+    "startMs": 18378,
+    "endMs": 23892,
+    "timestampMs": 18378,
+    "confidence": null
+  },
+  {
+    "text": "independent move-pair rho_1, random-walk\nrho_1, and negative mean absolute",
+    "startMs": 23892,
+    "endMs": 29406,
+    "timestampMs": 23892,
+    "confidence": null
+  },
+  {
+    "text": "fitness difference. Budgets 50, 100, and\n500 samples; 200 resamples;",
+    "startMs": 29406,
+    "endMs": 35532,
+    "timestampMs": 29406,
+    "confidence": null
+  },
+  {
+    "text": "typed landscapes plus the six-module LLM\ncache. Independent pair accuracy:",
+    "startMs": 35532,
+    "endMs": 41658,
+    "timestampMs": 35532,
+    "confidence": null
+  },
+  {
+    "text": "0.831, 0.925, 0.998. Walk estimator:\n0.734, 0.848, 0.992. Negative-MAD:",
+    "startMs": 41658,
+    "endMs": 47172,
+    "timestampMs": 41658,
+    "confidence": null
+  },
+  {
+    "text": "0.827, 0.915, 0.991. Independent pairs\nwere strongest at the low",
+    "startMs": 47172,
+    "endMs": 53298,
+    "timestampMs": 47172,
+    "confidence": null
+  },
+  {
+    "text": "budget used by the protocol. The\ndistinction is part of",
+    "startMs": 53298,
+    "endMs": 59424,
+    "timestampMs": 53298,
+    "confidence": null
+  },
+  {
+    "text": "the result. A large ordering effect does\nnot automatically imply",
+    "startMs": 59424,
+    "endMs": 65550,
+    "timestampMs": 59424,
+    "confidence": null
+  },
+  {
+    "text": "an evolutionary-search advantage, and\nalmost-sure convergence does not",
+    "startMs": 65550,
+    "endMs": 70451,
+    "timestampMs": 65550,
+    "confidence": null
+  },
+  {
+    "text": "promise practical efficiency.",
+    "startMs": 70451,
+    "endMs": 72289,
+    "timestampMs": 70451,
+    "confidence": null
+  }
+]

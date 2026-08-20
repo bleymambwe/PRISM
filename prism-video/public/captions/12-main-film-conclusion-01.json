@@ -1,0 +1,128 @@
+[
+  {
+    "text": "This section examines Main-film conclusion\n(3–4 minutes) from first",
+    "startMs": 0,
+    "endMs": 4351,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 4351,
+    "endMs": 9185,
+    "timestampMs": 4351,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 9185,
+    "endMs": 14019,
+    "timestampMs": 9185,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? Return to",
+    "startMs": 14019,
+    "endMs": 18853,
+    "timestampMs": 14019,
+    "confidence": null
+  },
+  {
+    "text": "the six instruction cards from the cold\nopen. Summarize: order",
+    "startMs": 18853,
+    "endMs": 23687,
+    "timestampMs": 18853,
+    "confidence": null
+  },
+  {
+    "text": "can create large performance variation\neven when components do not",
+    "startMs": 23687,
+    "endMs": 28521,
+    "timestampMs": 23687,
+    "confidence": null
+  },
+  {
+    "text": "change; mutation, representation, and\nreplacement must match the landscape;",
+    "startMs": 28521,
+    "endMs": 32872,
+    "timestampMs": 28521,
+    "confidence": null
+  },
+  {
+    "text": "convergence in the limit does not\nguarantee budget-efficient search; exact",
+    "startMs": 32872,
+    "endMs": 37706,
+    "timestampMs": 32872,
+    "confidence": null
+  },
+  {
+    "text": "enumeration and random baselines exposed\nboth successes and boundaries;",
+    "startMs": 37706,
+    "endMs": 42057,
+    "timestampMs": 37706,
+    "confidence": null
+  },
+  {
+    "text": "transferable position effects may be more\nvaluable than a single",
+    "startMs": 42057,
+    "endMs": 46891,
+    "timestampMs": 42057,
+    "confidence": null
+  },
+  {
+    "text": "best ordering; prism’s mature contribution\nis the",
+    "startMs": 46891,
+    "endMs": 50275,
+    "timestampMs": 46891,
+    "confidence": null
+  },
+  {
+    "text": "measure–diagnose–select–verify protocol.\nEnd on the paper’s refined",
+    "startMs": 50275,
+    "endMs": 53659,
+    "timestampMs": 50275,
+    "confidence": null
+  },
+  {
+    "text": "question: > “Before searching for the best\norder, determine whether",
+    "startMs": 53659,
+    "endMs": 58493,
+    "timestampMs": 53659,
+    "confidence": null
+  },
+  {
+    "text": "order matters, whether the landscape is\nsearchable, and whether a",
+    "startMs": 58493,
+    "endMs": 63327,
+    "timestampMs": 58493,
+    "confidence": null
+  },
+  {
+    "text": "cheaper landscape can guide the expensive\none.” The distinction is",
+    "startMs": 63327,
+    "endMs": 68161,
+    "timestampMs": 63327,
+    "confidence": null
+  },
+  {
+    "text": "part of the result. A large ordering\neffect does not",
+    "startMs": 68161,
+    "endMs": 72995,
+    "timestampMs": 68161,
+    "confidence": null
+  },
+  {
+    "text": "automatically imply an evolutionary-search\nadvantage, and almost-sure",
+    "startMs": 72995,
+    "endMs": 76379,
+    "timestampMs": 72995,
+    "confidence": null
+  },
+  {
+    "text": "convergence does not promise practical\nefficiency.",
+    "startMs": 76379,
+    "endMs": 79280,
+    "timestampMs": 76379,
+    "confidence": null
+  }
+]

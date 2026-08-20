@@ -1,0 +1,191 @@
+[
+  {
+    "text": "Pause on H-scaleup for a complete evidence\nreading of Experiment",
+    "startMs": 0,
+    "endMs": 5425,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "H — Scale-up to 720 and beyond. First,\nidentify the",
+    "startMs": 5425,
+    "endMs": 10850,
+    "timestampMs": 5425,
+    "confidence": null
+  },
+  {
+    "text": "research question before looking at the\nanswer. The question asks",
+    "startMs": 10850,
+    "endMs": 16275,
+    "timestampMs": 10850,
+    "confidence": null
+  },
+  {
+    "text": "whether the fixed components create a\nmeaningful ordering surface, whether",
+    "startMs": 16275,
+    "endMs": 21700,
+    "timestampMs": 16275,
+    "confidence": null
+  },
+  {
+    "text": "a particular neighborhood provides useful\nguidance on that surface, or",
+    "startMs": 21700,
+    "endMs": 27125,
+    "timestampMs": 21700,
+    "confidence": null
+  },
+  {
+    "text": "whether a cheaper executor is equally\neffective. The sample is",
+    "startMs": 27125,
+    "endMs": 32550,
+    "timestampMs": 27125,
+    "confidence": null
+  },
+  {
+    "text": "720 orderings, and the source artifact is",
+    "startMs": 32550,
+    "endMs": 36347,
+    "timestampMs": 32550,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-06/results/n6_landscape.csv;\nn6_search.csv;",
+    "startMs": 36347,
+    "endMs": 37432,
+    "timestampMs": 36347,
+    "confidence": null
+  },
+  {
+    "text": "n7_search.csv. The horizontal axis names\nthe recorded independent",
+    "startMs": 37432,
+    "endMs": 41772,
+    "timestampMs": 37432,
+    "confidence": null
+  },
+  {
+    "text": "quantity—such as permutation size,\nposition, distance, or distinct",
+    "startMs": 41772,
+    "endMs": 46112,
+    "timestampMs": 41772,
+    "confidence": null
+  },
+  {
+    "text": "evaluations. The vertical axis names the\nmeasured outcome—such as accuracy,",
+    "startMs": 46112,
+    "endMs": 51537,
+    "timestampMs": 46112,
+    "confidence": null
+  },
+  {
+    "text": "error, hit probability, regret,\ncorrelation, or hitting time. Raw points",
+    "startMs": 51537,
+    "endMs": 56962,
+    "timestampMs": 51537,
+    "confidence": null
+  },
+  {
+    "text": "remain visible when their count permits. A\nsummary line or",
+    "startMs": 56962,
+    "endMs": 62387,
+    "timestampMs": 56962,
+    "confidence": null
+  },
+  {
+    "text": "bar describes those points; it does not\nreplace them. A",
+    "startMs": 62387,
+    "endMs": 67812,
+    "timestampMs": 62387,
+    "confidence": null
+  },
+  {
+    "text": "capped observation receives a censor\nmarker, and a sampled landscape",
+    "startMs": 67812,
+    "endMs": 73237,
+    "timestampMs": 67812,
+    "confidence": null
+  },
+  {
+    "text": "never pretends to be exhaustively\nenumerated. The central pattern supports",
+    "startMs": 73237,
+    "endMs": 78662,
+    "timestampMs": 73237,
+    "confidence": null
+  },
+  {
+    "text": "this finding: Stage A: six-block XOR, 720\norderings, 33 optima,",
+    "startMs": 78662,
+    "endMs": 84087,
+    "timestampMs": 78662,
+    "confidence": null
+  },
+  {
+    "text": "standard deviation 0.1103; portfolio\nprism, 80 generations, 10 seeds; 90%",
+    "startMs": 84087,
+    "endMs": 89512,
+    "timestampMs": 84087,
+    "confidence": null
+  },
+  {
+    "text": "hit rate and mean regret 0.0083. The\ncorrect limitation is:",
+    "startMs": 89512,
+    "endMs": 94937,
+    "timestampMs": 89512,
+    "confidence": null
+  },
+  {
+    "text": "The conclusion is scoped to the recorded\nevaluator, landscape, and",
+    "startMs": 94937,
+    "endMs": 100362,
+    "timestampMs": 94937,
+    "confidence": null
+  },
+  {
+    "text": "budget. That limitation rules out a\nbroader promotional interpretation while",
+    "startMs": 100362,
+    "endMs": 105787,
+    "timestampMs": 100362,
+    "confidence": null
+  },
+  {
+    "text": "preserving the result actually measured.\nThe decision carried into the",
+    "startMs": 105787,
+    "endMs": 111212,
+    "timestampMs": 105787,
+    "confidence": null
+  },
+  {
+    "text": "research program is: This directly\nmotivates Experiment I. Finally, compare",
+    "startMs": 111212,
+    "endMs": 116637,
+    "timestampMs": 111212,
+    "confidence": null
+  },
+  {
+    "text": "against the equal-budget alternative.\nGenerations, repeated cache hits, and",
+    "startMs": 116637,
+    "endMs": 121519,
+    "timestampMs": 116637,
+    "confidence": null
+  },
+  {
+    "text": "distinct evaluations are not\ninterchangeable. A method earns a",
+    "startMs": 121519,
+    "endMs": 126401,
+    "timestampMs": 121519,
+    "confidence": null
+  },
+  {
+    "text": "search-efficiency claim only when\nuncertainty, evaluator resolution, optimum",
+    "startMs": 126401,
+    "endMs": 130741,
+    "timestampMs": 126401,
+    "confidence": null
+  },
+  {
+    "text": "density, and evaluation cost have all been\naccounted for.",
+    "startMs": 130741,
+    "endMs": 135620,
+    "timestampMs": 130741,
+    "confidence": null
+  }
+]

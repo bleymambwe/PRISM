@@ -1,0 +1,205 @@
+[
+  {
+    "text": "This section examines Chapter 5 —\nConvergence theory, carefully stated",
+    "startMs": 0,
+    "endMs": 5603,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "(8–10 minutes) from first principles. Keep\ntwo questions separate: does",
+    "startMs": 5603,
+    "endMs": 11206,
+    "timestampMs": 5603,
+    "confidence": null
+  },
+  {
+    "text": "changing the order change the measured\noutcome, and does the",
+    "startMs": 11206,
+    "endMs": 16809,
+    "timestampMs": 11206,
+    "confidence": null
+  },
+  {
+    "text": "proposed search method beat a matched\nalternative at the same",
+    "startMs": 16809,
+    "endMs": 22412,
+    "timestampMs": 16809,
+    "confidence": null
+  },
+  {
+    "text": "distinct-evaluation budget? Build the\nMarkov-chain argument in this order: A",
+    "startMs": 22412,
+    "endMs": 28015,
+    "timestampMs": 22412,
+    "confidence": null
+  },
+  {
+    "text": "state is the entire population, not one\npermutation. The state",
+    "startMs": 28015,
+    "endMs": 33618,
+    "timestampMs": 28015,
+    "confidence": null
+  },
+  {
+    "text": "space consists of multisets of mu\npermutations from S_n. Selection,",
+    "startMs": 33618,
+    "endMs": 39221,
+    "timestampMs": 33618,
+    "confidence": null
+  },
+  {
+    "text": "mutation, and replacement define\ntransition probabilities. A population",
+    "startMs": 39221,
+    "endMs": 43703,
+    "timestampMs": 39221,
+    "confidence": null
+  },
+  {
+    "text": "containing an optimum is an absorbing\nstate under elitist replacement.",
+    "startMs": 43703,
+    "endMs": 49306,
+    "timestampMs": 43703,
+    "confidence": null
+  },
+  {
+    "text": "Positive mutation probability and a\nconnected mutation graph make the",
+    "startMs": 49306,
+    "endMs": 54909,
+    "timestampMs": 49306,
+    "confidence": null
+  },
+  {
+    "text": "optimum reachable. Display and narrate the\nalmost-sure convergence",
+    "startMs": 54909,
+    "endMs": 59391,
+    "timestampMs": 54909,
+    "confidence": null
+  },
+  {
+    "text": "statement:\nlim_{ttoinfty}Pr(X_tinOmega_{opt})=1.",
+    "startMs": 59391,
+    "endMs": 63313,
+    "timestampMs": 59391,
+    "confidence": null
+  },
+  {
+    "text": "eventual guarantee, not a promise of fast\npractical convergence. Then",
+    "startMs": 63313,
+    "endMs": 68916,
+    "timestampMs": 63313,
+    "confidence": null
+  },
+  {
+    "text": "introduce the paper’s expected-time\nexpression using the fundamental matrix:",
+    "startMs": 68916,
+    "endMs": 73958,
+    "timestampMs": 68916,
+    "confidence": null
+  },
+  {
+    "text": "mathbb{E}[T]=mathbf{1}^{top}(I-Q)^{-1}mathbf{1}.\nPresent the paper’s",
+    "startMs": 73958,
+    "endMs": 76199,
+    "timestampMs": 73958,
+    "confidence": null
+  },
+  {
+    "text": "O(n^3log n) claim specifically in the\nstated swap-mutation setting and",
+    "startMs": 76199,
+    "endMs": 81802,
+    "timestampMs": 76199,
+    "confidence": null
+  },
+  {
+    "text": "immediately attach the empirical\nlimitation: deceptive or",
+    "startMs": 81802,
+    "endMs": 85724,
+    "timestampMs": 81802,
+    "confidence": null
+  },
+  {
+    "text": "operator-mismatched landscapes can be\ncensored under realistic budgets. Do",
+    "startMs": 85724,
+    "endMs": 90766,
+    "timestampMs": 85724,
+    "confidence": null
+  },
+  {
+    "text": "not generalize the rate to every\nobjective. Finally show the",
+    "startMs": 90766,
+    "endMs": 96369,
+    "timestampMs": 90766,
+    "confidence": null
+  },
+  {
+    "text": "geometric picture: d(X_t,Omega_{opt})le\nrho(Q)^t d(X_0,Omega_{opt}). Animate",
+    "startMs": 96369,
+    "endMs": 99731,
+    "timestampMs": 96369,
+    "confidence": null
+  },
+  {
+    "text": "the illustrative rho(Q)approx0.96 curve\nand the paper’s calculation of",
+    "startMs": 99731,
+    "endMs": 104773,
+    "timestampMs": 99731,
+    "confidence": null
+  },
+  {
+    "text": "approximately 113 generations for a 99%\nthreshold. Label it as",
+    "startMs": 104773,
+    "endMs": 110376,
+    "timestampMs": 104773,
+    "confidence": null
+  },
+  {
+    "text": "the paper’s parameterized theoretical\nillustration, not a universal",
+    "startMs": 110376,
+    "endMs": 114858,
+    "timestampMs": 110376,
+    "confidence": null
+  },
+  {
+    "text": "constant. Add an optional technical\nsidebar explaining that aging",
+    "startMs": 114858,
+    "endMs": 119900,
+    "timestampMs": 114858,
+    "confidence": null
+  },
+  {
+    "text": "replacement breaks population absorption\neven if the best-ever record may",
+    "startMs": 119900,
+    "endMs": 125503,
+    "timestampMs": 119900,
+    "confidence": null
+  },
+  {
+    "text": "still converge; hybrid restart preserves\nthe best-ever ordering explicitly.",
+    "startMs": 125503,
+    "endMs": 130545,
+    "timestampMs": 125503,
+    "confidence": null
+  },
+  {
+    "text": "The distinction is part of the result. A\nlarge ordering",
+    "startMs": 130545,
+    "endMs": 136148,
+    "timestampMs": 130545,
+    "confidence": null
+  },
+  {
+    "text": "effect does not automatically imply an\nevolutionary-search advantage, and",
+    "startMs": 136148,
+    "endMs": 141190,
+    "timestampMs": 136148,
+    "confidence": null
+  },
+  {
+    "text": "almost-sure convergence does not promise\npractical efficiency.",
+    "startMs": 141190,
+    "endMs": 145109,
+    "timestampMs": 141190,
+    "confidence": null
+  }
+]

@@ -1,0 +1,219 @@
+[
+  {
+    "text": "This section examines Experiment I —\nSparse n=7 parity boundary",
+    "startMs": 0,
+    "endMs": 5486,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 5486,
+    "endMs": 10972,
+    "timestampMs": 5486,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 10972,
+    "endMs": 16458,
+    "timestampMs": 10972,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 16458,
+    "endMs": 21944,
+    "timestampMs": 16458,
+    "confidence": null
+  },
+  {
+    "text": "Search space: all 5,040 orderings\nenumerated. Optimum: 1.0000 held by",
+    "startMs": 21944,
+    "endMs": 27430,
+    "timestampMs": 21944,
+    "confidence": null
+  },
+  {
+    "text": "14 orderings, only 0.28%; landscape\nstandard deviation 0.113. Historical",
+    "startMs": 27430,
+    "endMs": 32368,
+    "timestampMs": 27430,
+    "confidence": null
+  },
+  {
+    "text": "default: population 20 and mutation\nprobability 0.05; only 4/15 seeds",
+    "startMs": 32368,
+    "endMs": 37854,
+    "timestampMs": 32368,
+    "confidence": null
+  },
+  {
+    "text": "hit an optimum after roughly 103 distinct\nevaluations. Random comparison:",
+    "startMs": 37854,
+    "endMs": 43340,
+    "timestampMs": 37854,
+    "confidence": null
+  },
+  {
+    "text": "at that same approximate budget, random’s\nexpected success was about",
+    "startMs": 43340,
+    "endMs": 48826,
+    "timestampMs": 43340,
+    "confidence": null
+  },
+  {
+    "text": "31%, close to prism’s 27%. Tuned prism:\npopulation 40, mutation",
+    "startMs": 48826,
+    "endMs": 54312,
+    "timestampMs": 48826,
+    "confidence": null
+  },
+  {
+    "text": "0.6; 15/15 hits at about 384 mean\nevaluations. Random: about",
+    "startMs": 54312,
+    "endMs": 59798,
+    "timestampMs": 54312,
+    "confidence": null
+  },
+  {
+    "text": "318 mean evaluations in the recorded\ncomparison. 40-seed audit: elitist",
+    "startMs": 59798,
+    "endMs": 65284,
+    "timestampMs": 59798,
+    "confidence": null
+  },
+  {
+    "text": "prism 19/40 hits, random 30/40; Wilson\nintervals overlapped. Conclusion:",
+    "startMs": 65284,
+    "endMs": 70222,
+    "timestampMs": 65284,
+    "confidence": null
+  },
+  {
+    "text": "evolution had no reliable advantage on\nthis near-zero-locality landscape.",
+    "startMs": 70222,
+    "endMs": 75160,
+    "timestampMs": 70222,
+    "confidence": null
+  },
+  {
+    "text": "The correct action is random sampling or a\nbetter representation.",
+    "startMs": 75160,
+    "endMs": 80646,
+    "timestampMs": 75160,
+    "confidence": null
+  },
+  {
+    "text": "Visual: display the apparent “15 out of\n15” win, then",
+    "startMs": 80646,
+    "endMs": 86132,
+    "timestampMs": 80646,
+    "confidence": null
+  },
+  {
+    "text": "normalize by distinct evaluation cost and\nreveal that random is",
+    "startMs": 86132,
+    "endMs": 91618,
+    "timestampMs": 86132,
+    "confidence": null
+  },
+  {
+    "text": "at least as competitive. Now read evidence\npanel I-audit. The",
+    "startMs": 91618,
+    "endMs": 97104,
+    "timestampMs": 91618,
+    "confidence": null
+  },
+  {
+    "text": "axes, units, and sample are stated on\nscreen. The sample",
+    "startMs": 97104,
+    "endMs": 102590,
+    "timestampMs": 97104,
+    "confidence": null
+  },
+  {
+    "text": "represented here is all 5,040 orderings.\nRaw observations remain visible",
+    "startMs": 102590,
+    "endMs": 108076,
+    "timestampMs": 102590,
+    "confidence": null
+  },
+  {
+    "text": "wherever the artifact provides them.\nCensored observations stay marked at",
+    "startMs": 108076,
+    "endMs": 113562,
+    "timestampMs": 108076,
+    "confidence": null
+  },
+  {
+    "text": "the cap rather than becoming invented\nhitting times, and sampled",
+    "startMs": 113562,
+    "endMs": 119048,
+    "timestampMs": 113562,
+    "confidence": null
+  },
+  {
+    "text": "landscapes leave unobserved permutations\nblank. The supported finding is:",
+    "startMs": 119048,
+    "endMs": 123986,
+    "timestampMs": 119048,
+    "confidence": null
+  },
+  {
+    "text": "Conclusion: evolution had no reliable\nadvantage on this near-zero-locality",
+    "startMs": 123986,
+    "endMs": 128924,
+    "timestampMs": 123986,
+    "confidence": null
+  },
+  {
+    "text": "landscape. The broader claim not\nestablished here is: Optimum: 1.0000",
+    "startMs": 128924,
+    "endMs": 134410,
+    "timestampMs": 128924,
+    "confidence": null
+  },
+  {
+    "text": "held by 14 orderings, only 0.28%;\nlandscape standard deviation 0.113.",
+    "startMs": 134410,
+    "endMs": 139896,
+    "timestampMs": 134410,
+    "confidence": null
+  },
+  {
+    "text": "This evidence changed the program as\nfollows: Carry this constraint",
+    "startMs": 139896,
+    "endMs": 145382,
+    "timestampMs": 139896,
+    "confidence": null
+  },
+  {
+    "text": "into the next experiment and compare\nmethods at equal cost.",
+    "startMs": 145382,
+    "endMs": 150868,
+    "timestampMs": 145382,
+    "confidence": null
+  },
+  {
+    "text": "The distinction is part of the result. A\nlarge ordering",
+    "startMs": 150868,
+    "endMs": 156354,
+    "timestampMs": 150868,
+    "confidence": null
+  },
+  {
+    "text": "effect does not automatically imply an\nevolutionary-search advantage, and",
+    "startMs": 156354,
+    "endMs": 161292,
+    "timestampMs": 156354,
+    "confidence": null
+  },
+  {
+    "text": "almost-sure convergence does not promise\npractical efficiency.",
+    "startMs": 161292,
+    "endMs": 165135,
+    "timestampMs": 161292,
+    "confidence": null
+  }
+]

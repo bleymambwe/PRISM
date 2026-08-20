@@ -1,0 +1,205 @@
+[
+  {
+    "text": "This section examines Experiment N —\nHybrid restart and precedence",
+    "startMs": 0,
+    "endMs": 5465,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "surrogate from first principles. Keep two\nquestions separate: does changing",
+    "startMs": 5465,
+    "endMs": 10930,
+    "timestampMs": 5465,
+    "confidence": null
+  },
+  {
+    "text": "the order change the measured outcome, and\ndoes the proposed",
+    "startMs": 10930,
+    "endMs": 16395,
+    "timestampMs": 10930,
+    "confidence": null
+  },
+  {
+    "text": "search method beat a matched alternative\nat the same distinct-evaluation",
+    "startMs": 16395,
+    "endMs": 21860,
+    "timestampMs": 16395,
+    "confidence": null
+  },
+  {
+    "text": "budget? Landscape highlight: Kendall n=7,\none optimum among 5,040 orderings.",
+    "startMs": 21860,
+    "endMs": 27325,
+    "timestampMs": 21860,
+    "confidence": null
+  },
+  {
+    "text": "Precedence representation: binary features\nindicating whether item i appears",
+    "startMs": 27325,
+    "endMs": 32244,
+    "timestampMs": 27325,
+    "confidence": null
+  },
+  {
+    "text": "before item j. Audited result reported in\nthe paper: precedence",
+    "startMs": 32244,
+    "endMs": 37709,
+    "timestampMs": 32244,
+    "confidence": null
+  },
+  {
+    "text": "surrogate 14.8 [14,15] mean evaluations;\nelitist prism 54.2 [50,59]; random",
+    "startMs": 37709,
+    "endMs": 43174,
+    "timestampMs": 37709,
+    "confidence": null
+  },
+  {
+    "text": "only 2/40 hits within a 500-evaluation\ncap. Hybrid restart: retain",
+    "startMs": 43174,
+    "endMs": 48639,
+    "timestampMs": 43174,
+    "confidence": null
+  },
+  {
+    "text": "best-ever, restart the rest after\nstagnation; never the worst in",
+    "startMs": 48639,
+    "endMs": 54104,
+    "timestampMs": 48639,
+    "confidence": null
+  },
+  {
+    "text": "the studied set but wastes restarts on\nsome structured landscapes.",
+    "startMs": 54104,
+    "endMs": 59569,
+    "timestampMs": 54104,
+    "confidence": null
+  },
+  {
+    "text": "Lesson: representation-landscape matching\nmatters for surrogates just as it",
+    "startMs": 59569,
+    "endMs": 64488,
+    "timestampMs": 59569,
+    "confidence": null
+  },
+  {
+    "text": "does for mutation. Now read evidence panel\nN-surrogate. The axes,",
+    "startMs": 64488,
+    "endMs": 69953,
+    "timestampMs": 64488,
+    "confidence": null
+  },
+  {
+    "text": "units, and sample are stated on screen.\nThe sample represented",
+    "startMs": 69953,
+    "endMs": 75418,
+    "timestampMs": 69953,
+    "confidence": null
+  },
+  {
+    "text": "here is 5,040 orderings. Raw observations\nremain visible wherever the",
+    "startMs": 75418,
+    "endMs": 80883,
+    "timestampMs": 75418,
+    "confidence": null
+  },
+  {
+    "text": "artifact provides them. Censored\nobservations stay marked at the cap",
+    "startMs": 80883,
+    "endMs": 86348,
+    "timestampMs": 80883,
+    "confidence": null
+  },
+  {
+    "text": "rather than becoming invented hitting\ntimes, and sampled landscapes leave",
+    "startMs": 86348,
+    "endMs": 91813,
+    "timestampMs": 86348,
+    "confidence": null
+  },
+  {
+    "text": "unobserved permutations blank. The\nsupported finding is: Audited result",
+    "startMs": 91813,
+    "endMs": 96732,
+    "timestampMs": 91813,
+    "confidence": null
+  },
+  {
+    "text": "reported in the paper: precedence\nsurrogate 14.8 [14,15] mean evaluations;",
+    "startMs": 96732,
+    "endMs": 102197,
+    "timestampMs": 96732,
+    "confidence": null
+  },
+  {
+    "text": "elitist prism 54.2 [50,59]; random only\n2/40 hits within a",
+    "startMs": 102197,
+    "endMs": 107662,
+    "timestampMs": 102197,
+    "confidence": null
+  },
+  {
+    "text": "500-evaluation cap. The broader claim not\nestablished here is: Audited",
+    "startMs": 107662,
+    "endMs": 113127,
+    "timestampMs": 107662,
+    "confidence": null
+  },
+  {
+    "text": "result reported in the paper: precedence\nsurrogate 14.8 [14,15] mean",
+    "startMs": 113127,
+    "endMs": 118592,
+    "timestampMs": 113127,
+    "confidence": null
+  },
+  {
+    "text": "evaluations; elitist prism 54.2 [50,59];\nrandom only 2/40 hits within",
+    "startMs": 118592,
+    "endMs": 124057,
+    "timestampMs": 118592,
+    "confidence": null
+  },
+  {
+    "text": "a 500-evaluation cap. This evidence\nchanged the program as follows:",
+    "startMs": 124057,
+    "endMs": 129522,
+    "timestampMs": 124057,
+    "confidence": null
+  },
+  {
+    "text": "Carry this constraint into the next\nexperiment and compare methods",
+    "startMs": 129522,
+    "endMs": 134987,
+    "timestampMs": 129522,
+    "confidence": null
+  },
+  {
+    "text": "at equal cost. The distinction is part of\nthe result.",
+    "startMs": 134987,
+    "endMs": 140452,
+    "timestampMs": 134987,
+    "confidence": null
+  },
+  {
+    "text": "A large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 140452,
+    "endMs": 145917,
+    "timestampMs": 140452,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 145917,
+    "endMs": 150289,
+    "timestampMs": 145917,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 150289,
+    "endMs": 150835,
+    "timestampMs": 150289,
+    "confidence": null
+  }
+]

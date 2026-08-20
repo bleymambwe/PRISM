@@ -1,0 +1,212 @@
+[
+  {
+    "text": "This section examines Experiment Q —\nSmall-model transfer at the",
+    "startMs": 0,
+    "endMs": 4686,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "paper cut from first principles. Keep two\nquestions separate: does",
+    "startMs": 4686,
+    "endMs": 9372,
+    "timestampMs": 4686,
+    "confidence": null
+  },
+  {
+    "text": "changing the order change the measured\noutcome, and does the",
+    "startMs": 9372,
+    "endMs": 14058,
+    "timestampMs": 9372,
+    "confidence": null
+  },
+  {
+    "text": "proposed search method beat a matched\nalternative at the same",
+    "startMs": 14058,
+    "endMs": 18744,
+    "timestampMs": 14058,
+    "confidence": null
+  },
+  {
+    "text": "distinct-evaluation budget? In the main\ndocumentary, preserve the paper-cut",
+    "startMs": 18744,
+    "endMs": 22961,
+    "timestampMs": 18744,
+    "confidence": null
+  },
+  {
+    "text": "status: target: Gemma, described in the\nlog as a 26B",
+    "startMs": 22961,
+    "endMs": 27647,
+    "timestampMs": 22961,
+    "confidence": null
+  },
+  {
+    "text": "MoE model with 4B active parameters; same\nsix modules and",
+    "startMs": 27647,
+    "endMs": 32333,
+    "timestampMs": 27647,
+    "confidence": null
+  },
+  {
+    "text": "32 G S M eight K questions as Experiment\nK;",
+    "startMs": 32333,
+    "endMs": 37019,
+    "timestampMs": 32333,
+    "confidence": null
+  },
+  {
+    "text": "120 orderings: 100 random, source top 15,\nsource bottom 5;",
+    "startMs": 37019,
+    "endMs": 41705,
+    "timestampMs": 37019,
+    "confidence": null
+  },
+  {
+    "text": "3,840 target cells; at the paper cut, 212\nwere cached",
+    "startMs": 41705,
+    "endMs": 46391,
+    "timestampMs": 41705,
+    "confidence": null
+  },
+  {
+    "text": "and the run was in progress. Do not reveal\nthe",
+    "startMs": 46391,
+    "endMs": 51077,
+    "timestampMs": 46391,
+    "confidence": null
+  },
+  {
+    "text": "completed outcome until the post-paper\nepilogue. Now read evidence panel",
+    "startMs": 51077,
+    "endMs": 55763,
+    "timestampMs": 51077,
+    "confidence": null
+  },
+  {
+    "text": "Q-progress. The axes, units, and sample\nare stated on screen.",
+    "startMs": 55763,
+    "endMs": 60449,
+    "timestampMs": 55763,
+    "confidence": null
+  },
+  {
+    "text": "The sample represented here is 120\norderings. Raw observations remain",
+    "startMs": 60449,
+    "endMs": 65135,
+    "timestampMs": 60449,
+    "confidence": null
+  },
+  {
+    "text": "visible wherever the artifact provides\nthem. Censored observations stay",
+    "startMs": 65135,
+    "endMs": 69352,
+    "timestampMs": 65135,
+    "confidence": null
+  },
+  {
+    "text": "marked at the cap rather than becoming\ninvented hitting times,",
+    "startMs": 69352,
+    "endMs": 74038,
+    "timestampMs": 69352,
+    "confidence": null
+  },
+  {
+    "text": "and sampled landscapes leave unobserved\npermutations blank. The supported",
+    "startMs": 74038,
+    "endMs": 78255,
+    "timestampMs": 74038,
+    "confidence": null
+  },
+  {
+    "text": "finding is: In the main documentary,\npreserve the paper-cut status:",
+    "startMs": 78255,
+    "endMs": 82941,
+    "timestampMs": 78255,
+    "confidence": null
+  },
+  {
+    "text": "target: Gemma, described in the log as a\n26B MoE",
+    "startMs": 82941,
+    "endMs": 87627,
+    "timestampMs": 82941,
+    "confidence": null
+  },
+  {
+    "text": "model with 4B active parameters; same six\nmodules and 32",
+    "startMs": 87627,
+    "endMs": 92313,
+    "timestampMs": 87627,
+    "confidence": null
+  },
+  {
+    "text": "G S M eight K questions as Experiment K;\n120",
+    "startMs": 92313,
+    "endMs": 96999,
+    "timestampMs": 92313,
+    "confidence": null
+  },
+  {
+    "text": "orderings: 100 random, source top 15,\nsource bottom 5; 3,840",
+    "startMs": 96999,
+    "endMs": 101685,
+    "timestampMs": 96999,
+    "confidence": null
+  },
+  {
+    "text": "target cells; at the paper cut, The\nbroader claim not",
+    "startMs": 101685,
+    "endMs": 106371,
+    "timestampMs": 101685,
+    "confidence": null
+  },
+  {
+    "text": "established here is: Do not reveal the\ncompleted outcome until",
+    "startMs": 106371,
+    "endMs": 111057,
+    "timestampMs": 106371,
+    "confidence": null
+  },
+  {
+    "text": "the post-paper epilogue. This evidence\nchanged the program as follows:",
+    "startMs": 111057,
+    "endMs": 115743,
+    "timestampMs": 111057,
+    "confidence": null
+  },
+  {
+    "text": "Carry this constraint into the next\nexperiment and compare methods",
+    "startMs": 115743,
+    "endMs": 120429,
+    "timestampMs": 115743,
+    "confidence": null
+  },
+  {
+    "text": "at equal cost. The distinction is part of\nthe result.",
+    "startMs": 120429,
+    "endMs": 125115,
+    "timestampMs": 120429,
+    "confidence": null
+  },
+  {
+    "text": "A large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 125115,
+    "endMs": 129801,
+    "timestampMs": 125115,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 129801,
+    "endMs": 133550,
+    "timestampMs": 129801,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 133550,
+    "endMs": 134010,
+    "timestampMs": 133550,
+    "confidence": null
+  }
+]

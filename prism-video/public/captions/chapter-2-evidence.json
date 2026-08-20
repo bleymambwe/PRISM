@@ -1,0 +1,191 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4621,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Chapter 2 — prism’s\nevolutionary loop (7–8 minutes).",
+    "startMs": 4621,
+    "endMs": 9242,
+    "timestampMs": 4621,
+    "confidence": null
+  },
+  {
+    "text": "First, identify the research question\nbefore looking at the answer.",
+    "startMs": 9242,
+    "endMs": 13863,
+    "timestampMs": 9242,
+    "confidence": null
+  },
+  {
+    "text": "The question asks whether the fixed\ncomponents create a meaningful",
+    "startMs": 13863,
+    "endMs": 18484,
+    "timestampMs": 13863,
+    "confidence": null
+  },
+  {
+    "text": "ordering surface, whether a particular\nneighborhood provides useful guidance",
+    "startMs": 18484,
+    "endMs": 22643,
+    "timestampMs": 18484,
+    "confidence": null
+  },
+  {
+    "text": "on that surface, or whether a cheaper\nexecutor is equally",
+    "startMs": 22643,
+    "endMs": 27264,
+    "timestampMs": 22643,
+    "confidence": null
+  },
+  {
+    "text": "effective. The sample is 7 landscapes, and\nthe source artifact",
+    "startMs": 27264,
+    "endMs": 31885,
+    "timestampMs": 27264,
+    "confidence": null
+  },
+  {
+    "text": "is production brief and paper source. The\nhorizontal axis names",
+    "startMs": 31885,
+    "endMs": 36506,
+    "timestampMs": 31885,
+    "confidence": null
+  },
+  {
+    "text": "the recorded independent quantity—such as\npermutation size, position,",
+    "startMs": 36506,
+    "endMs": 40203,
+    "timestampMs": 36506,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 40203,
+    "endMs": 44824,
+    "timestampMs": 40203,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 44824,
+    "endMs": 48983,
+    "timestampMs": 44824,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 48983,
+    "endMs": 53604,
+    "timestampMs": 48983,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 53604,
+    "endMs": 58225,
+    "timestampMs": 53604,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 58225,
+    "endMs": 62846,
+    "timestampMs": 58225,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 62846,
+    "endMs": 67467,
+    "timestampMs": 62846,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nAnimate one complete generation",
+    "startMs": 67467,
+    "endMs": 72088,
+    "timestampMs": 67467,
+    "confidence": null
+  },
+  {
+    "text": "with a small population of five\npermutations before showing the",
+    "startMs": 72088,
+    "endMs": 76709,
+    "timestampMs": 72088,
+    "confidence": null
+  },
+  {
+    "text": "full baseline settings. The correct\nlimitation is: Do not display",
+    "startMs": 76709,
+    "endMs": 81330,
+    "timestampMs": 76709,
+    "confidence": null
+  },
+  {
+    "text": "the entire pseudocode at once. That\nlimitation rules out a",
+    "startMs": 81330,
+    "endMs": 85951,
+    "timestampMs": 81330,
+    "confidence": null
+  },
+  {
+    "text": "broader promotional interpretation while\npreserving the result actually",
+    "startMs": 85951,
+    "endMs": 89648,
+    "timestampMs": 85951,
+    "confidence": null
+  },
+  {
+    "text": "measured. The decision carried into the\nresearch program is: Carry",
+    "startMs": 89648,
+    "endMs": 94269,
+    "timestampMs": 89648,
+    "confidence": null
+  },
+  {
+    "text": "this constraint into the next experiment\nand compare methods at",
+    "startMs": 94269,
+    "endMs": 98890,
+    "timestampMs": 94269,
+    "confidence": null
+  },
+  {
+    "text": "equal cost. Finally, compare against the\nequal-budget alternative.",
+    "startMs": 98890,
+    "endMs": 102587,
+    "timestampMs": 98890,
+    "confidence": null
+  },
+  {
+    "text": "Generations, repeated cache hits, and\ndistinct evaluations are not",
+    "startMs": 102587,
+    "endMs": 106746,
+    "timestampMs": 102587,
+    "confidence": null
+  },
+  {
+    "text": "interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 106746,
+    "endMs": 110905,
+    "timestampMs": 106746,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 110905,
+    "endMs": 115064,
+    "timestampMs": 110905,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 115064,
+    "endMs": 116920,
+    "timestampMs": 115064,
+    "confidence": null
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "text": "This section examines Experiment L —\nAging, hybrid ideas, and",
+    "startMs": 0,
+    "endMs": 5063,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "a positional surrogate from first\nprinciples. Keep two questions separate:",
+    "startMs": 5063,
+    "endMs": 10126,
+    "timestampMs": 5063,
+    "confidence": null
+  },
+  {
+    "text": "does changing the order change the\nmeasured outcome, and does",
+    "startMs": 10126,
+    "endMs": 15189,
+    "timestampMs": 10126,
+    "confidence": null
+  },
+  {
+    "text": "the proposed search method beat a matched\nalternative at the",
+    "startMs": 15189,
+    "endMs": 20252,
+    "timestampMs": 15189,
+    "confidence": null
+  },
+  {
+    "text": "same distinct-evaluation budget? Methods:\nelitist prism, aging evolution,",
+    "startMs": 20252,
+    "endMs": 24302,
+    "timestampMs": 20252,
+    "confidence": null
+  },
+  {
+    "text": "random, and a BANANAS-style ridge\nsurrogate using positional one-hot",
+    "startMs": 24302,
+    "endMs": 28859,
+    "timestampMs": 24302,
+    "confidence": null
+  },
+  {
+    "text": "features; later hybrid restart is\nseparated in Experiment N. Protocol:",
+    "startMs": 28859,
+    "endMs": 33922,
+    "timestampMs": 28859,
+    "confidence": null
+  },
+  {
+    "text": "four methods across three cached\nlandscapes, initially 15 seeds; 40-seed",
+    "startMs": 33922,
+    "endMs": 38985,
+    "timestampMs": 33922,
+    "confidence": null
+  },
+  {
+    "text": "verification on parity n=7; cap 500\ndistinct evaluations. Parity: aging",
+    "startMs": 38985,
+    "endMs": 44048,
+    "timestampMs": 38985,
+    "confidence": null
+  },
+  {
+    "text": "improved hit rate from roughly 48% to 78%,\nbut random",
+    "startMs": 44048,
+    "endMs": 49111,
+    "timestampMs": 44048,
+    "confidence": null
+  },
+  {
+    "text": "was about 75%; it fixed premature\nconvergence without creating locality.",
+    "startMs": 49111,
+    "endMs": 54174,
+    "timestampMs": 49111,
+    "confidence": null
+  },
+  {
+    "text": "Structured XOR n=6: elitist remained\nfaster, 18.5 versus 28.7 evaluations.",
+    "startMs": 54174,
+    "endMs": 59237,
+    "timestampMs": 54174,
+    "confidence": null
+  },
+  {
+    "text": "Positional surrogate: mild win on the LLM\nlandscape, inert on",
+    "startMs": 59237,
+    "endMs": 64300,
+    "timestampMs": 59237,
+    "confidence": null
+  },
+  {
+    "text": "parity. Decision: F D C-negative suggests\nelitist search with a",
+    "startMs": 64300,
+    "endMs": 69363,
+    "timestampMs": 64300,
+    "confidence": null
+  },
+  {
+    "text": "matched or portfolio operator; F D C near\nzero suggests",
+    "startMs": 69363,
+    "endMs": 74426,
+    "timestampMs": 69363,
+    "confidence": null
+  },
+  {
+    "text": "random or aging. Aging is a robust\ndefault, not a",
+    "startMs": 74426,
+    "endMs": 79489,
+    "timestampMs": 74426,
+    "confidence": null
+  },
+  {
+    "text": "universal winner. Now read evidence panel\nL-methods. The axes, units,",
+    "startMs": 79489,
+    "endMs": 84552,
+    "timestampMs": 79489,
+    "confidence": null
+  },
+  {
+    "text": "and sample are stated on screen. The\nsample represented here",
+    "startMs": 84552,
+    "endMs": 89615,
+    "timestampMs": 84552,
+    "confidence": null
+  },
+  {
+    "text": "is 15 seeds. Raw observations remain\nvisible wherever the artifact",
+    "startMs": 89615,
+    "endMs": 94678,
+    "timestampMs": 89615,
+    "confidence": null
+  },
+  {
+    "text": "provides them. Censored observations stay\nmarked at the cap rather",
+    "startMs": 94678,
+    "endMs": 99741,
+    "timestampMs": 94678,
+    "confidence": null
+  },
+  {
+    "text": "than becoming invented hitting times, and\nsampled landscapes leave",
+    "startMs": 99741,
+    "endMs": 104298,
+    "timestampMs": 99741,
+    "confidence": null
+  },
+  {
+    "text": "unobserved permutations blank. The\nsupported finding is: Parity: aging",
+    "startMs": 104298,
+    "endMs": 108855,
+    "timestampMs": 104298,
+    "confidence": null
+  },
+  {
+    "text": "improved hit rate from roughly 48% to 78%,\nbut random",
+    "startMs": 108855,
+    "endMs": 113918,
+    "timestampMs": 108855,
+    "confidence": null
+  },
+  {
+    "text": "was about 75%; it fixed premature\nconvergence without creating locality.",
+    "startMs": 113918,
+    "endMs": 118981,
+    "timestampMs": 113918,
+    "confidence": null
+  },
+  {
+    "text": "The broader claim not established here is:\nThe conclusion is",
+    "startMs": 118981,
+    "endMs": 124044,
+    "timestampMs": 118981,
+    "confidence": null
+  },
+  {
+    "text": "scoped to the recorded evaluator,\nlandscape, and budget. This evidence",
+    "startMs": 124044,
+    "endMs": 129107,
+    "timestampMs": 124044,
+    "confidence": null
+  },
+  {
+    "text": "changed the program as follows: Decision:\nF D C-negative suggests",
+    "startMs": 129107,
+    "endMs": 134170,
+    "timestampMs": 129107,
+    "confidence": null
+  },
+  {
+    "text": "elitist search with a matched or portfolio\noperator; F D",
+    "startMs": 134170,
+    "endMs": 139233,
+    "timestampMs": 134170,
+    "confidence": null
+  },
+  {
+    "text": "C near zero suggests random or aging. The\ndistinction is",
+    "startMs": 139233,
+    "endMs": 144296,
+    "timestampMs": 139233,
+    "confidence": null
+  },
+  {
+    "text": "part of the result. A large ordering\neffect does not",
+    "startMs": 144296,
+    "endMs": 149359,
+    "timestampMs": 144296,
+    "confidence": null
+  },
+  {
+    "text": "automatically imply an evolutionary-search\nadvantage, and almost-sure",
+    "startMs": 149359,
+    "endMs": 152903,
+    "timestampMs": 149359,
+    "confidence": null
+  },
+  {
+    "text": "convergence does not promise practical\nefficiency.",
+    "startMs": 152903,
+    "endMs": 155935,
+    "timestampMs": 152903,
+    "confidence": null
+  }
+]

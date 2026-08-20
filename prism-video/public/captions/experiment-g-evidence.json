@@ -1,0 +1,191 @@
+[
+  {
+    "text": "Pause on G-landscape for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 5215,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "G — Exact v4 neural ground truth. First,\nidentify the",
+    "startMs": 5215,
+    "endMs": 10430,
+    "timestampMs": 5215,
+    "confidence": null
+  },
+  {
+    "text": "research question before looking at the\nanswer. The question asks",
+    "startMs": 10430,
+    "endMs": 15645,
+    "timestampMs": 10430,
+    "confidence": null
+  },
+  {
+    "text": "whether the fixed components create a\nmeaningful ordering surface, whether",
+    "startMs": 15645,
+    "endMs": 20860,
+    "timestampMs": 15645,
+    "confidence": null
+  },
+  {
+    "text": "a particular neighborhood provides useful\nguidance on that surface, or",
+    "startMs": 20860,
+    "endMs": 26075,
+    "timestampMs": 20860,
+    "confidence": null
+  },
+  {
+    "text": "whether a cheaper executor is equally\neffective. The sample is",
+    "startMs": 26075,
+    "endMs": 31290,
+    "timestampMs": 26075,
+    "confidence": null
+  },
+  {
+    "text": "all 120 orderings, and the source artifact\nis",
+    "startMs": 31290,
+    "endMs": 35462,
+    "timestampMs": 31290,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-05/results/v4_landscape.csv;\nv4_search.csv. The",
+    "startMs": 35462,
+    "endMs": 37026,
+    "timestampMs": 35462,
+    "confidence": null
+  },
+  {
+    "text": "horizontal axis names the recorded\nindependent quantity—such as permutation",
+    "startMs": 37026,
+    "endMs": 41719,
+    "timestampMs": 37026,
+    "confidence": null
+  },
+  {
+    "text": "size, position, distance, or distinct\nevaluations. The vertical axis names",
+    "startMs": 41719,
+    "endMs": 46934,
+    "timestampMs": 41719,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome—such as accuracy,\nerror, hit probability, regret,",
+    "startMs": 46934,
+    "endMs": 51627,
+    "timestampMs": 46934,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 51627,
+    "endMs": 56842,
+    "timestampMs": 51627,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 56842,
+    "endMs": 62057,
+    "timestampMs": 56842,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 62057,
+    "endMs": 67272,
+    "timestampMs": 62057,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 67272,
+    "endMs": 72487,
+    "timestampMs": 67272,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: XOR-v4:",
+    "startMs": 72487,
+    "endMs": 77180,
+    "timestampMs": 72487,
+    "confidence": null
+  },
+  {
+    "text": "optimum 1.0000, eight of 120 orderings\noptimal, landscape standard deviation",
+    "startMs": 77180,
+    "endMs": 82395,
+    "timestampMs": 77180,
+    "confidence": null
+  },
+  {
+    "text": "0.120, prism 100% hit rate. The correct\nlimitation is: The",
+    "startMs": 82395,
+    "endMs": 87610,
+    "timestampMs": 82395,
+    "confidence": null
+  },
+  {
+    "text": "conclusion is scoped to the recorded\nevaluator, landscape, and budget.",
+    "startMs": 87610,
+    "endMs": 92825,
+    "timestampMs": 87610,
+    "confidence": null
+  },
+  {
+    "text": "That limitation rules out a broader\npromotional interpretation while",
+    "startMs": 92825,
+    "endMs": 97518,
+    "timestampMs": 92825,
+    "confidence": null
+  },
+  {
+    "text": "preserving the result actually measured.\nThe decision carried into the",
+    "startMs": 97518,
+    "endMs": 102733,
+    "timestampMs": 97518,
+    "confidence": null
+  },
+  {
+    "text": "research program is: Carry this constraint\ninto the next experiment",
+    "startMs": 102733,
+    "endMs": 107948,
+    "timestampMs": 102733,
+    "confidence": null
+  },
+  {
+    "text": "and compare methods at equal cost.\nFinally, compare against the",
+    "startMs": 107948,
+    "endMs": 113163,
+    "timestampMs": 107948,
+    "confidence": null
+  },
+  {
+    "text": "equal-budget alternative. Generations,\nrepeated cache hits, and distinct",
+    "startMs": 113163,
+    "endMs": 117335,
+    "timestampMs": 113163,
+    "confidence": null
+  },
+  {
+    "text": "evaluations are not interchangeable. A\nmethod earns a search-efficiency",
+    "startMs": 117335,
+    "endMs": 122028,
+    "timestampMs": 117335,
+    "confidence": null
+  },
+  {
+    "text": "claim only when uncertainty, evaluator\nresolution, optimum density, and",
+    "startMs": 122028,
+    "endMs": 126721,
+    "timestampMs": 122028,
+    "confidence": null
+  },
+  {
+    "text": "evaluation cost have all been accounted\nfor.",
+    "startMs": 126721,
+    "endMs": 130370,
+    "timestampMs": 126721,
+    "confidence": null
+  }
+]

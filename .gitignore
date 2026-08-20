@@ -99,3 +99,33 @@ docs/CONTINUITY_PROTOCOL.md
 docs/RESEARCH_STATUS_COMPREHENSIVE_*.md
 docs/RECENT_DEVELOPMENTS_*.md
 docs/BENCHMARK_DISCOVERY_*.md
+
+# ---------------------------------------------------------------------------
+# Packaging, build output and vendored dependencies
+# ---------------------------------------------------------------------------
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+prof.out
+
+# Vendored JavaScript dependencies (~618 MB, includes a bundled headless Chrome)
+node_modules/
+
+# arXiv submission bundles and old PDF version snapshots. arXiv is
+# authoritative; the paper source is what belongs here.
+*.zip
+arxiv*.pdf
+prism arxiv*.pdf
+paper/**/*_BUILD.pdf
+
+# Generated narration audio - rebuilt by scripts/generate_narration.py
+prism-video/public/audio/
+prism-video/renders/*.mp4
+prism-video/renders/*.mov
+
+# Third-party papers downloaded for venue research - not ours to redistribute
+publication/strategy/**/papers/
+publication/**/_pdf_cache/

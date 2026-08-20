@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on J-locality for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 5213,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "J — Pre-flight diagnostics. First,\nidentify the research question before",
+    "startMs": 5213,
+    "endMs": 10426,
+    "timestampMs": 5213,
+    "confidence": null
+  },
+  {
+    "text": "looking at the answer. The question asks\nwhether the fixed",
+    "startMs": 10426,
+    "endMs": 15639,
+    "timestampMs": 10426,
+    "confidence": null
+  },
+  {
+    "text": "components create a meaningful ordering\nsurface, whether a particular",
+    "startMs": 15639,
+    "endMs": 20331,
+    "timestampMs": 15639,
+    "confidence": null
+  },
+  {
+    "text": "neighborhood provides useful guidance on\nthat surface, or whether a",
+    "startMs": 20331,
+    "endMs": 25544,
+    "timestampMs": 20331,
+    "confidence": null
+  },
+  {
+    "text": "cheaper executor is equally effective. The\nsample is the sample",
+    "startMs": 25544,
+    "endMs": 30757,
+    "timestampMs": 25544,
+    "confidence": null
+  },
+  {
+    "text": "reported in the source, and the source\nartifact is",
+    "startMs": 30757,
+    "endMs": 35449,
+    "timestampMs": 30757,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-08/results/locality.csv;",
+    "startMs": 35449,
+    "endMs": 35970,
+    "timestampMs": 35449,
+    "confidence": null
+  },
+  {
+    "text": "iteration-14/preflight_error.csv. The\nhorizontal axis names the recorded",
+    "startMs": 35970,
+    "endMs": 39619,
+    "timestampMs": 35970,
+    "confidence": null
+  },
+  {
+    "text": "independent quantity—such as permutation\nsize, position, distance, or",
+    "startMs": 39619,
+    "endMs": 43790,
+    "timestampMs": 39619,
+    "confidence": null
+  },
+  {
+    "text": "distinct evaluations. The vertical axis\nnames the measured outcome—such as",
+    "startMs": 43790,
+    "endMs": 49003,
+    "timestampMs": 43790,
+    "confidence": null
+  },
+  {
+    "text": "accuracy, error, hit probability, regret,\ncorrelation, or hitting time. Raw",
+    "startMs": 49003,
+    "endMs": 54216,
+    "timestampMs": 49003,
+    "confidence": null
+  },
+  {
+    "text": "points remain visible when their count\npermits. A summary line",
+    "startMs": 54216,
+    "endMs": 59429,
+    "timestampMs": 54216,
+    "confidence": null
+  },
+  {
+    "text": "or bar describes those points; it does not\nreplace them.",
+    "startMs": 59429,
+    "endMs": 64642,
+    "timestampMs": 59429,
+    "confidence": null
+  },
+  {
+    "text": "A capped observation receives a censor\nmarker, and a sampled",
+    "startMs": 64642,
+    "endMs": 69855,
+    "timestampMs": 64642,
+    "confidence": null
+  },
+  {
+    "text": "landscape never pretends to be\nexhaustively enumerated. The central",
+    "startMs": 69855,
+    "endMs": 75068,
+    "timestampMs": 69855,
+    "confidence": null
+  },
+  {
+    "text": "supports this finding: Teach both\nstatistics before showing the outcome:",
+    "startMs": 75068,
+    "endMs": 80281,
+    "timestampMs": 75068,
+    "confidence": null
+  },
+  {
+    "text": "rho_1=operatorname{corr}(f(pi),f(m(pi)))\nwhere m is one mutation move, and F",
+    "startMs": 80281,
+    "endMs": 84973,
+    "timestampMs": 80281,
+    "confidence": null
+  },
+  {
+    "text": "D C correlates fitness with distance to\nthe nearest optimum.",
+    "startMs": 84973,
+    "endMs": 90186,
+    "timestampMs": 84973,
+    "confidence": null
+  },
+  {
+    "text": "The correct limitation is: Caveat:\nscramble identity moves can inflate",
+    "startMs": 90186,
+    "endMs": 95399,
+    "timestampMs": 90186,
+    "confidence": null
+  },
+  {
+    "text": "its autocorrelation; exclude it from a\nnaïve argmax. That limitation",
+    "startMs": 95399,
+    "endMs": 100612,
+    "timestampMs": 95399,
+    "confidence": null
+  },
+  {
+    "text": "rules out a broader promotional\ninterpretation while preserving the result",
+    "startMs": 100612,
+    "endMs": 105825,
+    "timestampMs": 100612,
+    "confidence": null
+  },
+  {
+    "text": "actually measured. The decision carried\ninto the research program is:",
+    "startMs": 105825,
+    "endMs": 111038,
+    "timestampMs": 105825,
+    "confidence": null
+  },
+  {
+    "text": "Carry this constraint into the next\nexperiment and compare methods",
+    "startMs": 111038,
+    "endMs": 116251,
+    "timestampMs": 111038,
+    "confidence": null
+  },
+  {
+    "text": "at equal cost. Finally, compare against\nthe equal-budget alternative.",
+    "startMs": 116251,
+    "endMs": 120943,
+    "timestampMs": 116251,
+    "confidence": null
+  },
+  {
+    "text": "Generations, repeated cache hits, and\ndistinct evaluations are not",
+    "startMs": 120943,
+    "endMs": 125635,
+    "timestampMs": 120943,
+    "confidence": null
+  },
+  {
+    "text": "interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 125635,
+    "endMs": 130327,
+    "timestampMs": 125635,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 130327,
+    "endMs": 135019,
+    "timestampMs": 130327,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 135019,
+    "endMs": 137109,
+    "timestampMs": 135019,
+    "confidence": null
+  }
+]

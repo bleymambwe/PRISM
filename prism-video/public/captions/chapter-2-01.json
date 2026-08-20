@@ -1,0 +1,163 @@
+[
+  {
+    "text": "This section examines Chapter 2 — prism’s\nevolutionary loop (7–8",
+    "startMs": 0,
+    "endMs": 5033,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "minutes) from first principles. Keep two\nquestions separate: does changing",
+    "startMs": 5033,
+    "endMs": 10066,
+    "timestampMs": 5033,
+    "confidence": null
+  },
+  {
+    "text": "the order change the measured outcome, and\ndoes the proposed",
+    "startMs": 10066,
+    "endMs": 15099,
+    "timestampMs": 10066,
+    "confidence": null
+  },
+  {
+    "text": "search method beat a matched alternative\nat the same distinct-evaluation",
+    "startMs": 15099,
+    "endMs": 20132,
+    "timestampMs": 15099,
+    "confidence": null
+  },
+  {
+    "text": "budget? Animate one complete generation\nwith a small population of",
+    "startMs": 20132,
+    "endMs": 25165,
+    "timestampMs": 20132,
+    "confidence": null
+  },
+  {
+    "text": "five permutations before showing the full\nbaseline settings. Explain every",
+    "startMs": 25165,
+    "endMs": 30198,
+    "timestampMs": 25165,
+    "confidence": null
+  },
+  {
+    "text": "step: Sample mu random permutations.\nDecode each ordering into a",
+    "startMs": 30198,
+    "endMs": 35231,
+    "timestampMs": 30198,
+    "confidence": null
+  },
+  {
+    "text": "system. Evaluate fitness. Copy the global\nbest into the next",
+    "startMs": 35231,
+    "endMs": 40264,
+    "timestampMs": 35231,
+    "confidence": null
+  },
+  {
+    "text": "population. Sample k competitors and\nselect the highest-fitness parent.",
+    "startMs": 40264,
+    "endMs": 44794,
+    "timestampMs": 40264,
+    "confidence": null
+  },
+  {
+    "text": "Mutate the parent with probability p_m.\nRepeat until the next",
+    "startMs": 44794,
+    "endMs": 49827,
+    "timestampMs": 44794,
+    "confidence": null
+  },
+  {
+    "text": "population is full. Stop after T\ngenerations or an evaluation",
+    "startMs": 49827,
+    "endMs": 54860,
+    "timestampMs": 49827,
+    "confidence": null
+  },
+  {
+    "text": "budget. Explain the baseline parameters\nand their intended role: population",
+    "startMs": 54860,
+    "endMs": 59893,
+    "timestampMs": 54860,
+    "confidence": null
+  },
+  {
+    "text": "mu=20 for the historical small problems;\ntournament size k=3; mutation",
+    "startMs": 59893,
+    "endMs": 64926,
+    "timestampMs": 59893,
+    "confidence": null
+  },
+  {
+    "text": "probability p_m=0.05; one elite copy; no\ncrossover, to isolate ordering",
+    "startMs": 64926,
+    "endMs": 69959,
+    "timestampMs": 64926,
+    "confidence": null
+  },
+  {
+    "text": "and neighborhood effects. Then show how\nlater experiments altered the",
+    "startMs": 69959,
+    "endMs": 74992,
+    "timestampMs": 69959,
+    "confidence": null
+  },
+  {
+    "text": "historical settings for harder nge7\nlandscapes and why distinct evaluated",
+    "startMs": 74992,
+    "endMs": 80025,
+    "timestampMs": 74992,
+    "confidence": null
+  },
+  {
+    "text": "permutations, not generations alone,\nbecame the cost unit. Include a",
+    "startMs": 80025,
+    "endMs": 85058,
+    "timestampMs": 80025,
+    "confidence": null
+  },
+  {
+    "text": "line-by-line animation of the three paper\nalgorithms: main loop, tournament",
+    "startMs": 85058,
+    "endMs": 90091,
+    "timestampMs": 85058,
+    "confidence": null
+  },
+  {
+    "text": "selection, and generic mutation. Do not\ndisplay the entire pseudocode",
+    "startMs": 90091,
+    "endMs": 95124,
+    "timestampMs": 90091,
+    "confidence": null
+  },
+  {
+    "text": "at once. The distinction is part of the\nresult. A",
+    "startMs": 95124,
+    "endMs": 100157,
+    "timestampMs": 95124,
+    "confidence": null
+  },
+  {
+    "text": "large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 100157,
+    "endMs": 104687,
+    "timestampMs": 100157,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 104687,
+    "endMs": 108714,
+    "timestampMs": 104687,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 108714,
+    "endMs": 109220,
+    "timestampMs": 108714,
+    "confidence": null
+  }
+]

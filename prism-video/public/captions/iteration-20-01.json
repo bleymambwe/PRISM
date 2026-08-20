@@ -1,0 +1,121 @@
+[
+  {
+    "text": "This section examines Iteration 20 —\nSix-system SciML suite from",
+    "startMs": 0,
+    "endMs": 5264,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "first principles. Keep two questions\nseparate: does changing the order",
+    "startMs": 5264,
+    "endMs": 10528,
+    "timestampMs": 5264,
+    "confidence": null
+  },
+  {
+    "text": "change the measured outcome, and does the\nproposed search method",
+    "startMs": 10528,
+    "endMs": 15792,
+    "timestampMs": 10528,
+    "confidence": null
+  },
+  {
+    "text": "beat a matched alternative at the same\ndistinct-evaluation budget? Systems:",
+    "startMs": 15792,
+    "endMs": 21056,
+    "timestampMs": 15792,
+    "confidence": null
+  },
+  {
+    "text": "damped oscillator, cubic oscillator, Van\nder Pol, Lotka–Volterra, Lorenz-63,",
+    "startMs": 21056,
+    "endMs": 25794,
+    "timestampMs": 21056,
+    "confidence": null
+  },
+  {
+    "text": "and Rössler. Six operations and all 720\norders per system,",
+    "startMs": 25794,
+    "endMs": 31058,
+    "timestampMs": 25794,
+    "confidence": null
+  },
+  {
+    "text": "4,320 rows total. Ordering effects\nappeared in all six valid",
+    "startMs": 31058,
+    "endMs": 36322,
+    "timestampMs": 31058,
+    "confidence": null
+  },
+  {
+    "text": "system configurations; optima ranged from\none to eight per 720.",
+    "startMs": 36322,
+    "endMs": 41586,
+    "timestampMs": 36322,
+    "confidence": null
+  },
+  {
+    "text": "Insert was selected by rho_1 on all six,\nsuggesting general",
+    "startMs": 41586,
+    "endMs": 46850,
+    "timestampMs": 41586,
+    "confidence": null
+  },
+  {
+    "text": "precedence structure. Important\ncorrection: Cayley/swap-aligned F D C",
+    "startMs": 46850,
+    "endMs": 51061,
+    "timestampMs": 46850,
+    "confidence": null
+  },
+  {
+    "text": "under-called search on Van der Pol,\nRössler, and Lotka–Volterra;",
+    "startMs": 51061,
+    "endMs": 55799,
+    "timestampMs": 51061,
+    "confidence": null
+  },
+  {
+    "text": "insert-prism dominated random despite\nnear-zero F D C. New lesson:",
+    "startMs": 55799,
+    "endMs": 61063,
+    "timestampMs": 55799,
+    "confidence": null
+  },
+  {
+    "text": "regime diagnosis should align its distance\nmetric with the detected",
+    "startMs": 61063,
+    "endMs": 66327,
+    "timestampMs": 61063,
+    "confidence": null
+  },
+  {
+    "text": "operator or combine strong\noperator-specific rho_1 with F D C.",
+    "startMs": 66327,
+    "endMs": 71591,
+    "timestampMs": 66327,
+    "confidence": null
+  },
+  {
+    "text": "The distinction is part of the result. A\nlarge ordering",
+    "startMs": 71591,
+    "endMs": 76855,
+    "timestampMs": 71591,
+    "confidence": null
+  },
+  {
+    "text": "effect does not automatically imply an\nevolutionary-search advantage, and",
+    "startMs": 76855,
+    "endMs": 81593,
+    "timestampMs": 76855,
+    "confidence": null
+  },
+  {
+    "text": "almost-sure convergence does not promise\npractical efficiency.",
+    "startMs": 81593,
+    "endMs": 85280,
+    "timestampMs": 81593,
+    "confidence": null
+  }
+]

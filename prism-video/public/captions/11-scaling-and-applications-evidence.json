@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on the section's explanatory diagram\nfor a complete evidence",
+    "startMs": 0,
+    "endMs": 4725,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "reading of Scaling and applications (5–6\nminutes). First, identify the",
+    "startMs": 4725,
+    "endMs": 9450,
+    "timestampMs": 4725,
+    "confidence": null
+  },
+  {
+    "text": "research question before looking at the\nanswer. The question asks",
+    "startMs": 9450,
+    "endMs": 14175,
+    "timestampMs": 9450,
+    "confidence": null
+  },
+  {
+    "text": "whether the fixed components create a\nmeaningful ordering surface, whether",
+    "startMs": 14175,
+    "endMs": 18900,
+    "timestampMs": 14175,
+    "confidence": null
+  },
+  {
+    "text": "a particular neighborhood provides useful\nguidance on that surface, or",
+    "startMs": 18900,
+    "endMs": 23625,
+    "timestampMs": 18900,
+    "confidence": null
+  },
+  {
+    "text": "whether a cheaper executor is equally\neffective. The sample is",
+    "startMs": 23625,
+    "endMs": 28350,
+    "timestampMs": 23625,
+    "confidence": null
+  },
+  {
+    "text": "the sample reported in the source, and the\nsource artifact",
+    "startMs": 28350,
+    "endMs": 33075,
+    "timestampMs": 28350,
+    "confidence": null
+  },
+  {
+    "text": "is production brief and paper source. The\nhorizontal axis names",
+    "startMs": 33075,
+    "endMs": 37800,
+    "timestampMs": 33075,
+    "confidence": null
+  },
+  {
+    "text": "the recorded independent quantity—such as\npermutation size, position,",
+    "startMs": 37800,
+    "endMs": 41580,
+    "timestampMs": 37800,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 41580,
+    "endMs": 46305,
+    "timestampMs": 41580,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 46305,
+    "endMs": 50557,
+    "timestampMs": 46305,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 50557,
+    "endMs": 55282,
+    "timestampMs": 50557,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 55282,
+    "endMs": 60007,
+    "timestampMs": 55282,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 60007,
+    "endMs": 64732,
+    "timestampMs": 60007,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 64732,
+    "endMs": 69457,
+    "timestampMs": 64732,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nClearly label this as",
+    "startMs": 69457,
+    "endMs": 74182,
+    "timestampMs": 69457,
+    "confidence": null
+  },
+  {
+    "text": "a scaling proposal, not a completed result\nin the supplied",
+    "startMs": 74182,
+    "endMs": 78907,
+    "timestampMs": 74182,
+    "confidence": null
+  },
+  {
+    "text": "paper. The correct limitation is: Explain\nthe proposed three-stage",
+    "startMs": 78907,
+    "endMs": 83159,
+    "timestampMs": 78907,
+    "confidence": null
+  },
+  {
+    "text": "weight-sharing strategy: pre-train a\ncompatible supernet once; freeze shared",
+    "startMs": 83159,
+    "endMs": 87411,
+    "timestampMs": 83159,
+    "confidence": null
+  },
+  {
+    "text": "weights and score many orderings cheaply;\nretrain or fine-tune only",
+    "startMs": 87411,
+    "endMs": 92136,
+    "timestampMs": 87411,
+    "confidence": null
+  },
+  {
+    "text": "the top k orderings from scratch. That\nlimitation rules out",
+    "startMs": 92136,
+    "endMs": 96861,
+    "timestampMs": 92136,
+    "confidence": null
+  },
+  {
+    "text": "a broader promotional interpretation while\npreserving the result actually",
+    "startMs": 96861,
+    "endMs": 101113,
+    "timestampMs": 96861,
+    "confidence": null
+  },
+  {
+    "text": "measured. The decision carried into the\nresearch program is: Carry",
+    "startMs": 101113,
+    "endMs": 105838,
+    "timestampMs": 101113,
+    "confidence": null
+  },
+  {
+    "text": "this constraint into the next experiment\nand compare methods at",
+    "startMs": 105838,
+    "endMs": 110563,
+    "timestampMs": 105838,
+    "confidence": null
+  },
+  {
+    "text": "equal cost. Finally, compare against the\nequal-budget alternative.",
+    "startMs": 110563,
+    "endMs": 114343,
+    "timestampMs": 110563,
+    "confidence": null
+  },
+  {
+    "text": "Generations, repeated cache hits, and\ndistinct evaluations are not",
+    "startMs": 114343,
+    "endMs": 118595,
+    "timestampMs": 114343,
+    "confidence": null
+  },
+  {
+    "text": "interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 118595,
+    "endMs": 122847,
+    "timestampMs": 118595,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 122847,
+    "endMs": 127099,
+    "timestampMs": 122847,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 127099,
+    "endMs": 128984,
+    "timestampMs": 127099,
+    "confidence": null
+  }
+]

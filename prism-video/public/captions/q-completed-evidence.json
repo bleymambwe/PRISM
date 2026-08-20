@@ -1,0 +1,177 @@
+[
+  {
+    "text": "Pause on Q-progress for a complete\nevidence reading of Q",
+    "startMs": 0,
+    "endMs": 4921,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "completed — Gemma transfer. First,\nidentify the research question before",
+    "startMs": 4921,
+    "endMs": 9842,
+    "timestampMs": 4921,
+    "confidence": null
+  },
+  {
+    "text": "looking at the answer. The question asks\nwhether the fixed",
+    "startMs": 9842,
+    "endMs": 14763,
+    "timestampMs": 9842,
+    "confidence": null
+  },
+  {
+    "text": "components create a meaningful ordering\nsurface, whether a particular",
+    "startMs": 14763,
+    "endMs": 19192,
+    "timestampMs": 14763,
+    "confidence": null
+  },
+  {
+    "text": "neighborhood provides useful guidance on\nthat surface, or whether a",
+    "startMs": 19192,
+    "endMs": 24113,
+    "timestampMs": 19192,
+    "confidence": null
+  },
+  {
+    "text": "cheaper executor is equally effective. The\nsample is 4,101 calls,",
+    "startMs": 24113,
+    "endMs": 29034,
+    "timestampMs": 24113,
+    "confidence": null
+  },
+  {
+    "text": "and the source artifact is\nexperiments/iteration-17 paper-cut record.",
+    "startMs": 29034,
+    "endMs": 33463,
+    "timestampMs": 29034,
+    "confidence": null
+  },
+  {
+    "text": "horizontal axis names the recorded\nindependent quantity—such as permutation",
+    "startMs": 33463,
+    "endMs": 37892,
+    "timestampMs": 33463,
+    "confidence": null
+  },
+  {
+    "text": "size, position, distance, or distinct\nevaluations. The vertical axis names",
+    "startMs": 37892,
+    "endMs": 42813,
+    "timestampMs": 37892,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome—such as accuracy,\nerror, hit probability, regret,",
+    "startMs": 42813,
+    "endMs": 47242,
+    "timestampMs": 42813,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 47242,
+    "endMs": 52163,
+    "timestampMs": 47242,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 52163,
+    "endMs": 57084,
+    "timestampMs": 52163,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 57084,
+    "endMs": 62005,
+    "timestampMs": 57084,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 62005,
+    "endMs": 66926,
+    "timestampMs": 62005,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: Target",
+    "startMs": 66926,
+    "endMs": 71355,
+    "timestampMs": 66926,
+    "confidence": null
+  },
+  {
+    "text": "order sensitivity: standard deviation\n0.247, range 0.06–0.91. The correct",
+    "startMs": 71355,
+    "endMs": 75784,
+    "timestampMs": 71355,
+    "confidence": null
+  },
+  {
+    "text": "limitation is: The conclusion is scoped to\nthe recorded evaluator,",
+    "startMs": 75784,
+    "endMs": 80705,
+    "timestampMs": 75784,
+    "confidence": null
+  },
+  {
+    "text": "landscape, and budget. That limitation\nrules out a broader promotional",
+    "startMs": 80705,
+    "endMs": 85626,
+    "timestampMs": 80705,
+    "confidence": null
+  },
+  {
+    "text": "interpretation while preserving the result\nactually measured. The decision",
+    "startMs": 85626,
+    "endMs": 90055,
+    "timestampMs": 85626,
+    "confidence": null
+  },
+  {
+    "text": "carried into the research program is:\nCarry this constraint into",
+    "startMs": 90055,
+    "endMs": 94976,
+    "timestampMs": 90055,
+    "confidence": null
+  },
+  {
+    "text": "the next experiment and compare methods at\nequal cost. Finally,",
+    "startMs": 94976,
+    "endMs": 99897,
+    "timestampMs": 94976,
+    "confidence": null
+  },
+  {
+    "text": "compare against the equal-budget\nalternative. Generations, repeated cache",
+    "startMs": 99897,
+    "endMs": 103834,
+    "timestampMs": 99897,
+    "confidence": null
+  },
+  {
+    "text": "hits, and distinct evaluations are not\ninterchangeable. A method earns",
+    "startMs": 103834,
+    "endMs": 108755,
+    "timestampMs": 103834,
+    "confidence": null
+  },
+  {
+    "text": "a search-efficiency claim only when\nuncertainty, evaluator resolution,",
+    "startMs": 108755,
+    "endMs": 112692,
+    "timestampMs": 108755,
+    "confidence": null
+  },
+  {
+    "text": "optimum density, and evaluation cost have\nall been accounted for.",
+    "startMs": 112692,
+    "endMs": 117619,
+    "timestampMs": 112692,
+    "confidence": null
+  }
+]

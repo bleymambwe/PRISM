@@ -1,0 +1,35 @@
+name: Bug report
+description: Report reproducible incorrect behavior in PRISM
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include API keys, private data, or security-sensitive details."
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include expected and observed behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include code, seed, inputs, and the complete error.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: PRISM version or commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Python, operating system, and Numpy versions
+    validations:
+      required: true
+

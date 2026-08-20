@@ -1,0 +1,4 @@
+# 144k JSONL request lines (~150MB) — regenerable from the runner
+results/chunks/
+# the GSM8K test split is upstream data, not ours to vendor
+data/gsm8k_test.jsonl

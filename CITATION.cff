@@ -1,18 +1,30 @@
 cff-version: 1.2.0
-message: "If you use this software or its artifacts, please cite the paper below."
+message: "If you use PRISM or its artifacts in research, please cite the software and the preprint."
 title: "PRISM: code and reproducibility artifacts"
+type: software
 authors:
-  - family-names: Mambwe
-    given-names: Blessings
-    orcid: ""
+  - given-names: Blessings
+    family-names: Mambwe
+    orcid: "https://orcid.org/0009-0002-7986-3636"
+    affiliation: "ML Collective"
+version: 0.1.0
 license: MIT
+license-url: "https://github.com/bleymambwe/PRISM/blob/main/LICENSE"
 repository-code: "https://github.com/bleymambwe/PRISM"
+url: "https://github.com/bleymambwe/PRISM"
+abstract: >-
+  Landscape diagnostics and search for permutation-valued decisions. The
+  software is MIT licensed; the research artifacts it accompanies are released
+  under CC BY 4.0, matching the release statement in arXiv:2608.08344.
 preferred-citation:
   type: article
   title: "PRISM: A Predictive Protocol for Permutation Optimization via Landscape Diagnostics"
   authors:
-    - family-names: Mambwe
-      given-names: Blessings
+    - given-names: Blessings
+      family-names: Mambwe
+      orcid: "https://orcid.org/0009-0002-7986-3636"
+      affiliation: "ML Collective"
   year: 2026
-  journal: "arXiv preprint"
+  journal: "arXiv"
+  doi: "10.48550/arXiv.2608.08344"
   url: "https://arxiv.org/abs/2608.08344"

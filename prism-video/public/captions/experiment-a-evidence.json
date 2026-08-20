@@ -1,0 +1,205 @@
+[
+  {
+    "text": "Pause on A-validation for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 5227,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "A — Historical reproduction. First,\nidentify the research question before",
+    "startMs": 5227,
+    "endMs": 10454,
+    "timestampMs": 5227,
+    "confidence": null
+  },
+  {
+    "text": "looking at the answer. The question asks\nwhether the fixed",
+    "startMs": 10454,
+    "endMs": 15681,
+    "timestampMs": 10454,
+    "confidence": null
+  },
+  {
+    "text": "components create a meaningful ordering\nsurface, whether a particular",
+    "startMs": 15681,
+    "endMs": 20386,
+    "timestampMs": 15681,
+    "confidence": null
+  },
+  {
+    "text": "neighborhood provides useful guidance on\nthat surface, or whether a",
+    "startMs": 20386,
+    "endMs": 25613,
+    "timestampMs": 20386,
+    "confidence": null
+  },
+  {
+    "text": "cheaper executor is equally effective. The\nsample is the sample",
+    "startMs": 25613,
+    "endMs": 30840,
+    "timestampMs": 25613,
+    "confidence": null
+  },
+  {
+    "text": "reported in the source, and the source\nartifact is",
+    "startMs": 30840,
+    "endMs": 35545,
+    "timestampMs": 30840,
+    "confidence": null
+  },
+  {
+    "text": "prism-research/outputs/validation_results.csv;\nvalidation_variance.csv. The",
+    "startMs": 35545,
+    "endMs": 37113,
+    "timestampMs": 35545,
+    "confidence": null
+  },
+  {
+    "text": "horizontal axis names the recorded\nindependent quantity—such as permutation",
+    "startMs": 37113,
+    "endMs": 41818,
+    "timestampMs": 37113,
+    "confidence": null
+  },
+  {
+    "text": "size, position, distance, or distinct\nevaluations. The vertical axis names",
+    "startMs": 41818,
+    "endMs": 47045,
+    "timestampMs": 41818,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome—such as accuracy,\nerror, hit probability, regret,",
+    "startMs": 47045,
+    "endMs": 51750,
+    "timestampMs": 47045,
+    "confidence": null
+  },
+  {
+    "text": "correlation, or hitting time. Raw points\nremain visible when their",
+    "startMs": 51750,
+    "endMs": 56977,
+    "timestampMs": 51750,
+    "confidence": null
+  },
+  {
+    "text": "count permits. A summary line or bar\ndescribes those points;",
+    "startMs": 56977,
+    "endMs": 62204,
+    "timestampMs": 56977,
+    "confidence": null
+  },
+  {
+    "text": "it does not replace them. A capped\nobservation receives a",
+    "startMs": 62204,
+    "endMs": 67431,
+    "timestampMs": 62204,
+    "confidence": null
+  },
+  {
+    "text": "censor marker, and a sampled landscape\nnever pretends to be",
+    "startMs": 67431,
+    "endMs": 72658,
+    "timestampMs": 67431,
+    "confidence": null
+  },
+  {
+    "text": "exhaustively enumerated. The central\npattern supports this finding: Result:",
+    "startMs": 72658,
+    "endMs": 77363,
+    "timestampMs": 72658,
+    "confidence": null
+  },
+  {
+    "text": "classification accuracy reached 1.0000 on\nXOR, OR, AND, and parity;",
+    "startMs": 77363,
+    "endMs": 82590,
+    "timestampMs": 77363,
+    "confidence": null
+  },
+  {
+    "text": "polynomial MSE was 0.0070 versus the\nearlier 0.0068. The correct",
+    "startMs": 82590,
+    "endMs": 87817,
+    "timestampMs": 82590,
+    "confidence": null
+  },
+  {
+    "text": "limitation is: Corrections: order mattered\non four of five tasks;",
+    "startMs": 87817,
+    "endMs": 93044,
+    "timestampMs": 87817,
+    "confidence": null
+  },
+  {
+    "text": "AND had essentially zero variance;\nrepeated noisy maximum fitness biased",
+    "startMs": 93044,
+    "endMs": 98271,
+    "timestampMs": 93044,
+    "confidence": null
+  },
+  {
+    "text": "the historical best-ever value upward;\nonly positions zero through two",
+    "startMs": 98271,
+    "endMs": 103498,
+    "timestampMs": 98271,
+    "confidence": null
+  },
+  {
+    "text": "were functional. That limitation rules out\na broader promotional",
+    "startMs": 103498,
+    "endMs": 108203,
+    "timestampMs": 103498,
+    "confidence": null
+  },
+  {
+    "text": "interpretation while preserving the result\nactually measured. The decision",
+    "startMs": 108203,
+    "endMs": 112908,
+    "timestampMs": 108203,
+    "confidence": null
+  },
+  {
+    "text": "carried into the research program is:\nCarry this constraint into",
+    "startMs": 112908,
+    "endMs": 118135,
+    "timestampMs": 112908,
+    "confidence": null
+  },
+  {
+    "text": "the next experiment and compare methods at\nequal cost. Finally,",
+    "startMs": 118135,
+    "endMs": 123362,
+    "timestampMs": 118135,
+    "confidence": null
+  },
+  {
+    "text": "compare against the equal-budget\nalternative. Generations, repeated cache",
+    "startMs": 123362,
+    "endMs": 127544,
+    "timestampMs": 123362,
+    "confidence": null
+  },
+  {
+    "text": "hits, and distinct evaluations are not\ninterchangeable. A method earns",
+    "startMs": 127544,
+    "endMs": 132771,
+    "timestampMs": 127544,
+    "confidence": null
+  },
+  {
+    "text": "a search-efficiency claim only when\nuncertainty, evaluator resolution,",
+    "startMs": 132771,
+    "endMs": 136953,
+    "timestampMs": 132771,
+    "confidence": null
+  },
+  {
+    "text": "optimum density, and evaluation cost have\nall been accounted for.",
+    "startMs": 136953,
+    "endMs": 142185,
+    "timestampMs": 136953,
+    "confidence": null
+  }
+]

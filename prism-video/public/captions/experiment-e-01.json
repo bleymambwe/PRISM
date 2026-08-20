@@ -1,0 +1,191 @@
+[
+  {
+    "text": "This section examines Experiment E —\nFailed all-positions neural redesign",
+    "startMs": 0,
+    "endMs": 4743,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 4743,
+    "endMs": 9486,
+    "timestampMs": 4743,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 9486,
+    "endMs": 14229,
+    "timestampMs": 9486,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 14229,
+    "endMs": 18972,
+    "timestampMs": 14229,
+    "confidence": null
+  },
+  {
+    "text": "Hypothesis: deepening XOR and parity to\nfive functional permuted layers",
+    "startMs": 18972,
+    "endMs": 23715,
+    "timestampMs": 18972,
+    "confidence": null
+  },
+  {
+    "text": "would increase useful order variance.\nSetup: 60 generations; deeper plain",
+    "startMs": 23715,
+    "endMs": 28458,
+    "timestampMs": 23715,
+    "confidence": null
+  },
+  {
+    "text": "stack; 50–100 training-step budget.\nResult: variance fell to exactly zero;",
+    "startMs": 28458,
+    "endMs": 33201,
+    "timestampMs": 28458,
+    "confidence": null
+  },
+  {
+    "text": "all stage-one orderings remained at chance\naccuracy 0.500. Important",
+    "startMs": 33201,
+    "endMs": 37470,
+    "timestampMs": 33201,
+    "confidence": null
+  },
+  {
+    "text": "contradiction: the stochastic search still\nsurfaced best fitness 1.0,",
+    "startMs": 37470,
+    "endMs": 41739,
+    "timestampMs": 37470,
+    "confidence": null
+  },
+  {
+    "text": "exposing best-ever noise inflation.\nDecision: reject the plain deeper stack",
+    "startMs": 41739,
+    "endMs": 46482,
+    "timestampMs": 41739,
+    "confidence": null
+  },
+  {
+    "text": "and redesign with residual blocks. Visual:\nall landscape points collapse",
+    "startMs": 46482,
+    "endMs": 51225,
+    "timestampMs": 46482,
+    "confidence": null
+  },
+  {
+    "text": "onto a flat 0.5 line; a false “1.0 best”\nspike",
+    "startMs": 51225,
+    "endMs": 55968,
+    "timestampMs": 51225,
+    "confidence": null
+  },
+  {
+    "text": "is revealed as a noisy measurement, then\nstamped “benchmark rejected.”",
+    "startMs": 55968,
+    "endMs": 60711,
+    "timestampMs": 55968,
+    "confidence": null
+  },
+  {
+    "text": "Now read evidence panel E-flat. The axes,\nunits, and sample",
+    "startMs": 60711,
+    "endMs": 65454,
+    "timestampMs": 60711,
+    "confidence": null
+  },
+  {
+    "text": "are stated on screen. The sample\nrepresented here is the",
+    "startMs": 65454,
+    "endMs": 70197,
+    "timestampMs": 65454,
+    "confidence": null
+  },
+  {
+    "text": "sample reported in the source. Raw\nobservations remain visible wherever",
+    "startMs": 70197,
+    "endMs": 74940,
+    "timestampMs": 70197,
+    "confidence": null
+  },
+  {
+    "text": "the artifact provides them. Censored\nobservations stay marked at the",
+    "startMs": 74940,
+    "endMs": 79683,
+    "timestampMs": 74940,
+    "confidence": null
+  },
+  {
+    "text": "cap rather than becoming invented hitting\ntimes, and sampled landscapes",
+    "startMs": 79683,
+    "endMs": 84426,
+    "timestampMs": 79683,
+    "confidence": null
+  },
+  {
+    "text": "leave unobserved permutations blank. The\nsupported finding is: Result:",
+    "startMs": 84426,
+    "endMs": 88695,
+    "timestampMs": 84426,
+    "confidence": null
+  },
+  {
+    "text": "variance fell to exactly zero; all\nstage-one orderings remained at",
+    "startMs": 88695,
+    "endMs": 93438,
+    "timestampMs": 88695,
+    "confidence": null
+  },
+  {
+    "text": "chance accuracy 0.500. The broader claim\nnot established here is:",
+    "startMs": 93438,
+    "endMs": 98181,
+    "timestampMs": 93438,
+    "confidence": null
+  },
+  {
+    "text": "The conclusion is scoped to the recorded\nevaluator, landscape, and",
+    "startMs": 98181,
+    "endMs": 102924,
+    "timestampMs": 98181,
+    "confidence": null
+  },
+  {
+    "text": "budget. This evidence changed the program\nas follows: Decision: reject",
+    "startMs": 102924,
+    "endMs": 107667,
+    "timestampMs": 102924,
+    "confidence": null
+  },
+  {
+    "text": "the plain deeper stack and redesign with\nresidual blocks. The",
+    "startMs": 107667,
+    "endMs": 112410,
+    "timestampMs": 107667,
+    "confidence": null
+  },
+  {
+    "text": "distinction is part of the result. A large\nordering effect",
+    "startMs": 112410,
+    "endMs": 117153,
+    "timestampMs": 112410,
+    "confidence": null
+  },
+  {
+    "text": "does not automatically imply an\nevolutionary-search advantage, and",
+    "startMs": 117153,
+    "endMs": 120948,
+    "timestampMs": 117153,
+    "confidence": null
+  },
+  {
+    "text": "almost-sure convergence does not promise\npractical efficiency.",
+    "startMs": 120948,
+    "endMs": 124270,
+    "timestampMs": 120948,
+    "confidence": null
+  }
+]

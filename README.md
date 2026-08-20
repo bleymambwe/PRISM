@@ -16,6 +16,9 @@ use, and *when* simpler alternatives are preferable.
 
 | Path | Contents |
 | --- | --- |
+| `src/prism_search/` | The installable package: mutation operators, operator-aligned permutation distances, landscape diagnostics and the search executor. One required dependency (NumPy). |
+| `evals/instruction_order/` | An [Inspect AI](https://inspect.aisi.org.uk/) eval implementing the paper's instruction-ordering landscape, where 720 orderings of six fixed reasoning modules span 6.3%–96.9% accuracy on GSM8K. |
+| `tests/` | Deterministic unit and regression tests for the package and the eval. |
 | `experiments/` | 23 pre-registered experiment iterations. Each carries a `PLAN.md` stating the hypothesis before the run, `hypotheses.json`, the runner code, and `results/` including per-run token and cost accounting. |
 | `docs/` | The research record: `EXPERIMENT_LOG.md`, `DECISION_LOG.md`, `LITERATURE_LOG.md`, `RISK_REGISTER.md`, `ITERATION_TEMPLATE.md`, `ARTIFACT_INDEX.md`, and the July 2026 experiments audit report. |
 | `scripts/` | Figure generation, dashboard and report build scripts. |
@@ -26,6 +29,43 @@ use, and *when* simpler alternatives are preferable.
 Experiments cover synthetic permutation landscapes, neural architecture benchmarks, scientific
 machine-learning pipelines, LLM instruction ordering, cross-model transfer, and prompt-optimizer
 baselines.
+
+## Installing the package
+
+PRISM requires Python 3.10 or newer.
+
+```bash
+git clone https://github.com/bleymambwe/PRISM.git
+cd PRISM
+python -m pip install -e .
+```
+
+```python
+from prism_search import PRISM, preflight
+
+def fixed_points(ordering):
+    return sum(index == value for index, value in enumerate(ordering))
+
+diagnostics = preflight(n=8, fitness_fn=fixed_points, seed=7)
+print(diagnostics.recommendation, diagnostics.selected_operator)
+```
+
+The pre-flight thresholds are empirical operating bands, not universal laws.
+Report them with the seed, probe sizes, evaluator version, reference type and
+uncertainty. See [`docs/quickstart.md`](docs/quickstart.md) and
+[`docs/api.md`](docs/api.md).
+
+## Running the instruction-ordering eval
+
+```bash
+python -m pip install -e ".[eval]"
+inspect eval evals/instruction_order/task.py@instruction_order_gsm8k --model openai/gpt-4o-mini
+```
+
+It reports spread across orderings rather than a single accuracy — the headline
+figure is `worst_ordering_accuracy`, what you get when a reasonable prompt
+happens to use a bad order. See
+[`evals/instruction_order/README.md`](evals/instruction_order/README.md).
 
 ## How the experiments are organised
 
@@ -72,4 +112,17 @@ deliberately not published here. See [`REPO_SCOPE.md`](REPO_SCOPE.md) for the ru
 
 ## License
 
-[MIT](LICENSE) © 2026 Blessings Mambwe.
+Two licences, split by what the material is:
+
+| Material | Licence |
+| --- | --- |
+| Software — `src/prism_search/`, `evals/`, `tests/`, `scripts/`, `.github/` | [MIT](LICENSE) |
+| Research artifacts — `experiments/`, `docs/`, `deliverables/book_figures/`, `GNGN_Toy_Problems.ipynb` | [CC BY 4.0](LICENSE-ARTIFACTS) |
+
+The artifact licence matches the release statement in
+[arXiv:2608.08344](https://arxiv.org/abs/2608.08344), which places the seeded
+scripts, evaluation caches, frozen question pools, result tables and forecast
+record under CC BY 4.0. The code carries MIT instead because CC BY 4.0 is not an
+OSI-approved software licence.
+
+© 2026 Blessings Mambwe.

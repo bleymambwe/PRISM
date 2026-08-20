@@ -1,0 +1,163 @@
+[
+  {
+    "text": "This section examines From experiments to\nthe mature prism protocol",
+    "startMs": 0,
+    "endMs": 5083,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "(6–7 minutes) from first principles. Keep\ntwo questions separate: does",
+    "startMs": 5083,
+    "endMs": 10166,
+    "timestampMs": 5083,
+    "confidence": null
+  },
+  {
+    "text": "changing the order change the measured\noutcome, and does the",
+    "startMs": 10166,
+    "endMs": 15249,
+    "timestampMs": 10166,
+    "confidence": null
+  },
+  {
+    "text": "proposed search method beat a matched\nalternative at the same",
+    "startMs": 15249,
+    "endMs": 20332,
+    "timestampMs": 15249,
+    "confidence": null
+  },
+  {
+    "text": "distinct-evaluation budget? Animate a\nfive-gate decision procedure: Variance",
+    "startMs": 20332,
+    "endMs": 24398,
+    "timestampMs": 20332,
+    "confidence": null
+  },
+  {
+    "text": "gate: evaluate about 30 random orderings.\nStop if fitness variance",
+    "startMs": 24398,
+    "endMs": 29481,
+    "timestampMs": 24398,
+    "confidence": null
+  },
+  {
+    "text": "is negligible. Resolution gate: confirm\nthe evaluator distinguishes",
+    "startMs": 29481,
+    "endMs": 33547,
+    "timestampMs": 29481,
+    "confidence": null
+  },
+  {
+    "text": "orderings and does not produce artificial\nties. Pre-flight: estimate rho_1",
+    "startMs": 33547,
+    "endMs": 38630,
+    "timestampMs": 33547,
+    "confidence": null
+  },
+  {
+    "text": "for candidate moves and F D C with\nuncertainty. Method",
+    "startMs": 38630,
+    "endMs": 43713,
+    "timestampMs": 38630,
+    "confidence": null
+  },
+  {
+    "text": "selection: high useful rho_1: use the\nmatched operator; precedence",
+    "startMs": 43713,
+    "endMs": 48288,
+    "timestampMs": 43713,
+    "confidence": null
+  },
+  {
+    "text": "structure: consider insert and the\nprecedence surrogate; materially negative",
+    "startMs": 48288,
+    "endMs": 52863,
+    "timestampMs": 48288,
+    "confidence": null
+  },
+  {
+    "text": "F D C: elitist prism can exploit guidance;\nnear-zero F",
+    "startMs": 52863,
+    "endMs": 57946,
+    "timestampMs": 52863,
+    "confidence": null
+  },
+  {
+    "text": "D C: random sampling or aging is often\nappropriate; strongly",
+    "startMs": 57946,
+    "endMs": 63029,
+    "timestampMs": 57946,
+    "confidence": null
+  },
+  {
+    "text": "positive F D C: avoid naïve evolutionary\nsearch; transferable small",
+    "startMs": 63029,
+    "endMs": 68112,
+    "timestampMs": 63029,
+    "confidence": null
+  },
+  {
+    "text": "source landscape: evaluate target\ncandidates in transferred order. Honest",
+    "startMs": 68112,
+    "endMs": 72687,
+    "timestampMs": 68112,
+    "confidence": null
+  },
+  {
+    "text": "reporting: random-without-replacement,\ndistinct evaluation budgets, hit",
+    "startMs": 72687,
+    "endMs": 75737,
+    "timestampMs": 72687,
+    "confidence": null
+  },
+  {
+    "text": "rate, regret, intervals, API calls, and\ncost. This is the",
+    "startMs": 75737,
+    "endMs": 80820,
+    "timestampMs": 75737,
+    "confidence": null
+  },
+  {
+    "text": "film’s main conclusion. Make the final\nbranch visually explicit: prism",
+    "startMs": 80820,
+    "endMs": 85903,
+    "timestampMs": 80820,
+    "confidence": null
+  },
+  {
+    "text": "can recommend not using prism’s\nevolutionary loop. That is a",
+    "startMs": 85903,
+    "endMs": 90986,
+    "timestampMs": 85903,
+    "confidence": null
+  },
+  {
+    "text": "scientific strength of the protocol. The\ndistinction is part of",
+    "startMs": 90986,
+    "endMs": 96069,
+    "timestampMs": 90986,
+    "confidence": null
+  },
+  {
+    "text": "the result. A large ordering effect does\nnot automatically imply",
+    "startMs": 96069,
+    "endMs": 101152,
+    "timestampMs": 96069,
+    "confidence": null
+  },
+  {
+    "text": "an evolutionary-search advantage, and\nalmost-sure convergence does not",
+    "startMs": 101152,
+    "endMs": 105218,
+    "timestampMs": 101152,
+    "confidence": null
+  },
+  {
+    "text": "promise practical efficiency.",
+    "startMs": 105218,
+    "endMs": 106744,
+    "timestampMs": 105218,
+    "confidence": null
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "text": "This section examines Chapter 4 — From a\npermutation to",
+    "startMs": 0,
+    "endMs": 4836,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "a neural network (5–6 minutes) from first\nprinciples. Keep two",
+    "startMs": 4836,
+    "endMs": 9672,
+    "timestampMs": 4836,
+    "confidence": null
+  },
+  {
+    "text": "questions separate: does changing the\norder change the measured outcome,",
+    "startMs": 9672,
+    "endMs": 14508,
+    "timestampMs": 9672,
+    "confidence": null
+  },
+  {
+    "text": "and does the proposed search method beat a\nmatched alternative",
+    "startMs": 14508,
+    "endMs": 19344,
+    "timestampMs": 14508,
+    "confidence": null
+  },
+  {
+    "text": "at the same distinct-evaluation budget?\nExplain the five historical branch",
+    "startMs": 19344,
+    "endMs": 24180,
+    "timestampMs": 19344,
+    "confidence": null
+  },
+  {
+    "text": "types: Linear; Deep MLP; Linear + Tanh;\nLinear + Sigmoid;",
+    "startMs": 24180,
+    "endMs": 29016,
+    "timestampMs": 24180,
+    "confidence": null
+  },
+  {
+    "text": "medium-width MLP. Animate the permutation\n[1, 2, 0, 3, 4]",
+    "startMs": 29016,
+    "endMs": 33852,
+    "timestampMs": 29016,
+    "confidence": null
+  },
+  {
+    "text": "filling five compatible slots. Show\ninternal dimensions remaining compatible",
+    "startMs": 33852,
+    "endMs": 38204,
+    "timestampMs": 33852,
+    "confidence": null
+  },
+  {
+    "text": "so every permutation creates a valid\nnetwork. Trace a single",
+    "startMs": 38204,
+    "endMs": 43040,
+    "timestampMs": 38204,
+    "confidence": null
+  },
+  {
+    "text": "input vector through each block. Then\ndistinguish three designs: early",
+    "startMs": 43040,
+    "endMs": 47876,
+    "timestampMs": 43040,
+    "confidence": null
+  },
+  {
+    "text": "benchmark, where only three of five\npositions were truly functional;",
+    "startMs": 47876,
+    "endMs": 52712,
+    "timestampMs": 47876,
+    "confidence": null
+  },
+  {
+    "text": "failed deeper plain-stack redesign, where\nevery ordering collapsed to",
+    "startMs": 52712,
+    "endMs": 57064,
+    "timestampMs": 52712,
+    "confidence": null
+  },
+  {
+    "text": "chance; v4 residual bottleneck design,\nwhere all positions mattered and",
+    "startMs": 57064,
+    "endMs": 61900,
+    "timestampMs": 57064,
+    "confidence": null
+  },
+  {
+    "text": "deterministic ground truth could be\nenumerated. This chapter must prevent",
+    "startMs": 61900,
+    "endMs": 66736,
+    "timestampMs": 61900,
+    "confidence": null
+  },
+  {
+    "text": "the viewer from assuming the earliest\nbenchmark was already the",
+    "startMs": 66736,
+    "endMs": 71572,
+    "timestampMs": 66736,
+    "confidence": null
+  },
+  {
+    "text": "final benchmark design. The distinction is\npart of the result.",
+    "startMs": 71572,
+    "endMs": 76408,
+    "timestampMs": 71572,
+    "confidence": null
+  },
+  {
+    "text": "A large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 76408,
+    "endMs": 81244,
+    "timestampMs": 76408,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 81244,
+    "endMs": 85113,
+    "timestampMs": 81244,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 85113,
+    "endMs": 85595,
+    "timestampMs": 85113,
+    "confidence": null
+  }
+]

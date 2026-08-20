@@ -1,0 +1,233 @@
+[
+  {
+    "text": "This section examines Experiment K —\nSix-module LLM instruction ordering",
+    "startMs": 0,
+    "endMs": 6003,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "from first principles. Keep two questions\nseparate: does changing the",
+    "startMs": 6003,
+    "endMs": 12006,
+    "timestampMs": 6003,
+    "confidence": null
+  },
+  {
+    "text": "order change the measured outcome, and\ndoes the proposed search",
+    "startMs": 12006,
+    "endMs": 18009,
+    "timestampMs": 12006,
+    "confidence": null
+  },
+  {
+    "text": "method beat a matched alternative at the\nsame distinct-evaluation budget?",
+    "startMs": 18009,
+    "endMs": 24012,
+    "timestampMs": 18009,
+    "confidence": null
+  },
+  {
+    "text": "Modules: RESTATE, IDENTIFY, PLAN, COMPUTE,\nCHECK, ANSWER/FORMAT. Model:",
+    "startMs": 24012,
+    "endMs": 28814,
+    "timestampMs": 24012,
+    "confidence": null
+  },
+  {
+    "text": "Gemini 2.5 Flash-Lite, temperature zero.\nEvaluation: fixed 32-question G S",
+    "startMs": 28814,
+    "endMs": 34817,
+    "timestampMs": 28814,
+    "confidence": null
+  },
+  {
+    "text": "M eight K subset, seed 42; exact-match\ngrading; per-ordering-per-question",
+    "startMs": 34817,
+    "endMs": 40219,
+    "timestampMs": 34817,
+    "confidence": null
+  },
+  {
+    "text": "cache. Search space: all 6!=720 prompts,\nexhaustively evaluated;",
+    "startMs": 40219,
+    "endMs": 45021,
+    "timestampMs": 40219,
+    "confidence": null
+  },
+  {
+    "text": "approximately 23,000 cached model calls.\nFitness distribution: 0.063–0.969",
+    "startMs": 45021,
+    "endMs": 49823,
+    "timestampMs": 45021,
+    "confidence": null
+  },
+  {
+    "text": "accuracy; mean about 0.72; standard\ndeviation 0.23; 60/720 orderings",
+    "startMs": 49823,
+    "endMs": 55225,
+    "timestampMs": 49823,
+    "confidence": null
+  },
+  {
+    "text": "attained the top score. Position effects:\nANSWER first, mean 0.435;",
+    "startMs": 55225,
+    "endMs": 61228,
+    "timestampMs": 55225,
+    "confidence": null
+  },
+  {
+    "text": "ANSWER last, 0.870. COMPUTE first, 0.908;\nCOMPUTE fifth, 0.585. Pre-flight:",
+    "startMs": 61228,
+    "endMs": 67231,
+    "timestampMs": 61228,
+    "confidence": null
+  },
+  {
+    "text": "insert selected at rho_1=0.547; F D C =\n−0.346. Audited",
+    "startMs": 67231,
+    "endMs": 73234,
+    "timestampMs": 67231,
+    "confidence": null
+  },
+  {
+    "text": "search: prism 9.9 [7,13] versus random\n10.8 [8,14] distinct evaluations",
+    "startMs": 73234,
+    "endMs": 79237,
+    "timestampMs": 73234,
+    "confidence": null
+  },
+  {
+    "text": "to an exact optimum; statistically\ncomparable. Correct scientific payload:",
+    "startMs": 79237,
+    "endMs": 84639,
+    "timestampMs": 79237,
+    "confidence": null
+  },
+  {
+    "text": "ordering alone created a roughly 90-point\nperformance swing and exposed",
+    "startMs": 84639,
+    "endMs": 90642,
+    "timestampMs": 84639,
+    "confidence": null
+  },
+  {
+    "text": "interpretable position rules. Do not claim\na decisive search-speed",
+    "startMs": 90642,
+    "endMs": 96044,
+    "timestampMs": 90642,
+    "confidence": null
+  },
+  {
+    "text": "advantage. Visual: an interactive-looking\n6×6 position-effect matrix, a",
+    "startMs": 96044,
+    "endMs": 100846,
+    "timestampMs": 96044,
+    "confidence": null
+  },
+  {
+    "text": "histogram of 720 accuracies, and two live\nprompt executions using",
+    "startMs": 100846,
+    "endMs": 106849,
+    "timestampMs": 100846,
+    "confidence": null
+  },
+  {
+    "text": "identical modules in different orders. Now\nread evidence panel K-llm.",
+    "startMs": 106849,
+    "endMs": 112852,
+    "timestampMs": 106849,
+    "confidence": null
+  },
+  {
+    "text": "The axes, units, and sample are stated on\nscreen. The",
+    "startMs": 112852,
+    "endMs": 118855,
+    "timestampMs": 112852,
+    "confidence": null
+  },
+  {
+    "text": "sample represented here is 720 orderings.\nRaw observations remain visible",
+    "startMs": 118855,
+    "endMs": 124858,
+    "timestampMs": 118855,
+    "confidence": null
+  },
+  {
+    "text": "wherever the artifact provides them.\nCensored observations stay marked at",
+    "startMs": 124858,
+    "endMs": 130861,
+    "timestampMs": 124858,
+    "confidence": null
+  },
+  {
+    "text": "the cap rather than becoming invented\nhitting times, and sampled",
+    "startMs": 130861,
+    "endMs": 136864,
+    "timestampMs": 130861,
+    "confidence": null
+  },
+  {
+    "text": "landscapes leave unobserved permutations\nblank. The supported finding is:",
+    "startMs": 136864,
+    "endMs": 142266,
+    "timestampMs": 136864,
+    "confidence": null
+  },
+  {
+    "text": "Modules: RESTATE, IDENTIFY, PLAN, COMPUTE,\nCHECK, ANSWER/FORMAT. The broader",
+    "startMs": 142266,
+    "endMs": 147668,
+    "timestampMs": 142266,
+    "confidence": null
+  },
+  {
+    "text": "claim not established here is: Do not\nclaim a decisive",
+    "startMs": 147668,
+    "endMs": 153671,
+    "timestampMs": 147668,
+    "confidence": null
+  },
+  {
+    "text": "search-speed advantage. This evidence\nchanged the program as follows: Carry",
+    "startMs": 153671,
+    "endMs": 159674,
+    "timestampMs": 153671,
+    "confidence": null
+  },
+  {
+    "text": "this constraint into the next experiment\nand compare methods at",
+    "startMs": 159674,
+    "endMs": 165677,
+    "timestampMs": 159674,
+    "confidence": null
+  },
+  {
+    "text": "equal cost. The distinction is part of the\nresult. A",
+    "startMs": 165677,
+    "endMs": 171680,
+    "timestampMs": 165677,
+    "confidence": null
+  },
+  {
+    "text": "large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 171680,
+    "endMs": 177082,
+    "timestampMs": 171680,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 177082,
+    "endMs": 181884,
+    "timestampMs": 177082,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 181884,
+    "endMs": 182484,
+    "timestampMs": 181884,
+    "confidence": null
+  }
+]

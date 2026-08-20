@@ -1,0 +1,198 @@
+[
+  {
+    "text": "Pause on F-portfolio for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 5110,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "F — Uniform operator portfolio. First,\nidentify the research question",
+    "startMs": 5110,
+    "endMs": 10220,
+    "timestampMs": 5110,
+    "confidence": null
+  },
+  {
+    "text": "before looking at the answer. The question\nasks whether the",
+    "startMs": 10220,
+    "endMs": 15330,
+    "timestampMs": 10220,
+    "confidence": null
+  },
+  {
+    "text": "fixed components create a meaningful\nordering surface, whether a particular",
+    "startMs": 15330,
+    "endMs": 20440,
+    "timestampMs": 15330,
+    "confidence": null
+  },
+  {
+    "text": "neighborhood provides useful guidance on\nthat surface, or whether a",
+    "startMs": 20440,
+    "endMs": 25550,
+    "timestampMs": 20440,
+    "confidence": null
+  },
+  {
+    "text": "cheaper executor is equally effective. The\nsample is 15 seeds,",
+    "startMs": 25550,
+    "endMs": 30660,
+    "timestampMs": 25550,
+    "confidence": null
+  },
+  {
+    "text": "and the source artifact is",
+    "startMs": 30660,
+    "endMs": 33215,
+    "timestampMs": 30660,
+    "confidence": null
+  },
+  {
+    "text": "experiments/iteration-04/results/portfolio_results.csv.\nThe horizontal axis",
+    "startMs": 33215,
+    "endMs": 35259,
+    "timestampMs": 33215,
+    "confidence": null
+  },
+  {
+    "text": "names the recorded independent\nquantity—such as permutation size,",
+    "startMs": 35259,
+    "endMs": 39858,
+    "timestampMs": 35259,
+    "confidence": null
+  },
+  {
+    "text": "distance, or distinct evaluations. The\nvertical axis names the measured",
+    "startMs": 39858,
+    "endMs": 44968,
+    "timestampMs": 39858,
+    "confidence": null
+  },
+  {
+    "text": "outcome—such as accuracy, error, hit\nprobability, regret, correlation, or",
+    "startMs": 44968,
+    "endMs": 49567,
+    "timestampMs": 44968,
+    "confidence": null
+  },
+  {
+    "text": "hitting time. Raw points remain visible\nwhen their count permits.",
+    "startMs": 49567,
+    "endMs": 54677,
+    "timestampMs": 49567,
+    "confidence": null
+  },
+  {
+    "text": "A summary line or bar describes those\npoints; it does",
+    "startMs": 54677,
+    "endMs": 59787,
+    "timestampMs": 54677,
+    "confidence": null
+  },
+  {
+    "text": "not replace them. A capped observation\nreceives a censor marker,",
+    "startMs": 59787,
+    "endMs": 64897,
+    "timestampMs": 59787,
+    "confidence": null
+  },
+  {
+    "text": "and a sampled landscape never pretends to\nbe exhaustively enumerated.",
+    "startMs": 64897,
+    "endMs": 70007,
+    "timestampMs": 64897,
+    "confidence": null
+  },
+  {
+    "text": "The central pattern supports this finding:\nResult: the uniform portfolio",
+    "startMs": 70007,
+    "endMs": 75117,
+    "timestampMs": 70007,
+    "confidence": null
+  },
+  {
+    "text": "had zero censoring on every typed\nlandscape and cost about",
+    "startMs": 75117,
+    "endMs": 80227,
+    "timestampMs": 75117,
+    "confidence": null
+  },
+  {
+    "text": "1.1–4.1 times the matched fixed operator.\nThe correct limitation is:",
+    "startMs": 80227,
+    "endMs": 85337,
+    "timestampMs": 80227,
+    "confidence": null
+  },
+  {
+    "text": "The conclusion is scoped to the recorded\nevaluator, landscape, and",
+    "startMs": 85337,
+    "endMs": 90447,
+    "timestampMs": 85337,
+    "confidence": null
+  },
+  {
+    "text": "budget. That limitation rules out a\nbroader promotional interpretation while",
+    "startMs": 90447,
+    "endMs": 95557,
+    "timestampMs": 90447,
+    "confidence": null
+  },
+  {
+    "text": "preserving the result actually measured.\nThe decision carried into the",
+    "startMs": 95557,
+    "endMs": 100667,
+    "timestampMs": 95557,
+    "confidence": null
+  },
+  {
+    "text": "research program is: Decision: use uniform\nportfolio when the landscape",
+    "startMs": 100667,
+    "endMs": 105777,
+    "timestampMs": 100667,
+    "confidence": null
+  },
+  {
+    "text": "is unknown; use a matched fixed operator\nwhen diagnosed; treat",
+    "startMs": 105777,
+    "endMs": 110887,
+    "timestampMs": 105777,
+    "confidence": null
+  },
+  {
+    "text": "adaptive weights as a diagnostic. Finally,\ncompare against the equal-budget",
+    "startMs": 110887,
+    "endMs": 115997,
+    "timestampMs": 110887,
+    "confidence": null
+  },
+  {
+    "text": "alternative. Generations, repeated cache\nhits, and distinct evaluations are",
+    "startMs": 115997,
+    "endMs": 120596,
+    "timestampMs": 115997,
+    "confidence": null
+  },
+  {
+    "text": "not interchangeable. A method earns a\nsearch-efficiency claim only when",
+    "startMs": 120596,
+    "endMs": 125706,
+    "timestampMs": 120596,
+    "confidence": null
+  },
+  {
+    "text": "uncertainty, evaluator resolution, optimum\ndensity, and evaluation cost have",
+    "startMs": 125706,
+    "endMs": 130305,
+    "timestampMs": 125706,
+    "confidence": null
+  },
+  {
+    "text": "all been accounted for.",
+    "startMs": 130305,
+    "endMs": 132359,
+    "timestampMs": 130305,
+    "confidence": null
+  }
+]

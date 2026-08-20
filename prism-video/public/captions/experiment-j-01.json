@@ -1,0 +1,247 @@
+[
+  {
+    "text": "This section examines Experiment J —\nPre-flight diagnostics from first",
+    "startMs": 0,
+    "endMs": 5302,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "principles. Keep two questions separate:\ndoes changing the order change",
+    "startMs": 5302,
+    "endMs": 10604,
+    "timestampMs": 5302,
+    "confidence": null
+  },
+  {
+    "text": "the measured outcome, and does the\nproposed search method beat",
+    "startMs": 10604,
+    "endMs": 15906,
+    "timestampMs": 10604,
+    "confidence": null
+  },
+  {
+    "text": "a matched alternative at the same\ndistinct-evaluation budget? Teach both",
+    "startMs": 15906,
+    "endMs": 21208,
+    "timestampMs": 15906,
+    "confidence": null
+  },
+  {
+    "text": "statistics before showing the outcome:",
+    "startMs": 21208,
+    "endMs": 23859,
+    "timestampMs": 21208,
+    "confidence": null
+  },
+  {
+    "text": "rho_1=operatorname{corr}(f(pi),f(m(pi)))\nwhere m is one mutation move, and F",
+    "startMs": 23859,
+    "endMs": 28631,
+    "timestampMs": 23859,
+    "confidence": null
+  },
+  {
+    "text": "D C correlates fitness with distance to\nthe nearest optimum.",
+    "startMs": 28631,
+    "endMs": 33933,
+    "timestampMs": 28631,
+    "confidence": null
+  },
+  {
+    "text": "Setup: about 4,000 sampled moves in the\ninitial study across",
+    "startMs": 33933,
+    "endMs": 39235,
+    "timestampMs": 33933,
+    "confidence": null
+  },
+  {
+    "text": "eight enumerated landscapes; later\nsampling audit used 100 pairs per",
+    "startMs": 39235,
+    "endMs": 44537,
+    "timestampMs": 39235,
+    "confidence": null
+  },
+  {
+    "text": "operator and 200 F D C points, repeated\n200 times.",
+    "startMs": 44537,
+    "endMs": 49839,
+    "timestampMs": 44537,
+    "confidence": null
+  },
+  {
+    "text": "Operator recovery: Hamming→swap\nrho_1=0.655; Kendall→insert 0.777;",
+    "startMs": 49839,
+    "endMs": 53020,
+    "timestampMs": 49839,
+    "confidence": null
+  },
+  {
+    "text": "adjacency→inversion 0.675. Regime\nseparation: strongly negative F D C",
+    "startMs": 53020,
+    "endMs": 57792,
+    "timestampMs": 53020,
+    "confidence": null
+  },
+  {
+    "text": "accompanied fast convergence; parity n=7\nwas about −0.06 and behaved",
+    "startMs": 57792,
+    "endMs": 63094,
+    "timestampMs": 57792,
+    "confidence": null
+  },
+  {
+    "text": "like random; deceptive fitness had F D C\nabout +0.78",
+    "startMs": 63094,
+    "endMs": 68396,
+    "timestampMs": 63094,
+    "confidence": null
+  },
+  {
+    "text": "despite smoothness near 0.65. Sampling\naudit: correct typed-landscape",
+    "startMs": 68396,
+    "endMs": 72638,
+    "timestampMs": 68396,
+    "confidence": null
+  },
+  {
+    "text": "operator selected about 94–99% of the\ntime. Caveat: scramble identity",
+    "startMs": 72638,
+    "endMs": 77940,
+    "timestampMs": 72638,
+    "confidence": null
+  },
+  {
+    "text": "moves can inflate its autocorrelation;\nexclude it from a naïve",
+    "startMs": 77940,
+    "endMs": 83242,
+    "timestampMs": 77940,
+    "confidence": null
+  },
+  {
+    "text": "argmax. Visual: two landscapes with the\nsame smooth local appearance",
+    "startMs": 83242,
+    "endMs": 88544,
+    "timestampMs": 83242,
+    "confidence": null
+  },
+  {
+    "text": "but opposite F D C guidance. Now read\nevidence panel",
+    "startMs": 88544,
+    "endMs": 93846,
+    "timestampMs": 88544,
+    "confidence": null
+  },
+  {
+    "text": "J-locality. The axes, units, and sample\nare stated on screen.",
+    "startMs": 93846,
+    "endMs": 99148,
+    "timestampMs": 93846,
+    "confidence": null
+  },
+  {
+    "text": "The sample represented here is the sample\nreported in the",
+    "startMs": 99148,
+    "endMs": 104450,
+    "timestampMs": 99148,
+    "confidence": null
+  },
+  {
+    "text": "source. Raw observations remain visible\nwherever the artifact provides them.",
+    "startMs": 104450,
+    "endMs": 109752,
+    "timestampMs": 104450,
+    "confidence": null
+  },
+  {
+    "text": "Censored observations stay marked at the\ncap rather than becoming",
+    "startMs": 109752,
+    "endMs": 115054,
+    "timestampMs": 109752,
+    "confidence": null
+  },
+  {
+    "text": "invented hitting times, and sampled\nlandscapes leave unobserved permutations",
+    "startMs": 115054,
+    "endMs": 119826,
+    "timestampMs": 115054,
+    "confidence": null
+  },
+  {
+    "text": "blank. The supported finding is: Teach\nboth statistics before showing",
+    "startMs": 119826,
+    "endMs": 125128,
+    "timestampMs": 119826,
+    "confidence": null
+  },
+  {
+    "text": "the outcome:\nrho_1=operatorname{corr}(f(pi),f(m(pi)))",
+    "startMs": 125128,
+    "endMs": 128839,
+    "timestampMs": 125128,
+    "confidence": null
+  },
+  {
+    "text": "mutation move, and F D C correlates\nfitness with distance",
+    "startMs": 128839,
+    "endMs": 134141,
+    "timestampMs": 128839,
+    "confidence": null
+  },
+  {
+    "text": "to the nearest optimum. The broader claim\nnot established here",
+    "startMs": 134141,
+    "endMs": 139443,
+    "timestampMs": 134141,
+    "confidence": null
+  },
+  {
+    "text": "is: Caveat: scramble identity moves can\ninflate its autocorrelation; exclude",
+    "startMs": 139443,
+    "endMs": 144745,
+    "timestampMs": 139443,
+    "confidence": null
+  },
+  {
+    "text": "it from a naïve argmax. This evidence\nchanged the program",
+    "startMs": 144745,
+    "endMs": 150047,
+    "timestampMs": 144745,
+    "confidence": null
+  },
+  {
+    "text": "as follows: Carry this constraint into the\nnext experiment and",
+    "startMs": 150047,
+    "endMs": 155349,
+    "timestampMs": 150047,
+    "confidence": null
+  },
+  {
+    "text": "compare methods at equal cost. The\ndistinction is part of",
+    "startMs": 155349,
+    "endMs": 160651,
+    "timestampMs": 155349,
+    "confidence": null
+  },
+  {
+    "text": "the result. A large ordering effect does\nnot automatically imply",
+    "startMs": 160651,
+    "endMs": 165953,
+    "timestampMs": 160651,
+    "confidence": null
+  },
+  {
+    "text": "an evolutionary-search advantage, and\nalmost-sure convergence does not",
+    "startMs": 165953,
+    "endMs": 170195,
+    "timestampMs": 165953,
+    "confidence": null
+  },
+  {
+    "text": "promise practical efficiency.",
+    "startMs": 170195,
+    "endMs": 171785,
+    "timestampMs": 170195,
+    "confidence": null
+  }
+]

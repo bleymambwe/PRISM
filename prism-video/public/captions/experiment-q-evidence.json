@@ -1,0 +1,212 @@
+[
+  {
+    "text": "Pause on Q-progress for a complete\nevidence reading of Experiment",
+    "startMs": 0,
+    "endMs": 4873,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "Q — Small-model transfer at the paper cut.\nFirst, identify",
+    "startMs": 4873,
+    "endMs": 9746,
+    "timestampMs": 4873,
+    "confidence": null
+  },
+  {
+    "text": "the research question before looking at\nthe answer. The question",
+    "startMs": 9746,
+    "endMs": 14619,
+    "timestampMs": 9746,
+    "confidence": null
+  },
+  {
+    "text": "asks whether the fixed components create a\nmeaningful ordering surface,",
+    "startMs": 14619,
+    "endMs": 19492,
+    "timestampMs": 14619,
+    "confidence": null
+  },
+  {
+    "text": "whether a particular neighborhood provides\nuseful guidance on that surface,",
+    "startMs": 19492,
+    "endMs": 24365,
+    "timestampMs": 19492,
+    "confidence": null
+  },
+  {
+    "text": "or whether a cheaper executor is equally\neffective. The sample",
+    "startMs": 24365,
+    "endMs": 29238,
+    "timestampMs": 24365,
+    "confidence": null
+  },
+  {
+    "text": "is 120 orderings, and the source artifact\nis experiments/iteration-17",
+    "startMs": 29238,
+    "endMs": 33624,
+    "timestampMs": 29238,
+    "confidence": null
+  },
+  {
+    "text": "paper-cut record. The horizontal axis\nnames the recorded independent",
+    "startMs": 33624,
+    "endMs": 38010,
+    "timestampMs": 33624,
+    "confidence": null
+  },
+  {
+    "text": "quantity—such as permutation size,\nposition, distance, or distinct",
+    "startMs": 38010,
+    "endMs": 41909,
+    "timestampMs": 38010,
+    "confidence": null
+  },
+  {
+    "text": "evaluations. The vertical axis names the\nmeasured outcome—such as accuracy,",
+    "startMs": 41909,
+    "endMs": 46782,
+    "timestampMs": 41909,
+    "confidence": null
+  },
+  {
+    "text": "error, hit probability, regret,\ncorrelation, or hitting time. Raw points",
+    "startMs": 46782,
+    "endMs": 51655,
+    "timestampMs": 46782,
+    "confidence": null
+  },
+  {
+    "text": "remain visible when their count permits. A\nsummary line or",
+    "startMs": 51655,
+    "endMs": 56528,
+    "timestampMs": 51655,
+    "confidence": null
+  },
+  {
+    "text": "bar describes those points; it does not\nreplace them. A",
+    "startMs": 56528,
+    "endMs": 61401,
+    "timestampMs": 56528,
+    "confidence": null
+  },
+  {
+    "text": "capped observation receives a censor\nmarker, and a sampled landscape",
+    "startMs": 61401,
+    "endMs": 66274,
+    "timestampMs": 61401,
+    "confidence": null
+  },
+  {
+    "text": "never pretends to be exhaustively\nenumerated. The central pattern supports",
+    "startMs": 66274,
+    "endMs": 71147,
+    "timestampMs": 66274,
+    "confidence": null
+  },
+  {
+    "text": "this finding: In the main documentary,\npreserve the paper-cut status:",
+    "startMs": 71147,
+    "endMs": 76020,
+    "timestampMs": 71147,
+    "confidence": null
+  },
+  {
+    "text": "target: Gemma, described in the log as a\n26B MoE",
+    "startMs": 76020,
+    "endMs": 80893,
+    "timestampMs": 76020,
+    "confidence": null
+  },
+  {
+    "text": "model with 4B active parameters; same six\nmodules and 32",
+    "startMs": 80893,
+    "endMs": 85766,
+    "timestampMs": 80893,
+    "confidence": null
+  },
+  {
+    "text": "G S M eight K questions as Experiment K;\n120",
+    "startMs": 85766,
+    "endMs": 90639,
+    "timestampMs": 85766,
+    "confidence": null
+  },
+  {
+    "text": "orderings: 100 random, source top 15,\nsource bottom 5; 3,840",
+    "startMs": 90639,
+    "endMs": 95512,
+    "timestampMs": 90639,
+    "confidence": null
+  },
+  {
+    "text": "target cells; at the paper cut, The\ncorrect limitation is:",
+    "startMs": 95512,
+    "endMs": 100385,
+    "timestampMs": 95512,
+    "confidence": null
+  },
+  {
+    "text": "Do not reveal the completed outcome until\nthe post-paper epilogue.",
+    "startMs": 100385,
+    "endMs": 105258,
+    "timestampMs": 100385,
+    "confidence": null
+  },
+  {
+    "text": "That limitation rules out a broader\npromotional interpretation while",
+    "startMs": 105258,
+    "endMs": 109644,
+    "timestampMs": 105258,
+    "confidence": null
+  },
+  {
+    "text": "preserving the result actually measured.\nThe decision carried into the",
+    "startMs": 109644,
+    "endMs": 114517,
+    "timestampMs": 109644,
+    "confidence": null
+  },
+  {
+    "text": "research program is: Carry this constraint\ninto the next experiment",
+    "startMs": 114517,
+    "endMs": 119390,
+    "timestampMs": 114517,
+    "confidence": null
+  },
+  {
+    "text": "and compare methods at equal cost.\nFinally, compare against the",
+    "startMs": 119390,
+    "endMs": 124263,
+    "timestampMs": 119390,
+    "confidence": null
+  },
+  {
+    "text": "equal-budget alternative. Generations,\nrepeated cache hits, and distinct",
+    "startMs": 124263,
+    "endMs": 128162,
+    "timestampMs": 124263,
+    "confidence": null
+  },
+  {
+    "text": "evaluations are not interchangeable. A\nmethod earns a search-efficiency",
+    "startMs": 128162,
+    "endMs": 132548,
+    "timestampMs": 128162,
+    "confidence": null
+  },
+  {
+    "text": "claim only when uncertainty, evaluator\nresolution, optimum density, and",
+    "startMs": 132548,
+    "endMs": 136934,
+    "timestampMs": 132548,
+    "confidence": null
+  },
+  {
+    "text": "evaluation cost have all been accounted\nfor.",
+    "startMs": 136934,
+    "endMs": 140350,
+    "timestampMs": 136934,
+    "confidence": null
+  }
+]

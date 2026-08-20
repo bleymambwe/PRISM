@@ -1,0 +1,212 @@
+[
+  {
+    "text": "This section examines Experiment F —\nUniform operator portfolio from",
+    "startMs": 0,
+    "endMs": 4884,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "first principles. Keep two questions\nseparate: does changing the order",
+    "startMs": 4884,
+    "endMs": 9768,
+    "timestampMs": 4884,
+    "confidence": null
+  },
+  {
+    "text": "change the measured outcome, and does the\nproposed search method",
+    "startMs": 9768,
+    "endMs": 14652,
+    "timestampMs": 9768,
+    "confidence": null
+  },
+  {
+    "text": "beat a matched alternative at the same\ndistinct-evaluation budget? Question:",
+    "startMs": 14652,
+    "endMs": 19536,
+    "timestampMs": 14652,
+    "confidence": null
+  },
+  {
+    "text": "can one safe default avoid catastrophic\noperator mismatch? Setup: portfolio",
+    "startMs": 19536,
+    "endMs": 24420,
+    "timestampMs": 19536,
+    "confidence": null
+  },
+  {
+    "text": "and adaptive variants across all three\ntyped landscapes, n=6 through",
+    "startMs": 24420,
+    "endMs": 29304,
+    "timestampMs": 24420,
+    "confidence": null
+  },
+  {
+    "text": "16, 15 seeds, same cap as the operator\nstudy. Result:",
+    "startMs": 29304,
+    "endMs": 34188,
+    "timestampMs": 29304,
+    "confidence": null
+  },
+  {
+    "text": "the uniform portfolio had zero censoring\non every typed landscape",
+    "startMs": 34188,
+    "endMs": 39072,
+    "timestampMs": 34188,
+    "confidence": null
+  },
+  {
+    "text": "and cost about 1.1–4.1 times the matched\nfixed operator. Adaptive",
+    "startMs": 39072,
+    "endMs": 43956,
+    "timestampMs": 39072,
+    "confidence": null
+  },
+  {
+    "text": "result: it ranked the correct operator\nfirst on all three",
+    "startMs": 43956,
+    "endMs": 48840,
+    "timestampMs": 43956,
+    "confidence": null
+  },
+  {
+    "text": "landscapes but did not consistently\nimprove hitting time and required",
+    "startMs": 48840,
+    "endMs": 53724,
+    "timestampMs": 48840,
+    "confidence": null
+  },
+  {
+    "text": "an extra evaluation per mutation event.\nDecision: use uniform portfolio",
+    "startMs": 53724,
+    "endMs": 58608,
+    "timestampMs": 53724,
+    "confidence": null
+  },
+  {
+    "text": "when the landscape is unknown; use a\nmatched fixed operator",
+    "startMs": 58608,
+    "endMs": 63492,
+    "timestampMs": 58608,
+    "confidence": null
+  },
+  {
+    "text": "when diagnosed; treat adaptive weights as\na diagnostic. Now read",
+    "startMs": 63492,
+    "endMs": 68376,
+    "timestampMs": 63492,
+    "confidence": null
+  },
+  {
+    "text": "evidence panel F-portfolio. The axes,\nunits, and sample are stated",
+    "startMs": 68376,
+    "endMs": 73260,
+    "timestampMs": 68376,
+    "confidence": null
+  },
+  {
+    "text": "on screen. The sample represented here is\n15 seeds. Raw",
+    "startMs": 73260,
+    "endMs": 78144,
+    "timestampMs": 73260,
+    "confidence": null
+  },
+  {
+    "text": "observations remain visible wherever the\nartifact provides them. Censored",
+    "startMs": 78144,
+    "endMs": 82539,
+    "timestampMs": 78144,
+    "confidence": null
+  },
+  {
+    "text": "observations stay marked at the cap rather\nthan becoming invented",
+    "startMs": 82539,
+    "endMs": 87423,
+    "timestampMs": 82539,
+    "confidence": null
+  },
+  {
+    "text": "hitting times, and sampled landscapes\nleave unobserved permutations blank.",
+    "startMs": 87423,
+    "endMs": 91818,
+    "timestampMs": 87423,
+    "confidence": null
+  },
+  {
+    "text": "The supported finding is: Result: the\nuniform portfolio had zero",
+    "startMs": 91818,
+    "endMs": 96702,
+    "timestampMs": 91818,
+    "confidence": null
+  },
+  {
+    "text": "censoring on every typed landscape and\ncost about 1.1–4.1 times",
+    "startMs": 96702,
+    "endMs": 101586,
+    "timestampMs": 96702,
+    "confidence": null
+  },
+  {
+    "text": "the matched fixed operator. The broader\nclaim not established here",
+    "startMs": 101586,
+    "endMs": 106470,
+    "timestampMs": 101586,
+    "confidence": null
+  },
+  {
+    "text": "is: The conclusion is scoped to the\nrecorded evaluator, landscape,",
+    "startMs": 106470,
+    "endMs": 111354,
+    "timestampMs": 106470,
+    "confidence": null
+  },
+  {
+    "text": "and budget. This evidence changed the\nprogram as follows: Decision:",
+    "startMs": 111354,
+    "endMs": 116238,
+    "timestampMs": 111354,
+    "confidence": null
+  },
+  {
+    "text": "use uniform portfolio when the landscape\nis unknown; use a",
+    "startMs": 116238,
+    "endMs": 121122,
+    "timestampMs": 116238,
+    "confidence": null
+  },
+  {
+    "text": "matched fixed operator when diagnosed;\ntreat adaptive weights as a",
+    "startMs": 121122,
+    "endMs": 126006,
+    "timestampMs": 121122,
+    "confidence": null
+  },
+  {
+    "text": "diagnostic. The distinction is part of the\nresult. A large",
+    "startMs": 126006,
+    "endMs": 130890,
+    "timestampMs": 126006,
+    "confidence": null
+  },
+  {
+    "text": "ordering effect does not automatically\nimply an evolutionary-search",
+    "startMs": 130890,
+    "endMs": 134797,
+    "timestampMs": 130890,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 134797,
+    "endMs": 138704,
+    "timestampMs": 134797,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 138704,
+    "endMs": 139185,
+    "timestampMs": 138704,
+    "confidence": null
+  }
+]

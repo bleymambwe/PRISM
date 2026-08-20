@@ -1,0 +1,16 @@
+landscape,family,n,size,best,worst,spread,n_optima,optimum_density,distinct_values,source
+llm_gsm8k_n6,llm,6,720,0.96875,0.0625,0.90625,60,0.083333,29,experiments/iteration-09/results/llm_landscape.csv
+parity_n5,neural,5,120,0.958333,0.458333,0.5,2,0.016667,13,experiments/iteration-05/results/v4_landscape.csv
+parity_n7,neural,7,5040,1.0,0.375,0.625,14,0.002778,16,experiments/iteration-07/results/n7_parity_landscape.csv
+xor_n5,neural,5,120,1.0,0.5,0.5,8,0.066667,7,experiments/iteration-05/results/v4_landscape.csv
+xor_n6,neural,6,720,1.0,0.416667,0.583333,33,0.045833,8,experiments/iteration-06/results/n6_landscape.csv
+sciml_cubic_oscillator,sciml,6,720,0.999478,0.698339,0.301139,3,0.004167,315,experiments/iteration-20-sciml-suite/results/suite_landscape.csv
+sciml_damped_oscillator,sciml,6,720,0.998809,0.395858,0.602951,1,0.001389,124,experiments/iteration-20-sciml-suite/results/suite_landscape.csv
+sciml_lorenz63,sciml,6,720,0.993078,0.888374,0.104704,3,0.004167,485,experiments/iteration-20-sciml-suite/results/suite_landscape.csv
+sciml_lotka_volterra,sciml,6,720,0.998955,0.0,0.998955,8,0.011111,188,experiments/iteration-20-sciml-suite/results/suite_landscape.csv
+sciml_rossler,sciml,6,720,0.812531,0.367171,0.44536,1,0.001389,511,experiments/iteration-20-sciml-suite/results/suite_landscape.csv
+sciml_vanderpol,sciml,6,720,0.881387,0.311644,0.569743,2,0.002778,565,experiments/iteration-20-sciml-suite/results/suite_landscape.csv
+adjacency_n7,synthetic,7,5040,1.0,0.0,1.0,2,0.000397,7,prism-research/benchmarks/synthetic.py
+deceptive_n7,synthetic,7,5040,2.0,0.285714,1.714286,1,0.000198,7,prism-research/benchmarks/synthetic.py
+hamming_n7,synthetic,7,5040,1.0,0.0,1.0,1,0.000198,7,prism-research/benchmarks/synthetic.py
+kendall_n7,synthetic,7,5040,1.0,0.0,1.0,1,0.000198,22,prism-research/benchmarks/synthetic.py

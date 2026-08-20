@@ -1,0 +1,36 @@
+{
+  "creators": [
+    {
+      "name": "Mambwe, Blessings",
+      "orcid": "0009-0002-7986-3636",
+      "affiliation": "ML Collective"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Beck, Jacob",
+      "type": "Other"
+    }
+  ],
+  "title": "PRISM: Permutation-based Reasoning and Intelligence Search Method",
+  "description": "Research software and reproducibility materials for permutation-valued optimization using landscape diagnostics and pre-flight algorithm selection.",
+  "version": "0.1.0",
+  "access_right": "open",
+  "upload_type": "software",
+  "language": "eng",
+  "license": "bsd-3-clause",
+  "keywords": [
+    "permutation optimization",
+    "fitness landscape",
+    "algorithm selection",
+    "instruction ordering",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.48550/arXiv.2608.08344",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}

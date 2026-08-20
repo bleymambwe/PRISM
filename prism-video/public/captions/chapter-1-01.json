@@ -1,0 +1,149 @@
+[
+  {
+    "text": "This section examines Chapter 1 — The\nordering problem (4–5",
+    "startMs": 0,
+    "endMs": 4705,
+    "timestampMs": 0,
+    "confidence": null
+  },
+  {
+    "text": "minutes) from first principles. Keep two\nquestions separate: does changing",
+    "startMs": 4705,
+    "endMs": 9410,
+    "timestampMs": 4705,
+    "confidence": null
+  },
+  {
+    "text": "the order change the measured outcome, and\ndoes the proposed",
+    "startMs": 9410,
+    "endMs": 14115,
+    "timestampMs": 9410,
+    "confidence": null
+  },
+  {
+    "text": "search method beat a matched alternative\nat the same distinct-evaluation",
+    "startMs": 14115,
+    "endMs": 18820,
+    "timestampMs": 14115,
+    "confidence": null
+  },
+  {
+    "text": "budget? Explain function composition with\ntwo animated transformations:",
+    "startMs": 18820,
+    "endMs": 22584,
+    "timestampMs": 18820,
+    "confidence": null
+  },
+  {
+    "text": "Tanh(Linear(x)) versus Linear(Tanh(x)).\nShow why nonlinearity makes f circ g",
+    "startMs": 22584,
+    "endMs": 27289,
+    "timestampMs": 22584,
+    "confidence": null
+  },
+  {
+    "text": "generally different from g circ f. Then\ncompare search spaces:",
+    "startMs": 27289,
+    "endMs": 31994,
+    "timestampMs": 27289,
+    "confidence": null
+  },
+  {
+    "text": ". Method . Search space . Example at n=10,\nk=5",
+    "startMs": 31994,
+    "endMs": 36699,
+    "timestampMs": 31994,
+    "confidence": null
+  },
+  {
+    "text": ". . --- . --- . --- . . Choose",
+    "startMs": 36699,
+    "endMs": 41404,
+    "timestampMs": 36699,
+    "confidence": null
+  },
+  {
+    "text": "one of k operations at every slot . k^n .",
+    "startMs": 41404,
+    "endMs": 46109,
+    "timestampMs": 41404,
+    "confidence": null
+  },
+  {
+    "text": "9,765,625 . . prism: reorder n fixed\noperations . n",
+    "startMs": 46109,
+    "endMs": 50814,
+    "timestampMs": 46109,
+    "confidence": null
+  },
+  {
+    "text": "factorial . 3,628,800 . Do not say\nfactorial growth is",
+    "startMs": 50814,
+    "endMs": 55519,
+    "timestampMs": 50814,
+    "confidence": null
+  },
+  {
+    "text": "“small.” Say it is a restricted but still\nrapidly growing",
+    "startMs": 55519,
+    "endMs": 60224,
+    "timestampMs": 55519,
+    "confidence": null
+  },
+  {
+    "text": "space that can be tractable at moderate n,\nespecially when",
+    "startMs": 60224,
+    "endMs": 64929,
+    "timestampMs": 60224,
+    "confidence": null
+  },
+  {
+    "text": "evaluations are cached, transferred, or\napproximated. Clarify that the early",
+    "startMs": 64929,
+    "endMs": 69634,
+    "timestampMs": 64929,
+    "confidence": null
+  },
+  {
+    "text": "paper uses a neural-architecture framing,\nwhile the mature program",
+    "startMs": 69634,
+    "endMs": 73868,
+    "timestampMs": 69634,
+    "confidence": null
+  },
+  {
+    "text": "generalizes the ordering lens to prompts,\nscientific pipelines, and other",
+    "startMs": 73868,
+    "endMs": 78573,
+    "timestampMs": 73868,
+    "confidence": null
+  },
+  {
+    "text": "fixed-component systems. The distinction\nis part of the result. A",
+    "startMs": 78573,
+    "endMs": 83278,
+    "timestampMs": 78573,
+    "confidence": null
+  },
+  {
+    "text": "large ordering effect does not\nautomatically imply an evolutionary-search",
+    "startMs": 83278,
+    "endMs": 87512,
+    "timestampMs": 83278,
+    "confidence": null
+  },
+  {
+    "text": "advantage, and almost-sure convergence\ndoes not promise practical",
+    "startMs": 87512,
+    "endMs": 91276,
+    "timestampMs": 87512,
+    "confidence": null
+  },
+  {
+    "text": "efficiency.",
+    "startMs": 91276,
+    "endMs": 91744,
+    "timestampMs": 91276,
+    "confidence": null
+  }
+]
