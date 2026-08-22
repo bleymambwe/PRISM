@@ -38,6 +38,12 @@ orderings**:
 ```bash
 uv sync --extra eval
 
+# Required: task.py imports evals.instruction_order.* as an absolute package.
+# pytest gets the repo root on sys.path from pyproject's `pythonpath` setting;
+# `inspect eval`'s module loader doesn't add it, so set this explicitly or the
+# run fails with `ModuleNotFoundError: No module named 'evals'`.
+export PYTHONPATH=.
+
 # Cheap default: 50 random orderings.
 uv run inspect eval evals/instruction_order/task.py@instruction_order_gsm8k \
     --model openai/gpt-4o-mini
@@ -98,14 +104,18 @@ it does not optimise against it.
 | arXiv paper the eval implements | [arXiv:2608.08344](https://doi.org/10.48550/arXiv.2608.08344) — §"The Instruction-Ordering Landscape". |
 | Public repo, submitter is a contributor | Yes. |
 
-Still to do:
+Status:
 
-- [ ] Run the validation sweep on 2–3 models and record it as `evaluation_report`.
-- [ ] Tag a commit and take the 40-char SHA.
-- [ ] Open a [Register Eval Submission](https://github.com/UKGovernmentBEIS/inspect_evals/issues/new?template=register-submission.yml)
-      issue with the arXiv URL and a blob URL pinned to that SHA:
-      `https://github.com/bleymambwe/PRISM/blob/<sha>/evals/instruction_order/task.py#L<line>`
-      One issue per task — submit `instruction_order_gsm8k` first.
+- [x] `instruction_order_gsm8k` submitted: [Register Eval Submission #2242](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2242)
+      (opened 2026-08-22), pinned to `103444da69839ed5be8d1fa2d388571ae2897bc2` — no separate git
+      tag needed, the register accepts a raw 40-char commit SHA directly.
+- [ ] `instruction_order_gsm8k_exhaustive` and `instruction_order_math500` still need their own
+      submission issues — one per task, per the register's own FAQ.
+- [ ] Validation sweep / `evaluation_report` — deliberately skipped. The live register process
+      only recommends this, it isn't a submission field, and this machine hit a reproducible
+      hang in Python's async HTTP stack against every model provider tried (OpenRouter and
+      OpenAI directly) that wasn't worth chasing further here. Worth doing from a different
+      environment before the next task's submission if it's cheap to try.
 
 ## Tests
 

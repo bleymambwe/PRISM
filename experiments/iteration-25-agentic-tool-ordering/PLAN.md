@@ -6,6 +6,21 @@ timestamp. The runner is **not** built or run until Bley explicitly approves the
 **Proposed dedicated cost cap (on approval):** $15.00 (own two-meter guard, independent of all
 prior caps). Realistic expected spend ≈ $6–10. **Nothing runs until approved.**
 
+**2026-08-22 addendum — reuse `inspect_evals.bfcl` instead of hand-rolling BFCL:** while
+preparing the `evals/instruction_order` submission to the Inspect Evals register, found that
+`UKGovernmentBEIS/inspect_evals` — the same registry — already ships a working BFCL
+implementation at `src/inspect_evals/bfcl/`: dataset loading (`data.py`), prompt construction
+(`prompts.py`), an AST-match scorer (`score/scorer.py`, `score/multi_turn_scorer.py`), and both
+single- and multi-turn solvers (`solve/`). §3 and §6 below currently assume building menu
+selection, prompt construction, and AST scoring from scratch. On approval, the runner should
+instead depend on `inspect_evals` (or vendor just its `bfcl/score/` and `bfcl/utils/` modules)
+and insert the ordering permutation as a thin layer in front of their existing dataset/prompt
+loader — the same pattern `evals/instruction_order/orderings.py` already uses to reuse PRISM's
+own distance code rather than reimplementing it. This should lower both the implementation risk
+and the realistic-spend estimate above (fewer new failure points in the scoring path); the stage
+cost table in §6 has not yet been re-costed against this — do that before re-opening the approval
+decision.
+
 ---
 
 ## 1. Why this experiment exists
