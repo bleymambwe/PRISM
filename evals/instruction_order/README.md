@@ -126,8 +126,8 @@ issue programmatically.
       [PR #2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252).
 
 No separate git tag was needed for any of the three — the register accepts a raw 40-char commit
-SHA directly. The earlier API-created issues (#2242, #2245, #2246) never got labeled and are
-dead; they should be closed as superseded by the three above.
+SHA directly. The earlier API-created issues (#2242, #2245, #2246) never got labeled, so the bot
+never ran on them; closed as superseded by the three above.
 
 - [ ] Validation sweep / `evaluation_report` — deliberately skipped. The live register process
       only recommends this, it isn't a submission field, and this machine hit a reproducible
