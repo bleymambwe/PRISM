@@ -18,7 +18,7 @@
   "access_right": "open",
   "upload_type": "software",
   "language": "eng",
-  "license": "bsd-3-clause",
+  "license": "MIT",
   "keywords": [
     "permutation optimization",
     "fitness landscape",
