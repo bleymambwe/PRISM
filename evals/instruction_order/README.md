@@ -107,15 +107,22 @@ it does not optimise against it.
 Status:
 
 - [x] `instruction_order_gsm8k` submitted: [Register Eval Submission #2242](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2242)
-      (opened 2026-08-22), pinned to `103444da69839ed5be8d1fa2d388571ae2897bc2` — no separate git
-      tag needed, the register accepts a raw 40-char commit SHA directly.
-- [ ] `instruction_order_gsm8k_exhaustive` and `instruction_order_math500` still need their own
-      submission issues — one per task, per the register's own FAQ.
+      (opened 2026-08-22), pinned to `103444da69839ed5be8d1fa2d388571ae2897bc2`.
+- [x] `instruction_order_gsm8k_exhaustive` submitted: [#2245](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2245)
+      (opened 2026-08-22), pinned to `2d578d761f70e2fef3a381a6243265247b297759`.
+- [x] `instruction_order_math500` submitted: [#2246](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2246)
+      (opened 2026-08-22), pinned to `2d578d761f70e2fef3a381a6243265247b297759`.
+      No separate git tag was needed for any of the three — the register accepts a raw 40-char
+      commit SHA directly.
 - [ ] Validation sweep / `evaluation_report` — deliberately skipped. The live register process
       only recommends this, it isn't a submission field, and this machine hit a reproducible
       hang in Python's async HTTP stack against every model provider tried (OpenRouter and
       OpenAI directly) that wasn't worth chasing further here. Worth doing from a different
-      environment before the next task's submission if it's cheap to try.
+      environment if it's cheap to try.
+- [ ] From here it's out of this repo's hands: each issue triggers a bot that validates the
+      submission, derives register metadata, and opens a PR against `inspect_evals` for a
+      maintainer to review and merge. Watch the three issues above for that PR link and for any
+      requested changes.
 
 ## Tests
 
