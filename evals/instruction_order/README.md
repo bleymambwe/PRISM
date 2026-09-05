@@ -103,6 +103,7 @@ it does not optimise against it.
 | External assets pinned | GSM8K subset is committed to `data/`, so the repo commit SHA pins it. MATH-500 pins HF revision `6e4ed1a2…`. |
 | arXiv paper the eval implements | [arXiv:2608.08344](https://doi.org/10.48550/arXiv.2608.08344) — §"The Instruction-Ordering Landscape". |
 | Public repo, submitter is a contributor | Yes. |
+| Full evaluation logs uploaded | Yes — two `.eval` files each for PRs [#2318](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2318), [#2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251), and [#2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252), uploaded 2026-09-05 as `@bleymambwe`. |
 
 Status:
 
@@ -112,31 +113,27 @@ template system itself and silently fails to attach when an external contributor
 issue programmatically.
 
 - [x] `instruction_order_gsm8k` submitted: [#2247](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2247)
-      (opened 2026-08-22), pinned to `103444da69839ed5be8d1fa2d388571ae2897bc2`. First pass
-      accidentally carried the exhaustive task's source URL; corrected and reopened. The
-      corrected engine run succeeded but can't open its PR until a maintainer closes
-      [PR #2250](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2250) (opened from the
-      mistaken first pass) — the engine refuses a second PR per issue. Flagged in a comment on
-      that PR; closing PRs isn't something an external contributor can do here.
+      (opened 2026-08-22), pinned to `103444da69839ed5be8d1fa2d388571ae2897bc2` →
+      [PR #2318](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2318). Uploaded the
+      two full 1,600-sample `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano` on 2026-09-05.
 - [x] `instruction_order_gsm8k_exhaustive` submitted: [#2248](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2248)
       (opened 2026-08-22), pinned to `2d578d761f70e2fef3a381a6243265247b297759` →
-      [PR #2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251).
+      [PR #2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251). Uploaded the
+      two full `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano` on 2026-09-05.
 - [x] `instruction_order_math500` submitted: [#2249](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2249)
       (opened 2026-08-22), pinned to `2d578d761f70e2fef3a381a6243265247b297759` →
-      [PR #2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252).
+      [PR #2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252). Uploaded the
+      two full `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano` on 2026-09-05.
 
 No separate git tag was needed for any of the three — the register accepts a raw 40-char commit
 SHA directly. The earlier API-created issues (#2242, #2245, #2246) never got labeled, so the bot
 never ran on them; closed as superseded by the three above.
 
-- [ ] Validation sweep / `evaluation_report` — deliberately skipped. The live register process
-      only recommends this, it isn't a submission field, and this machine hit a reproducible
-      hang in Python's async HTTP stack against every model provider tried (OpenRouter and
-      OpenAI directly) that wasn't worth chasing further here. Worth doing from a different
-      environment if it's cheap to try.
-- [ ] From here it's out of this repo's hands: a maintainer needs to close PR #2250, then #2247
-      needs reopening once more to regenerate its PR; and #2251 / #2252 need maintainer review
-      and merge. Watch the three issues for that PR link and for any requested changes.
+- [x] Full evaluation logs uploaded through the maintainer-provided log uploader. Confirmation
+      text requested notifying maintainers that `bleymambwe` uploaded the paired logs for issues
+      #2318, #2251, and #2252.
+- [ ] From here it's out of this repo's hands: PRs #2318, #2251, and #2252 need maintainer
+      review and merge. Watch the PRs for requested changes.
 
 ## Tests
 
