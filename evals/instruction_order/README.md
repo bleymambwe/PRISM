@@ -82,6 +82,21 @@ comparability with the published landscapes and requires a task-version bump.
 **Distinct orderings by construction.** Duplicate orderings would silently
 reduce the number of conditions and inflate apparent agreement between them.
 
+## Known issues
+
+**GSM8K subset question 31 carries a wrong gold label.** The carnival question
+sums to 2,180 (750 + 430 + 700 + 300), but the committed gold is 2280, inherited
+verbatim from GSM8K's own rationale (which adds Maryam's 400 increment in place of
+Sarah's 300). A correct answer to that item is scored incorrect, so every
+ordering is capped at 31/32. That cap is the 96.9% ceiling in the paper's
+6.3%-96.9% range. The label is left unchanged so the task keeps matching the
+frozen subset behind the published landscapes; correcting it requires a
+task-version bump.
+
+**The 6.3%-96.9% range is one model's result.** It was measured on Gemini 2.5
+Flash-Lite in Experiment K. The eval implements that protocol; it does not
+promise the same spread on other models.
+
 ## Relationship to `prism_search`
 
 `orderings.py` uses PRISM's operator-aligned permutation distances (Cayley for
@@ -132,8 +147,12 @@ never ran on them; closed as superseded by the three above.
 - [x] Full evaluation logs uploaded through the maintainer-provided log uploader. Confirmation
       text requested notifying maintainers that `bleymambwe` uploaded the paired logs for issues
       #2318, #2251, and #2252.
-- [ ] From here it's out of this repo's hands: PRs #2318, #2251, and #2252 need maintainer
-      review and merge. Watch the PRs for requested changes.
+- [x] PR #2252 (`instruction_order_math500`) approved and merged 2026-09-29; it is listed as
+      `register/prism_instruction_order`.
+- [ ] PRs #2318 and #2251: the register bot reported no blocking or security findings, only
+      non-blocking warnings (install extra, `PYTHONPATH=.`, and on #2318 the bot-derived
+      title and description). Acknowledged on both PRs on 2026-10-01, with corrected `eval.yaml`
+      wording offered for #2318. They need a register re-run and a maintainer merge.
 
 ## Tests
 
