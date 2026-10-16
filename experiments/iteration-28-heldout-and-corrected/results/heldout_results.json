@@ -1,0 +1,205 @@
+{
+  "labels": {
+    "adjacency_n7": 1,
+    "deceptive_n7": 0,
+    "hamming_n7": 1,
+    "kendall_n7": 1,
+    "llm_gsm8k_n6": 0,
+    "parity_n5": 0,
+    "parity_n7": 1,
+    "sciml_cubic_oscillator": 1,
+    "sciml_damped_oscillator": 1,
+    "sciml_lorenz63": 1,
+    "sciml_lotka_volterra": 1,
+    "sciml_rossler": 1,
+    "sciml_vanderpol": 1,
+    "xor_n5": 0,
+    "xor_n6": 0
+  },
+  "gaps": {
+    "adjacency_n7": 0.35,
+    "deceptive_n7": 0.0,
+    "hamming_n7": 0.75,
+    "kendall_n7": 0.675,
+    "llm_gsm8k_n6": 0.0,
+    "parity_n5": -0.025000000000000022,
+    "parity_n7": 0.225,
+    "sciml_cubic_oscillator": 0.6749999999999999,
+    "sciml_damped_oscillator": 0.725,
+    "sciml_lorenz63": 0.5750000000000001,
+    "sciml_lotka_volterra": 0.42499999999999993,
+    "sciml_rossler": 0.85,
+    "sciml_vanderpol": 0.42500000000000004,
+    "xor_n5": 0.0,
+    "xor_n6": 0.050000000000000044
+  },
+  "folds": {
+    "llm": {
+      "status": "ok",
+      "fitted_g": -0.35,
+      "train_balanced": 0.525,
+      "test": [
+        "llm_gsm8k_n6"
+      ],
+      "preds": {
+        "llm_gsm8k_n6": 0
+      },
+      "truth": {
+        "llm_gsm8k_n6": 0
+      }
+    },
+    "neural": {
+      "status": "ok",
+      "fitted_g": -0.05,
+      "train_balanced": 0.4444444444444444,
+      "test": [
+        "parity_n5",
+        "parity_n7",
+        "xor_n5",
+        "xor_n6"
+      ],
+      "preds": {
+        "parity_n5": 1,
+        "parity_n7": 1,
+        "xor_n5": 1,
+        "xor_n6": 1
+      },
+      "truth": {
+        "parity_n5": 0,
+        "parity_n7": 1,
+        "xor_n5": 0,
+        "xor_n6": 0
+      }
+    },
+    "sciml": {
+      "status": "ok",
+      "fitted_g": -0.4,
+      "train_balanced": 0.65,
+      "test": [
+        "sciml_cubic_oscillator",
+        "sciml_damped_oscillator",
+        "sciml_lorenz63",
+        "sciml_lotka_volterra",
+        "sciml_rossler",
+        "sciml_vanderpol"
+      ],
+      "preds": {
+        "sciml_cubic_oscillator": 0,
+        "sciml_damped_oscillator": 0,
+        "sciml_lorenz63": 0,
+        "sciml_lotka_volterra": 0,
+        "sciml_rossler": 0,
+        "sciml_vanderpol": 0
+      },
+      "truth": {
+        "sciml_cubic_oscillator": 1,
+        "sciml_damped_oscillator": 1,
+        "sciml_lorenz63": 1,
+        "sciml_lotka_volterra": 1,
+        "sciml_rossler": 1,
+        "sciml_vanderpol": 1
+      }
+    },
+    "synthetic": {
+      "status": "ok",
+      "fitted_g": -0.35,
+      "train_balanced": 0.5714285714285714,
+      "test": [
+        "adjacency_n7",
+        "deceptive_n7",
+        "hamming_n7",
+        "kendall_n7"
+      ],
+      "preds": {
+        "adjacency_n7": 0,
+        "deceptive_n7": 1,
+        "hamming_n7": 1,
+        "kendall_n7": 1
+      },
+      "truth": {
+        "adjacency_n7": 1,
+        "deceptive_n7": 0,
+        "hamming_n7": 1,
+        "kendall_n7": 1
+      }
+    }
+  },
+  "pooled_heldout": {
+    "n": 15,
+    "positives": 10,
+    "balanced_accuracy_fitted": 0.25,
+    "balanced_accuracy_published_g": 0.5,
+    "bootstrap_BA_minus_0.5_fitted": [
+      -0.45,
+      0.011363636363636354,
+      1999
+    ],
+    "bootstrap_BA_minus_0.5_published": [
+      -0.2,
+      0.25,
+      1995
+    ]
+  },
+  "B2_null_false_search_pays": {
+    "per_landscape": {
+      "adjacency_n7": 0.75,
+      "deceptive_n7": 0.995,
+      "hamming_n7": 0.745,
+      "kendall_n7": 0.475,
+      "llm_gsm8k_n6": 0.73,
+      "parity_n5": 0.565,
+      "parity_n7": 0.515,
+      "sciml_cubic_oscillator": 0.175,
+      "sciml_damped_oscillator": 0.125,
+      "sciml_lorenz63": 0.215,
+      "sciml_lotka_volterra": 0.14,
+      "sciml_rossler": 0.2,
+      "sciml_vanderpol": 0.155,
+      "xor_n5": 0.855,
+      "xor_n6": 0.79
+    },
+    "mean": 0.49533333333333324,
+    "ci95": [
+      0.34933333333333333,
+      0.6457166666666663
+    ],
+    "supported_lower_bound_gt_0.10": true
+  },
+  "B3_degenerate_fdc_minus1_at_m20": {
+    "per_landscape": {
+      "adjacency_n7": 0.005,
+      "deceptive_n7": 0.03,
+      "hamming_n7": 0.01,
+      "kendall_n7": 0.0,
+      "llm_gsm8k_n6": 0.0,
+      "parity_n5": 0.0,
+      "parity_n7": 0.0,
+      "sciml_cubic_oscillator": 0.0,
+      "sciml_damped_oscillator": 0.0,
+      "sciml_lorenz63": 0.0,
+      "sciml_lotka_volterra": 0.0,
+      "sciml_rossler": 0.0,
+      "sciml_vanderpol": 0.0,
+      "xor_n5": 0.005,
+      "xor_n6": 0.0
+    },
+    "mean": 0.003333333333333333
+  },
+  "probe_decision_at_published_g": {
+    "adjacency_n7": 1,
+    "deceptive_n7": 1,
+    "hamming_n7": 1,
+    "kendall_n7": 1,
+    "llm_gsm8k_n6": 1,
+    "parity_n5": 0,
+    "parity_n7": 1,
+    "sciml_cubic_oscillator": 0,
+    "sciml_damped_oscillator": 1,
+    "sciml_lorenz63": 1,
+    "sciml_lotka_volterra": 0,
+    "sciml_rossler": 1,
+    "sciml_vanderpol": 1,
+    "xor_n5": 1,
+    "xor_n6": 1
+  }
+}
