@@ -1,0 +1,26 @@
+{
+  "frozen_before_results": true,
+  "origin": "publication/research-recovery-2026-10-16/methodology/METHODOLOGY_AUDIT.md findings M01 and M02",
+  "constraints": "CPU only, no paid API calls, replay on the 15 enumerated iteration-26 landscapes, 40 seeds (M02) and 200 resamples (M01). Failures and nulls are retained.",
+  "M02": {
+    "design": "Run prism_protocol with the TOTAL budget set to each B in {15,25,50,100,200} (fresh run per B), not read off a B=200 trace. Baselines that are anytime (uniform, ls_swap, ea_portfolio) are read from the existing iteration-26 traces, which is valid for them. Seeds 0-39, same seeds as the archive.",
+    "primary_metric": "success@B = fraction of (landscape, seed) runs that evaluate a true global optimum within B distinct evaluations; macro-averaged over the 15 landscapes.",
+    "H27-1": "Fresh-budget protocol success@100 is NOT higher than fixed swap local search success@100 (archive: 70.5%). Falsified only if the landscape-bootstrap 95% CI of (protocol - ls_swap) lies entirely above 0.",
+    "H27-2": "Fresh-budget protocol macro success@B is higher than uniform sampling at B=100. Supported only if the landscape-bootstrap 95% CI of (protocol - uniform) excludes 0 in favour of the protocol.",
+    "H27-3": "At B=15 and B=25 the probe consumes at least 80% of the budget (audit: 13-14 of 15 calls), so the small-budget result is mostly unguided random sampling. Measured as mean distinct evaluations spent before executor selection / B.",
+    "exploratory_variant": "prism_protocol_floor: if the probe at budget B would exceed 25% of B, skip the probe and run the fixed default executor ls_swap. The 25% rule is fixed here, not tuned. Reported as exploratory because the 15 landscapes were used to design the rest of the protocol; it cannot support a generalization claim.",
+    "reporting_rule": "Report per-landscape success, the macro mean, landscape-bootstrap CIs (2000 resamples, seed 20261016), and the old prefix numbers beside the fresh numbers."
+  },
+  "M01": {
+    "design": "Estimate regime and operator agreement for the DEPLOYED probe (production prism_search.diagnostics.preflight with the best-observed proxy reference), with every evaluation charged and counted as unique calls, at probe sizes matched to total charged calls m in {20,50,100,200,500}. Truth comes from landscape_truth.csv (full-enumeration optima, 20,000-pair rho1, so the reference is itself an estimate and is labelled as such). Also a cross-fit variant: references are chosen from one half of the sample and FDC is computed on the other half, both halves charged.",
+    "primary_metric": "regime agreement and operator agreement with truth, mean over landscapes, 200 resamples per landscape and m.",
+    "H27-4": "Deployed-probe regime agreement at 200 charged calls is below the 91% reported for the oracle-assisted estimator in the rejected submission. Supported if the landscape-level mean is below 0.91 with its landscape-bootstrap 95% upper bound below 0.91.",
+    "H27-5": "The self-reference bias of the best-observed proxy pushes FDC negative, so the proxy over-calls the search_pays regime relative to cross-fit. Measured as the signed difference in the fraction of resamples labelled search_pays, proxy minus cross-fit, on landscapes whose true regime is not search_pays.",
+    "H27-6": "Charged calls are well below the oracle estimator's 7m raw accesses: report both so the old number can be restated at equal access cost.",
+    "reporting_rule": "The old 91% number must not be cited as a deployable guarantee in any rewritten manuscript; report these deployed-probe numbers instead, with all landscapes shown."
+  },
+  "claim_rules": {
+    "no_cherry_picking": "All 15 landscapes and all budgets are reported. No landscape is dropped for being uninformative.",
+    "thresholds": "FDC thresholds -0.15 and 0.30 were set in earlier iterations on these same landscapes. They are NOT validated out of sample here and the report must say so."
+  }
+}
