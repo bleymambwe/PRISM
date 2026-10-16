@@ -1,0 +1,31 @@
+# Masakhane-style benchmark metadata. Fields marked TODO need the user / collaborator.
+task: afrimgsm-fewshot-ordering
+description: >
+  Order the 8 AfriMGSM train exemplars as a few-shot prompt prefix; PRISM
+  searches the 8! = 40,320 orderings. Fitness = exact-match accuracy.
+dataset:
+  name: masakhane/afrimgsm
+  url: https://huggingface.co/datasets/masakhane/afrimgsm
+  license: apache-2.0   # as listed on the Hugging Face card, verified 2026-10-15
+  derived_from: GSM8K (translation of a subset)
+  splits: {train: 8, test: 250}   # per language config
+  configs: [amh, eng, ewe, fra, hau, ibo, kin, lin, lug, orm, sna, sot, swa, twi, vai, wol, xho, yor, zul]
+  card_inconsistency: >
+    Card text says 18 languages / "16 African + English + French"; the viewer
+    shows 19 configs. Re-check against the paper before citing a count.
+citation:
+  paper: "IrokoBench: A New Benchmark for African Languages in the Age of Large Language Models"
+  authors: "Adelani et al."
+  year: 2024
+  arxiv: 2406.03368
+  venue: NAACL 2025 (per arXiv listing)
+protocol:
+  search_subset: "deterministic half of test (even index after seeded shuffle)"
+  report_subset: "the other half; never used by the search"
+  seeds: [0, 1, 2, 3, 4]
+  distinct_eval_budget: 200
+  decoding: greedy / temperature 0
+collaborators:
+  native_speaker_review: TODO   # name/role/consent of a speaker per language reported
+  masakhane_community_review: TODO
+status: draft-no-results
