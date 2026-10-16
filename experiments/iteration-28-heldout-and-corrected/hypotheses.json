@@ -1,0 +1,29 @@
+{
+  "frozen_before_results": true,
+  "follows": "iteration-27 (commit cf8bc04). Closes the remaining audit tasks p1 (held-out assessment), p4 (freeze) and p5 (corrected scoring primary).",
+  "constraints": "CPU only, no paid calls. Development landscapes are the same 15; this is leave-one-family-out validation, NOT an independent test set. No prospective unseen landscapes exist yet, and the report must say so.",
+  "evaluators": {
+    "success@B": "run evaluates a true global optimum within B distinct evaluations (iteration-26 definition).",
+    "deployed_probe": "prism_search.diagnostics.preflight, best-observed proxy reference, pair/landscape sizes from iteration-27 sizes_for(m=200, size).",
+    "resamples": 200,
+    "bootstrap": "landscape-level, 2000 resamples, seed 20261016"
+  },
+  "A_corrected_scoring_primary": {
+    "design": "Replace the llm_gsm8k_n6 table with experiments/iteration-09/results/llm_landscape_q31corrected.csv (Q31 answer key fixed: 750+430+700+300=2180, so 55 optima, max 1.0). Recompute true rho1 per operator, true operator, true FDC and regime, and success@100/200 for uniform, ls_swap, ea_portfolio, and the protocol at its true budget (40 seeds, seeds 0-39). The corrected table becomes the primary GSM8K landscape in every later analysis; the original is a labelled sensitivity analysis.",
+    "A1": "True operator stays insert and true regime stays search_pays after correction.",
+    "A2": "The ordering uniform < protocol < ls_swap at B=100 on this landscape is unchanged. Reported per landscape, not pooled.",
+    "A3": "Corrected landscape has 55 optima, min 0.0625, max 1.0 (arithmetic check from the audit)."
+  },
+  "B_heldout": {
+    "ground_truth": "Binary 'search pays' for a landscape = max(success@100 of ls_swap, ea_portfolio) minus success@100 of uniform >= 0.15. The 0.15 margin is fixed here, before any result. Success rates use 40 seeds, corrected GSM8K table for the llm landscape.",
+    "probe_decision": "Probe predicts 'search pays' for a resample when its estimated FDC <= g. The deceptive threshold d is unused in this binary task. g is fitted on training families only.",
+    "protocol": "Leave-one-family-out over {llm, neural, sciml, synthetic}. For each held-out family, choose g from {-0.40,-0.35,...,-0.05} (step 0.05) maximizing balanced accuracy of the per-landscape majority probe decision on the other families, ties broken toward the more negative g. Apply to the held-out family. Also report the frozen published g=-0.15 for comparison.",
+    "B1": "Held-out balanced accuracy of the fitted-g probe does NOT exceed the better of always-search and never-search (both 0.5 balanced accuracy by construction) by a margin whose landscape-bootstrap 95% lower bound is above 0. Expected to hold given 15 landscapes; stated so a null is a pre-registered outcome.",
+    "B2_null_calibration": "Shuffle each landscape's fitness values across its permutations (seed 20261016 per landscape), keep the marginal distribution, run the deployed probe at m=200 with 200 resamples. Prediction: false 'search pays' rate (FDC <= -0.15) exceeds 10% on average, because the proxy reference includes the best sampled point. Supported if the landscape-bootstrap 95% lower bound exceeds 0.10.",
+    "B3_degeneracy": "Fraction of probes at m=20 that return FDC exactly -1 (two-point degeneracy from audit M06). Reported only."
+  },
+  "claim_rules": {
+    "no_cherry_picking": "All 15 landscapes, all four held-out folds reported, including folds where the fit is undefined because the training set lacks one class.",
+    "undefined_folds": "If a training set contains a single class, balanced accuracy is undefined for that fold; the fold is reported as undefined and excluded from pooled numbers, with the count stated."
+  }
+}
