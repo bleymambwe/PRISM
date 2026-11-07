@@ -11,6 +11,10 @@ Free (runs against llm_landscape.csv). Produces:
 - Verdict: did the pre-flight predict the outcome?
 
 Outputs -> results/llm_analysis.txt + llm_position_effects.csv
+
+Optional argument: a suffix selecting results/llm_landscape<suffix>.csv and
+writing llm_analysis<suffix>.txt + llm_position_effects<suffix>.csv, e.g.
+`python analyze_llm_landscape.py _q31corrected` (see q31_requery.py).
 """
 
 import csv
@@ -25,6 +29,7 @@ sys.path.insert(0, os.path.join(ROOT, "prism-research"))
 from core.prism import PRISM, MUTATIONS
 
 RES = os.path.join(os.path.dirname(__file__), "results")
+SUFFIX = sys.argv[1] if len(sys.argv) > 1 else ""
 RNG = np.random.default_rng(42)
 MODULE_NAMES = ["RESTATE", "IDENTIFY", "PLAN", "COMPUTE", "CHECK",
                 "ANSWER"]
@@ -32,7 +37,7 @@ N = 6
 
 land = {tuple(json.loads(r["perm"])): float(r["fitness"])
         for r in csv.DictReader(open(os.path.join(RES,
-                                                  "llm_landscape.csv")))}
+                                                  f"llm_landscape{SUFFIX}.csv")))}
 keys = list(land.keys())
 vals = np.array([land[k] for k in keys])
 opt = vals.max()
@@ -111,7 +116,7 @@ for k in keys:
     for i, m in enumerate(k):
         pos[m][i] += land[k]
 pos /= 120  # each (module, position) appears 5!=120 times
-with open(os.path.join(RES, "llm_position_effects.csv"), "w",
+with open(os.path.join(RES, f"llm_position_effects{SUFFIX}.csv"), "w",
           newline="") as f:
     w = csv.writer(f)
     w.writerow(["module"] + [f"pos{i+1}" for i in range(N)])
@@ -171,5 +176,5 @@ for b in budgets:
                f"{np.mean(rnd):>8.4f}")
 
 text = "\n".join(out)
-open(os.path.join(RES, "llm_analysis.txt"), "w").write(text + "\n")
+open(os.path.join(RES, f"llm_analysis{SUFFIX}.txt"), "w").write(text + "\n")
 print(text)

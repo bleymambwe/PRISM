@@ -1,0 +1,10 @@
+== original: min 0.0625 max 0.9688 mean 0.7167 std 0.2304 optima 60/720 (8.3%)
+  FDC ulam: -0.364
+  FDC cayley: -0.346
+  elitist  hits 40/40 evals-to-optimum 9.9 [7,13]
+  random   hits 40/40 evals-to-optimum 10.8 [8,14]
+== q31-corrected: min 0.0625 max 1.0000 mean 0.7353 std 0.2413 optima 55/720 (7.6%)
+  FDC ulam: -0.379
+  FDC cayley: -0.344
+  elitist  hits 40/40 evals-to-optimum 10.7 [8,14]
+  random   hits 40/40 evals-to-optimum 12.1 [9,15]

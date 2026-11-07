@@ -1,0 +1,26 @@
+LLM chain landscape (720 orderings, 32 GSM8K questions, Gemini 2.5 Flash-Lite):
+  optimum 1.0000 (55/720 = 7.6%), min 0.0625, mean 0.7353, std 0.2413
+  position effects (mean acc by module position):
+    RESTATE   0.720 0.741 0.742 0.748 0.746 0.715
+    IDENTIFY  0.779 0.760 0.742 0.730 0.732 0.669
+    PLAN      0.790 0.740 0.716 0.732 0.737 0.698
+    COMPUTE   0.934 0.801 0.728 0.653 0.599 0.698
+    CHECK     0.755 0.782 0.730 0.712 0.700 0.734
+    ANSWER    0.435 0.590 0.754 0.836 0.898 0.898
+
+D14 pre-flight:
+  rho1: swap=0.415, insert=0.553, inversion=0.306, scramble=0.594
+  FDC: -0.344
+  predicted operator: insert; search should beat random
+
+Search comparison (15 seeds):
+  PRISM default (pop=20, p_m=0.05): 15/15 hits, mean evals-to-optimum 8, mean explored 21
+  PRISM D12-scaled (pop=40, p_m=0.5): 15/15 hits, mean evals-to-optimum 10, mean explored 40
+  random: 15/15 hits, mean evals-to-optimum 21 (expected 13)
+
+  best-found quality (mean over 15 seeds):
+   budget  PRISM default  PRISM D12   random
+       15         0.9938     0.9938   0.9833
+       30         1.0000     0.9958   0.9896
+       60         1.0000     1.0000   1.0000
+      120         1.0000     1.0000   1.0000

@@ -118,7 +118,7 @@ it does not optimise against it.
 | External assets pinned | GSM8K subset is committed to `data/`, so the repo commit SHA pins it. MATH-500 pins HF revision `6e4ed1a2…`. |
 | arXiv paper the eval implements | [arXiv:2608.08344](https://doi.org/10.48550/arXiv.2608.08344) — §"The Instruction-Ordering Landscape". |
 | Public repo, submitter is a contributor | Yes. |
-| Full evaluation logs uploaded | Yes — two `.eval` files each for PRs [#2318](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2318), [#2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251), and [#2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252), uploaded 2026-09-05 as `@bleymambwe`. |
+| Evaluation logs uploaded | Two `.eval` files per PR, uploaded 2026-09-05 as `@bleymambwe`. Only [#2318](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2318) used the default 1,600-sample task. [#2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251) used one question across all 720 orderings (720 samples); [#2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252) used 10 orderings x 10 questions (100 samples). Those are reduced runs. The checked-in direct-API validation data in [`validation/`](validation/) is also partial; see its README for coverage. |
 
 Status:
 
@@ -129,16 +129,19 @@ issue programmatically.
 
 - [x] `instruction_order_gsm8k` submitted: [#2247](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2247)
       (opened 2026-08-22), pinned to `103444da69839ed5be8d1fa2d388571ae2897bc2` →
-      [PR #2318](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2318). Uploaded the
-      two full 1,600-sample `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano` on 2026-09-05.
+      [PR #2318](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2318), merged 2026-10-14.
+      Uploaded two default-size 1,600-sample `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano`
+      on 2026-09-05.
 - [x] `instruction_order_gsm8k_exhaustive` submitted: [#2248](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2248)
       (opened 2026-08-22), pinned to `2d578d761f70e2fef3a381a6243265247b297759` →
-      [PR #2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251). Uploaded the
-      two full `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano` on 2026-09-05.
+      [PR #2251](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2251), merged 2026-10-08.
+      Uploaded two reduced 720-sample runs (one question across all orderings) for `gpt-4o-mini`
+      and `gpt-4.1-nano` on 2026-09-05.
 - [x] `instruction_order_math500` submitted: [#2249](https://github.com/UKGovernmentBEIS/inspect_evals/issues/2249)
       (opened 2026-08-22), pinned to `2d578d761f70e2fef3a381a6243265247b297759` →
-      [PR #2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252). Uploaded the
-      two full `.eval` logs for `gpt-4o-mini` and `gpt-4.1-nano` on 2026-09-05.
+      [PR #2252](https://github.com/UKGovernmentBEIS/inspect_evals/pull/2252), merged 2026-09-29.
+      Uploaded two reduced 100-sample runs (10 orderings x 10 questions) for `gpt-4o-mini` and
+      `gpt-4.1-nano` on 2026-09-05.
 
 No separate git tag was needed for any of the three — the register accepts a raw 40-char commit
 SHA directly. The earlier API-created issues (#2242, #2245, #2246) never got labeled, so the bot
@@ -149,10 +152,11 @@ never ran on them; closed as superseded by the three above.
       #2318, #2251, and #2252.
 - [x] PR #2252 (`instruction_order_math500`) approved and merged 2026-09-29; it is listed as
       `register/prism_instruction_order`.
-- [ ] PRs #2318 and #2251: the register bot reported no blocking or security findings, only
-      non-blocking warnings (install extra, `PYTHONPATH=.`, and on #2318 the bot-derived
-      title and description). Acknowledged on both PRs on 2026-10-01, with corrected `eval.yaml`
-      wording offered for #2318. They need a register re-run and a maintainer merge.
+- [x] All three register PRs are merged. Automated reviews reported no blocking or security
+      findings. The bot's 10/15 lint score is informational; it flags optional-extra/install-path
+      conventions and test/export structure, and does not block registration. The install extra
+      and `PYTHONPATH=.` requirements were acknowledged on the PRs; #2318's title and description
+      were corrected before merge.
 
 ## Tests
 
